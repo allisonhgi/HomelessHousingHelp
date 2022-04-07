@@ -1,0 +1,46 @@
+.tip-box-7,
+.tip-box-8 {
+  align-items: flex-start;
+  display: flex;
+  height: 315px;
+  margin-left: 20px;
+  min-width: 623px;
+}
+
+.overlap-group-87,
+.overlap-group-88 {
+  height: 305px;
+  margin-left: -1px;
+  position: relative;
+  width: 624px;
+}
+
+.rectangle-6-8,
+.rectangle-6-9 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 127px;
+  left: 51px;
+  position: absolute;
+  top: 0;
+  width: 573px;
+}
+
+.this-button-will-rea-1,
+.this-button-will-rea-2 {
+  left: 69px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 15px;
+  width: 546px;
+}
+
+.arrow-3-8,
+.arrow-3-9 {
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 19px;
+  width: 52px;
+}
+

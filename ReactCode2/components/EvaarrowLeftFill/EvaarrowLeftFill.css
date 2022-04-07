@@ -1,0 +1,21 @@
+.evaarrow-left-fill-21 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 25px;
+  margin-left: 4px;
+  padding: 7.0px 6.2px;
+  transform: rotate(-90deg);
+  width: 28px;
+}
+
+.vector-116 {
+  height: 10px;
+  transform: rotate(90deg);
+  width: 13px;
+}
+
+.evaarrow-left-fill-21.evaarrow-left-fill-22 {
+  margin-left: 5px;
+}
+

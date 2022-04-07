@@ -1,0 +1,21 @@
+.profile-picture-1,
+.profile-picture-2 {
+  align-items: flex-start;
+  background-color: var(--summer-green);
+  border-radius: 92.5px;
+  display: flex;
+  height: 185px;
+  justify-content: flex-end;
+  left: 26px;
+  min-width: 185px;
+  padding: 37.5px 34.8px;
+  position: absolute;
+  top: 0;
+}
+
+.icon-star-1,
+.icon-star-2 {
+  height: 109px;
+  width: 114px;
+}
+

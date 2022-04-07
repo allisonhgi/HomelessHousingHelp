@@ -1,0 +1,122 @@
+.voucher-tool-eligibility-questions {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 30px 0;
+  width: 1440px;
+}
+
+.flex-col-12 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: -5px;
+  min-height: 860px;
+  width: 1440px;
+}
+
+.flex-row-20 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 93px;
+  margin-right: 15.0px;
+  min-width: 1347px;
+  position: relative;
+}
+
+.place-7 {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  width: 187px;
+}
+
+.flex-col-13 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 357px;
+  min-height: 90px;
+  width: 260px;
+}
+
+.my-account-26 {
+  cursor: pointer;
+  letter-spacing: 0;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.more-resources-62 {
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.overlap-group4-8 {
+  height: 112px;
+  margin-top: 63px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-7 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-7 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-21 {
+  align-items: flex-start;
+  display: flex;
+  height: 564px;
+  margin-left: 39px;
+  margin-top: 28px;
+  min-width: 1192px;
+  position: relative;
+}
+
+.tutorial-buttons-container-6 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 24px;
+  min-width: 1348px;
+  position: relative;
+}
+
+.tutorial-buttons-76 {
+  align-self: flex-end;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-77 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 464px;
+  width: 99px;
+}
+

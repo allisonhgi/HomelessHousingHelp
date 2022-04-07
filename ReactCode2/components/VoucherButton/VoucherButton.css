@@ -1,0 +1,50 @@
+.voucher-button {
+  align-items: flex-end;
+  background-color: var(--summer-green);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 214px;
+  padding: 22.5px 30px;
+  position: absolute;
+  top: 0;
+  width: 556px;
+}
+
+.i-have-a-voucher {
+  color: var(--white);
+  font-weight: 500;
+  margin-top: 8px;
+  min-height: 76px;
+  min-width: 491px;
+}
+
+.arrow-1-1 {
+  cursor: pointer;
+  height: 29px;
+  margin-right: 9px;
+  margin-top: 55px;
+  width: 54px;
+}
+
+.voucher-button.voucher-button-1 {
+  background-color: var(--shakespeare);
+  cursor: unset;
+  left: 1074px;
+  padding: 22.5px 0;
+  top: 22px;
+}
+
+.voucher-button.voucher-button-1 .i-have-a-voucher {
+  align-self: center;
+  min-width: unset;
+  width: 486px;
+}
+
+.voucher-button.voucher-button-1 .arrow-1-1 {
+  cursor: unset;
+  margin-right: 39px;
+}
+

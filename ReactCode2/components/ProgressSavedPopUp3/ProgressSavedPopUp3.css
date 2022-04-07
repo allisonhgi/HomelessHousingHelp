@@ -1,0 +1,18 @@
+.progress-saved-pop-up-2 {
+  align-items: flex-start;
+  background-color: var(--black-6);
+  display: flex;
+  height: 1024px;
+  min-width: 1440px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.overlay .progress-saved-pop-up-2 {
+  background-color: #00000000;
+}
+
+#overlay-progress-saved-pop-up {
+  background-color: var(--black-6);
+}
+

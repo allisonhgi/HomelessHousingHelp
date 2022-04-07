@@ -1,0 +1,36 @@
+.regional-access-point-default-1 {
+  align-items: center;
+  background-color: var(--midnight-blue);
+  display: flex;
+  height: 75px;
+  margin-left: 1px;
+  margin-top: 12px;
+  min-width: 945px;
+  padding: 22.8px 19px;
+}
+
+.catholic-community-services-2 {
+  letter-spacing: 0;
+  min-height: 29px;
+  width: 580px;
+}
+
+.view-on-map {
+  letter-spacing: 0;
+  margin-bottom: 0.85px;
+  margin-left: 149px;
+  min-height: 23px;
+  width: 133px;
+}
+
+.icon-cursor {
+  align-self: flex-start;
+  height: 22px;
+  margin-left: 12px;
+  width: 27px;
+}
+
+.regional-access-point-default-1.regional-access-point-default {
+  margin-top: 20px;
+}
+

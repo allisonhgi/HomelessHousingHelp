@@ -1,0 +1,20 @@
+.filter-button {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 5px;
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  left: 134px;
+  min-width: 193px;
+  padding: 10px 3.7px;
+  position: absolute;
+  top: 659px;
+}
+
+.home-type {
+  letter-spacing: 0;
+  min-height: 30px;
+  width: 145px;
+}
+

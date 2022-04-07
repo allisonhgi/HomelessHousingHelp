@@ -1,0 +1,16 @@
+.text-info-9 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 564px;
+  margin-left: 115px;
+  min-width: 1011px;
+  padding: 39px 45px;
+}
+
+.check-if-any-of-the-below-apply {
+  letter-spacing: 0;
+  min-height: 475px;
+  width: 907px;
+}
+

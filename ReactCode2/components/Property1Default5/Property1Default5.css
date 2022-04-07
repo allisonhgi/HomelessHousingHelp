@@ -1,0 +1,37 @@
+.profile-section-small {
+  align-items: flex-start;
+  background-color: var(--polar);
+  border-radius: 5px;
+  display: flex;
+  height: 84px;
+  min-width: 566px;
+  padding: 19px 14px;
+}
+
+.saved-voucher-tool-data {
+  letter-spacing: 0;
+  min-height: 45px;
+  min-width: 425px;
+}
+
+.view {
+  align-self: center;
+  letter-spacing: 0;
+  margin-bottom: 1.0px;
+  margin-left: 52px;
+  min-height: 29px;
+  min-width: 55px;
+}
+
+.profile-section-small.profile-section-small-1 {
+  margin-top: 28px;
+}
+
+.profile-section-small.profile-section-small-1 .saved-voucher-tool-data {
+  min-width: 354px;
+}
+
+.profile-section-small.profile-section-small-1 .view {
+  margin-left: 123px;
+}
+

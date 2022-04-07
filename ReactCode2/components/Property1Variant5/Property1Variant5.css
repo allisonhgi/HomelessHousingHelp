@@ -1,0 +1,48 @@
+.document-button {
+  align-items: center;
+  background-color: var(--midnight-blue);
+  display: flex;
+  height: 86px;
+  left: 14px;
+  min-width: 916px;
+  padding: 17px 19px;
+  position: absolute;
+  top: 316px;
+}
+
+.proof-of-income {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 45px;
+  min-height: 51px;
+  white-space: nowrap;
+  width: 323px;
+}
+
+.overlap-group-81 {
+  align-items: flex-start;
+  background-color: var(--cornflower);
+  border-radius: 12px;
+  display: flex;
+  height: 42px;
+  margin-left: 372px;
+  min-width: 183px;
+  padding: 9px 15px;
+}
+
+.click-for-details-3 {
+  letter-spacing: 0;
+  min-height: 23px;
+  width: 152px;
+}
+
+.document-button.document-button-1,
+.document-button.document-button-4 {
+  top: 218px;
+}
+
+.document-button.document-button-2,
+.document-button.document-button-5 {
+  top: 120px;
+}
+

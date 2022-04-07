@@ -1,0 +1,75 @@
+.disqualification-questions {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-left: 115px;
+  min-height: 564px;
+  padding: 20px 30px;
+  width: 1011px;
+}
+
+.check-if-any-of-the {
+  letter-spacing: 0;
+  margin-top: 13px;
+  min-height: 52px;
+  width: 907px;
+}
+
+.flex-row-31 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  height: 458px;
+  margin-right: 33px;
+  margin-top: 1px;
+  min-width: 879px;
+}
+
+.flex-col-21 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+  min-height: 414px;
+  width: 32px;
+}
+
+.rectangle-24 {
+  background-color: var(--white);
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.rectangle-23 {
+  cursor: pointer;
+  height: 32px;
+  margin-top: 25px;
+  width: 32px;
+}
+
+.rectangle-2 {
+  background-color: var(--white);
+  cursor: pointer;
+  height: 32px;
+  margin-top: 75px;
+  width: 32px;
+}
+
+.rectangle-16-3 {
+  background-color: var(--white);
+  cursor: pointer;
+  height: 32px;
+  margin-top: 79px;
+  width: 32px;
+}
+
+.youre-a-registered {
+  letter-spacing: 0;
+  line-height: 55px;
+  margin-left: 24px;
+  min-height: 458px;
+  width: 823px;
+}
+

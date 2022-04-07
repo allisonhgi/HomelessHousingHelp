@@ -1,0 +1,49 @@
+.tip-box-5,
+.tip-box-6 {
+  align-items: flex-start;
+  display: flex;
+  height: 272px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 623px;
+  padding: 0 0.0px;
+  position: absolute;
+  top: 0;
+}
+
+.overlap-group-85,
+.overlap-group-86 {
+  height: 171px;
+  position: relative;
+  width: 573px;
+}
+
+.rectangle-6-6,
+.rectangle-6-7 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 127px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 573px;
+}
+
+.this-button-will-tak-4,
+.this-button-will-tak-5 {
+  left: 18px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 13px;
+  width: 526px;
+}
+
+.arrow-3-6,
+.arrow-3-7 {
+  height: 45px;
+  left: 34px;
+  position: absolute;
+  top: 126px;
+  width: 22px;
+}
+

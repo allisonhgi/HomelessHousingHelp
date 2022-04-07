@@ -1,0 +1,104 @@
+.received-voucher-button-3 {
+  align-items: flex-start;
+  display: flex;
+  height: 495px;
+  left: 1px;
+  min-width: 410px;
+  position: absolute;
+  top: 0;
+}
+
+.overlap-group1-60 {
+  align-items: flex-start;
+  background-color: var(--amazon);
+  border-radius: 5px;
+  display: flex;
+  height: 495px;
+  justify-content: flex-end;
+  min-width: 1307px;
+  padding: 3px 10px;
+}
+
+.ive-applied-for-a-v-9 {
+  letter-spacing: 0;
+  margin-top: 18px;
+  min-height: 75px;
+  width: 368px;
+}
+
+.line-7-1 {
+  align-self: center;
+  height: 440px;
+  margin-bottom: 7.0px;
+  margin-left: 10px;
+  width: 2px;
+}
+
+.overlap-group-container-11 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 39px;
+  min-height: 449px;
+  width: 856px;
+}
+
+.overlap-group2-45 {
+  align-self: flex-end;
+  height: 34px;
+  position: relative;
+  width: 87px;
+}
+
+.close-1 {
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 4px;
+  width: 71px;
+}
+
+.overlap-group-90 {
+  height: 405px;
+  margin-top: 10px;
+  position: relative;
+  width: 812px;
+}
+
+.tutorial-buttons-131 {
+  background-color: var(--summer-green);
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px #00000026;
+  cursor: pointer;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 345px;
+  width: 275px;
+}
+
+.go-to-housing-tool-1 {
+  cursor: pointer;
+  left: 12px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 360px;
+}
+
+.arrow-1-8 {
+  height: 15px;
+  left: 236px;
+  position: absolute;
+  top: 367px;
+  width: 27px;
+}
+
+.if-you-have-applied-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 0;
+  width: 812px;
+}
+

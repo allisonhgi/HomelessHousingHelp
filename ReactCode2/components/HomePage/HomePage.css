@@ -1,0 +1,225 @@
+.home-page-35 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 2239px;
+  overflow: hidden;
+  padding: 30px 0;
+  width: 1440px;
+}
+
+.flex-row-1 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 94px;
+  margin-right: 5.0px;
+  min-width: 1347px;
+  position: relative;
+}
+
+.log-in {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  width: 187px;
+}
+
+.flex-col {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 357px;
+  min-height: 90px;
+  width: 260px;
+}
+
+.more-resources-21 {
+  cursor: pointer;
+  letter-spacing: 0;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.voucher-tools {
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.overlap-group4-2 {
+  height: 2188px;
+  margin-left: -246px;
+  margin-top: 64px;
+  position: relative;
+  width: 1819px;
+}
+
+.overlap-group1-42 {
+  height: 2188px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1819px;
+}
+
+.polygon-1 {
+  height: 827px;
+  left: 1308px;
+  position: absolute;
+  top: 901px;
+  width: 511px;
+}
+
+.polygon-2 {
+  height: 645px;
+  left: 155px;
+  position: absolute;
+  top: 1543px;
+  width: 733px;
+}
+
+.ellipse-1 {
+  background-color: var(--jagged-ice);
+  border-radius: 409px;
+  height: 818px;
+  left: 0;
+  position: absolute;
+  top: 210px;
+  width: 818px;
+}
+
+.title {
+  color: var(--black);
+  font-weight: 500;
+  left: 336px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.connecting-housing-r {
+  left: 336px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 374px;
+  width: 642px;
+}
+
+.whether-youre-a-cas {
+  left: 708px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 1121px;
+  width: 914px;
+}
+
+.no-we-cant-persona {
+  left: 827px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 1846px;
+  width: 859px;
+}
+
+.emergency-housing-vo {
+  left: 853px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 1404px;
+  width: 796px;
+}
+
+.our-services {
+  color: var(--black);
+  font-weight: 500;
+  left: 291px;
+  position: absolute;
+  top: 1107px;
+  width: 520px;
+}
+
+.we-are-currently-tar {
+  left: 708px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 777px;
+  width: 914px;
+}
+
+.our-mission {
+  color: var(--black);
+  font-weight: 500;
+  left: 291px;
+  position: absolute;
+  top: 763px;
+  width: 520px;
+}
+
+.do-we-distribute-vouchers {
+  color: var(--black);
+  font-weight: 500;
+  left: 291px;
+  position: absolute;
+  top: 1838px;
+  width: 520px;
+}
+
+.voucher-container {
+  border-radius: 5px;
+  height: 214px;
+  left: 1074px;
+  position: absolute;
+  top: 285px;
+  width: 556px;
+}
+
+.i-need-a-voucher {
+  color: var(--white);
+  font-weight: 500;
+  left: 31px;
+  position: absolute;
+  top: 124px;
+  width: 494px;
+}
+
+.overlap-group3 {
+  height: 76px;
+  left: 853px;
+  position: absolute;
+  top: 581px;
+  width: 520px;
+}
+
+.more-information {
+  cursor: pointer;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 0;
+  width: 520px;
+}
+
+.arrow-2 {
+  height: 43px;
+  left: 459px;
+  position: absolute;
+  top: 9px;
+  width: 37px;
+}
+
+.what-is-an-emergency-housing-voucher {
+  color: var(--black);
+  font-weight: 500;
+  left: 291px;
+  position: absolute;
+  top: 1396px;
+  width: 520px;
+}
+

@@ -1,0 +1,17 @@
+.phone-pop-up-v2-phone-pop-up-default {
+  align-items: flex-start;
+  background-color: var(--black-5);
+  display: flex;
+  height: 1012px;
+  min-width: 1440px;
+  position: relative;
+}
+
+.overlay .phone-pop-up-v2-phone-pop-up-default {
+  background-color: #00000000;
+}
+
+#overlay-phone-pop-up-v2-phone-pop-up-default {
+  background-color: var(--black-5);
+}
+

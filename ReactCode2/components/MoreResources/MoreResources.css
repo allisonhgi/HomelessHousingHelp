@@ -1,0 +1,45 @@
+.more-resources-24,
+.more-resources-26,
+.more-resources-28,
+.more-resources-30,
+.more-resources-32,
+.more-resources-34,
+.more-resources-36,
+.more-resources-38,
+.more-resources-40,
+.more-resources-42,
+.more-resources-44,
+.more-resources-46,
+.more-resources-48,
+.more-resources-50,
+.more-resources-52,
+.more-resources-54 {
+  align-items: flex-start;
+  display: flex;
+  height: 25px;
+  margin-left: 440px;
+  min-width: 184px;
+}
+
+.more-resources-25,
+.more-resources-27,
+.more-resources-29,
+.more-resources-31,
+.more-resources-33,
+.more-resources-35,
+.more-resources-37,
+.more-resources-39,
+.more-resources-41,
+.more-resources-43,
+.more-resources-45,
+.more-resources-47,
+.more-resources-49,
+.more-resources-51,
+.more-resources-53,
+.more-resources-55 {
+  cursor: pointer;
+  letter-spacing: 0;
+  min-height: 25px;
+  width: 184px;
+}
+

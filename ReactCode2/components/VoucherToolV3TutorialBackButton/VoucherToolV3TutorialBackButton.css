@@ -1,0 +1,79 @@
+.voucher-tool-v3-tutorial-back-button {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 28px 0;
+  position: relative;
+  width: 1440px;
+}
+
+.flex-row-70 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 88px;
+  margin-right: 4.0px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.overlap-group3-25 {
+  align-self: flex-end;
+  height: 112px;
+  margin-right: -5px;
+  margin-top: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-24 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-24 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-71 {
+  align-items: flex-end;
+  display: flex;
+  margin-left: -8px;
+  margin-top: 322px;
+  min-width: 1399px;
+}
+
+.overlap-group2-41 {
+  height: 272px;
+  position: relative;
+  width: 623px;
+}
+
+.tutorial-buttons-110 {
+  cursor: pointer;
+  height: 77px;
+  left: 51px;
+  position: absolute;
+  top: 189px;
+  width: 99px;
+}
+
+.tutorial-buttons-111 {
+  cursor: pointer;
+  height: 77px;
+  margin-bottom: 7px;
+  margin-left: 677px;
+  width: 99px;
+}
+

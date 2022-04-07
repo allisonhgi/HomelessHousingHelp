@@ -1,0 +1,25 @@
+.text-info {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 564px;
+  justify-content: flex-end;
+  margin-left: 115px;
+  min-width: 1011px;
+  padding: 1px 58px;
+}
+
+.no-documents-are-nee {
+  letter-spacing: 0;
+  min-height: 533px;
+  width: 882px;
+}
+
+.text-info.text-info-1,
+.text-info.text-info-2 {
+  left: 0;
+  margin-left: unset;
+  position: absolute;
+  top: 0;
+}
+

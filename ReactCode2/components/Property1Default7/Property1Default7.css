@@ -1,0 +1,41 @@
+.profile-section-v2-2 {
+  align-items: flex-end;
+  display: flex;
+  height: 344px;
+  left: 295px;
+  min-width: 410px;
+  position: absolute;
+  top: 13px;
+}
+
+.overlap-group-76 {
+  align-items: flex-start;
+  background-color: var(--polar);
+  border-radius: 5px;
+  display: flex;
+  height: 346px;
+  justify-content: flex-end;
+  margin-bottom: -2px;
+  min-width: 410px;
+  padding: 21px 25px;
+}
+
+.saved-voucher-tool-data-1 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 184px;
+  width: 185px;
+}
+
+.view-1 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  margin-left: 114px;
+  min-height: 29px;
+  width: 59px;
+}
+
+.profile-section-v2-2.profile-section-v2-3 {
+  left: 734px;
+}
+

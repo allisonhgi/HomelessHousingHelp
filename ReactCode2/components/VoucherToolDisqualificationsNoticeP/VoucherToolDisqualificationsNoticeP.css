@@ -1,0 +1,124 @@
+.voucher-tool-disqualifications-notice-page {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 30px 0;
+  width: 1440px;
+}
+
+.flex-col-35 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: -5px;
+  min-height: 860px;
+  width: 1440px;
+}
+
+.flex-row-60 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 93px;
+  margin-right: 15.0px;
+  min-width: 1347px;
+  position: relative;
+}
+
+.place-17 {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  width: 187px;
+}
+
+.flex-col-36 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 357px;
+  min-height: 90px;
+  width: 260px;
+}
+
+.my-account-32 {
+  cursor: pointer;
+  letter-spacing: 0;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.more-resources-73 {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.overlap-group2-38 {
+  height: 112px;
+  margin-top: 63px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-20 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-20 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-61 {
+  align-items: flex-start;
+  display: flex;
+  height: 564px;
+  margin-left: 39px;
+  margin-top: 28px;
+  min-width: 1182px;
+  position: relative;
+}
+
+.tutorial-buttons-container-19 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 24px;
+  min-width: 1348px;
+  position: relative;
+}
+
+.tutorial-buttons-102 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-103 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 464px;
+  width: 99px;
+}
+

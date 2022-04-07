@@ -1,0 +1,80 @@
+.disqualification-questions-v2,
+.disqualification-questions-v2-1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-left: 115px;
+  min-height: 564px;
+  padding: 20px 30px;
+  width: 1011px;
+}
+
+.check-if-any-of-the-1,
+.check-if-any-of-the-2 {
+  letter-spacing: 0;
+  margin-top: 13px;
+  min-height: 52px;
+  width: 907px;
+}
+
+.flex-row-66,
+.flex-row-67 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  height: 458px;
+  margin-right: 33px;
+  margin-top: 1px;
+  min-width: 879px;
+}
+
+.flex-col-38,
+.flex-col-39 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+  min-height: 414px;
+  width: 32px;
+}
+
+.rectangle-24-1,
+.rectangle-24-2 {
+  background-color: var(--white);
+  height: 32px;
+  width: 32px;
+}
+
+.rectangle-23-1,
+.rectangle-23-2 {
+  height: 32px;
+  margin-top: 25px;
+  width: 32px;
+}
+
+.rectangle-2-1,
+.rectangle-2-2 {
+  background-color: var(--white);
+  height: 32px;
+  margin-top: 75px;
+  width: 32px;
+}
+
+.rectangle-16-4,
+.rectangle-16-5 {
+  background-color: var(--white);
+  height: 32px;
+  margin-top: 79px;
+  width: 32px;
+}
+
+.youre-a-registered-1,
+.youre-a-registered-2 {
+  letter-spacing: 0;
+  line-height: 55px;
+  margin-left: 24px;
+  min-height: 458px;
+  width: 823px;
+}
+

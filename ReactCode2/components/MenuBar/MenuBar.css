@@ -1,0 +1,256 @@
+.menu-bar,
+.menu-bar-1,
+.menu-bar-2,
+.menu-bar-3,
+.menu-bar-4,
+.menu-bar-5,
+.menu-bar-6,
+.menu-bar-7,
+.menu-bar-8,
+.menu-bar-9,
+.menu-bar-10,
+.menu-bar-11,
+.menu-bar-12,
+.menu-bar-13,
+.menu-bar-14,
+.menu-bar-15,
+.menu-bar-16,
+.menu-bar-17,
+.menu-bar-18,
+.menu-bar-19,
+.menu-bar-20 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 145px;
+  min-width: 504px;
+}
+
+.more-resources,
+.more-resources-1,
+.more-resources-2,
+.more-resources-3,
+.more-resources-4,
+.more-resources-5,
+.more-resources-6,
+.more-resources-7,
+.more-resources-8,
+.more-resources-9,
+.more-resources-10,
+.more-resources-11,
+.more-resources-12,
+.more-resources-13,
+.more-resources-14,
+.more-resources-15,
+.more-resources-16,
+.more-resources-17,
+.more-resources-18,
+.more-resources-19,
+.more-resources-20 {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-bottom: 1.0px;
+  min-height: 25px;
+  width: 184px;
+}
+
+.overlap-group1-34,
+.overlap-group1-35,
+.overlap-group1-36,
+.overlap-group2-1,
+.overlap-group1-37,
+.overlap-group1-38,
+.overlap-group2-2,
+.overlap-group1-39,
+.overlap-group2-3,
+.overlap-group2-4,
+.overlap-group6,
+.overlap-group2-5,
+.overlap-group2-6,
+.overlap-group2-7,
+.overlap-group2-8,
+.overlap-group2-9,
+.overlap-group2-10,
+.overlap-group4-1,
+.overlap-group2-11,
+.overlap-group1-40,
+.overlap-group2-12 {
+  height: 30px;
+  margin-left: 9px;
+  margin-top: 2.0px;
+  position: relative;
+  width: 184px;
+}
+
+.my-account,
+.my-account-1,
+.my-account-2,
+.my-account-3,
+.my-account-4,
+.my-account-5,
+.my-account-6,
+.my-account-7,
+.my-account-8,
+.my-account-9,
+.my-account-10,
+.my-account-11,
+.my-account-12,
+.my-account-13,
+.my-account-14,
+.my-account-15,
+.my-account-16,
+.my-account-17,
+.my-account-18,
+.my-account-19,
+.my-account-20 {
+  cursor: pointer;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 184px;
+}
+
+.line-5,
+.line-5-1,
+.line-5-2,
+.line-5-3,
+.line-5-4,
+.line-5-5,
+.line-5-6,
+.line-5-7,
+.line-5-8,
+.line-5-9,
+.line-5-10,
+.line-5-11,
+.line-5-12,
+.line-5-13,
+.line-5-14,
+.line-5-15,
+.line-5-16,
+.line-5-17,
+.line-5-18,
+.line-5-19,
+.line-5-20 {
+  height: 30px;
+  left: 16px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.icround-account-circle,
+.icround-account-circle-1,
+.icround-account-circle-2,
+.icround-account-circle-3,
+.icround-account-circle-4,
+.icround-account-circle-5,
+.icround-account-circle-6,
+.icround-account-circle-7,
+.icround-account-circle-8,
+.icround-account-circle-9,
+.icround-account-circle-10,
+.icround-account-circle-11,
+.icround-account-circle-12,
+.icround-account-circle-13,
+.icround-account-circle-14,
+.icround-account-circle-15,
+.icround-account-circle-16,
+.icround-account-circle-17,
+.icround-account-circle-18,
+.icround-account-circle-19,
+.icround-account-circle-20 {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  margin-left: 23px;
+  padding: 0 4px;
+  width: 48px;
+}
+
+.vector-35,
+.vector-37,
+.vector-39,
+.vector-41,
+.vector-43,
+.vector-45,
+.vector-47,
+.vector-49,
+.vector-51,
+.vector-53,
+.vector-55,
+.vector-57,
+.vector-59,
+.vector-61,
+.vector-63,
+.vector-65,
+.vector-67,
+.vector-69,
+.vector-71,
+.vector-73,
+.vector-75 {
+  height: 40px;
+  width: 40px;
+}
+
+.evaarrow-left-fill,
+.evaarrow-left-fill-1,
+.evaarrow-left-fill-2,
+.evaarrow-left-fill-3,
+.evaarrow-left-fill-4,
+.evaarrow-left-fill-5,
+.evaarrow-left-fill-6,
+.evaarrow-left-fill-7,
+.evaarrow-left-fill-8,
+.evaarrow-left-fill-9,
+.evaarrow-left-fill-10,
+.evaarrow-left-fill-11,
+.evaarrow-left-fill-12,
+.evaarrow-left-fill-13,
+.evaarrow-left-fill-14,
+.evaarrow-left-fill-15,
+.evaarrow-left-fill-16,
+.evaarrow-left-fill-17,
+.evaarrow-left-fill-18,
+.evaarrow-left-fill-19,
+.evaarrow-left-fill-20 {
+  align-items: flex-start;
+  background-color: var(--white);
+  cursor: pointer;
+  display: flex;
+  height: 33px;
+  margin-bottom: 1.0px;
+  margin-left: 9px;
+  padding: 9.5px 6.1px;
+  transform: rotate(-90deg);
+  width: 33px;
+}
+
+.vector-36,
+.vector-38,
+.vector-40,
+.vector-42,
+.vector-44,
+.vector-46,
+.vector-48,
+.vector-50,
+.vector-52,
+.vector-54,
+.vector-56,
+.vector-58,
+.vector-60,
+.vector-62,
+.vector-64,
+.vector-66,
+.vector-68,
+.vector-70,
+.vector-72,
+.vector-74,
+.vector-76 {
+  height: 12px;
+  transform: rotate(90deg);
+  width: 17px;
+}
+
