@@ -34614,7 +34614,7 @@ var HomePage = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "i-need-a-voucher"
       }, iNeedAVoucher), /*#__PURE__*/_react.default.createElement(_VoucherButton.default, {
-        iHaveAVoucher: voucherButton1Props.iHaveAVoucher
+        iNeedAVoucher: voucherButton1Props.iNeedAVoucher
       })), /*#__PURE__*/_react.default.createElement(_VoucherButton.default, {
         iHaveAVoucher: voucherButton2Props.iHaveAVoucher,
         className: voucherButton2Props.className

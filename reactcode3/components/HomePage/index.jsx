@@ -59,7 +59,7 @@ class HomePage extends React.Component {
             </div>
             <div className="voucher-container">
               <div className="i-need-a-voucher">{iNeedAVoucher}</div>
-              <VoucherButton iHaveAVoucher={voucherButton1Props.iHaveAVoucher} />
+              <VoucherButton iNeedAVoucher={voucherButton1Props.iNeedAVoucher} />
             </div>
             <VoucherButton
               iHaveAVoucher={voucherButton2Props.iHaveAVoucher}
