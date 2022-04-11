@@ -1,0 +1,17 @@
+.text-info-5 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 564px;
+  justify-content: flex-end;
+  margin-left: 115px;
+  min-width: 1011px;
+  padding: 1px 58px;
+}
+
+.no-documents-are-nee-4 {
+  letter-spacing: 0;
+  min-height: 533px;
+  width: 882px;
+}
+

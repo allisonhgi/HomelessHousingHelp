@@ -1,0 +1,51 @@
+.tip-box-3 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 272px;
+  padding: 0 0.0px;
+  position: absolute;
+  top: 0;
+  width: 623px;
+}
+
+.overlap-group-62 {
+  height: 171px;
+  position: relative;
+  width: 573px;
+}
+
+.rectangle-6-3 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 127px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 573px;
+}
+
+.this-button-will-tak-3 {
+  left: 18px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 13px;
+  width: 526px;
+}
+
+.arrow-3-3 {
+  height: 45px;
+  left: 34px;
+  position: absolute;
+  top: 126px;
+  width: 22px;
+}
+
+.rectangle-8 {
+  height: 36px;
+  margin-right: 22.0px;
+  margin-top: 59px;
+  width: 64px;
+}
+

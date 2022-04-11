@@ -1,0 +1,170 @@
+.voucher-tool-tutorial-save-data-button {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 30px 0;
+  width: 1440px;
+}
+
+.flex-col-5 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: -5px;
+  min-height: 831px;
+  position: relative;
+  width: 1440px;
+}
+
+.flex-row-7 {
+  align-items: flex-start;
+  display: flex;
+  height: 93px;
+  margin-right: 15.0px;
+  min-width: 1347px;
+  position: relative;
+}
+
+.place-3 {
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  width: 187px;
+}
+
+.flex-col-6 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 357px;
+  min-height: 90px;
+  width: 260px;
+}
+
+.my-account-23 {
+  letter-spacing: 0;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.more-resources-28 {
+  letter-spacing: 0;
+  margin-top: 4px;
+  min-height: 43px;
+  text-align: right;
+  width: 260px;
+}
+
+.overlap-group2-18 {
+  height: 112px;
+  margin-top: 63px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-2 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-2 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.overlap-group-65 {
+  height: 368px;
+  margin-left: 40.61px;
+  margin-top: 130px;
+  position: relative;
+  width: 591px;
+}
+
+.rectangle-6-4 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 327px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 591px;
+}
+
+.text-1 {
+  left: 455px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 282px;
+  width: 65px;
+}
+
+.this-button-will-sav {
+  left: 19px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 16px;
+  width: 561px;
+}
+
+.arrow-4 {
+  height: 22px;
+  left: 509px;
+  position: absolute;
+  top: 286px;
+  width: 53px;
+}
+
+.arrow-3-4 {
+  height: 45px;
+  left: 288px;
+  position: absolute;
+  top: 323px;
+  width: 22px;
+}
+
+.rectangle-8-1 {
+  height: 36px;
+  left: 509px;
+  position: absolute;
+  top: 280px;
+  width: 64px;
+}
+
+.tutorial-buttons-container-1 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 53px;
+  min-width: 1348px;
+  position: relative;
+}
+
+.tutorial-buttons-64 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-65 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 464px;
+  width: 99px;
+}
+

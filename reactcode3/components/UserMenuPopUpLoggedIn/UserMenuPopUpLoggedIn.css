@@ -1,0 +1,25 @@
+.user-menu-pop-up-logged-in {
+  align-items: flex-start;
+  display: flex;
+  height: 1024px;
+  min-width: 1440px;
+  position: relative;
+}
+
+.overlay .user-menu-pop-up-logged-in {
+  background-color: #00000000;
+}
+
+#overlay-user-menu-pop-up-logged-in .container-center-horizontal {
+  justify-content: normal;
+}
+
+#overlay-user-menu-pop-up-logged-in {
+  background-color: transparent;
+}
+
+#overlay-user-menu-pop-up-logged-in .user-menu-pop-up-logged-in {
+  left: 920px;
+  top: 89px;
+}
+

@@ -1,0 +1,77 @@
+.voucher-tool-v2-tutorial-save-data-button {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 28px 0;
+  position: relative;
+  width: 1440px;
+}
+
+.flex-row-80 {
+  align-items: flex-start;
+  display: flex;
+  height: 88px;
+  margin-left: 20.75px;
+  min-width: 1385px;
+  position: relative;
+}
+
+.overlap-group4-20 {
+  align-self: flex-end;
+  height: 112px;
+  margin-right: -5px;
+  margin-top: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-30 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-30 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-81 {
+  align-items: center;
+  display: flex;
+  margin-right: 6.0px;
+  margin-top: 326px;
+  min-width: 1348px;
+}
+
+.tutorial-buttons-123 {
+  cursor: pointer;
+  height: 77px;
+  margin-top: 120.0px;
+  width: 99px;
+}
+
+.overlap-group5-14 {
+  height: 327px;
+  margin-left: 231px;
+  position: relative;
+  width: 643px;
+}
+
+.tutorial-buttons-124 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 276px;
+  margin-top: 118.0px;
+  width: 99px;
+}
+

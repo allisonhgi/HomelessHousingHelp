@@ -1,0 +1,47 @@
+.resources-v3 {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1035px;
+  padding: 28px 38px;
+  position: relative;
+  width: 1440px;
+}
+
+.flex-row-91 {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  height: 88px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.find-a-home-1 {
+  color: var(--black);
+  font-weight: 500;
+  margin-left: 2.0px;
+  margin-top: 72px;
+  min-height: 75px;
+  text-align: center;
+  width: 480px;
+}
+
+.if-you-have-received {
+  letter-spacing: 0;
+  margin-right: 12.0px;
+  margin-top: 39px;
+  min-height: 100px;
+  width: 1262px;
+}
+
+.housing-search-resources {
+  align-self: flex-start;
+  letter-spacing: 0;
+  margin-left: 45px;
+  margin-top: 36px;
+  min-height: 75px;
+  width: 663px;
+}
+

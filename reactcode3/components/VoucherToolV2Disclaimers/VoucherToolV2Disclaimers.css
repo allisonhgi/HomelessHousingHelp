@@ -1,0 +1,124 @@
+.voucher-tool-v2-disclaimers {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 28px 0;
+  width: 1440px;
+}
+
+.flex-col-11 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: -5px;
+  min-height: 862px;
+  width: 1440px;
+}
+
+.flex-row-22 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 88px;
+  margin-left: 10.75px;
+  min-width: 1385px;
+  position: relative;
+}
+
+.overlap-group3-11 {
+  height: 112px;
+  margin-top: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-8 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-8 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-23 {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 39px;
+  margin-top: 28px;
+  min-width: 1192px;
+  position: relative;
+}
+
+.tool-question-screen-2 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 5px;
+  display: flex;
+  height: 564px;
+  justify-content: flex-end;
+  margin-left: 125px;
+  min-width: 1011px;
+}
+
+.overlap-group-73 {
+  height: 618px;
+  margin-bottom: -99px;
+  position: relative;
+  width: 1002px;
+}
+
+.obot-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  width: 892px;
+}
+
+.voucher-applying-1 {
+  height: 556px;
+  left: 446px;
+  object-fit: cover;
+  position: absolute;
+  top: 62px;
+  width: 556px;
+}
+
+.tutorial-buttons-container-6 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 24px;
+  min-width: 1348px;
+  position: relative;
+}
+
+.tutorial-buttons-79 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-80 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 493px;
+  width: 99px;
+}
+

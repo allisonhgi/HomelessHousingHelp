@@ -1,0 +1,28 @@
+.bix {
+  align-items: flex-start;
+  display: flex;
+  height: 34px;
+  left: 53px;
+  padding: 9.0px;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.vector-79 {
+  height: 15px;
+  width: 15px;
+}
+
+.bix.bix-1 {
+  left: unset;
+  margin-top: 5px;
+  position: unset;
+  top: unset;
+}
+
+.bix.bix-2 {
+  left: 0;
+  top: 8px;
+}
+

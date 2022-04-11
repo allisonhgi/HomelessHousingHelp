@@ -1,0 +1,23 @@
+.tutorial-buttons-72 {
+  align-items: center;
+  background-color: var(--summer-green);
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px #00000026;
+  display: flex;
+  height: 67px;
+  margin-bottom: 2.0px;
+  min-width: 211px;
+  padding: 0 11px;
+}
+
+.back-to-home {
+  letter-spacing: 0;
+  min-height: 35px;
+  min-width: 189px;
+}
+
+.tutorial-buttons-72.tutorial-buttons-73,
+.tutorial-buttons-72.tutorial-buttons-74 {
+  cursor: pointer;
+}
+

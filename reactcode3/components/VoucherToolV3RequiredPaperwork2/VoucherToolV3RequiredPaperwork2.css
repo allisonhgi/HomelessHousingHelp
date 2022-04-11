@@ -1,0 +1,141 @@
+.voucher-tool-v3-required-paperwork {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 28px 0;
+  width: 1440px;
+}
+
+.flex-row-58 {
+  align-items: flex-start;
+  display: flex;
+  height: 88px;
+  margin-right: 4.0px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.overlap-group6-4 {
+  align-self: flex-end;
+  height: 112px;
+  margin-right: -5px;
+  margin-top: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-20 {
+  color: var(--black);
+  font-weight: 500;
+  left: 513px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-20 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-59 {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  margin-left: 44px;
+  margin-top: 28px;
+  min-width: 1182px;
+  position: relative;
+}
+
+.text-info-8 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 564px;
+  margin-left: 115px;
+  min-width: 1011px;
+  padding: 19px 34px;
+}
+
+.overlap-group5-13 {
+  height: 514px;
+  position: relative;
+  width: 930px;
+}
+
+.no-documents-are-nee-6 {
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 0;
+  width: 911px;
+}
+
+.overlap-group-84 {
+  align-items: flex-start;
+  background-color: var(--midnight-blue);
+  display: flex;
+  height: 86px;
+  left: 14px;
+  min-width: 916px;
+  padding: 17px 19px;
+  position: absolute;
+  top: 416px;
+}
+
+.owner-certification-1 {
+  letter-spacing: 0;
+  line-height: 45px;
+  min-height: 51px;
+  white-space: nowrap;
+  width: 323px;
+}
+
+.overlap-group1-59 {
+  align-items: flex-start;
+  align-self: center;
+  background-color: var(--cornflower);
+  border-radius: 12px;
+  display: flex;
+  height: 42px;
+  margin-left: 372px;
+  min-width: 183px;
+  padding: 9px 15px;
+}
+
+.click-for-details-5 {
+  letter-spacing: 0;
+  min-height: 23px;
+  width: 152px;
+}
+
+.tutorial-buttons-container-18 {
+  align-items: flex-start;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 24px;
+  min-width: 1348px;
+}
+
+.tutorial-buttons-103 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-104 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 1150px;
+  width: 99px;
+}
+

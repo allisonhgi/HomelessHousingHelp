@@ -1,0 +1,63 @@
+.resource-section-8 {
+  align-items: flex-start;
+  display: flex;
+  height: 242px;
+  left: 0;
+  min-width: 1293px;
+  position: absolute;
+  top: 0;
+}
+
+.overlap-group2-25 {
+  border-radius: 2px;
+  height: 242px;
+  position: relative;
+  width: 1293px;
+}
+
+.rectangle-26 {
+  background-color: var(--midnight-blue);
+  border-radius: 2px;
+  cursor: pointer;
+  height: 242px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1293px;
+}
+
+.housing-choice-vouchers-8 {
+  left: 21px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 14px;
+}
+
+.the-housing-choice-v-8 {
+  left: 21px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 74px;
+  width: 1217px;
+}
+
+.rectangle-27-1 {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px #00000080;
+  cursor: pointer;
+  height: 50px;
+  left: 1041px;
+  position: absolute;
+  top: 166px;
+  width: 222px;
+}
+
+.link-to-resource-1 {
+  left: 1058px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 178px;
+  width: 187px;
+}
+
