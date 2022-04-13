@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import MoreResources from "../MoreResources";
 import VoucherButtonV3 from "../VoucherButtonV3";
+import VoucherButtonV2 from "../VoucherButtonV2";
 import "./HomePageV3.css";
 
 class HomePageV3 extends React.Component {
@@ -72,6 +73,7 @@ class HomePageV3 extends React.Component {
               <VoucherButtonV3 voucherButtonV2Props={voucherButtonV31Props.voucherButtonV2Props} />
               <Link to="/resources-v3-1">
                 <div className="voucher-button-v3">
+  {/*this is where the error comes in*/}
                   <VoucherButtonV3
                     className={voucherButtonV32Props.className}
                     voucherButtonV2Props={voucherButtonV32Props.voucherButtonV2Props}

@@ -34485,6 +34485,8 @@ var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
 var _VoucherButtonV = _interopRequireDefault(require("../VoucherButtonV3"));
 
+var _VoucherButtonV2 = _interopRequireDefault(require("../VoucherButtonV2"));
+
 require("./HomePageV3.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34640,7 +34642,7 @@ var HomePageV3 = /*#__PURE__*/function (_React$Component) {
 
 var _default = HomePageV3;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../VoucherButtonV3":"components/VoucherButtonV3/index.jsx","./HomePageV3.css":"components/HomePageV3/HomePageV3.css"}],"components/Property1Audio/Property1Audio.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../VoucherButtonV3":"components/VoucherButtonV3/index.jsx","../VoucherButtonV2":"components/VoucherButtonV2/index.jsx","./HomePageV3.css":"components/HomePageV3/HomePageV3.css"}],"components/Property1Audio/Property1Audio.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
