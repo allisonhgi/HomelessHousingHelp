@@ -1,0 +1,44 @@
+.tip-box {
+  align-items: flex-start;
+  display: flex;
+  height: 272px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 623px;
+  padding: 0 0.0px;
+  position: absolute;
+  top: 0;
+}
+
+.overlap-group-21 {
+  height: 171px;
+  position: relative;
+  width: 573px;
+}
+
+.rectangle-6 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 127px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 573px;
+}
+
+.this-button-will-tak {
+  left: 18px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 13px;
+  width: 526px;
+}
+
+.arrow-3 {
+  height: 45px;
+  left: 34px;
+  position: absolute;
+  top: 126px;
+  width: 22px;
+}
+

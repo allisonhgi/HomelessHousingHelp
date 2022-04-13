@@ -1,0 +1,80 @@
+.voucher-tool-v3-tutorial-audio-button {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  padding: 28px 0;
+  width: 1440px;
+}
+
+.flex-row-25 {
+  align-items: flex-start;
+  display: flex;
+  height: 88px;
+  margin-right: 4.0px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.overlap-group2-12 {
+  align-self: flex-end;
+  height: 112px;
+  margin-right: -5px;
+  margin-top: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.voucher-tool-10 {
+  color: var(--black);
+  font-weight: 500;
+  left: 512px;
+  position: absolute;
+  top: 0;
+  width: 405px;
+}
+
+.line-1-10 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.flex-row-26 {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  height: 315px;
+  margin-left: 44px;
+  margin-top: 40px;
+  min-width: 699px;
+  position: relative;
+}
+
+.tutorial-buttons-container-8 {
+  align-items: flex-start;
+  display: flex;
+  height: 78px;
+  margin-right: 6.0px;
+  margin-top: 261px;
+  min-width: 1348px;
+}
+
+.tutorial-buttons-30 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 77px;
+  width: 99px;
+}
+
+.tutorial-buttons-31 {
+  cursor: pointer;
+  height: 77px;
+  margin-left: 1150px;
+  width: 99px;
+}
+

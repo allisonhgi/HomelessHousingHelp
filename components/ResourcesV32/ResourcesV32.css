@@ -1,0 +1,121 @@
+.resources-v3 {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1484px;
+  padding: 28px 38px;
+  position: relative;
+  width: 1440px;
+}
+
+.flex-row-7 {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  height: 88px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.more-resources-6 {
+  color: var(--black);
+  font-weight: 500;
+  margin-left: 2.0px;
+  margin-top: 75px;
+  min-height: 75px;
+  width: 440px;
+}
+
+.if-you-have-already {
+  letter-spacing: 0;
+  margin-right: 12.0px;
+  margin-top: 36px;
+  min-height: 83px;
+  width: 1262px;
+}
+
+.span1-2 {
+  color: var(--black);
+  font-family: var(--font-family-libre_baskerville);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+}
+
+.other-voucher-programs {
+  align-self: flex-start;
+  letter-spacing: 0;
+  margin-left: 45px;
+  margin-top: 13px;
+  min-height: 75px;
+  width: 599px;
+}
+
+.overlap-group4-3 {
+  height: 242px;
+  margin-left: 19.0px;
+  margin-top: 18px;
+  position: relative;
+  width: 1293px;
+}
+
+.housing-choice-vouchers {
+  left: 21px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 76px;
+}
+
+.the-housing-choice-v {
+  left: 21px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 136px;
+  width: 1217px;
+}
+
+.food-and-shelter-resources {
+  align-self: flex-start;
+  letter-spacing: 0;
+  margin-left: 45px;
+  margin-top: 32px;
+  min-height: 75px;
+  width: 687px;
+}
+
+.temporary-housing-resources {
+  align-self: flex-start;
+  letter-spacing: 0;
+  margin-left: 45px;
+  margin-top: 36px;
+  min-height: 75px;
+  width: 789px;
+}
+
+.overlap-group5-4 {
+  height: 242px;
+  margin-left: 19.0px;
+  position: relative;
+  width: 1293px;
+}
+
+.rectangle-27-2 {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px #00000080;
+  cursor: pointer;
+  height: 50px;
+  left: 1041px;
+  position: absolute;
+  top: 171px;
+  width: 222px;
+}
+
+.link-to-resource-2 {
+  left: 1058px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 183px;
+  width: 187px;
+}
+

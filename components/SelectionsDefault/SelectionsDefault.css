@@ -1,0 +1,115 @@
+.eligibility-questions {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 125px;
+  min-height: 564px;
+  padding: 17px 0;
+  width: 1011px;
+}
+
+.overlap-group3-8 {
+  align-self: flex-end;
+  height: 454px;
+  position: relative;
+  width: 958px;
+}
+
+.overlap-group2-14 {
+  height: 446px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 958px;
+}
+
+.in-order-to-be-eligi {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 0;
+  width: 905px;
+}
+
+.span0-2 {
+  line-height: 37px;
+}
+
+.span1-5 {
+  line-height: 25px;
+}
+
+.homeless-at-risk-of {
+  left: 119px;
+  letter-spacing: 0;
+  line-height: 55px;
+  position: absolute;
+  top: 138px;
+  width: 839px;
+}
+
+.rectangle-12 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 149px;
+  width: 32px;
+}
+
+.rectangle-13 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 204px;
+  width: 32px;
+}
+
+.rectangle-14 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 260px;
+  width: 32px;
+}
+
+.rectangle-15 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 313px;
+  width: 32px;
+}
+
+.rectangle-16-1 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 369px;
+  width: 32px;
+}
+
+.rectangle-17 {
+  background-color: var(--white);
+  height: 32px;
+  left: 64px;
+  position: absolute;
+  top: 422px;
+  width: 32px;
+}
+
+.rectangle-18 {
+  background-color: var(--white);
+  height: 32px;
+  margin-left: 116px;
+  margin-top: 23px;
+  width: 32px;
+}
+

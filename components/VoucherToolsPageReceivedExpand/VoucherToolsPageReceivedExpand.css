@@ -1,0 +1,95 @@
+.voucher-tools-page-received-expand {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1005px;
+  padding: 28px 38px;
+  width: 1440px;
+}
+
+.flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 88px;
+  min-width: 1360px;
+  position: relative;
+}
+
+.resource-matching {
+  align-self: center;
+  color: var(--black);
+  font-weight: 500;
+  margin-left: 1.0px;
+  margin-top: 75px;
+  min-height: 68px;
+  text-align: center;
+  width: 527px;
+}
+
+.if-youre-not-sure-w {
+  align-self: center;
+  letter-spacing: 0;
+  margin-right: 12.0px;
+  margin-top: 45px;
+  min-height: 36px;
+  width: 1262px;
+}
+
+.click-on-the-section {
+  letter-spacing: 0;
+  margin-left: 45px;
+  margin-top: 37px;
+  min-height: 75px;
+  width: 960px;
+}
+
+.overlap-group-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  margin-right: 12px;
+  min-width: 1307px;
+}
+
+.button-container {
+  height: 495px;
+  position: relative;
+  width: 411px;
+}
+
+.overlap-group4 {
+  align-items: flex-start;
+  background-color: var(--hippie-blue);
+  border-radius: 5px;
+  display: flex;
+  height: 495px;
+  margin-left: 38px;
+  min-width: 410px;
+  padding: 19px 21px;
+}
+
+.ive-applied-for-a-v {
+  letter-spacing: 0;
+  min-height: 435px;
+  width: 368px;
+}
+
+.overlap-group5 {
+  align-items: flex-start;
+  background-color: var(--amazon);
+  border-radius: 5px;
+  display: flex;
+  height: 495px;
+  justify-content: flex-end;
+  margin-left: 38px;
+  min-width: 410px;
+  padding: 21px 20px;
+}
+
+.ive-applied-for-a-v-1 {
+  letter-spacing: 0;
+  min-height: 75px;
+  width: 368px;
+}
+
