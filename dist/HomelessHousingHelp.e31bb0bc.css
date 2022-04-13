@@ -15,12 +15,15 @@
   flex-direction: row;
   justify-content: center;
   pointer-events: none;
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  zoom: 0.88;
 }
 
 .container-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
+  margin: 0;
 }
 
 .overlay {
@@ -708,8 +711,9 @@
   flex-direction: column;
   height: 2126px;
   overflow: hidden;
-  padding: 28px 0;
   width: 1440px;
+  padding: 28px 0;
+  margin: auto;
 }
 
 .flex-row-1 {
@@ -723,7 +727,7 @@
 
 .overlap-group5-1 {
   height: 2088px;
-  margin-right: -132.92px;
+  margin-right: -150px;
   margin-top: 115px;
   position: relative;
   width: 1819px;

@@ -5,8 +5,9 @@
   flex-direction: column;
   height: 2126px;
   overflow: hidden;
-  padding: 28px 0;
   width: 1440px;
+  padding: 28px 0;
+  margin: auto;
 }
 
 .flex-row-1 {
@@ -20,7 +21,7 @@
 
 .overlap-group5-1 {
   height: 2088px;
-  margin-right: -132.92px;
+  margin-right: -150px;
   margin-top: 115px;
   position: relative;
   width: 1819px;
