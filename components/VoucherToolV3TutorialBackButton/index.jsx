@@ -1,44 +1,97 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HomePageLink from "../HomePageLink";
 import Logo from "../Logo";
+import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
 import Property1Audio from "../Property1Audio";
 import TipTypeBackButton from "../TipTypeBackButton";
+import styled from "styled-components";
+import { Header2 } from "../../styledMixins";
 import "./VoucherToolV3TutorialBackButton.css";
 
 class VoucherToolV3TutorialBackButton extends React.Component {
   render() {
-    const { voucherTool, line1, property1AudioProps, tipTypeBackButtonProps } = this.props;
+    const { voucherTool, property1AudioProps, tipTypeBackButtonProps } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-tutorial-back-button screen">
-          <div className="flex-row-23">
-            <HomePageLink />
+          <OverlapGroup2>
             <Logo />
+            <HomePageLink />
             <MoreResources />
-          </div>
-          <div className="overlap-group3-6">
-            <div className="voucher-tool-9 header-2">{voucherTool}</div>
-            <img className="line-1-9" src={line1} />
-          </div>
+          </OverlapGroup2>
+          <VoucherTool>{voucherTool}</VoucherTool>
           <Property1Audio className={property1AudioProps.className} />
-          <div className="flex-row-24">
-            <div className="overlap-group2-11">
+          <FlexRow>
+            <OverlapGroup3>
               <TipTypeBackButton thisButtonWillTak={tipTypeBackButtonProps.thisButtonWillTak} />
               <Link to="/voucher-tool-v3-tutorial-next-button">
-                <img className="tutorial-buttons-28" src="/img/tutorial-buttons-15@2x.svg" />
+                <TutorialButtons src="/img/tutorial-buttons-21@2x.svg" />
               </Link>
-            </div>
+            </OverlapGroup3>
             <Link to="/voucher-tool-v3-tutorial-audio-button">
-              <img className="tutorial-buttons-29" src="/img/tutorial-buttons-14@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-20@2x.svg" />
             </Link>
-          </div>
+          </FlexRow>
         </div>
       </div>
     );
   }
 }
+
+const OverlapGroup2 = styled.div`
+  height: 152px;
+  position: relative;
+  display: flex;
+  padding: 38px 85px;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 1440px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px #00000040;
+`;
+
+const VoucherTool = styled.div`
+  ${Header2}
+  width: 405px;
+  min-height: 111px;
+  align-self: center;
+  margin-top: 63px;
+  margin-right: 1px;
+  font-weight: 500;
+  color: var(--black);
+`;
+
+const FlexRow = styled.div`
+  margin-top: 322px;
+  margin-left: -8px;
+  display: flex;
+  align-items: flex-end;
+  min-width: 1399px;
+`;
+
+const OverlapGroup3 = styled.div`
+  width: 623px;
+  height: 272px;
+  position: relative;
+`;
+
+const TutorialButtons = styled.img`
+  position: absolute;
+  width: 99px;
+  height: 77px;
+  top: 189px;
+  left: 51px;
+  cursor: pointer;
+`;
+
+const TutorialButtons1 = styled.img`
+  width: 99px;
+  height: 77px;
+  margin-left: 677px;
+  margin-bottom: 7px;
+  cursor: pointer;
+`;
 
 export default VoucherToolV3TutorialBackButton;

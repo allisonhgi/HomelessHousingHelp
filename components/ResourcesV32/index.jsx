@@ -1,74 +1,96 @@
 import React from "react";
-import HomePageLink from "../HomePageLink";
 import Logo from "../Logo";
+import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
 import ResourceAddedOrNotNotAdded2 from "../ResourceAddedOrNotNotAdded2";
 import ResourceAddedOrNotResourceAddedOrNo2 from "../ResourceAddedOrNotResourceAddedOrNo2";
-import ResourceAddedOrNotNotAdded3 from "../ResourceAddedOrNotNotAdded3";
+import styled from "styled-components";
+import { RobotoMediumBlack50px, Header2, LibrebaskervilleNormalBlack25px } from "../../styledMixins";
 import "./ResourcesV32.css";
 
 class ResourcesV32 extends React.Component {
   render() {
     const {
-      moreResources,
+      findAHome,
       spanText1,
       spanText2,
-      otherVoucherPrograms,
-      housingChoiceVouchers,
-      theHousingChoiceV,
-      foodAndShelterResources,
-      temporaryHousingResources,
-      linkToResource,
-      moreResourcesProps,
+      spanText3,
+      housingSearchResources,
       resourceAddedOrNotNotAdded2Props,
       resourceAddedOrNotResourceAddedOrNo2Props,
-      resourceAddedOrNotNotAdded3Props,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="resources-v3 screen">
-          <div className="flex-row-7">
-            <HomePageLink />
+          <OverlapGroup3>
             <Logo />
-            <MoreResources className={moreResourcesProps.className} />
-          </div>
-          <div className="more-resources-6 header-2">{moreResources}</div>
-          <div className="if-you-have-already librebaskerville-normal-black-25px">
+            <HomePageLink />
+            <MoreResources />
+          </OverlapGroup3>
+          <FindAHome>{findAHome}</FindAHome>
+          <IfYouHaveReceived>
             <span className="librebaskerville-normal-black-25px">{spanText1}</span>
-            <span className="span1-2">{spanText2}</span>
-          </div>
-          <div className="other-voucher-programs roboto-medium-black-50px">{otherVoucherPrograms}</div>
-          <div className="overlap-group4-3">
-            <div className="housing-choice-vouchers roboto-medium-white-40px">{housingChoiceVouchers}</div>
-            <div className="the-housing-choice-v librebaskerville-normal-white-25px">{theHousingChoiceV}</div>
-            <ResourceAddedOrNotNotAdded2
-              housingChoiceVouchers={resourceAddedOrNotNotAdded2Props.housingChoiceVouchers}
-              theHousingChoiceV={resourceAddedOrNotNotAdded2Props.theHousingChoiceV}
-              linkToResource={resourceAddedOrNotNotAdded2Props.linkToResource}
-            />
-          </div>
-          <div className="food-and-shelter-resources roboto-medium-black-50px">{foodAndShelterResources}</div>
+            <span className="librebaskerville-bold-black-25px">{spanText2}</span>
+            <span className="librebaskerville-normal-black-25px">{spanText3}</span>
+          </IfYouHaveReceived>
+          <HousingSearchResources>{housingSearchResources}</HousingSearchResources>
+          <ResourceAddedOrNotNotAdded2
+            affordableHousing={resourceAddedOrNotNotAdded2Props.affordableHousing}
+            theLargestAndMost={resourceAddedOrNotNotAdded2Props.theLargestAndMost}
+            linkToResource={resourceAddedOrNotNotAdded2Props.linkToResource}
+          />
           <ResourceAddedOrNotResourceAddedOrNo2
-            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo2Props.universityDistrictFoodBank}
-            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo2Props.ourMissionIsToBu}
+            name={resourceAddedOrNotResourceAddedOrNo2Props.name}
+            kchaHelpsRentersI={resourceAddedOrNotResourceAddedOrNo2Props.kchaHelpsRentersI}
             linkToResource={resourceAddedOrNotResourceAddedOrNo2Props.linkToResource}
           />
-          <div className="temporary-housing-resources roboto-medium-black-50px">{temporaryHousingResources}</div>
-          <div className="overlap-group5-4">
-            <ResourceAddedOrNotNotAdded3
-              housingChoiceVouchers={resourceAddedOrNotNotAdded3Props.housingChoiceVouchers}
-              theHousingChoiceV={resourceAddedOrNotNotAdded3Props.theHousingChoiceV}
-            />
-            <a href="https://lihi.org/rosies-village/" target="_blank">
-              <div className="rectangle-27-2"></div>
-            </a>
-            <div className="link-to-resource-2 roboto-medium-midnight-blue-25px">{linkToResource}</div>
-          </div>
         </div>
       </div>
     );
   }
 }
+
+const OverlapGroup3 = styled.div`
+  height: 152px;
+  position: relative;
+  display: flex;
+  padding: 38px 85px;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 1440px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px #00000040;
+`;
+
+const FindAHome = styled.div`
+  ${Header2}
+  width: 343px;
+  min-height: 75px;
+  margin-top: 39px;
+  margin-right: 1px;
+  font-weight: 500;
+  color: var(--black);
+  text-align: center;
+`;
+
+const IfYouHaveReceived = styled.div`
+  ${LibrebaskervilleNormalBlack25px}
+  width: 1262px;
+  min-height: 100px;
+  margin-top: 36px;
+  margin-right: 12px;
+  letter-spacing: 0;
+`;
+
+const HousingSearchResources = styled.div`
+  ${RobotoMediumBlack50px}
+  width: 663px;
+  min-height: 75px;
+  align-self: flex-start;
+  margin-top: 36px;
+  margin-left: 83px;
+  letter-spacing: 0;
+`;
 
 export default ResourcesV32;

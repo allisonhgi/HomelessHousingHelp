@@ -29643,11 +29643,6 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"App.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":[function(require,module,exports) {
 "use strict";
 
@@ -29681,7 +29676,7 @@ function _inheritsLoose(subClass, superClass) {
   subClass.prototype.constructor = subClass;
   (0, _setPrototypeOf.default)(subClass, superClass);
 }
-},{"./setPrototypeOf.js":"node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js"}],"node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+},{"./setPrototypeOf.js":"node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js"}],"node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -29871,7 +29866,7 @@ if ("development" !== "production") {
     exports.typeOf = typeOf;
   })();
 }
-},{}],"node_modules/react-is/index.js":[function(require,module,exports) {
+},{}],"node_modules/prop-types/node_modules/react-is/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -29879,7 +29874,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-is.development.js');
 }
-},{"./cjs/react-is.development.js":"node_modules/react-is/cjs/react-is.development.js"}],"node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
+},{"./cjs/react-is.development.js":"node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js"}],"node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -30658,7 +30653,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
   ReactPropTypes.PropTypes = ReactPropTypes;
   return ReactPropTypes;
 };
-},{"react-is":"node_modules/react-is/index.js","object-assign":"node_modules/object-assign/index.js","./lib/ReactPropTypesSecret":"node_modules/prop-types/lib/ReactPropTypesSecret.js","./lib/has":"node_modules/prop-types/lib/has.js","./checkPropTypes":"node_modules/prop-types/checkPropTypes.js"}],"node_modules/prop-types/index.js":[function(require,module,exports) {
+},{"react-is":"node_modules/prop-types/node_modules/react-is/index.js","object-assign":"node_modules/object-assign/index.js","./lib/ReactPropTypesSecret":"node_modules/prop-types/lib/ReactPropTypesSecret.js","./lib/has":"node_modules/prop-types/lib/has.js","./checkPropTypes":"node_modules/prop-types/checkPropTypes.js"}],"node_modules/prop-types/index.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -30677,7 +30672,7 @@ if ("development" !== 'production') {
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
-},{"react-is":"node_modules/react-is/index.js","./factoryWithTypeCheckers":"node_modules/prop-types/factoryWithTypeCheckers.js"}],"node_modules/@babel/runtime/helpers/esm/extends.js":[function(require,module,exports) {
+},{"react-is":"node_modules/prop-types/node_modules/react-is/index.js","./factoryWithTypeCheckers":"node_modules/prop-types/factoryWithTypeCheckers.js"}],"node_modules/@babel/runtime/helpers/esm/extends.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32439,7 +32434,205 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
 
-},{"isarray":"node_modules/path-to-regexp/node_modules/isarray/index.js"}],"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
+},{"isarray":"node_modules/path-to-regexp/node_modules/isarray/index.js"}],"node_modules/react-router/node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+'use strict';
+
+if ("development" !== "production") {
+  (function () {
+    'use strict'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+
+    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+
+    function isValidElementType(type) {
+      return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+
+    function typeOf(object) {
+      if (typeof object === 'object' && object !== null) {
+        var $$typeof = object.$$typeof;
+
+        switch ($$typeof) {
+          case REACT_ELEMENT_TYPE:
+            var type = object.type;
+
+            switch (type) {
+              case REACT_ASYNC_MODE_TYPE:
+              case REACT_CONCURRENT_MODE_TYPE:
+              case REACT_FRAGMENT_TYPE:
+              case REACT_PROFILER_TYPE:
+              case REACT_STRICT_MODE_TYPE:
+              case REACT_SUSPENSE_TYPE:
+                return type;
+
+              default:
+                var $$typeofType = type && type.$$typeof;
+
+                switch ($$typeofType) {
+                  case REACT_CONTEXT_TYPE:
+                  case REACT_FORWARD_REF_TYPE:
+                  case REACT_LAZY_TYPE:
+                  case REACT_MEMO_TYPE:
+                  case REACT_PROVIDER_TYPE:
+                    return $$typeofType;
+
+                  default:
+                    return $$typeof;
+                }
+
+            }
+
+          case REACT_PORTAL_TYPE:
+            return $$typeof;
+        }
+      }
+
+      return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+
+
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+
+    function isAsyncMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+          hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+        }
+      }
+      return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+
+    function isConcurrentMode(object) {
+      return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+
+    function isContextConsumer(object) {
+      return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+
+    function isContextProvider(object) {
+      return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+
+    function isElement(object) {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+
+    function isForwardRef(object) {
+      return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+
+    function isFragment(object) {
+      return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+
+    function isLazy(object) {
+      return typeOf(object) === REACT_LAZY_TYPE;
+    }
+
+    function isMemo(object) {
+      return typeOf(object) === REACT_MEMO_TYPE;
+    }
+
+    function isPortal(object) {
+      return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+
+    function isProfiler(object) {
+      return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+
+    function isStrictMode(object) {
+      return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+
+    function isSuspense(object) {
+      return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+  })();
+}
+},{}],"node_modules/react-router/node_modules/react-is/index.js":[function(require,module,exports) {
+'use strict';
+
+if ("development" === 'production') {
+  module.exports = require('./cjs/react-is.production.min.js');
+} else {
+  module.exports = require('./cjs/react-is.development.js');
+}
+},{"./cjs/react-is.development.js":"node_modules/react-router/node_modules/react-is/cjs/react-is.development.js"}],"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32461,7 +32654,205 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
   return target;
 }
-},{}],"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":[function(require,module,exports) {
+},{}],"node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+'use strict';
+
+if ("development" !== "production") {
+  (function () {
+    'use strict'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+
+    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+
+    function isValidElementType(type) {
+      return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+
+    function typeOf(object) {
+      if (typeof object === 'object' && object !== null) {
+        var $$typeof = object.$$typeof;
+
+        switch ($$typeof) {
+          case REACT_ELEMENT_TYPE:
+            var type = object.type;
+
+            switch (type) {
+              case REACT_ASYNC_MODE_TYPE:
+              case REACT_CONCURRENT_MODE_TYPE:
+              case REACT_FRAGMENT_TYPE:
+              case REACT_PROFILER_TYPE:
+              case REACT_STRICT_MODE_TYPE:
+              case REACT_SUSPENSE_TYPE:
+                return type;
+
+              default:
+                var $$typeofType = type && type.$$typeof;
+
+                switch ($$typeofType) {
+                  case REACT_CONTEXT_TYPE:
+                  case REACT_FORWARD_REF_TYPE:
+                  case REACT_LAZY_TYPE:
+                  case REACT_MEMO_TYPE:
+                  case REACT_PROVIDER_TYPE:
+                    return $$typeofType;
+
+                  default:
+                    return $$typeof;
+                }
+
+            }
+
+          case REACT_PORTAL_TYPE:
+            return $$typeof;
+        }
+      }
+
+      return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+
+
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+
+    function isAsyncMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+          hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+        }
+      }
+      return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+
+    function isConcurrentMode(object) {
+      return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+
+    function isContextConsumer(object) {
+      return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+
+    function isContextProvider(object) {
+      return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+
+    function isElement(object) {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+
+    function isForwardRef(object) {
+      return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+
+    function isFragment(object) {
+      return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+
+    function isLazy(object) {
+      return typeOf(object) === REACT_LAZY_TYPE;
+    }
+
+    function isMemo(object) {
+      return typeOf(object) === REACT_MEMO_TYPE;
+    }
+
+    function isPortal(object) {
+      return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+
+    function isProfiler(object) {
+      return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+
+    function isStrictMode(object) {
+      return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+
+    function isSuspense(object) {
+      return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+  })();
+}
+},{}],"node_modules/hoist-non-react-statics/node_modules/react-is/index.js":[function(require,module,exports) {
+'use strict';
+
+if ("development" === 'production') {
+  module.exports = require('./cjs/react-is.production.min.js');
+} else {
+  module.exports = require('./cjs/react-is.development.js');
+}
+},{"./cjs/react-is.development.js":"node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js"}],"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":[function(require,module,exports) {
 'use strict';
 
 var reactIs = require('react-is');
@@ -32566,7 +32957,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"node_modules/react-is/index.js"}],"node_modules/react-router/esm/react-router.js":[function(require,module,exports) {
+},{"react-is":"node_modules/hoist-non-react-statics/node_modules/react-is/index.js"}],"node_modules/react-router/esm/react-router.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -33362,7 +33753,7 @@ if ("development" !== "production") {
     global[key] = "esm";
   }
 }
-},{"@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","history":"node_modules/history/esm/history.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"node_modules/path-to-regexp/index.js","react-is":"node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","history":"node_modules/history/esm/history.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"node_modules/path-to-regexp/index.js","react-is":"node_modules/react-router/node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33775,12 +34166,2239 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"components/HomePageLink/HomePageLink.css":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+/**
+ * @license React
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+'use strict';
+
+if ("development" !== "production") {
+  (function () {
+    'use strict'; // ATTENTION
+    // When adding new symbols to this file,
+    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+    // The Symbol used to tag the ReactElement-like types.
+
+    var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+    var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+    var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+    var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+    var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+    var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+    var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+    var REACT_SERVER_CONTEXT_TYPE = Symbol.for('react.server_context');
+    var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+    var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+    var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+    var REACT_MEMO_TYPE = Symbol.for('react.memo');
+    var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+    var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen'); // -----------------------------------------------------------------------------
+
+    var enableScopeAPI = false; // Experimental Create Event Handle API.
+
+    var enableCacheElement = false;
+    var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+    var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+    // stuff. Intended to enable React core members to more easily debug scheduling
+    // issues in DEV builds.
+
+    var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+    var REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+
+    function isValidElementType(type) {
+      if (typeof type === 'string' || typeof type === 'function') {
+        return true;
+      } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+      if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden || type === REACT_OFFSCREEN_TYPE || enableScopeAPI || enableCacheElement || enableTransitionTracing) {
+        return true;
+      }
+
+      if (typeof type === 'object' && type !== null) {
+        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+        // types supported by any Flight configuration anywhere since
+        // we don't know which Flight build this will end up being used
+        // with.
+        type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    function typeOf(object) {
+      if (typeof object === 'object' && object !== null) {
+        var $$typeof = object.$$typeof;
+
+        switch ($$typeof) {
+          case REACT_ELEMENT_TYPE:
+            var type = object.type;
+
+            switch (type) {
+              case REACT_FRAGMENT_TYPE:
+              case REACT_PROFILER_TYPE:
+              case REACT_STRICT_MODE_TYPE:
+              case REACT_SUSPENSE_TYPE:
+              case REACT_SUSPENSE_LIST_TYPE:
+                return type;
+
+              default:
+                var $$typeofType = type && type.$$typeof;
+
+                switch ($$typeofType) {
+                  case REACT_SERVER_CONTEXT_TYPE:
+                  case REACT_CONTEXT_TYPE:
+                  case REACT_FORWARD_REF_TYPE:
+                  case REACT_LAZY_TYPE:
+                  case REACT_MEMO_TYPE:
+                  case REACT_PROVIDER_TYPE:
+                    return $$typeofType;
+
+                  default:
+                    return $$typeof;
+                }
+
+            }
+
+          case REACT_PORTAL_TYPE:
+            return $$typeof;
+        }
+      }
+
+      return undefined;
+    }
+
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var SuspenseList = REACT_SUSPENSE_LIST_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false;
+    var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
+
+    function isAsyncMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+          hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+        }
+      }
+      return false;
+    }
+
+    function isConcurrentMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+          hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
+
+          console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+        }
+      }
+      return false;
+    }
+
+    function isContextConsumer(object) {
+      return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+
+    function isContextProvider(object) {
+      return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+
+    function isElement(object) {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+
+    function isForwardRef(object) {
+      return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+
+    function isFragment(object) {
+      return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+
+    function isLazy(object) {
+      return typeOf(object) === REACT_LAZY_TYPE;
+    }
+
+    function isMemo(object) {
+      return typeOf(object) === REACT_MEMO_TYPE;
+    }
+
+    function isPortal(object) {
+      return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+
+    function isProfiler(object) {
+      return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+
+    function isStrictMode(object) {
+      return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+
+    function isSuspense(object) {
+      return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+
+    function isSuspenseList(object) {
+      return typeOf(object) === REACT_SUSPENSE_LIST_TYPE;
+    }
+
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.SuspenseList = SuspenseList;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isSuspenseList = isSuspenseList;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+  })();
+}
+},{}],"node_modules/react-is/index.js":[function(require,module,exports) {
+'use strict';
+
+if ("development" === 'production') {
+  module.exports = require('./cjs/react-is.production.min.js');
+} else {
+  module.exports = require('./cjs/react-is.development.js');
+}
+},{"./cjs/react-is.development.js":"node_modules/react-is/cjs/react-is.development.js"}],"node_modules/shallowequal/index.js":[function(require,module,exports) {
+//
+
+module.exports = function shallowEqual(objA, objB, compare, compareContext) {
+  var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
+
+  if (ret !== void 0) {
+    return !!ret;
+  }
+
+  if (objA === objB) {
+    return true;
+  }
+
+  if (typeof objA !== "object" || !objA || typeof objB !== "object" || !objB) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  var bHasOwnProperty = Object.prototype.hasOwnProperty.bind(objB);
+
+  // Test for A's keys different from B.
+  for (var idx = 0; idx < keysA.length; idx++) {
+    var key = keysA[idx];
+
+    if (!bHasOwnProperty(key)) {
+      return false;
+    }
+
+    var valueA = objA[key];
+    var valueB = objB[key];
+
+    ret = compare ? compare.call(compareContext, valueA, valueB, key) : void 0;
+
+    if (ret === false || (ret === void 0 && valueA !== valueB)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+},{}],"node_modules/@emotion/stylis/dist/stylis.browser.esm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function stylis_min(W) {
+  function M(d, c, e, h, a) {
+    for (var m = 0, b = 0, v = 0, n = 0, q, g, x = 0, K = 0, k, u = k = q = 0, l = 0, r = 0, I = 0, t = 0, B = e.length, J = B - 1, y, f = '', p = '', F = '', G = '', C; l < B;) {
+      g = e.charCodeAt(l);
+      l === J && 0 !== b + n + v + m && (0 !== b && (g = 47 === b ? 10 : 47), n = v = m = 0, B++, J++);
+
+      if (0 === b + n + v + m) {
+        if (l === J && (0 < r && (f = f.replace(N, '')), 0 < f.trim().length)) {
+          switch (g) {
+            case 32:
+            case 9:
+            case 59:
+            case 13:
+            case 10:
+              break;
+
+            default:
+              f += e.charAt(l);
+          }
+
+          g = 59;
+        }
+
+        switch (g) {
+          case 123:
+            f = f.trim();
+            q = f.charCodeAt(0);
+            k = 1;
+
+            for (t = ++l; l < B;) {
+              switch (g = e.charCodeAt(l)) {
+                case 123:
+                  k++;
+                  break;
+
+                case 125:
+                  k--;
+                  break;
+
+                case 47:
+                  switch (g = e.charCodeAt(l + 1)) {
+                    case 42:
+                    case 47:
+                      a: {
+                        for (u = l + 1; u < J; ++u) {
+                          switch (e.charCodeAt(u)) {
+                            case 47:
+                              if (42 === g && 42 === e.charCodeAt(u - 1) && l + 2 !== u) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                              break;
+
+                            case 10:
+                              if (47 === g) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                          }
+                        }
+
+                        l = u;
+                      }
+
+                  }
+
+                  break;
+
+                case 91:
+                  g++;
+
+                case 40:
+                  g++;
+
+                case 34:
+                case 39:
+                  for (; l++ < J && e.charCodeAt(l) !== g;) {}
+
+              }
+
+              if (0 === k) break;
+              l++;
+            }
+
+            k = e.substring(t, l);
+            0 === q && (q = (f = f.replace(ca, '').trim()).charCodeAt(0));
+
+            switch (q) {
+              case 64:
+                0 < r && (f = f.replace(N, ''));
+                g = f.charCodeAt(1);
+
+                switch (g) {
+                  case 100:
+                  case 109:
+                  case 115:
+                  case 45:
+                    r = c;
+                    break;
+
+                  default:
+                    r = O;
+                }
+
+                k = M(c, r, k, g, a + 1);
+                t = k.length;
+                0 < A && (r = X(O, f, I), C = H(3, k, r, c, D, z, t, g, a, h), f = r.join(''), void 0 !== C && 0 === (t = (k = C.trim()).length) && (g = 0, k = ''));
+                if (0 < t) switch (g) {
+                  case 115:
+                    f = f.replace(da, ea);
+
+                  case 100:
+                  case 109:
+                  case 45:
+                    k = f + '{' + k + '}';
+                    break;
+
+                  case 107:
+                    f = f.replace(fa, '$1 $2');
+                    k = f + '{' + k + '}';
+                    k = 1 === w || 2 === w && L('@' + k, 3) ? '@-webkit-' + k + '@' + k : '@' + k;
+                    break;
+
+                  default:
+                    k = f + k, 112 === h && (k = (p += k, ''));
+                } else k = '';
+                break;
+
+              default:
+                k = M(c, X(c, f, I), k, h, a + 1);
+            }
+
+            F += k;
+            k = I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+            break;
+
+          case 125:
+          case 59:
+            f = (0 < r ? f.replace(N, '') : f).trim();
+            if (1 < (t = f.length)) switch (0 === u && (q = f.charCodeAt(0), 45 === q || 96 < q && 123 > q) && (t = (f = f.replace(' ', ':')).length), 0 < A && void 0 !== (C = H(1, f, c, d, D, z, p.length, h, a, h)) && 0 === (t = (f = C.trim()).length) && (f = '\x00\x00'), q = f.charCodeAt(0), g = f.charCodeAt(1), q) {
+              case 0:
+                break;
+
+              case 64:
+                if (105 === g || 99 === g) {
+                  G += f + e.charAt(l);
+                  break;
+                }
+
+              default:
+                58 !== f.charCodeAt(t - 1) && (p += P(f, q, g, f.charCodeAt(2)));
+            }
+            I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+        }
+      }
+
+      switch (g) {
+        case 13:
+        case 10:
+          47 === b ? b = 0 : 0 === 1 + q && 107 !== h && 0 < f.length && (r = 1, f += '\x00');
+          0 < A * Y && H(0, f, c, d, D, z, p.length, h, a, h);
+          z = 1;
+          D++;
+          break;
+
+        case 59:
+        case 125:
+          if (0 === b + n + v + m) {
+            z++;
+            break;
+          }
+
+        default:
+          z++;
+          y = e.charAt(l);
+
+          switch (g) {
+            case 9:
+            case 32:
+              if (0 === n + m + b) switch (x) {
+                case 44:
+                case 58:
+                case 9:
+                case 32:
+                  y = '';
+                  break;
+
+                default:
+                  32 !== g && (y = ' ');
+              }
+              break;
+
+            case 0:
+              y = '\\0';
+              break;
+
+            case 12:
+              y = '\\f';
+              break;
+
+            case 11:
+              y = '\\v';
+              break;
+
+            case 38:
+              0 === n + b + m && (r = I = 1, y = '\f' + y);
+              break;
+
+            case 108:
+              if (0 === n + b + m + E && 0 < u) switch (l - u) {
+                case 2:
+                  112 === x && 58 === e.charCodeAt(l - 3) && (E = x);
+
+                case 8:
+                  111 === K && (E = K);
+              }
+              break;
+
+            case 58:
+              0 === n + b + m && (u = l);
+              break;
+
+            case 44:
+              0 === b + v + n + m && (r = 1, y += '\r');
+              break;
+
+            case 34:
+            case 39:
+              0 === b && (n = n === g ? 0 : 0 === n ? g : n);
+              break;
+
+            case 91:
+              0 === n + b + v && m++;
+              break;
+
+            case 93:
+              0 === n + b + v && m--;
+              break;
+
+            case 41:
+              0 === n + b + m && v--;
+              break;
+
+            case 40:
+              if (0 === n + b + m) {
+                if (0 === q) switch (2 * x + 3 * K) {
+                  case 533:
+                    break;
+
+                  default:
+                    q = 1;
+                }
+                v++;
+              }
+
+              break;
+
+            case 64:
+              0 === b + v + n + m + u + k && (k = 1);
+              break;
+
+            case 42:
+            case 47:
+              if (!(0 < n + m + v)) switch (b) {
+                case 0:
+                  switch (2 * g + 3 * e.charCodeAt(l + 1)) {
+                    case 235:
+                      b = 47;
+                      break;
+
+                    case 220:
+                      t = l, b = 42;
+                  }
+
+                  break;
+
+                case 42:
+                  47 === g && 42 === x && t + 2 !== l && (33 === e.charCodeAt(t + 2) && (p += e.substring(t, l + 1)), y = '', b = 0);
+              }
+          }
+
+          0 === b && (f += y);
+      }
+
+      K = x;
+      x = g;
+      l++;
+    }
+
+    t = p.length;
+
+    if (0 < t) {
+      r = c;
+      if (0 < A && (C = H(2, p, r, d, D, z, t, h, a, h), void 0 !== C && 0 === (p = C).length)) return G + p + F;
+      p = r.join(',') + '{' + p + '}';
+
+      if (0 !== w * E) {
+        2 !== w || L(p, 2) || (E = 0);
+
+        switch (E) {
+          case 111:
+            p = p.replace(ha, ':-moz-$1') + p;
+            break;
+
+          case 112:
+            p = p.replace(Q, '::-webkit-input-$1') + p.replace(Q, '::-moz-$1') + p.replace(Q, ':-ms-input-$1') + p;
+        }
+
+        E = 0;
+      }
+    }
+
+    return G + p + F;
+  }
+
+  function X(d, c, e) {
+    var h = c.trim().split(ia);
+    c = h;
+    var a = h.length,
+        m = d.length;
+
+    switch (m) {
+      case 0:
+      case 1:
+        var b = 0;
+
+        for (d = 0 === m ? '' : d[0] + ' '; b < a; ++b) {
+          c[b] = Z(d, c[b], e).trim();
+        }
+
+        break;
+
+      default:
+        var v = b = 0;
+
+        for (c = []; b < a; ++b) {
+          for (var n = 0; n < m; ++n) {
+            c[v++] = Z(d[n] + ' ', h[b], e).trim();
+          }
+        }
+
+    }
+
+    return c;
+  }
+
+  function Z(d, c, e) {
+    var h = c.charCodeAt(0);
+    33 > h && (h = (c = c.trim()).charCodeAt(0));
+
+    switch (h) {
+      case 38:
+        return c.replace(F, '$1' + d.trim());
+
+      case 58:
+        return d.trim() + c.replace(F, '$1' + d.trim());
+
+      default:
+        if (0 < 1 * e && 0 < c.indexOf('\f')) return c.replace(F, (58 === d.charCodeAt(0) ? '' : '$1') + d.trim());
+    }
+
+    return d + c;
+  }
+
+  function P(d, c, e, h) {
+    var a = d + ';',
+        m = 2 * c + 3 * e + 4 * h;
+
+    if (944 === m) {
+      d = a.indexOf(':', 9) + 1;
+      var b = a.substring(d, a.length - 1).trim();
+      b = a.substring(0, d).trim() + b + ';';
+      return 1 === w || 2 === w && L(b, 1) ? '-webkit-' + b + b : b;
+    }
+
+    if (0 === w || 2 === w && !L(a, 1)) return a;
+
+    switch (m) {
+      case 1015:
+        return 97 === a.charCodeAt(10) ? '-webkit-' + a + a : a;
+
+      case 951:
+        return 116 === a.charCodeAt(3) ? '-webkit-' + a + a : a;
+
+      case 963:
+        return 110 === a.charCodeAt(5) ? '-webkit-' + a + a : a;
+
+      case 1009:
+        if (100 !== a.charCodeAt(4)) break;
+
+      case 969:
+      case 942:
+        return '-webkit-' + a + a;
+
+      case 978:
+        return '-webkit-' + a + '-moz-' + a + a;
+
+      case 1019:
+      case 983:
+        return '-webkit-' + a + '-moz-' + a + '-ms-' + a + a;
+
+      case 883:
+        if (45 === a.charCodeAt(8)) return '-webkit-' + a + a;
+        if (0 < a.indexOf('image-set(', 11)) return a.replace(ja, '$1-webkit-$2') + a;
+        break;
+
+      case 932:
+        if (45 === a.charCodeAt(4)) switch (a.charCodeAt(5)) {
+          case 103:
+            return '-webkit-box-' + a.replace('-grow', '') + '-webkit-' + a + '-ms-' + a.replace('grow', 'positive') + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-' + a.replace('shrink', 'negative') + a;
+
+          case 98:
+            return '-webkit-' + a + '-ms-' + a.replace('basis', 'preferred-size') + a;
+        }
+        return '-webkit-' + a + '-ms-' + a + a;
+
+      case 964:
+        return '-webkit-' + a + '-ms-flex-' + a + a;
+
+      case 1023:
+        if (99 !== a.charCodeAt(8)) break;
+        b = a.substring(a.indexOf(':', 15)).replace('flex-', '').replace('space-between', 'justify');
+        return '-webkit-box-pack' + b + '-webkit-' + a + '-ms-flex-pack' + b + a;
+
+      case 1005:
+        return ka.test(a) ? a.replace(aa, ':-webkit-') + a.replace(aa, ':-moz-') + a : a;
+
+      case 1e3:
+        b = a.substring(13).trim();
+        c = b.indexOf('-') + 1;
+
+        switch (b.charCodeAt(0) + b.charCodeAt(c)) {
+          case 226:
+            b = a.replace(G, 'tb');
+            break;
+
+          case 232:
+            b = a.replace(G, 'tb-rl');
+            break;
+
+          case 220:
+            b = a.replace(G, 'lr');
+            break;
+
+          default:
+            return a;
+        }
+
+        return '-webkit-' + a + '-ms-' + b + a;
+
+      case 1017:
+        if (-1 === a.indexOf('sticky', 9)) break;
+
+      case 975:
+        c = (a = d).length - 10;
+        b = (33 === a.charCodeAt(c) ? a.substring(0, c) : a).substring(d.indexOf(':', 7) + 1).trim();
+
+        switch (m = b.charCodeAt(0) + (b.charCodeAt(7) | 0)) {
+          case 203:
+            if (111 > b.charCodeAt(8)) break;
+
+          case 115:
+            a = a.replace(b, '-webkit-' + b) + ';' + a;
+            break;
+
+          case 207:
+          case 102:
+            a = a.replace(b, '-webkit-' + (102 < m ? 'inline-' : '') + 'box') + ';' + a.replace(b, '-webkit-' + b) + ';' + a.replace(b, '-ms-' + b + 'box') + ';' + a;
+        }
+
+        return a + ';';
+
+      case 938:
+        if (45 === a.charCodeAt(5)) switch (a.charCodeAt(6)) {
+          case 105:
+            return b = a.replace('-items', ''), '-webkit-' + a + '-webkit-box-' + b + '-ms-flex-' + b + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-flex-item-' + a.replace(ba, '') + a;
+
+          default:
+            return '-webkit-' + a + '-ms-flex-line-pack' + a.replace('align-content', '').replace(ba, '') + a;
+        }
+        break;
+
+      case 973:
+      case 989:
+        if (45 !== a.charCodeAt(3) || 122 === a.charCodeAt(4)) break;
+
+      case 931:
+      case 953:
+        if (!0 === la.test(d)) return 115 === (b = d.substring(d.indexOf(':') + 1)).charCodeAt(0) ? P(d.replace('stretch', 'fill-available'), c, e, h).replace(':fill-available', ':stretch') : a.replace(b, '-webkit-' + b) + a.replace(b, '-moz-' + b.replace('fill-', '')) + a;
+        break;
+
+      case 962:
+        if (a = '-webkit-' + a + (102 === a.charCodeAt(5) ? '-ms-' + a : '') + a, 211 === e + h && 105 === a.charCodeAt(13) && 0 < a.indexOf('transform', 10)) return a.substring(0, a.indexOf(';', 27) + 1).replace(ma, '$1-webkit-$2') + a;
+    }
+
+    return a;
+  }
+
+  function L(d, c) {
+    var e = d.indexOf(1 === c ? ':' : '{'),
+        h = d.substring(0, 3 !== c ? e : 10);
+    e = d.substring(e + 1, d.length - 1);
+    return R(2 !== c ? h : h.replace(na, '$1'), e, c);
+  }
+
+  function ea(d, c) {
+    var e = P(c, c.charCodeAt(0), c.charCodeAt(1), c.charCodeAt(2));
+    return e !== c + ';' ? e.replace(oa, ' or ($1)').substring(4) : '(' + c + ')';
+  }
+
+  function H(d, c, e, h, a, m, b, v, n, q) {
+    for (var g = 0, x = c, w; g < A; ++g) {
+      switch (w = S[g].call(B, d, x, e, h, a, m, b, v, n, q)) {
+        case void 0:
+        case !1:
+        case !0:
+        case null:
+          break;
+
+        default:
+          x = w;
+      }
+    }
+
+    if (x !== c) return x;
+  }
+
+  function T(d) {
+    switch (d) {
+      case void 0:
+      case null:
+        A = S.length = 0;
+        break;
+
+      default:
+        if ('function' === typeof d) S[A++] = d;else if ('object' === typeof d) for (var c = 0, e = d.length; c < e; ++c) {
+          T(d[c]);
+        } else Y = !!d | 0;
+    }
+
+    return T;
+  }
+
+  function U(d) {
+    d = d.prefix;
+    void 0 !== d && (R = null, d ? 'function' !== typeof d ? w = 1 : (w = 2, R = d) : w = 0);
+    return U;
+  }
+
+  function B(d, c) {
+    var e = d;
+    33 > e.charCodeAt(0) && (e = e.trim());
+    V = e;
+    e = [V];
+
+    if (0 < A) {
+      var h = H(-1, c, e, e, D, z, 0, 0, 0, 0);
+      void 0 !== h && 'string' === typeof h && (c = h);
+    }
+
+    var a = M(O, e, c, 0, 0);
+    0 < A && (h = H(-2, a, e, e, D, z, a.length, 0, 0, 0), void 0 !== h && (a = h));
+    V = '';
+    E = 0;
+    z = D = 1;
+    return a;
+  }
+
+  var ca = /^\0+/g,
+      N = /[\0\r\f]/g,
+      aa = /: */g,
+      ka = /zoo|gra/,
+      ma = /([,: ])(transform)/g,
+      ia = /,\r+?/g,
+      F = /([\t\r\n ])*\f?&/g,
+      fa = /@(k\w+)\s*(\S*)\s*/,
+      Q = /::(place)/g,
+      ha = /:(read-only)/g,
+      G = /[svh]\w+-[tblr]{2}/,
+      da = /\(\s*(.*)\s*\)/g,
+      oa = /([\s\S]*?);/g,
+      ba = /-self|flex-/g,
+      na = /[^]*?(:[rp][el]a[\w-]+)[^]*/,
+      la = /stretch|:\s*\w+\-(?:conte|avail)/,
+      ja = /([^-])(image-set\()/,
+      z = 1,
+      D = 1,
+      E = 0,
+      w = 1,
+      O = [],
+      S = [],
+      A = 0,
+      R = null,
+      Y = 0,
+      V = '';
+  B.use = T;
+  B.set = U;
+  void 0 !== W && U(W);
+  return B;
+}
+
+var _default = stylis_min;
+exports.default = _default;
+},{}],"node_modules/@emotion/unitless/dist/unitless.browser.esm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+var _default = unitlessKeys;
+exports.default = _default;
+},{}],"node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function memoize(fn) {
+  var cache = Object.create(null);
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+var _default = memoize;
+exports.default = _default;
+},{}],"node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.esm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _memoize = _interopRequireDefault(require("@emotion/memoize"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|abbr|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|enterKeyHint|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|translate|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|incremental|fallback|inert|itemProp|itemScope|itemType|itemID|itemRef|on|option|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var isPropValid = /* #__PURE__ */(0, _memoize.default)(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+var _default = isPropValid;
+exports.default = _default;
+},{"@emotion/memoize":"node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
+
+// shim for using process in browser
+var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+  throw new Error('setTimeout has not been defined');
+}
+
+function defaultClearTimeout() {
+  throw new Error('clearTimeout has not been defined');
+}
+
+(function () {
+  try {
+    if (typeof setTimeout === 'function') {
+      cachedSetTimeout = setTimeout;
+    } else {
+      cachedSetTimeout = defaultSetTimout;
+    }
+  } catch (e) {
+    cachedSetTimeout = defaultSetTimout;
+  }
+
+  try {
+    if (typeof clearTimeout === 'function') {
+      cachedClearTimeout = clearTimeout;
+    } else {
+      cachedClearTimeout = defaultClearTimeout;
+    }
+  } catch (e) {
+    cachedClearTimeout = defaultClearTimeout;
+  }
+})();
+
+function runTimeout(fun) {
+  if (cachedSetTimeout === setTimeout) {
+    //normal enviroments in sane situations
+    return setTimeout(fun, 0);
+  } // if setTimeout wasn't available but was latter defined
+
+
+  if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+    cachedSetTimeout = setTimeout;
+    return setTimeout(fun, 0);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedSetTimeout(fun, 0);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+      return cachedSetTimeout.call(null, fun, 0);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+      return cachedSetTimeout.call(this, fun, 0);
+    }
+  }
+}
+
+function runClearTimeout(marker) {
+  if (cachedClearTimeout === clearTimeout) {
+    //normal enviroments in sane situations
+    return clearTimeout(marker);
+  } // if clearTimeout wasn't available but was latter defined
+
+
+  if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+    cachedClearTimeout = clearTimeout;
+    return clearTimeout(marker);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedClearTimeout(marker);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+      return cachedClearTimeout.call(null, marker);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+      // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+      return cachedClearTimeout.call(this, marker);
+    }
+  }
+}
+
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+  if (!draining || !currentQueue) {
+    return;
+  }
+
+  draining = false;
+
+  if (currentQueue.length) {
+    queue = currentQueue.concat(queue);
+  } else {
+    queueIndex = -1;
+  }
+
+  if (queue.length) {
+    drainQueue();
+  }
+}
+
+function drainQueue() {
+  if (draining) {
+    return;
+  }
+
+  var timeout = runTimeout(cleanUpNextTick);
+  draining = true;
+  var len = queue.length;
+
+  while (len) {
+    currentQueue = queue;
+    queue = [];
+
+    while (++queueIndex < len) {
+      if (currentQueue) {
+        currentQueue[queueIndex].run();
+      }
+    }
+
+    queueIndex = -1;
+    len = queue.length;
+  }
+
+  currentQueue = null;
+  draining = false;
+  runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+  var args = new Array(arguments.length - 1);
+
+  if (arguments.length > 1) {
+    for (var i = 1; i < arguments.length; i++) {
+      args[i - 1] = arguments[i];
+    }
+  }
+
+  queue.push(new Item(fun, args));
+
+  if (queue.length === 1 && !draining) {
+    runTimeout(drainQueue);
+  }
+}; // v8 likes predictible objects
+
+
+function Item(fun, array) {
+  this.fun = fun;
+  this.array = array;
+}
+
+Item.prototype.run = function () {
+  this.fun.apply(null, this.array);
+};
+
+process.title = 'browser';
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) {
+  return [];
+};
+
+process.binding = function (name) {
+  throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () {
+  return '/';
+};
+
+process.chdir = function (dir) {
+  throw new Error('process.chdir is not supported');
+};
+
+process.umask = function () {
+  return 0;
+};
+},{}],"node_modules/styled-components/dist/styled-components.browser.esm.js":[function(require,module,exports) {
+var process = require("process");
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.StyleSheetContext = exports.StyleSheetConsumer = exports.ServerStyleSheet = void 0;
+exports.StyleSheetManager = ye;
+exports.ThemeContext = exports.ThemeConsumer = void 0;
+exports.ThemeProvider = Fe;
+exports.__PRIVATE__ = void 0;
+exports.createGlobalStyle = We;
+exports.css = Ce;
+exports.default = void 0;
+exports.isStyledComponent = N;
+exports.keyframes = Ue;
+exports.withTheme = exports.version = exports.useTheme = void 0;
+
+var _reactIs = require("react-is");
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _shallowequal = _interopRequireDefault(require("shallowequal"));
+
+var _stylis = _interopRequireDefault(require("@emotion/stylis"));
+
+var _unitless = _interopRequireDefault(require("@emotion/unitless"));
+
+var _isPropValid = _interopRequireDefault(require("@emotion/is-prop-valid"));
+
+var _hoistNonReactStatics = _interopRequireDefault(require("hoist-non-react-statics"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function v() {
+  return (v = Object.assign || function (e) {
+    for (var t = 1; t < arguments.length; t++) {
+      var n = arguments[t];
+
+      for (var r in n) {
+        Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+      }
+    }
+
+    return e;
+  }).apply(this, arguments);
+}
+
+var g = function g(e, t) {
+  for (var n = [e[0]], r = 0, o = t.length; r < o; r += 1) {
+    n.push(t[r], e[r + 1]);
+  }
+
+  return n;
+},
+    S = function S(t) {
+  return null !== t && "object" == _typeof(t) && "[object Object]" === (t.toString ? t.toString() : Object.prototype.toString.call(t)) && !(0, _reactIs.typeOf)(t);
+},
+    w = Object.freeze([]),
+    E = Object.freeze({});
+
+function b(e) {
+  return "function" == typeof e;
+}
+
+function _(e) {
+  return "production" !== "development" && "string" == typeof e && e || e.displayName || e.name || "Component";
+}
+
+function N(e) {
+  return e && "string" == typeof e.styledComponentId;
+}
+
+var A = "undefined" != typeof process && (undefined || undefined) || "data-styled",
+    C = "5.3.5",
+    I = "undefined" != typeof window && "HTMLElement" in window,
+    P = Boolean("boolean" == typeof SC_DISABLE_SPEEDY ? SC_DISABLE_SPEEDY : "undefined" != typeof process && void 0 !== undefined && "" !== undefined ? "false" !== undefined && undefined : "undefined" != typeof process && void 0 !== undefined && "" !== undefined ? "false" !== undefined && undefined : "production" !== "development"),
+    O = {},
+    R = "production" !== "development" ? {
+  1: "Cannot create styled-component for component: %s.\n\n",
+  2: "Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n",
+  3: "Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",
+  4: "The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n",
+  5: "The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n",
+  6: "Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n",
+  7: 'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n',
+  8: 'ThemeProvider: Please make your "theme" prop an object.\n\n',
+  9: "Missing document `<head>`\n\n",
+  10: "Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",
+  11: "_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n",
+  12: "It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n",
+  13: "%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n",
+  14: 'ThemeProvider: "theme" prop is required.\n\n',
+  15: "A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n",
+  16: "Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n",
+  17: "CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n"
+} : {};
+exports.version = C;
+
+function D() {
+  for (var e = arguments.length <= 0 ? void 0 : arguments[0], t = [], n = 1, r = arguments.length; n < r; n += 1) {
+    t.push(n < 0 || arguments.length <= n ? void 0 : arguments[n]);
+  }
+
+  return t.forEach(function (t) {
+    e = e.replace(/%[a-z]/, t);
+  }), e;
+}
+
+function j(e) {
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
+    n[r - 1] = arguments[r];
+  }
+
+  throw "production" === "development" ? new Error("An error occurred. See https://git.io/JUIaE#" + e + " for more information." + (n.length > 0 ? " Args: " + n.join(", ") : "")) : new Error(D.apply(void 0, [R[e]].concat(n)).trim());
+}
+
+var T = function () {
+  function e(e) {
+    this.groupSizes = new Uint32Array(512), this.length = 512, this.tag = e;
+  }
+
+  var t = e.prototype;
+  return t.indexOfGroup = function (e) {
+    for (var t = 0, n = 0; n < e; n++) {
+      t += this.groupSizes[n];
+    }
+
+    return t;
+  }, t.insertRules = function (e, t) {
+    if (e >= this.groupSizes.length) {
+      for (var n = this.groupSizes, r = n.length, o = r; e >= o;) {
+        (o <<= 1) < 0 && j(16, "" + e);
+      }
+
+      this.groupSizes = new Uint32Array(o), this.groupSizes.set(n), this.length = o;
+
+      for (var s = r; s < o; s++) {
+        this.groupSizes[s] = 0;
+      }
+    }
+
+    for (var i = this.indexOfGroup(e + 1), a = 0, c = t.length; a < c; a++) {
+      this.tag.insertRule(i, t[a]) && (this.groupSizes[e]++, i++);
+    }
+  }, t.clearGroup = function (e) {
+    if (e < this.length) {
+      var t = this.groupSizes[e],
+          n = this.indexOfGroup(e),
+          r = n + t;
+      this.groupSizes[e] = 0;
+
+      for (var o = n; o < r; o++) {
+        this.tag.deleteRule(n);
+      }
+    }
+  }, t.getGroup = function (e) {
+    var t = "";
+    if (e >= this.length || 0 === this.groupSizes[e]) return t;
+
+    for (var n = this.groupSizes[e], r = this.indexOfGroup(e), o = r + n, s = r; s < o; s++) {
+      t += this.tag.getRule(s) + "/*!sc*/\n";
+    }
+
+    return t;
+  }, e;
+}(),
+    x = new Map(),
+    k = new Map(),
+    V = 1,
+    B = function B(e) {
+  if (x.has(e)) return x.get(e);
+
+  for (; k.has(V);) {
+    V++;
+  }
+
+  var t = V++;
+  return "production" !== "development" && ((0 | t) < 0 || t > 1 << 30) && j(16, "" + t), x.set(e, t), k.set(t, e), t;
+},
+    z = function z(e) {
+  return k.get(e);
+},
+    M = function M(e, t) {
+  t >= V && (V = t + 1), x.set(e, t), k.set(t, e);
+},
+    G = "style[" + A + '][data-styled-version="5.3.5"]',
+    L = new RegExp("^" + A + '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),
+    F = function F(e, t, n) {
+  for (var r, o = n.split(","), s = 0, i = o.length; s < i; s++) {
+    (r = o[s]) && e.registerName(t, r);
+  }
+},
+    Y = function Y(e, t) {
+  for (var n = (t.textContent || "").split("/*!sc*/\n"), r = [], o = 0, s = n.length; o < s; o++) {
+    var i = n[o].trim();
+
+    if (i) {
+      var a = i.match(L);
+
+      if (a) {
+        var c = 0 | parseInt(a[1], 10),
+            u = a[2];
+        0 !== c && (M(u, c), F(e, u, a[3]), e.getTag().insertRules(c, r)), r.length = 0;
+      } else r.push(i);
+    }
+  }
+},
+    q = function q() {
+  return "undefined" != typeof window && void 0 !== window.__webpack_nonce__ ? window.__webpack_nonce__ : null;
+},
+    H = function H(e) {
+  var t = document.head,
+      n = e || t,
+      r = document.createElement("style"),
+      o = function (e) {
+    for (var t = e.childNodes, n = t.length; n >= 0; n--) {
+      var r = t[n];
+      if (r && 1 === r.nodeType && r.hasAttribute(A)) return r;
+    }
+  }(n),
+      s = void 0 !== o ? o.nextSibling : null;
+
+  r.setAttribute(A, "active"), r.setAttribute("data-styled-version", "5.3.5");
+  var i = q();
+  return i && r.setAttribute("nonce", i), n.insertBefore(r, s), r;
+},
+    $ = function () {
+  function e(e) {
+    var t = this.element = H(e);
+    t.appendChild(document.createTextNode("")), this.sheet = function (e) {
+      if (e.sheet) return e.sheet;
+
+      for (var t = document.styleSheets, n = 0, r = t.length; n < r; n++) {
+        var o = t[n];
+        if (o.ownerNode === e) return o;
+      }
+
+      j(17);
+    }(t), this.length = 0;
+  }
+
+  var t = e.prototype;
+  return t.insertRule = function (e, t) {
+    try {
+      return this.sheet.insertRule(t, e), this.length++, !0;
+    } catch (e) {
+      return !1;
+    }
+  }, t.deleteRule = function (e) {
+    this.sheet.deleteRule(e), this.length--;
+  }, t.getRule = function (e) {
+    var t = this.sheet.cssRules[e];
+    return void 0 !== t && "string" == typeof t.cssText ? t.cssText : "";
+  }, e;
+}(),
+    W = function () {
+  function e(e) {
+    var t = this.element = H(e);
+    this.nodes = t.childNodes, this.length = 0;
+  }
+
+  var t = e.prototype;
+  return t.insertRule = function (e, t) {
+    if (e <= this.length && e >= 0) {
+      var n = document.createTextNode(t),
+          r = this.nodes[e];
+      return this.element.insertBefore(n, r || null), this.length++, !0;
+    }
+
+    return !1;
+  }, t.deleteRule = function (e) {
+    this.element.removeChild(this.nodes[e]), this.length--;
+  }, t.getRule = function (e) {
+    return e < this.length ? this.nodes[e].textContent : "";
+  }, e;
+}(),
+    U = function () {
+  function e(e) {
+    this.rules = [], this.length = 0;
+  }
+
+  var t = e.prototype;
+  return t.insertRule = function (e, t) {
+    return e <= this.length && (this.rules.splice(e, 0, t), this.length++, !0);
+  }, t.deleteRule = function (e) {
+    this.rules.splice(e, 1), this.length--;
+  }, t.getRule = function (e) {
+    return e < this.length ? this.rules[e] : "";
+  }, e;
+}(),
+    J = I,
+    X = {
+  isServer: !I,
+  useCSSOMInjection: !P
+},
+    Z = function () {
+  function e(e, t, n) {
+    void 0 === e && (e = E), void 0 === t && (t = {}), this.options = v({}, X, {}, e), this.gs = t, this.names = new Map(n), this.server = !!e.isServer, !this.server && I && J && (J = !1, function (e) {
+      for (var t = document.querySelectorAll(G), n = 0, r = t.length; n < r; n++) {
+        var o = t[n];
+        o && "active" !== o.getAttribute(A) && (Y(e, o), o.parentNode && o.parentNode.removeChild(o));
+      }
+    }(this));
+  }
+
+  e.registerId = function (e) {
+    return B(e);
+  };
+
+  var t = e.prototype;
+  return t.reconstructWithOptions = function (t, n) {
+    return void 0 === n && (n = !0), new e(v({}, this.options, {}, t), this.gs, n && this.names || void 0);
+  }, t.allocateGSInstance = function (e) {
+    return this.gs[e] = (this.gs[e] || 0) + 1;
+  }, t.getTag = function () {
+    return this.tag || (this.tag = (n = (t = this.options).isServer, r = t.useCSSOMInjection, o = t.target, e = n ? new U(o) : r ? new $(o) : new W(o), new T(e)));
+    var e, t, n, r, o;
+  }, t.hasNameForId = function (e, t) {
+    return this.names.has(e) && this.names.get(e).has(t);
+  }, t.registerName = function (e, t) {
+    if (B(e), this.names.has(e)) this.names.get(e).add(t);else {
+      var n = new Set();
+      n.add(t), this.names.set(e, n);
+    }
+  }, t.insertRules = function (e, t, n) {
+    this.registerName(e, t), this.getTag().insertRules(B(e), n);
+  }, t.clearNames = function (e) {
+    this.names.has(e) && this.names.get(e).clear();
+  }, t.clearRules = function (e) {
+    this.getTag().clearGroup(B(e)), this.clearNames(e);
+  }, t.clearTag = function () {
+    this.tag = void 0;
+  }, t.toString = function () {
+    return function (e) {
+      for (var t = e.getTag(), n = t.length, r = "", o = 0; o < n; o++) {
+        var s = z(o);
+
+        if (void 0 !== s) {
+          var i = e.names.get(s),
+              a = t.getGroup(o);
+
+          if (i && a && i.size) {
+            var c = A + ".g" + o + '[id="' + s + '"]',
+                u = "";
+            void 0 !== i && i.forEach(function (e) {
+              e.length > 0 && (u += e + ",");
+            }), r += "" + a + c + '{content:"' + u + '"}/*!sc*/\n';
+          }
+        }
+      }
+
+      return r;
+    }(this);
+  }, e;
+}(),
+    K = /(a)(d)/gi,
+    Q = function Q(e) {
+  return String.fromCharCode(e + (e > 25 ? 39 : 97));
+};
+
+function ee(e) {
+  var t,
+      n = "";
+
+  for (t = Math.abs(e); t > 52; t = t / 52 | 0) {
+    n = Q(t % 52) + n;
+  }
+
+  return (Q(t % 52) + n).replace(K, "$1-$2");
+}
+
+var te = function te(e, t) {
+  for (var n = t.length; n;) {
+    e = 33 * e ^ t.charCodeAt(--n);
+  }
+
+  return e;
+},
+    ne = function ne(e) {
+  return te(5381, e);
+};
+
+function re(e) {
+  for (var t = 0; t < e.length; t += 1) {
+    var n = e[t];
+    if (b(n) && !N(n)) return !1;
+  }
+
+  return !0;
+}
+
+var oe = ne("5.3.5"),
+    se = function () {
+  function e(e, t, n) {
+    this.rules = e, this.staticRulesId = "", this.isStatic = "production" === "development" && (void 0 === n || n.isStatic) && re(e), this.componentId = t, this.baseHash = te(oe, t), this.baseStyle = n, Z.registerId(t);
+  }
+
+  return e.prototype.generateAndInjectStyles = function (e, t, n) {
+    var r = this.componentId,
+        o = [];
+    if (this.baseStyle && o.push(this.baseStyle.generateAndInjectStyles(e, t, n)), this.isStatic && !n.hash) {
+      if (this.staticRulesId && t.hasNameForId(r, this.staticRulesId)) o.push(this.staticRulesId);else {
+        var s = Ne(this.rules, e, t, n).join(""),
+            i = ee(te(this.baseHash, s) >>> 0);
+
+        if (!t.hasNameForId(r, i)) {
+          var a = n(s, "." + i, void 0, r);
+          t.insertRules(r, i, a);
+        }
+
+        o.push(i), this.staticRulesId = i;
+      }
+    } else {
+      for (var c = this.rules.length, u = te(this.baseHash, n.hash), l = "", d = 0; d < c; d++) {
+        var h = this.rules[d];
+        if ("string" == typeof h) l += h, "production" !== "development" && (u = te(u, h + d));else if (h) {
+          var p = Ne(h, e, t, n),
+              f = Array.isArray(p) ? p.join("") : p;
+          u = te(u, f + d), l += f;
+        }
+      }
+
+      if (l) {
+        var m = ee(u >>> 0);
+
+        if (!t.hasNameForId(r, m)) {
+          var y = n(l, "." + m, void 0, r);
+          t.insertRules(r, m, y);
+        }
+
+        o.push(m);
+      }
+    }
+    return o.join(" ");
+  }, e;
+}(),
+    ie = /^\s*\/\/.*$/gm,
+    ae = [":", "[", ".", "#"];
+
+function ce(e) {
+  var t,
+      n,
+      r,
+      o,
+      s = void 0 === e ? E : e,
+      i = s.options,
+      a = void 0 === i ? E : i,
+      c = s.plugins,
+      u = void 0 === c ? w : c,
+      l = new _stylis.default(a),
+      d = [],
+      h = function (e) {
+    function t(t) {
+      if (t) try {
+        e(t + "}");
+      } catch (e) {}
+    }
+
+    return function (n, r, o, s, i, a, c, u, l, d) {
+      switch (n) {
+        case 1:
+          if (0 === l && 64 === r.charCodeAt(0)) return e(r + ";"), "";
+          break;
+
+        case 2:
+          if (0 === u) return r + "/*|*/";
+          break;
+
+        case 3:
+          switch (u) {
+            case 102:
+            case 112:
+              return e(o[0] + r), "";
+
+            default:
+              return r + (0 === d ? "/*|*/" : "");
+          }
+
+        case -2:
+          r.split("/*|*/}").forEach(t);
+      }
+    };
+  }(function (e) {
+    d.push(e);
+  }),
+      f = function f(e, r, s) {
+    return 0 === r && -1 !== ae.indexOf(s[n.length]) || s.match(o) ? e : "." + t;
+  };
+
+  function m(e, s, i, a) {
+    void 0 === a && (a = "&");
+    var c = e.replace(ie, ""),
+        u = s && i ? i + " " + s + " { " + c + " }" : c;
+    return t = a, n = s, r = new RegExp("\\" + n + "\\b", "g"), o = new RegExp("(\\" + n + "\\b){2,}"), l(i || !s ? "" : s, u);
+  }
+
+  return l.use([].concat(u, [function (e, t, o) {
+    2 === e && o.length && o[0].lastIndexOf(n) > 0 && (o[0] = o[0].replace(r, f));
+  }, h, function (e) {
+    if (-2 === e) {
+      var t = d;
+      return d = [], t;
+    }
+  }])), m.hash = u.length ? u.reduce(function (e, t) {
+    return t.name || j(15), te(e, t.name);
+  }, 5381).toString() : "", m;
+}
+
+var ue = _react.default.createContext(),
+    le = ue.Consumer,
+    de = _react.default.createContext(),
+    he = (de.Consumer, new Z()),
+    pe = ce();
+
+exports.StyleSheetConsumer = le;
+exports.StyleSheetContext = ue;
+
+function fe() {
+  return (0, _react.useContext)(ue) || he;
+}
+
+function me() {
+  return (0, _react.useContext)(de) || pe;
+}
+
+function ye(e) {
+  var t = (0, _react.useState)(e.stylisPlugins),
+      n = t[0],
+      s = t[1],
+      c = fe(),
+      u = (0, _react.useMemo)(function () {
+    var t = c;
+    return e.sheet ? t = e.sheet : e.target && (t = t.reconstructWithOptions({
+      target: e.target
+    }, !1)), e.disableCSSOMInjection && (t = t.reconstructWithOptions({
+      useCSSOMInjection: !1
+    })), t;
+  }, [e.disableCSSOMInjection, e.sheet, e.target]),
+      l = (0, _react.useMemo)(function () {
+    return ce({
+      options: {
+        prefix: !e.disableVendorPrefixes
+      },
+      plugins: n
+    });
+  }, [e.disableVendorPrefixes, n]);
+  return (0, _react.useEffect)(function () {
+    (0, _shallowequal.default)(n, e.stylisPlugins) || s(e.stylisPlugins);
+  }, [e.stylisPlugins]), _react.default.createElement(ue.Provider, {
+    value: u
+  }, _react.default.createElement(de.Provider, {
+    value: l
+  }, "production" !== "development" ? _react.default.Children.only(e.children) : e.children));
+}
+
+var ve = function () {
+  function e(e, t) {
+    var n = this;
+    this.inject = function (e, t) {
+      void 0 === t && (t = pe);
+      var r = n.name + t.hash;
+      e.hasNameForId(n.id, r) || e.insertRules(n.id, r, t(n.rules, r, "@keyframes"));
+    }, this.toString = function () {
+      return j(12, String(n.name));
+    }, this.name = e, this.id = "sc-keyframes-" + e, this.rules = t;
+  }
+
+  return e.prototype.getName = function (e) {
+    return void 0 === e && (e = pe), this.name + e.hash;
+  }, e;
+}(),
+    ge = /([A-Z])/,
+    Se = /([A-Z])/g,
+    we = /^ms-/,
+    Ee = function Ee(e) {
+  return "-" + e.toLowerCase();
+};
+
+function be(e) {
+  return ge.test(e) ? e.replace(Se, Ee).replace(we, "-ms-") : e;
+}
+
+var _e = function _e(e) {
+  return null == e || !1 === e || "" === e;
+};
+
+function Ne(e, n, r, o) {
+  if (Array.isArray(e)) {
+    for (var s, i = [], a = 0, c = e.length; a < c; a += 1) {
+      "" !== (s = Ne(e[a], n, r, o)) && (Array.isArray(s) ? i.push.apply(i, s) : i.push(s));
+    }
+
+    return i;
+  }
+
+  if (_e(e)) return "";
+  if (N(e)) return "." + e.styledComponentId;
+
+  if (b(e)) {
+    if ("function" != typeof (l = e) || l.prototype && l.prototype.isReactComponent || !n) return e;
+    var u = e(n);
+    return "production" !== "development" && (0, _reactIs.isElement)(u) && console.warn(_(e) + " is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details."), Ne(u, n, r, o);
+  }
+
+  var l;
+  return e instanceof ve ? r ? (e.inject(r, o), e.getName(o)) : e : S(e) ? function e(t, n) {
+    var r,
+        o,
+        s = [];
+
+    for (var i in t) {
+      t.hasOwnProperty(i) && !_e(t[i]) && (Array.isArray(t[i]) && t[i].isCss || b(t[i]) ? s.push(be(i) + ":", t[i], ";") : S(t[i]) ? s.push.apply(s, e(t[i], i)) : s.push(be(i) + ": " + (r = i, null == (o = t[i]) || "boolean" == typeof o || "" === o ? "" : "number" != typeof o || 0 === o || r in _unitless.default ? String(o).trim() : o + "px") + ";"));
+    }
+
+    return n ? [n + " {"].concat(s, ["}"]) : s;
+  }(e) : e.toString();
+}
+
+var Ae = function Ae(e) {
+  return Array.isArray(e) && (e.isCss = !0), e;
+};
+
+function Ce(e) {
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
+    n[r - 1] = arguments[r];
+  }
+
+  return b(e) || S(e) ? Ae(Ne(g(w, [e].concat(n)))) : 0 === n.length && 1 === e.length && "string" == typeof e[0] ? e : Ae(Ne(g(e, n)));
+}
+
+var Ie = /invalid hook call/i,
+    Pe = new Set(),
+    Oe = function Oe(e, t) {
+  if ("production" !== "development") {
+    var n = "The component " + e + (t ? ' with the id of "' + t + '"' : "") + " has been created dynamically.\nYou may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.",
+        r = console.error;
+
+    try {
+      var o = !0;
+      console.error = function (e) {
+        if (Ie.test(e)) o = !1, Pe.delete(n);else {
+          for (var t = arguments.length, s = new Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) {
+            s[i - 1] = arguments[i];
+          }
+
+          r.apply(void 0, [e].concat(s));
+        }
+      }, (0, _react.useRef)(), o && !Pe.has(n) && (console.warn(n), Pe.add(n));
+    } catch (e) {
+      Ie.test(e.message) && Pe.delete(n);
+    } finally {
+      console.error = r;
+    }
+  }
+},
+    Re = function Re(e, t, n) {
+  return void 0 === n && (n = E), e.theme !== n.theme && e.theme || t || n.theme;
+},
+    De = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,
+    je = /(^-|-$)/g;
+
+function Te(e) {
+  return e.replace(De, "-").replace(je, "");
+}
+
+var xe = function xe(e) {
+  return ee(ne(e) >>> 0);
+};
+
+function ke(e) {
+  return "string" == typeof e && ("production" === "development" || e.charAt(0) === e.charAt(0).toLowerCase());
+}
+
+var Ve = function Ve(e) {
+  return "function" == typeof e || "object" == _typeof(e) && null !== e && !Array.isArray(e);
+},
+    Be = function Be(e) {
+  return "__proto__" !== e && "constructor" !== e && "prototype" !== e;
+};
+
+function ze(e, t, n) {
+  var r = e[n];
+  Ve(t) && Ve(r) ? Me(r, t) : e[n] = t;
+}
+
+function Me(e) {
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
+    n[r - 1] = arguments[r];
+  }
+
+  for (var o = 0, s = n; o < s.length; o++) {
+    var i = s[o];
+    if (Ve(i)) for (var a in i) {
+      Be(a) && ze(e, i[a], a);
+    }
+  }
+
+  return e;
+}
+
+var Ge = _react.default.createContext(),
+    Le = Ge.Consumer;
+
+exports.ThemeConsumer = Le;
+exports.ThemeContext = Ge;
+
+function Fe(e) {
+  var t = (0, _react.useContext)(Ge),
+      n = (0, _react.useMemo)(function () {
+    return function (e, t) {
+      if (!e) return j(14);
+
+      if (b(e)) {
+        var n = e(t);
+        return "production" === "development" || null !== n && !Array.isArray(n) && "object" == _typeof(n) ? n : j(7);
+      }
+
+      return Array.isArray(e) || "object" != _typeof(e) ? j(8) : t ? v({}, t, {}, e) : e;
+    }(e.theme, t);
+  }, [e.theme, t]);
+  return e.children ? _react.default.createElement(Ge.Provider, {
+    value: n
+  }, e.children) : null;
+}
+
+var Ye = {};
+
+function qe(e, t, n) {
+  var o = N(e),
+      i = !ke(e),
+      a = t.attrs,
+      c = void 0 === a ? w : a,
+      d = t.componentId,
+      h = void 0 === d ? function (e, t) {
+    var n = "string" != typeof e ? "sc" : Te(e);
+    Ye[n] = (Ye[n] || 0) + 1;
+    var r = n + "-" + xe("5.3.5" + n + Ye[n]);
+    return t ? t + "-" + r : r;
+  }(t.displayName, t.parentComponentId) : d,
+      p = t.displayName,
+      f = void 0 === p ? function (e) {
+    return ke(e) ? "styled." + e : "Styled(" + _(e) + ")";
+  }(e) : p,
+      g = t.displayName && t.componentId ? Te(t.displayName) + "-" + t.componentId : t.componentId || h,
+      S = o && e.attrs ? Array.prototype.concat(e.attrs, c).filter(Boolean) : c,
+      A = t.shouldForwardProp;
+  o && e.shouldForwardProp && (A = t.shouldForwardProp ? function (n, r, o) {
+    return e.shouldForwardProp(n, r, o) && t.shouldForwardProp(n, r, o);
+  } : e.shouldForwardProp);
+
+  var C,
+      I = new se(n, g, o ? e.componentStyle : void 0),
+      P = I.isStatic && 0 === c.length,
+      O = function O(e, t) {
+    return function (e, t, n, r) {
+      var o = e.attrs,
+          i = e.componentStyle,
+          a = e.defaultProps,
+          c = e.foldedComponentIds,
+          d = e.shouldForwardProp,
+          h = e.styledComponentId,
+          p = e.target;
+      "production" !== "development" && (0, _react.useDebugValue)(h);
+
+      var f = function (e, t, n) {
+        void 0 === e && (e = E);
+        var r = v({}, t, {
+          theme: e
+        }),
+            o = {};
+        return n.forEach(function (e) {
+          var t,
+              n,
+              s,
+              i = e;
+
+          for (t in b(i) && (i = i(r)), i) {
+            r[t] = o[t] = "className" === t ? (n = o[t], s = i[t], n && s ? n + " " + s : n || s) : i[t];
+          }
+        }), [r, o];
+      }(Re(t, (0, _react.useContext)(Ge), a) || E, t, o),
+          y = f[0],
+          g = f[1],
+          S = function (e, t, n, r) {
+        var o = fe(),
+            s = me(),
+            i = t ? e.generateAndInjectStyles(E, o, s) : e.generateAndInjectStyles(n, o, s);
+        return "production" !== "development" && (0, _react.useDebugValue)(i), "production" !== "development" && !t && r && r(i), i;
+      }(i, r, y, "production" !== "development" ? e.warnTooManyClasses : void 0),
+          w = n,
+          _ = g.$as || t.$as || g.as || t.as || p,
+          N = ke(_),
+          A = g !== t ? v({}, t, {}, g) : t,
+          C = {};
+
+      for (var I in A) {
+        "$" !== I[0] && "as" !== I && ("forwardedAs" === I ? C.as = A[I] : (d ? d(I, _isPropValid.default, _) : !N || (0, _isPropValid.default)(I)) && (C[I] = A[I]));
+      }
+
+      return t.style && g.style !== t.style && (C.style = v({}, t.style, {}, g.style)), C.className = Array.prototype.concat(c, h, S !== h ? S : null, t.className, g.className).filter(Boolean).join(" "), C.ref = w, (0, _react.createElement)(_, C);
+    }(C, e, t, P);
+  };
+
+  return O.displayName = f, (C = _react.default.forwardRef(O)).attrs = S, C.componentStyle = I, C.displayName = f, C.shouldForwardProp = A, C.foldedComponentIds = o ? Array.prototype.concat(e.foldedComponentIds, e.styledComponentId) : w, C.styledComponentId = g, C.target = o ? e.target : e, C.withComponent = function (e) {
+    var r = t.componentId,
+        o = function (e, t) {
+      if (null == e) return {};
+      var n,
+          r,
+          o = {},
+          s = Object.keys(e);
+
+      for (r = 0; r < s.length; r++) {
+        n = s[r], t.indexOf(n) >= 0 || (o[n] = e[n]);
+      }
+
+      return o;
+    }(t, ["componentId"]),
+        s = r && r + "-" + (ke(e) ? e : Te(_(e)));
+
+    return qe(e, v({}, o, {
+      attrs: S,
+      componentId: s
+    }), n);
+  }, Object.defineProperty(C, "defaultProps", {
+    get: function get() {
+      return this._foldedDefaultProps;
+    },
+    set: function set(t) {
+      this._foldedDefaultProps = o ? Me({}, e.defaultProps, t) : t;
+    }
+  }), "production" !== "development" && (Oe(f, g), C.warnTooManyClasses = function (e, t) {
+    var n = {},
+        r = !1;
+    return function (o) {
+      if (!r && (n[o] = !0, Object.keys(n).length >= 200)) {
+        var s = t ? ' with the id of "' + t + '"' : "";
+        console.warn("Over 200 classes were generated for component " + e + s + ".\nConsider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"), r = !0, n = {};
+      }
+    };
+  }(f, g)), C.toString = function () {
+    return "." + C.styledComponentId;
+  }, i && (0, _hoistNonReactStatics.default)(C, e, {
+    attrs: !0,
+    componentStyle: !0,
+    displayName: !0,
+    foldedComponentIds: !0,
+    shouldForwardProp: !0,
+    styledComponentId: !0,
+    target: !0,
+    withComponent: !0
+  }), C;
+}
+
+var He = function He(e) {
+  return function e(t, r, o) {
+    if (void 0 === o && (o = E), !(0, _reactIs.isValidElementType)(r)) return j(1, String(r));
+
+    var s = function s() {
+      return t(r, o, Ce.apply(void 0, arguments));
+    };
+
+    return s.withConfig = function (n) {
+      return e(t, r, v({}, o, {}, n));
+    }, s.attrs = function (n) {
+      return e(t, r, v({}, o, {
+        attrs: Array.prototype.concat(o.attrs, n).filter(Boolean)
+      }));
+    }, s;
+  }(qe, e);
+};
+
+["a", "abbr", "address", "area", "article", "aside", "audio", "b", "base", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "keygen", "label", "legend", "li", "link", "main", "map", "mark", "marquee", "menu", "menuitem", "meta", "meter", "nav", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "u", "ul", "var", "video", "wbr", "circle", "clipPath", "defs", "ellipse", "foreignObject", "g", "image", "line", "linearGradient", "marker", "mask", "path", "pattern", "polygon", "polyline", "radialGradient", "rect", "stop", "svg", "text", "textPath", "tspan"].forEach(function (e) {
+  He[e] = He(e);
+});
+
+var $e = function () {
+  function e(e, t) {
+    this.rules = e, this.componentId = t, this.isStatic = re(e), Z.registerId(this.componentId + 1);
+  }
+
+  var t = e.prototype;
+  return t.createStyles = function (e, t, n, r) {
+    var o = r(Ne(this.rules, t, n, r).join(""), ""),
+        s = this.componentId + e;
+    n.insertRules(s, s, o);
+  }, t.removeStyles = function (e, t) {
+    t.clearRules(this.componentId + e);
+  }, t.renderStyles = function (e, t, n, r) {
+    e > 2 && Z.registerId(this.componentId + e), this.removeStyles(e, n), this.createStyles(e, t, n, r);
+  }, e;
+}();
+
+function We(e) {
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), o = 1; o < t; o++) {
+    n[o - 1] = arguments[o];
+  }
+
+  var i = Ce.apply(void 0, [e].concat(n)),
+      a = "sc-global-" + xe(JSON.stringify(i)),
+      u = new $e(i, a);
+
+  function l(e) {
+    var t = fe(),
+        n = me(),
+        o = (0, _react.useContext)(Ge),
+        l = (0, _react.useRef)(t.allocateGSInstance(a)).current;
+    return "production" !== "development" && _react.default.Children.count(e.children) && console.warn("The global style component " + a + " was given child JSX. createGlobalStyle does not render children."), "production" !== "development" && i.some(function (e) {
+      return "string" == typeof e && -1 !== e.indexOf("@import");
+    }) && console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."), t.server && h(l, e, t, o, n), (0, _react.useLayoutEffect)(function () {
+      if (!t.server) return h(l, e, t, o, n), function () {
+        return u.removeStyles(l, t);
+      };
+    }, [l, e, t, o, n]), null;
+  }
+
+  function h(e, t, n, r, o) {
+    if (u.isStatic) u.renderStyles(e, O, n, o);else {
+      var s = v({}, t, {
+        theme: Re(t, r, l.defaultProps)
+      });
+      u.renderStyles(e, s, n, o);
+    }
+  }
+
+  return "production" !== "development" && Oe(a), _react.default.memo(l);
+}
+
+function Ue(e) {
+  "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
+
+  for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
+    n[r - 1] = arguments[r];
+  }
+
+  var o = Ce.apply(void 0, [e].concat(n)).join(""),
+      s = xe(o);
+  return new ve(s, o);
+}
+
+var Je = function () {
+  function e() {
+    var e = this;
+    this._emitSheetCSS = function () {
+      var t = e.instance.toString();
+      if (!t) return "";
+      var n = q();
+      return "<style " + [n && 'nonce="' + n + '"', A + '="true"', 'data-styled-version="5.3.5"'].filter(Boolean).join(" ") + ">" + t + "</style>";
+    }, this.getStyleTags = function () {
+      return e.sealed ? j(2) : e._emitSheetCSS();
+    }, this.getStyleElement = function () {
+      var t;
+      if (e.sealed) return j(2);
+      var n = ((t = {})[A] = "", t["data-styled-version"] = "5.3.5", t.dangerouslySetInnerHTML = {
+        __html: e.instance.toString()
+      }, t),
+          o = q();
+      return o && (n.nonce = o), [_react.default.createElement("style", v({}, n, {
+        key: "sc-0-0"
+      }))];
+    }, this.seal = function () {
+      e.sealed = !0;
+    }, this.instance = new Z({
+      isServer: !0
+    }), this.sealed = !1;
+  }
+
+  var t = e.prototype;
+  return t.collectStyles = function (e) {
+    return this.sealed ? j(2) : _react.default.createElement(ye, {
+      sheet: this.instance
+    }, e);
+  }, t.interleaveWithNodeStream = function (e) {
+    return j(3);
+  }, e;
+}(),
+    Xe = function Xe(e) {
+  var t = _react.default.forwardRef(function (t, n) {
+    var o = (0, _react.useContext)(Ge),
+        i = e.defaultProps,
+        a = Re(t, o, i);
+    return "production" !== "development" && void 0 === a && console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "' + _(e) + '"'), _react.default.createElement(e, v({}, t, {
+      theme: a,
+      ref: n
+    }));
+  });
+
+  return (0, _hoistNonReactStatics.default)(t, e), t.displayName = "WithTheme(" + _(e) + ")", t;
+},
+    Ze = function Ze() {
+  return (0, _react.useContext)(Ge);
+},
+    Ke = {
+  StyleSheet: Z,
+  masterSheet: he
+};
+
+exports.__PRIVATE__ = Ke;
+exports.useTheme = Ze;
+exports.withTheme = Xe;
+exports.ServerStyleSheet = Je;
+"production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && "undefined" != typeof window && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
+var _default = He;
+exports.default = _default;
+},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"node_modules/process/browser.js"}],"components/LandingPage/LandingPage.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/HomePageLink/index.jsx":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/LandingPage/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33792,11 +36410,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-require("./HomePageLink.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+require("./LandingPage.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -33818,45 +36442,152 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var HomePageLink = /*#__PURE__*/function (_React$Component) {
-  _inherits(HomePageLink, _React$Component);
+var LandingPage = /*#__PURE__*/function (_React$Component) {
+  _inherits(LandingPage, _React$Component);
 
-  var _super = _createSuper(HomePageLink);
+  var _super = _createSuper(LandingPage);
 
-  function HomePageLink() {
-    _classCallCheck(this, HomePageLink);
+  function LandingPage() {
+    _classCallCheck(this, LandingPage);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(HomePageLink, [{
+  _createClass(LandingPage, [{
     key: "render",
     value: function render() {
-      var className = this.props.className;
-      return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/home-page-v3"
+      var _this$props = this.props,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          simplyifyingHousing = _this$props.simplyifyingHousing,
+          getHousingResources = _this$props.getHousingResources;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "home-page-link ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "vector",
-        src: "/img/vector-3@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "home-page roboto-normal-summer-green-25px"
-      }, "Home Page")));
+        className: "landing-page screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(Ellipse1, null), /*#__PURE__*/_react.default.createElement(HousingVoucherHelp, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-black-90px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement(Span1, null, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-black-90px"
+      }, spanText3))), /*#__PURE__*/_react.default.createElement(SimplyifyingHousing, null, simplyifyingHousing), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/home-page-v3"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, null, /*#__PURE__*/_react.default.createElement(GetHousingResources, null, getHousingResources))), /*#__PURE__*/_react.default.createElement(Polygon1, {
+        src: "/img/polygon-1@1x.svg"
+      }))));
     }
   }]);
 
-  return HomePageLink;
+  return LandingPage;
 }(_react.default.Component);
 
-var _default = HomePageLink;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./HomePageLink.css":"components/HomePageLink/HomePageLink.css"}],"components/Logo/Logo.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+var OverlapGroup = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 1788px;\n  height: 854px;\n  position: relative;\n  margin-top: -287px;\n  margin-left: -409px;\n"])));
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Logo/index.jsx":[function(require,module,exports) {
+var Ellipse1 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 818px;\n  height: 818px;\n  top: 0;\n  left: 0;\n  background-color: var(--jagged-ice);\n  border-radius: 409px;\n"])));
+
+var HousingVoucherHelp = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1319px;\n  top: 644px;\n  left: 469px;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: transparent;\n  font-size: 90px;\n  text-align: center;\n  letter-spacing: 0;\n"])));
+
+var Span1 = _styledComponents.default.span(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: var(--amazon);\n"])));
+
+var SimplyifyingHousing = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1157px;\n  min-height: 49px;\n  align-self: center;\n  margin-top: 34px;\n  margin-left: 0.91px;\n  transform: rotate(-0.05deg);\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 400;\n  color: var(--black);\n  font-size: 35px;\n  text-align: center;\n  letter-spacing: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  height: 566px;\n  align-self: flex-end;\n  margin-top: 107px;\n  margin-right: -186.13px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1111px;\n"])));
+
+var TutorialButtons = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  height: 64px;\n  display: flex;\n  padding: 0 36.7px;\n  align-items: center;\n  min-width: 410px;\n  background-color: var(--white);\n  border-radius: 10.49px;\n  border: 2px solid var(--hippie-blue);\n  box-shadow: 5.465005874633789px 5.465005874633789px 7.2866740226745605px #0000000d;\n  cursor: pointer;\n"])));
+
+var GetHousingResources = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 336px;\n  min-height: 39px;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: var(--hippie-blue);\n  font-size: 31.5px;\n  letter-spacing: 0;\n"])));
+
+var Polygon1 = _styledComponents.default.img(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 515px;\n  height: 543px;\n  align-self: flex-end;\n  margin-left: 186px;\n"])));
+
+var _default = LandingPage;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./LandingPage.css":"components/LandingPage/LandingPage.css"}],"styledMixins.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RobotoNormalSummerGreen25px = exports.RobotoMediumWhite40px = exports.RobotoMediumWhite35px = exports.RobotoMediumWhite30px = exports.RobotoMediumWhite29px = exports.RobotoMediumWhite25px = exports.RobotoMediumWhite21px2 = exports.RobotoMediumWhite21px = exports.RobotoMediumWhite20px = exports.RobotoMediumSummerGreen436px = exports.RobotoMediumMidnightBlue21px = exports.RobotoMediumBlack90px = exports.RobotoMediumBlack50px = exports.RobotoMediumBlack45px = exports.LibrebaskervilleNormalWhite25px2 = exports.LibrebaskervilleNormalWhite25px = exports.LibrebaskervilleNormalWhite22px = exports.LibrebaskervilleNormalWhite20px = exports.LibrebaskervilleNormalCornflower25p = exports.LibrebaskervilleNormalBlack30px = exports.LibrebaskervilleNormalBlack29px = exports.LibrebaskervilleNormalBlack28px = exports.LibrebaskervilleNormalBlack27px = exports.LibrebaskervilleNormalBlack25px = exports.LibrebaskervilleNormalBlack23px = exports.LibrebaskervilleBoldEdgewater25px = exports.LibrebaskervilleBoldBlack30px = exports.LibrebaskervilleBoldBlack27px = exports.LibrebaskervilleBoldBlack25px = exports.Header2 = exports.Border3pxSummerGreen = exports.Border25pxBlack = exports.Border1pxSummerGreen = exports.Border1pxBlack2 = exports.AlignSelfFlexStart = exports.AlignSelfFlexEnd = void 0;
+
+var _styledComponents = require("styled-components");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35, _templateObject36;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var AlignSelfFlexStart = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  align-self: flex-start;\n"])));
+exports.AlignSelfFlexStart = AlignSelfFlexStart;
+var AlignSelfFlexEnd = (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  align-self: flex-end;\n"])));
+exports.AlignSelfFlexEnd = AlignSelfFlexEnd;
+var Header2 = (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-60px);\n  letter-spacing: 0;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.Header2 = Header2;
+var RobotoNormalSummerGreen25px = (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: var(--summer-green);\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-m);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.RobotoNormalSummerGreen25px = RobotoNormalSummerGreen25px;
+var RobotoMediumWhite21px = (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: 21px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite21px = RobotoMediumWhite21px;
+var RobotoMediumWhite40px = (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-xxxl);\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite40px = RobotoMediumWhite40px;
+var RobotoMediumSummerGreen436px = (0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  color: var(--summer-green);\n  font-family: var(--font-family-roboto);\n  font-size: 43.6px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumSummerGreen436px = RobotoMediumSummerGreen436px;
+var LibrebaskervilleNormalBlack30px = (0, _styledComponents.css)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-xxl);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack30px = LibrebaskervilleNormalBlack30px;
+var RobotoMediumWhite30px = (0, _styledComponents.css)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-xxl);\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite30px = RobotoMediumWhite30px;
+var LibrebaskervilleNormalBlack27px = (0, _styledComponents.css)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-l);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack27px = LibrebaskervilleNormalBlack27px;
+var LibrebaskervilleNormalBlack28px = (0, _styledComponents.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-xl);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack28px = LibrebaskervilleNormalBlack28px;
+var RobotoMediumWhite29px = (0, _styledComponents.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: 29px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite29px = RobotoMediumWhite29px;
+var LibrebaskervilleNormalBlack25px = (0, _styledComponents.css)(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack25px = LibrebaskervilleNormalBlack25px;
+var LibrebaskervilleNormalWhite25px = (0, _styledComponents.css)(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalWhite25px = LibrebaskervilleNormalWhite25px;
+var RobotoMediumBlack45px = (0, _styledComponents.css)(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-roboto);\n  font-size: 45px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumBlack45px = RobotoMediumBlack45px;
+var LibrebaskervilleNormalWhite22px = (0, _styledComponents.css)(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-xs);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalWhite22px = LibrebaskervilleNormalWhite22px;
+var RobotoMediumBlack50px = (0, _styledComponents.css)(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-roboto);\n  font-size: 50px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumBlack50px = RobotoMediumBlack50px;
+var RobotoMediumWhite35px = (0, _styledComponents.css)(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: 35px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite35px = RobotoMediumWhite35px;
+var LibrebaskervilleBoldBlack30px = (0, _styledComponents.css)(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-xxl);\n  font-weight: 700;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleBoldBlack30px = LibrebaskervilleBoldBlack30px;
+var LibrebaskervilleNormalCornflower25p = (0, _styledComponents.css)(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n  color: var(--cornflower);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalCornflower25p = LibrebaskervilleNormalCornflower25p;
+var LibrebaskervilleNormalBlack23px = (0, _styledComponents.css)(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-s);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack23px = LibrebaskervilleNormalBlack23px;
+var RobotoMediumMidnightBlue21px = (0, _styledComponents.css)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n  color: var(--midnight-blue);\n  font-family: var(--font-family-roboto);\n  font-size: 21px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumMidnightBlue21px = RobotoMediumMidnightBlue21px;
+var LibrebaskervilleBoldBlack27px = (0, _styledComponents.css)(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-l);\n  font-weight: 700;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleBoldBlack27px = LibrebaskervilleBoldBlack27px;
+var LibrebaskervilleNormalWhite20px = (0, _styledComponents.css)(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: 20px;\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalWhite20px = LibrebaskervilleNormalWhite20px;
+var RobotoMediumBlack90px = (0, _styledComponents.css)(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-roboto);\n  font-size: 90px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumBlack90px = RobotoMediumBlack90px;
+var RobotoMediumWhite21px2 = (0, _styledComponents.css)(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n  color: var(--white-2);\n  font-family: var(--font-family-roboto);\n  font-size: 21px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite21px2 = RobotoMediumWhite21px2;
+var LibrebaskervilleNormalWhite25px2 = (0, _styledComponents.css)(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalWhite25px2 = LibrebaskervilleNormalWhite25px2;
+var RobotoMediumWhite25px = (0, _styledComponents.css)(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-m);\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite25px = RobotoMediumWhite25px;
+var RobotoMediumWhite20px = (0, _styledComponents.css)(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n  color: var(--white);\n  font-family: var(--font-family-roboto);\n  font-size: 20px;\n  font-weight: 500;\n  font-style: normal;\n"])));
+exports.RobotoMediumWhite20px = RobotoMediumWhite20px;
+var LibrebaskervilleBoldBlack25px = (0, _styledComponents.css)(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 700;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleBoldBlack25px = LibrebaskervilleBoldBlack25px;
+var LibrebaskervilleNormalBlack29px = (0, _styledComponents.css)(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n  color: var(--black);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: 29px;\n  font-weight: 400;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleNormalBlack29px = LibrebaskervilleNormalBlack29px;
+var LibrebaskervilleBoldEdgewater25px = (0, _styledComponents.css)(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n  color: var(--edgewater);\n  font-family: var(--font-family-libre_baskerville);\n  font-size: var(--font-size-m);\n  font-weight: 700;\n  font-style: normal;\n"])));
+exports.LibrebaskervilleBoldEdgewater25px = LibrebaskervilleBoldEdgewater25px;
+var Border25pxBlack = (0, _styledComponents.css)(_templateObject33 || (_templateObject33 = _taggedTemplateLiteral(["\n  border: 2.5px solid var(--black);\n"])));
+exports.Border25pxBlack = Border25pxBlack;
+var Border1pxBlack2 = (0, _styledComponents.css)(_templateObject34 || (_templateObject34 = _taggedTemplateLiteral(["\n  border: 1px solid var(--black-2);\n"])));
+exports.Border1pxBlack2 = Border1pxBlack2;
+var Border1pxSummerGreen = (0, _styledComponents.css)(_templateObject35 || (_templateObject35 = _taggedTemplateLiteral(["\n  border: 1px solid var(--summer-green);\n"])));
+exports.Border1pxSummerGreen = Border1pxSummerGreen;
+var Border3pxSummerGreen = (0, _styledComponents.css)(_templateObject36 || (_templateObject36 = _taggedTemplateLiteral(["\n  border: 3px solid var(--summer-green);\n"])));
+exports.Border3pxSummerGreen = Border3pxSummerGreen;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/Logo/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33868,11 +36599,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-require("./Logo.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -33911,16 +36648,16 @@ var Logo = /*#__PURE__*/function (_React$Component) {
       var className = this.props.className;
       return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/home-page-v3",
-        className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "align-self-flex-start"
+      }, /*#__PURE__*/_react.default.createElement(Logo1, {
         className: "logo ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "icon-home",
-        src: "/img/vector-2@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "hvh roboto-medium-summer-green-50px"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup5, {
+        className: "overlap-group5"
+      }, /*#__PURE__*/_react.default.createElement(Vector, {
+        className: "vector",
+        src: "/img/vector-3@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(HVH, {
+        className: "hvh"
       }, "HVH"))));
     }
   }]);
@@ -33928,14 +36665,17 @@ var Logo = /*#__PURE__*/function (_React$Component) {
   return Logo;
 }(_react.default.Component);
 
+var Logo1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 75px;\n  align-self: flex-start;\n  display: flex;\n  align-items: flex-start;\n  min-width: 93px;\n  cursor: pointer;\n\n  &.logo.logo-2 {\n    cursor: unset;\n  }\n\n  &.logo.logo-3 {\n    position: absolute;\n    top: 38px;\n    left: 91px;\n    align-self: unset;\n  }\n"])));
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 93px;\n  height: 78px;\n  position: relative;\n  margin-top: -2.75px;\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 54px;\n  height: 42px;\n  top: 0;\n  left: 19px;\n"])));
+
+var HVH = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 93px;\n  top: 40px;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumSummerGreen436px);
+
 var _default = Logo;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Logo.css":"components/Logo/Logo.css"}],"components/MoreResources/MoreResources.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/MoreResources/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/HomePageLink/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33947,11 +36687,100 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-require("./MoreResources.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var HomePageLink = /*#__PURE__*/function (_React$Component) {
+  _inherits(HomePageLink, _React$Component);
+
+  var _super = _createSuper(HomePageLink);
+
+  function HomePageLink() {
+    _classCallCheck(this, HomePageLink);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(HomePageLink, [{
+    key: "render",
+    value: function render() {
+      var className = this.props.className;
+      return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/home-page-v3"
+      }, /*#__PURE__*/_react.default.createElement(HomePageLink1, {
+        className: "home-page-link ".concat(className || "")
+      }, /*#__PURE__*/_react.default.createElement(Vector, {
+        className: "vector-1",
+        src: "/img/vector-2@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(HomePage, {
+        className: "home-page"
+      }, "Home Page")));
+    }
+  }]);
+
+  return HomePageLink;
+}(_react.default.Component);
+
+var HomePageLink1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 27px;\n  margin-left: 765px;\n  margin-bottom: 1px;\n  display: flex;\n  align-items: center;\n  min-width: 191px;\n  cursor: pointer;\n\n  &.home-page-link.home-page-link-2 {\n    position: absolute;\n    top: 62px;\n    left: 949px;\n    margin-left: unset;\n    margin-bottom: unset;\n  }\n\n  &.home-page-link.home-page-link-3 {\n    margin-left: 785px;\n  }\n\n  &.home-page-link.home-page-link-4 {\n    margin-left: 769px;\n  }\n\n  &.home-page-link.home-page-link-5 {\n    margin-left: 780px;\n  }\n\n  &.home-page-link.home-page-link-6 {\n    margin-left: 766px;\n  }\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 31px;\n  height: 23px;\n  margin-left: -3px;\n  margin-bottom: 0.68px;\n"])));
+
+var HomePage = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 142px;\n  min-height: 25px;\n  margin-left: 7px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoNormalSummerGreen25px);
+
+var _default = HomePageLink;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/MoreResources/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -33989,11 +36818,11 @@ var MoreResources = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var className = this.props.className;
       return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/resources-v3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
+        to: "/resources-v3-1"
+      }, /*#__PURE__*/_react.default.createElement(MoreResources1, {
         className: "more-resources ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "more-resources-1 roboto-normal-summer-green-25px"
+      }, /*#__PURE__*/_react.default.createElement(MoreResources2, {
+        className: "more-resources-1"
       }, "More Resources")));
     }
   }]);
@@ -34001,14 +36830,15 @@ var MoreResources = /*#__PURE__*/function (_React$Component) {
   return MoreResources;
 }(_react.default.Component);
 
+var MoreResources1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 25px;\n  margin-left: 31px;\n  margin-bottom: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 184px;\n  cursor: pointer;\n\n  &.more-resources.more-resources-3 {\n    cursor: unset;\n  }\n\n  &.more-resources.more-resources-4 {\n    position: absolute;\n    top: 63px;\n    left: 1171px;\n    margin-left: unset;\n    margin-bottom: unset;\n  }\n\n  &.more-resources.more-resources-5 {\n    margin-left: 33px;\n    margin-top: 1px;\n    margin-bottom: unset;\n  }\n\n  &.more-resources.more-resources-6 {\n    margin-left: 28px;\n  }\n\n  &.more-resources.more-resources-7 {\n    margin-left: 19px;\n  }\n\n  &.more-resources.more-resources-8 {\n    margin-left: 32px;\n    margin-bottom: 3px;\n  }\n"])));
+
+var MoreResources2 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 184px;\n  min-height: 25px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoNormalSummerGreen25px);
+
+var MoreResources3 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n\n  .more-resources.more-resources-3  & {\n    cursor: pointer;\n  }\n"])), _styledMixins.RobotoNormalSummerGreen25px);
+
 var _default = MoreResources;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./MoreResources.css":"components/MoreResources/MoreResources.css"}],"components/Property1Default/Property1Default.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Default/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1Audio/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34018,11 +36848,100 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./Property1Default.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Audio = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Audio, _React$Component);
+
+  var _super = _createSuper(Property1Audio);
+
+  function Property1Audio() {
+    _classCallCheck(this, Property1Audio);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Audio, [{
+    key: "render",
+    value: function render() {
+      var className = this.props.className;
+      return /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        className: "tutorial-buttons-3 ".concat(className || "")
+      }, /*#__PURE__*/_react.default.createElement(VolumeUp, {
+        className: "volume_up"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup, {
+        className: "overlap-group-1"
+      }, /*#__PURE__*/_react.default.createElement(Vector, {
+        className: "vector-2",
+        src: "/img/vector@2x.png"
+      }))));
+    }
+  }]);
+
+  return Property1Audio;
+}(_react.default.Component);
+
+var TutorialButtons = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 53px;\n  margin-top: 136px;\n  display: flex;\n  padding: 6px 8px;\n  align-items: flex-end;\n  min-width: 56px;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n\n  &.tutorial-buttons-3.tutorial-buttons-4 {\n    position: absolute;\n    top: 351px;\n    left: 44px;\n    margin-top: unset;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-5 {\n    margin-left: 1px;\n    margin-top: unset;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-6 {\n    margin-left: 1px;\n    margin-top: unset;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-8 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-9 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-10 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-11 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-12 {\n    margin-top: 25px;\n    margin-left: 44px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-13 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-14 {\n    margin-top: 25px;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-15 {\n    margin-bottom: 113px;\n    margin-top: unset;\n  }\n\n  &.tutorial-buttons-3.tutorial-buttons-16 {\n    margin-left: 1px;\n    margin-top: unset;\n  }\n"])));
+
+var VolumeUp = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 40px;\n  height: 40px;\n  display: flex;\n  padding: 4.6px 5px;\n  align-items: flex-start;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 29px;\n  display: flex;\n  padding: 13.1px 14.2px;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 30px;\n  background-image: url(/img/vector@2x.svg);\n  background-size: 100% 100%;\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 1px;\n  height: 1px;\n"])));
+
+var _default = Property1Audio;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/Property1Default/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34058,26 +36977,211 @@ var Property1Default = /*#__PURE__*/function (_React$Component) {
   _createClass(Property1Default, [{
     key: "render",
     value: function render() {
-      var className = this.props.className;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "havent-applied-button ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "i-havent-applied-fo roboto-medium-white-40px"
-      }, "I haven\u2019t applied for a voucher but would like to."));
+      var _this$props = this.props,
+          catholicCommunityServices = _this$props.catholicCommunityServices,
+          clickForDetails = _this$props.clickForDetails;
+      return /*#__PURE__*/_react.default.createElement(RegionalAccessPointV2, null, /*#__PURE__*/_react.default.createElement(CatholicCommunityServices, null, catholicCommunityServices), /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-rap-ccs"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(ClickForDetails, null, clickForDetails)));
     }
   }]);
 
   return Property1Default;
 }(_react.default.Component);
 
+var RegionalAccessPointV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 75px;\n  margin-top: 12px;\n  margin-left: 1px;\n  display: flex;\n  padding: 16px 19px;\n  align-items: center;\n  min-width: 945px;\n  background-color: var(--midnight-blue);\n"])));
+
+var CatholicCommunityServices = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 580px;\n  min-height: 29px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite29px);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  align-self: flex-end;\n  margin-left: 144px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
 var _default = Property1Default;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Default.css":"components/Property1Default/Property1Default.css"}],"components/Property1Expanded/Property1Expanded.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1Default8/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default8 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default8, _React$Component);
+
+  var _super = _createSuper(Property1Default8);
+
+  function Property1Default8() {
+    _classCallCheck(this, Property1Default8);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default8, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          catholicCommunityServices = _this$props.catholicCommunityServices,
+          className = _this$props.className;
+      return /*#__PURE__*/_react.default.createElement(RegionalAccessPointV2, {
+        className: "regional-access-point-v2-1 ".concat(className || "")
+      }, /*#__PURE__*/_react.default.createElement(CatholicCommunityServices, {
+        className: "catholic-community-services-1"
+      }, catholicCommunityServices), /*#__PURE__*/_react.default.createElement(OverlapGroup3, {
+        className: "overlap-group3"
+      }, /*#__PURE__*/_react.default.createElement(ClickForDetails, {
+        className: "click-for-details-1"
+      }, "Click for Details")));
+    }
+  }]);
+
+  return Property1Default8;
+}(_react.default.Component);
+
+var RegionalAccessPointV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 75px;\n  margin-top: 20px;\n  margin-left: 1px;\n  display: flex;\n  padding: 16px 19px;\n  align-items: center;\n  min-width: 945px;\n  background-color: var(--midnight-blue);\n\n  &.regional-access-point-v2-1.regional-access-point-v2-3 {\n    margin-top: 12px;\n  }\n"])));
+
+var CatholicCommunityServices = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 580px;\n  min-height: 29px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite29px);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 42px;\n  align-self: flex-end;\n  margin-left: 144px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var _default = Property1Default8;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/RegionalAccessPointsV2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default"));
+
+var _Property1Default2 = _interopRequireDefault(require("../Property1Default8"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var RegionalAccessPointsV2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(RegionalAccessPointsV2, _React$Component);
+
+  var _super = _createSuper(RegionalAccessPointsV2);
+
+  function RegionalAccessPointsV2() {
+    _classCallCheck(this, RegionalAccessPointsV2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(RegionalAccessPointsV2, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          regionalAccessPoin = _this$props.regionalAccessPoin,
+          property1DefaultProps = _this$props.property1DefaultProps,
+          property1Default81Props = _this$props.property1Default81Props,
+          property1Default82Props = _this$props.property1Default82Props,
+          property1Default83Props = _this$props.property1Default83Props,
+          property1Default84Props = _this$props.property1Default84Props;
+      return /*#__PURE__*/_react.default.createElement(RegionalAccessPointsV21, null, /*#__PURE__*/_react.default.createElement(RegionalAccessPoin, null, regionalAccessPoin), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1DefaultProps.catholicCommunityServices,
+        clickForDetails: property1DefaultProps.clickForDetails
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, {
+        catholicCommunityServices: property1Default81Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, {
+        catholicCommunityServices: property1Default82Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, {
+        catholicCommunityServices: property1Default83Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, {
+        catholicCommunityServices: property1Default84Props.catholicCommunityServices
+      }));
+    }
+  }]);
+
+  return RegionalAccessPointsV2;
+}(_react.default.Component);
+
+var RegionalAccessPointsV21 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  width: 1011px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  padding: 31px;\n  align-items: flex-start;\n  min-height: 564px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var RegionalAccessPoin = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  min-height: 35px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var _default = RegionalAccessPointsV2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Property1Default":"components/Property1Default/index.jsx","../Property1Default8":"components/Property1Default8/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RAP/VoucherToolV3RAP.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Expanded/index.jsx":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RAP/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34089,11 +37193,1761 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-require("./Property1Expanded.css");
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _RegionalAccessPointsV = _interopRequireDefault(require("../RegionalAccessPointsV2"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3RAP.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3RAP = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3RAP, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3RAP);
+
+  function VoucherToolV3RAP() {
+    _classCallCheck(this, VoucherToolV3RAP);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3RAP, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          regionalAccessPointsV2Props = _this$props.regionalAccessPointsV2Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-rap screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(FlexCol1, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_RegionalAccessPointsV.default, {
+        regionalAccessPoin: regionalAccessPointsV2Props.regionalAccessPoin,
+        property1DefaultProps: regionalAccessPointsV2Props.property1DefaultProps,
+        property1Default81Props: regionalAccessPointsV2Props.property1Default81Props,
+        property1Default82Props: regionalAccessPointsV2Props.property1Default82Props,
+        property1Default83Props: regionalAccessPointsV2Props.property1Default83Props,
+        property1Default84Props: regionalAccessPointsV2Props.property1Default84Props
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-next-steps"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-download-info"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-1@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3RAP;
+}(_react.default.Component);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1183px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var FlexCol1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  position: relative;\n  margin-left: 115px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 2px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 25px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 125px;\n  height: 77px;\n  margin-left: 40px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3RAP;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../RegionalAccessPointsV2":"components/RegionalAccessPointsV2/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RAP.css":"components/VoucherToolV3RAP/VoucherToolV3RAP.css"}],"components/Property1Default2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default2, _React$Component);
+
+  var _super = _createSuper(Property1Default2);
+
+  function Property1Default2() {
+    _classCallCheck(this, Property1Default2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default2, [{
+    key: "render",
+    value: function render() {
+      var className = this.props.className;
+      return /*#__PURE__*/_react.default.createElement(HaventAppliedButton, {
+        className: "havent-applied-button ".concat(className || "")
+      }, /*#__PURE__*/_react.default.createElement(IHaventAppliedFo, {
+        className: "i-havent-applied-fo"
+      }, "I haven\u2019t applied for a voucher but would like to."));
+    }
+  }]);
+
+  return Property1Default2;
+}(_react.default.Component);
+
+var HaventAppliedButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 495px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 20px 14px;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--midnight-blue);\n  border-radius: 5px;\n\n  &.havent-applied-button.havent-applied-button-2 {\n    position: unset;\n    top: unset;\n    left: unset;\n  }\n"])));
+
+var IHaventAppliedFo = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var IHaventAppliedFo1 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n\n  .havent-applied-button.havent-applied-button-2  & {\n    cursor: pointer;\n  }\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var _default = Property1Default2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Bix/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Bix = /*#__PURE__*/function (_React$Component) {
+  _inherits(Bix, _React$Component);
+
+  var _super = _createSuper(Bix);
+
+  function Bix() {
+    _classCallCheck(this, Bix);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Bix, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(Bix1, null, /*#__PURE__*/_react.default.createElement(Vector, {
+        src: "/img/vector-4@2x.svg"
+      }));
+    }
+  }]);
+
+  return Bix;
+}(_react.default.Component);
+
+var Bix1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 34px;\n  height: 34px;\n  top: 0;\n  left: 53px;\n  display: flex;\n  padding: 9px;\n  align-items: flex-start;\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 15px;\n  height: 15px;\n"])));
+
+var Bix2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 34px;\n  height: 34px;\n  top: 0;\n  left: 53px;\n  display: flex;\n  padding: 9px;\n  align-items: flex-start;\n"])));
+
+var Vector1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 15px;\n  height: 15px;\n"])));
+
+var Bix3 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 34px;\n  height: 34px;\n  top: 0;\n  left: 53px;\n  display: flex;\n  padding: 9px;\n  align-items: flex-start;\n"])));
+
+var Vector2 = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 15px;\n  height: 15px;\n"])));
+
+var _default = Bix;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/HaventAppliedButtonVariant4/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Bix = _interopRequireDefault(require("../Bix"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var HaventAppliedButtonVariant4 = /*#__PURE__*/function (_React$Component) {
+  _inherits(HaventAppliedButtonVariant4, _React$Component);
+
+  var _super = _createSuper(HaventAppliedButtonVariant4);
+
+  function HaventAppliedButtonVariant4() {
+    _classCallCheck(this, HaventAppliedButtonVariant4);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(HaventAppliedButtonVariant4, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          iHaventAppliedFo = _this$props.iHaventAppliedFo,
+          close = _this$props.close,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          spanText5 = _this$props.spanText5,
+          goToVoucherTool = _this$props.goToVoucherTool;
+      return /*#__PURE__*/_react.default.createElement(HaventAppliedButtonVariant41, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(IHaventAppliedFo, null, iHaventAppliedFo), /*#__PURE__*/_react.default.createElement(Line7, {
+        src: "/img/line-7@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Bix.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tools-page"
+      }, /*#__PURE__*/_react.default.createElement(Close, null, close))), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(IfYouHaventYetA, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement(Span12, null, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-cornflower-25px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText4), /*#__PURE__*/_react.default.createElement(Span4, null, spanText5)), /*#__PURE__*/_react.default.createElement(TutorialButtons, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(GoToVoucherTool, null, goToVoucherTool)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1@2x.svg"
+      }))))));
+    }
+  }]);
+
+  return HaventAppliedButtonVariant4;
+}(_react.default.Component);
+
+var HaventAppliedButtonVariant41 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 495px;\n  top: 0;\n  left: 7px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 410px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 495px;\n  display: flex;\n  padding: 3px 10px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 1307px;\n  background-color: var(--midnight-blue);\n  border-radius: 5px;\n"])));
+
+var IHaventAppliedFo = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  margin-top: 17px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var Line7 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 2px;\n  height: 440px;\n  align-self: center;\n  margin-left: 18px;\n  margin-bottom: 7px;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 856px;\n  margin-left: 39px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 476px;\n"])));
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 87px;\n  height: 34px;\n  position: relative;\n  align-self: flex-end;\n"])));
+
+var Close = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 71px;\n  top: 4px;\n  left: 0;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite21px2);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 825px;\n  height: 433px;\n  position: relative;\n  margin-top: 9px;\n"])));
+
+var IfYouHaventYetA = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 812px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 32px;\n"])), _styledMixins.LibrebaskervilleNormalWhite25px2);
+
+var Span12 = _styledComponents.default.span(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  text-decoration: underline;\n"])), _styledMixins.LibrebaskervilleNormalCornflower25p);
+
+var Span4 = _styledComponents.default.span(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 700;\n  color: var(--summer-green);\n  font-size: var(--font-size-m);\n"])));
+
+var TutorialButtons = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 275px;\n  height: 60px;\n  top: 373px;\n  left: 550px;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n"])));
+
+var GoToVoucherTool = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 388px;\n  left: 562px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite25px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 27px;\n  height: 15px;\n  top: 395px;\n  left: 786px;\n  cursor: pointer;\n"])));
+
+var _default = HaventAppliedButtonVariant4;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Bix":"components/Bix/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolsPageVoucherExpand/VoucherToolsPageVoucherExpand.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolsPageVoucherExpand/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default2"));
+
+var _HaventAppliedButtonVariant = _interopRequireDefault(require("../HaventAppliedButtonVariant4"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolsPageVoucherExpand.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolsPageVoucherExpand = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolsPageVoucherExpand, _React$Component);
+
+  var _super = _createSuper(VoucherToolsPageVoucherExpand);
+
+  function VoucherToolsPageVoucherExpand() {
+    _classCallCheck(this, VoucherToolsPageVoucherExpand);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolsPageVoucherExpand, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          resourceMatching = _this$props.resourceMatching,
+          ifYoureNotSureW = _this$props.ifYoureNotSureW,
+          clickOnTheSection = _this$props.clickOnTheSection,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          iveAppliedForAV = _this$props.iveAppliedForAV,
+          haventAppliedButtonVariant4Props = _this$props.haventAppliedButtonVariant4Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tools-page-voucher-expand screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(ResourceMatching, null, resourceMatching), /*#__PURE__*/_react.default.createElement(IfYoureNotSureW, null, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement(ClickOnTheSection, null, clickOnTheSection), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(HaventAppliedButtonContainer, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_HaventAppliedButtonVariant.default, haventAppliedButtonVariant4Props)), /*#__PURE__*/_react.default.createElement(OverlapGroup7, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText3))), /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV1, null, iveAppliedForAV)))));
+    }
+  }]);
+
+  return VoucherToolsPageVoucherExpand;
+}(_react.default.Component);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var ResourceMatching = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 534px;\n  min-height: 68px;\n  margin-top: 37px;\n  font-weight: 500;\n  color: var(--black);\n  text-align: center;\n"])), _styledMixins.Header2);
+
+var IfYoureNotSureW = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 36px;\n  margin-top: 45px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var ClickOnTheSection = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 960px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 37px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  margin-left: 33px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1307px;\n"])));
+
+var HaventAppliedButtonContainer = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 417px;\n  height: 495px;\n  position: relative;\n"])));
+
+var OverlapGroup7 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 32px;\n  display: flex;\n  padding: 19px 21px;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--hippie-blue);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 435px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 38px;\n  display: flex;\n  padding: 21px 20px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var _default = VoucherToolsPageVoucherExpand;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default2":"components/Property1Default2/index.jsx","../HaventAppliedButtonVariant4":"components/HaventAppliedButtonVariant4/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolsPageVoucherExpand.css":"components/VoucherToolsPageVoucherExpand/VoucherToolsPageVoucherExpand.css"}],"components/HomePageLink2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var HomePageLink2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(HomePageLink2, _React$Component);
+
+  var _super = _createSuper(HomePageLink2);
+
+  function HomePageLink2() {
+    _classCallCheck(this, HomePageLink2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(HomePageLink2, [{
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      return /*#__PURE__*/_react.default.createElement(HomePageLink, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/landing-page"
+      }, /*#__PURE__*/_react.default.createElement(HomePage, null, children)));
+    }
+  }]);
+
+  return HomePageLink2;
+}(_react.default.Component);
+
+var HomePageLink = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 27px;\n  margin-left: 766px;\n  margin-bottom: 1px;\n  display: flex;\n  padding: 0 14px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 191px;\n"])));
+
+var HomePage = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 142px;\n  min-height: 25px;\n  text-align: center;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoNormalSummerGreen25px);
+
+var _default = HomePageLink2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/HomePageV3/HomePageV3.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/HomePageV3/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink2"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./HomePageV3.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var HomePageV3 = /*#__PURE__*/function (_React$Component) {
+  _inherits(HomePageV3, _React$Component);
+
+  var _super = _createSuper(HomePageV3);
+
+  function HomePageV3() {
+    _classCallCheck(this, HomePageV3);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(HomePageV3, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          housingVoucherHelp = _this$props.housingVoucherHelp,
+          connectingHousingR = _this$props.connectingHousingR,
+          whetherYoureACas = _this$props.whetherYoureACas,
+          emergencyHousingVo = _this$props.emergencyHousingVo,
+          httpsWwwHudGovEhv = _this$props.httpsWwwHudGovEhv,
+          moreInformation = _this$props.moreInformation,
+          ourServices = _this$props.ourServices,
+          noWeCantPersona = _this$props.noWeCantPersona,
+          weAreCurrentlyTar = _this$props.weAreCurrentlyTar,
+          ourMission = _this$props.ourMission,
+          unsureWhichToClick = _this$props.unsureWhichToClick,
+          whatIsAnEmergencyHousingVoucher = _this$props.whatIsAnEmergencyHousingVoucher,
+          getMoreInformation = _this$props.getMoreInformation,
+          doWeDistributeVouchers = _this$props.doWeDistributeVouchers,
+          imInterestedInOtherResources = _this$props.imInterestedInOtherResources,
+          iNeedAVoucher = _this$props.iNeedAVoucher,
+          iHaveAVoucher = _this$props.iHaveAVoucher,
+          logoProps = _this$props.logoProps,
+          homePageLink2Props = _this$props.homePageLink2Props,
+          moreResourcesProps = _this$props.moreResourcesProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "home-page-v3 screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Logo.default, {
+        className: logoProps.className
+      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null, homePageLink2Props.children), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      })), /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(Polygon1, {
+        src: "/img/polygon-1-1@1x.svg"
+      }), /*#__PURE__*/_react.default.createElement(Ellipse1, null), /*#__PURE__*/_react.default.createElement(HousingVoucherHelp, null, housingVoucherHelp), /*#__PURE__*/_react.default.createElement(ConnectingHousingR, null, connectingHousingR), /*#__PURE__*/_react.default.createElement(WhetherYoureACas, null, whetherYoureACas), /*#__PURE__*/_react.default.createElement(EmergencyHousingVo, null, emergencyHousingVo), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.hud.gov/ehv",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Httpswwwhudgovehv, null, httpsWwwHudGovEhv)), /*#__PURE__*/_react.default.createElement(MoreInformation, null, moreInformation), /*#__PURE__*/_react.default.createElement(OurServices, null, ourServices), /*#__PURE__*/_react.default.createElement(Arrow2, {
+        src: "/img/arrow-2@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(NoWeCantPersona, null, noWeCantPersona)), /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(Polygon2, {
+        src: "/img/polygon-2@1x.svg"
+      }), /*#__PURE__*/_react.default.createElement(WeAreCurrentlyTar, null, weAreCurrentlyTar), /*#__PURE__*/_react.default.createElement(OurMission, null, ourMission)), /*#__PURE__*/_react.default.createElement(UnsureWhichToClick, null, unsureWhichToClick), /*#__PURE__*/_react.default.createElement(WhatIsAnEmergencyHousingVoucher, null, whatIsAnEmergencyHousingVoucher), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tools-page"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(GetMoreInformation, null, getMoreInformation), /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1-1@2x.svg"
+      })))), /*#__PURE__*/_react.default.createElement(DoWeDistributeVouchers, null, doWeDistributeVouchers), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/resources-v3-1"
+      }, /*#__PURE__*/_react.default.createElement(VoucherButtonV2, null, /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(ImInterestedInOtherResources, null, imInterestedInOtherResources), /*#__PURE__*/_react.default.createElement(Arrow11, {
+        src: "/img/arrow-1-2@2x.svg"
+      })))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(VoucherButtonV1, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(INeedAVoucher, null, iNeedAVoucher)), /*#__PURE__*/_react.default.createElement(Arrow12, {
+        src: "/img/arrow-1-3@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/resources-v3"
+      }, /*#__PURE__*/_react.default.createElement(VoucherButtonV4, null, /*#__PURE__*/_react.default.createElement(IHaveAVoucher, null, iHaveAVoucher), /*#__PURE__*/_react.default.createElement(Arrow13, {
+        src: "/img/arrow-1-2@2x.svg"
+      }))))));
+    }
+  }]);
+
+  return HomePageV3;
+}(_react.default.Component);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1819px;\n  height: 2088px;\n  position: relative;\n  margin-top: 79px;\n  margin-left: -246px;\n"])));
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1819px;\n  height: 1685px;\n  top: 0;\n  left: 0;\n"])));
+
+var Polygon1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 511px;\n  height: 827px;\n  top: 858px;\n  left: 1308px;\n"])));
+
+var Ellipse1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 818px;\n  height: 818px;\n  top: 167px;\n  left: 0;\n  background-color: var(--jagged-ice);\n  border-radius: 409px;\n"])));
+
+var HousingVoucherHelp = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 336px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack90px);
+
+var ConnectingHousingR = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 642px;\n  top: 345px;\n  left: 336px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var WhetherYoureACas = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 853px;\n  top: 797px;\n  left: 693px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack23px);
+
+var EmergencyHousingVo = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 712px;\n  top: 1053px;\n  left: 867px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack23px);
+
+var Httpswwwhudgovehv = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 301px;\n  top: 1198px;\n  left: 1263px;\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 400;\n  color: #16375e;\n  font-size: var(--font-size-s);\n  letter-spacing: 0;\n  text-decoration: underline;\n  cursor: pointer;\n"])));
+
+var MoreInformation = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 520px;\n  top: 553px;\n  left: 754px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var OurServices = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 291px;\n  top: 793px;\n  left: 337px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var Arrow2 = _styledComponents.default.img(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 32px;\n  height: 33px;\n  top: 567px;\n  left: 1170px;\n"])));
+
+var NoWeCantPersona = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 763px;\n  top: 1395px;\n  left: 783px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack23px);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1392px;\n  height: 532px;\n  top: 1556px;\n  left: 155px;\n"])));
+
+var Polygon2 = _styledComponents.default.img(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 733px;\n  height: 532px;\n  top: 0;\n  left: 0;\n"])));
+
+var WeAreCurrentlyTar = _styledComponents.default.div(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 854px;\n  top: 135px;\n  left: 538px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack23px);
+
+var OurMission = _styledComponents.default.div(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 282px;\n  top: 131px;\n  left: 182px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var UnsureWhichToClick = _styledComponents.default.div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 241px;\n  top: 455px;\n  left: 1088px;\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 400;\n  color: var(--black);\n  font-size: 21px;\n  letter-spacing: 0;\n"])));
+
+var WhatIsAnEmergencyHousingVoucher = _styledComponents.default.div(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 509px;\n  top: 1040px;\n  left: 336px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var TutorialButtons = _styledComponents.default.div(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 35px;\n  top: 450px;\n  left: 1350px;\n  display: flex;\n  padding: 8px;\n  align-items: flex-start;\n  min-width: 225px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n  cursor: pointer;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n  width: 208px;\n  height: 19px;\n  position: relative;\n"])));
+
+var GetMoreInformation = _styledComponents.default.div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 201px;\n  top: 0;\n  left: 0;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: #fffffff2;\n  font-size: 19px;\n  letter-spacing: 0;\n"])));
+
+var Arrow1 = _styledComponents.default.img(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 11px;\n  top: 5px;\n  left: 186px;\n"])));
+
+var DoWeDistributeVouchers = _styledComponents.default.div(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 374px;\n  top: 1382px;\n  left: 337px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var VoucherButtonV2 = _styledComponents.default.div(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 118px;\n  top: 315px;\n  left: 1088px;\n  display: flex;\n  padding: 15.3px 22px;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 513px;\n  background-color: #5fa8d3;\n  border-radius: 5px;\n  cursor: pointer;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n  width: 468px;\n  height: 86px;\n  position: relative;\n"])));
+
+var ImInterestedInOtherResources = _styledComponents.default.div(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 468px;\n  top: 0;\n  left: 0;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: var(--white);\n  font-size: 37px;\n  letter-spacing: 0;\n"])));
+
+var Arrow11 = _styledComponents.default.img(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 49px;\n  height: 29px;\n  top: 57px;\n  left: 414px;\n"])));
+
+var VoucherButtonV1 = _styledComponents.default.div(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 513px;\n  top: 15px;\n  left: 1088px;\n  display: flex;\n  flex-direction: column;\n  padding: 15.3px 22px;\n  align-items: flex-end;\n  min-height: 118px;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  cursor: pointer;\n"])));
+
+var INeedAVoucher = _styledComponents.default.div(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n  ", "\n  width: 468px;\n  min-height: 47px;\n  margin-top: 1px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var Arrow12 = _styledComponents.default.img(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n  width: 49px;\n  height: 29px;\n  margin-top: 10px;\n  margin-right: 5px;\n"])));
+
+var VoucherButtonV4 = _styledComponents.default.div(_templateObject33 || (_templateObject33 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 513px;\n  top: 165px;\n  left: 1088px;\n  display: flex;\n  flex-direction: column;\n  padding: 15.3px 22px;\n  align-items: flex-end;\n  min-height: 118px;\n  background-color: var(--midnight-blue);\n  border-radius: 5px;\n  cursor: pointer;\n"])));
+
+var IHaveAVoucher = _styledComponents.default.div(_templateObject34 || (_templateObject34 = _taggedTemplateLiteral(["\n  ", "\n  width: 468px;\n  min-height: 47px;\n  margin-top: 10px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var Arrow13 = _styledComponents.default.img(_templateObject35 || (_templateObject35 = _taggedTemplateLiteral(["\n  width: 49px;\n  height: 29px;\n  margin-top: 1px;\n  margin-right: 5px;\n"])));
+
+var _default = HomePageV3;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink2":"components/HomePageLink2/index.jsx","../MoreResources":"components/MoreResources/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./HomePageV3.css":"components/HomePageV3/HomePageV3.css"}],"components/TextInfo/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var TextInfo = /*#__PURE__*/function (_React$Component) {
+  _inherits(TextInfo, _React$Component);
+
+  var _super = _createSuper(TextInfo);
+
+  function TextInfo() {
+    _classCallCheck(this, TextInfo);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TextInfo, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(TextInfo1, null, /*#__PURE__*/_react.default.createElement(NoDocumentsAreNee, null, "You\u2019ve reached the end of our voucher tool! ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "If you\u2019d like, please choose how you\u2019d like to get a summary of the information provided by this tool:"));
+    }
+  }]);
+
+  return TextInfo;
+}(_react.default.Component);
+
+var TextInfo1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  height: 564px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 1px 58px;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var NoDocumentsAreNee = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 882px;\n  min-height: 533px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var TextInfo2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  height: 564px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 1px 58px;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var NoDocumentsAreNee1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 882px;\n  min-height: 533px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var _default = TextInfo;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/IcoutlinePhoneIphone/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var IcoutlinePhoneIphone = /*#__PURE__*/function (_React$Component) {
+  _inherits(IcoutlinePhoneIphone, _React$Component);
+
+  var _super = _createSuper(IcoutlinePhoneIphone);
+
+  function IcoutlinePhoneIphone() {
+    _classCallCheck(this, IcoutlinePhoneIphone);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(IcoutlinePhoneIphone, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(IcoutlinePhoneIphone1, null, /*#__PURE__*/_react.default.createElement(IconMobile, {
+        src: "/img/vector-10@2x.svg"
+      }));
+    }
+  }]);
+
+  return IcoutlinePhoneIphone;
+}(_react.default.Component);
+
+var IcoutlinePhoneIphone1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 171px;\n  height: 171px;\n  top: 225px;\n  left: 271px;\n  display: flex;\n  padding: 7px 34.9px;\n  align-items: flex-start;\n"])));
+
+var IconMobile = _styledComponents.default.img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 93px;\n  height: 157px;\n"])));
+
+var IcoutlinePhoneIphone2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 171px;\n  height: 171px;\n  top: 225px;\n  left: 271px;\n  display: flex;\n  padding: 7px 34.9px;\n  align-items: flex-start;\n"])));
+
+var IconMobile1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 93px;\n  height: 157px;\n"])));
+
+var _default = IcoutlinePhoneIphone;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/UilimageDownload/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var UilimageDownload = /*#__PURE__*/function (_React$Component) {
+  _inherits(UilimageDownload, _React$Component);
+
+  var _super = _createSuper(UilimageDownload);
+
+  function UilimageDownload() {
+    _classCallCheck(this, UilimageDownload);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(UilimageDownload, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(UilimageDownload1, null, /*#__PURE__*/_react.default.createElement(Vector, {
+        src: "/img/vector-11@2x.svg"
+      }));
+    }
+  }]);
+
+  return UilimageDownload;
+}(_react.default.Component);
+
+var UilimageDownload1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 196px;\n  height: 196px;\n  top: 200px;\n  left: 535px;\n  display: flex;\n  padding: 7.9px 8.3px;\n  align-items: flex-start;\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 172px;\n  height: 172px;\n  margin-left: 8px;\n"])));
+
+var UilimageDownload2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 196px;\n  height: 196px;\n  top: 200px;\n  left: 535px;\n  display: flex;\n  padding: 7.9px 8.3px;\n  align-items: flex-start;\n"])));
+
+var Vector1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 172px;\n  height: 172px;\n  margin-left: 8px;\n"])));
+
+var _default = UilimageDownload;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/Property1PhonePopUpDefault/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1PhonePopUpDefault = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1PhonePopUpDefault, _React$Component);
+
+  var _super = _createSuper(Property1PhonePopUpDefault);
+
+  function Property1PhonePopUpDefault() {
+    _classCallCheck(this, Property1PhonePopUpDefault);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1PhonePopUpDefault, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          wouldYouLikeToGe = _this$props.wouldYouLikeToGe,
+          email = _this$props.email,
+          text = _this$props.text;
+      return /*#__PURE__*/_react.default.createElement(PhonePopUpV2, null, /*#__PURE__*/_react.default.createElement(WouldYouLikeToGe, null, wouldYouLikeToGe), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(Email, null, email)), /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(Email, null, text))));
+    }
+  }]);
+
+  return Property1PhonePopUpDefault;
+}(_react.default.Component);
+
+var PhonePopUpV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 651px;\n  top: 478px;\n  left: 394px;\n  display: flex;\n  flex-direction: column;\n  padding: 23.1px 55px;\n  align-items: flex-end;\n  min-height: 245px;\n  background-color: var(--white);\n  border-radius: 5px;\n  border: 1px solid #0000001f;\n  box-shadow: 3px 3px 4px #00000040;\n"])));
+
+var WouldYouLikeToGe = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 529px;\n  min-height: 75px;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: var(--black);\n  font-size: 38px;\n  letter-spacing: 0;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  align-self: center;\n  margin-top: 38px;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 516px;\n"])));
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 67px;\n  display: flex;\n  padding: 14.8px 6px;\n  align-items: flex-start;\n  min-width: 238px;\n  background-color: var(--amazon);\n  border-radius: 8px;\n  box-shadow: 3px 3px 4px #00000026;\n"])));
+
+var Email = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  width: 225px;\n  min-height: 27px;\n  text-align: center;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  height: 67px;\n  margin-left: 40px;\n  display: flex;\n  padding: 14.8px 6px;\n  align-items: flex-start;\n  min-width: 238px;\n  background-color: var(--amazon);\n  border-radius: 8px;\n  box-shadow: 3px 3px 4px #00000026;\n"])));
+
+var _default = Property1PhonePopUpDefault;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3DownloadInfo/VoucherToolV3DownloadInfo.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3DownloadInfo/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _TextInfo = _interopRequireDefault(require("../TextInfo"));
+
+var _IcoutlinePhoneIphone = _interopRequireDefault(require("../IcoutlinePhoneIphone"));
+
+var _UilimageDownload = _interopRequireDefault(require("../UilimageDownload"));
+
+var _Property1PhonePopUpDefault = _interopRequireDefault(require("../Property1PhonePopUpDefault"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3DownloadInfo.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3DownloadInfo = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3DownloadInfo, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3DownloadInfo);
+
+  function VoucherToolV3DownloadInfo() {
+    _classCallCheck(this, VoucherToolV3DownloadInfo);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3DownloadInfo, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          getSummaryViaTextOrEmail = _this$props.getSummaryViaTextOrEmail,
+          downloadPdfOfSummary = _this$props.downloadPdfOfSummary,
+          property1AudioProps = _this$props.property1AudioProps,
+          property1PhonePopUpDefaultProps = _this$props.property1PhonePopUpDefaultProps,
+          homePageLinkProps = _this$props.homePageLinkProps,
+          moreResourcesProps = _this$props.moreResourcesProps,
+          logoProps = _this$props.logoProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-download-info-1 screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-2@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-3@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_TextInfo.default, null), /*#__PURE__*/_react.default.createElement(_IcoutlinePhoneIphone.default, null), /*#__PURE__*/_react.default.createElement(_UilimageDownload.default, null), /*#__PURE__*/_react.default.createElement(Rectangle35, null), /*#__PURE__*/_react.default.createElement(GetSummaryViaTextOrEmail, null, getSummaryViaTextOrEmail), /*#__PURE__*/_react.default.createElement(Rectangle36, null), /*#__PURE__*/_react.default.createElement(DownloadPDFOfSummary, null, downloadPdfOfSummary)), /*#__PURE__*/_react.default.createElement(Rectangle87, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-download-info"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle60, null)), /*#__PURE__*/_react.default.createElement(_Property1PhonePopUpDefault.default, {
+        wouldYouLikeToGe: property1PhonePopUpDefaultProps.wouldYouLikeToGe,
+        email: property1PhonePopUpDefaultProps.email,
+        text: property1PhonePopUpDefaultProps.text
+      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
+        className: homePageLinkProps.className
+      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      }), /*#__PURE__*/_react.default.createElement(_Logo.default, {
+        className: logoProps.className
+      }))));
+    }
+  }]);
+
+  return VoucherToolV3DownloadInfo;
+}(_react.default.Component);
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 1012px;\n  position: relative;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 215px;\n  left: 517px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 99px;\n  height: 77px;\n  top: 915px;\n  left: 43px;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 236px;\n  height: 77px;\n  top: 914px;\n  left: 1169px;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1011px;\n  height: 564px;\n  top: 326px;\n  left: 215px;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var Rectangle35 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 67px;\n  top: 412px;\n  left: 265px;\n  background-color: var(--midnight-blue);\n  border-radius: 12px;\n"])));
+
+var GetSummaryViaTextOrEmail = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 152px;\n  top: 421px;\n  left: 280px;\n  text-align: center;\n  letter-spacing: 0;\n"])));
+
+var Rectangle36 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 67px;\n  top: 412px;\n  left: 542px;\n  background-color: var(--midnight-blue);\n  border-radius: 12px;\n"])));
+
+var DownloadPDFOfSummary = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 152px;\n  top: 421px;\n  left: 557px;\n  text-align: center;\n  letter-spacing: 0;\n"])));
+
+var Rectangle87 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 152px;\n  top: 0;\n  left: 0;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var Rectangle60 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1012px;\n  top: 0;\n  left: 0;\n  background-color: #0000002e;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3DownloadInfo;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Property1Audio":"components/Property1Audio/index.jsx","../TextInfo":"components/TextInfo/index.jsx","../IcoutlinePhoneIphone":"components/IcoutlinePhoneIphone/index.jsx","../UilimageDownload":"components/UilimageDownload/index.jsx","../Property1PhonePopUpDefault":"components/Property1PhonePopUpDefault/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Logo":"components/Logo/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3DownloadInfo.css":"components/VoucherToolV3DownloadInfo/VoucherToolV3DownloadInfo.css"}],"components/ResourceAddedOrNotNotAdded/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourceAddedOrNotNotAdded = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourceAddedOrNotNotAdded, _React$Component);
+
+  var _super = _createSuper(ResourceAddedOrNotNotAdded);
+
+  function ResourceAddedOrNotNotAdded() {
+    _classCallCheck(this, ResourceAddedOrNotNotAdded);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourceAddedOrNotNotAdded, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          housingChoiceVouchers = _this$props.housingChoiceVouchers,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          linkToResource = _this$props.linkToResource;
+      return /*#__PURE__*/_react.default.createElement(ResourceSection, null, /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle26, null)), /*#__PURE__*/_react.default.createElement(HousingChoiceVouchers, null, housingChoiceVouchers), /*#__PURE__*/_react.default.createElement(TheHousingChoiceV, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-22px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText2)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle27, null)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(LinkToResource, null, linkToResource))));
+    }
+  }]);
+
+  return ResourceAddedOrNotNotAdded;
+}(_react.default.Component);
+
+var ResourceSection = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 242px;\n  top: 0;\n  left: 0;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1293px;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1293px;\n  height: 242px;\n  position: relative;\n  border-radius: 2px;\n"])));
+
+var Rectangle26 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1293px;\n  height: 242px;\n  top: 0;\n  left: 0;\n  background-color: var(--midnight-blue);\n  border-radius: 2px;\n  cursor: pointer;\n"])));
+
+var HousingChoiceVouchers = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 14px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite35px);
+
+var TheHousingChoiceV = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1217px;\n  top: 84px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite22px);
+
+var Rectangle27 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 186px;\n  height: 42px;\n  top: 178px;\n  left: 1081px;\n  background-color: var(--white);\n  border-radius: 8.4px;\n  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;\n  cursor: pointer;\n"])));
+
+var LinkToResource = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 157px;\n  top: 188px;\n  left: 1095px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumMidnightBlue21px);
+
+var _default = ResourceAddedOrNotNotAdded;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/ResourceAddedOrNotResourceAddedOrNo/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourceAddedOrNotResourceAddedOrNo = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourceAddedOrNotResourceAddedOrNo, _React$Component);
+
+  var _super = _createSuper(ResourceAddedOrNotResourceAddedOrNo);
+
+  function ResourceAddedOrNotResourceAddedOrNo() {
+    _classCallCheck(this, ResourceAddedOrNotResourceAddedOrNo);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourceAddedOrNotResourceAddedOrNo, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          universityDistrictFoodBank = _this$props.universityDistrictFoodBank,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          linkToResource = _this$props.linkToResource;
+      return /*#__PURE__*/_react.default.createElement(ResourceSection, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.udistrictfoodbank.org/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle26, null)), /*#__PURE__*/_react.default.createElement(UniversityDistrictFoodBank, null, universityDistrictFoodBank), /*#__PURE__*/_react.default.createElement(OurMissionIsToBu, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-22px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText2)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.udistrictfoodbank.org/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle27, null)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.udistrictfoodbank.org/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(LinkToResource, null, linkToResource))));
+    }
+  }]);
+
+  return ResourceAddedOrNotResourceAddedOrNo;
+}(_react.default.Component);
+
+var ResourceSection = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  margin-left: 19px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1293px;\n"])));
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1293px;\n  height: 226px;\n  position: relative;\n  border-radius: 2px;\n"])));
+
+var Rectangle26 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1293px;\n  height: 226px;\n  top: 0;\n  left: 0;\n  background-color: var(--hippie-blue);\n  border-radius: 2px;\n  cursor: pointer;\n"])));
+
+var UniversityDistrictFoodBank = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 516px;\n  top: 13px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite35px);
+
+var OurMissionIsToBu = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1217px;\n  top: 84px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite22px);
+
+var Rectangle27 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 186px;\n  height: 42px;\n  top: 164px;\n  left: 1082px;\n  background-color: var(--white);\n  border-radius: 8.4px;\n  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;\n  cursor: pointer;\n"])));
+
+var LinkToResource = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 157px;\n  top: 174px;\n  left: 1096px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumMidnightBlue21px);
+
+var _default = ResourceAddedOrNotResourceAddedOrNo;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/ResourcesV3/ResourcesV3.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourcesV3/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _ResourceAddedOrNotNotAdded = _interopRequireDefault(require("../ResourceAddedOrNotNotAdded"));
+
+var _ResourceAddedOrNotResourceAddedOrNo = _interopRequireDefault(require("../ResourceAddedOrNotResourceAddedOrNo"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./ResourcesV3.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourcesV3 = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourcesV3, _React$Component);
+
+  var _super = _createSuper(ResourcesV3);
+
+  function ResourcesV3() {
+    _classCallCheck(this, ResourcesV3);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourcesV3, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          moreResources = _this$props.moreResources,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          otherVoucherPrograms = _this$props.otherVoucherPrograms,
+          housingChoiceVouchers1 = _this$props.housingChoiceVouchers1,
+          theHousingChoiceV = _this$props.theHousingChoiceV,
+          foodAndShelterResources = _this$props.foodAndShelterResources,
+          temporaryHousingResources = _this$props.temporaryHousingResources,
+          housingChoiceVouchers2 = _this$props.housingChoiceVouchers2,
+          lihiProvidesAVari = _this$props.lihiProvidesAVari,
+          linkToResource = _this$props.linkToResource,
+          resourceAddedOrNotNotAddedProps = _this$props.resourceAddedOrNotNotAddedProps,
+          resourceAddedOrNotResourceAddedOrNoProps = _this$props.resourceAddedOrNotResourceAddedOrNoProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "resources-v3-1 screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(MoreResources1, null, moreResources), /*#__PURE__*/_react.default.createElement(IfYouHaveAlready, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-25px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-25px"
+      }, spanText2)), /*#__PURE__*/_react.default.createElement(OtherVoucherPrograms, null, otherVoucherPrograms), /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(HousingChoiceVouchers, null, housingChoiceVouchers1), /*#__PURE__*/_react.default.createElement(TheHousingChoiceV, null, theHousingChoiceV), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotNotAdded.default, {
+        housingChoiceVouchers: resourceAddedOrNotNotAddedProps.housingChoiceVouchers,
+        spanText1: resourceAddedOrNotNotAddedProps.spanText1,
+        spanText2: resourceAddedOrNotNotAddedProps.spanText2,
+        linkToResource: resourceAddedOrNotNotAddedProps.linkToResource
+      })), /*#__PURE__*/_react.default.createElement(FoodAndShelterResources, null, foodAndShelterResources), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotResourceAddedOrNo.default, {
+        universityDistrictFoodBank: resourceAddedOrNotResourceAddedOrNoProps.universityDistrictFoodBank,
+        spanText1: resourceAddedOrNotResourceAddedOrNoProps.spanText1,
+        spanText2: resourceAddedOrNotResourceAddedOrNoProps.spanText2,
+        linkToResource: resourceAddedOrNotResourceAddedOrNoProps.linkToResource
+      }), /*#__PURE__*/_react.default.createElement(TemporaryHousingResources, null, temporaryHousingResources), /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://lihi.org/rosies-village/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle26, null)), /*#__PURE__*/_react.default.createElement(HousingChoiceVouchers1, null, housingChoiceVouchers2), /*#__PURE__*/_react.default.createElement(LIHIProvidesAVari, null, lihiProvidesAVari)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://lihi.org/rosies-village/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle27, null)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://lihi.org/rosies-village/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(LinkToResource, null, linkToResource)))));
+    }
+  }]);
+
+  return ResourcesV3;
+}(_react.default.Component);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var MoreResources1 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 440px;\n  min-height: 75px;\n  margin-top: 39px;\n  margin-left: 2px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var IfYouHaveAlready = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 83px;\n  margin-top: 36px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var OtherVoucherPrograms = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 599px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 31px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1293px;\n  height: 242px;\n  position: relative;\n  margin-left: 19px;\n"])));
+
+var HousingChoiceVouchers = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 76px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var TheHousingChoiceV = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1217px;\n  top: 136px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite25px);
+
+var FoodAndShelterResources = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 687px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 44px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var TemporaryHousingResources = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  width: 789px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 36px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1293px;\n  height: 242px;\n  top: 0;\n  left: 0;\n  border-radius: 2px;\n"])));
+
+var Rectangle26 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1293px;\n  height: 242px;\n  top: 0;\n  left: 0;\n  background-color: var(--amazon);\n  border-radius: 2px;\n  cursor: pointer;\n"])));
+
+var HousingChoiceVouchers1 = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 14px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite35px);
+
+var LIHIProvidesAVari = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1217px;\n  top: 84px;\n  left: 21px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite22px);
+
+var Rectangle27 = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 186px;\n  height: 42px;\n  top: 180px;\n  left: 1081px;\n  background-color: var(--white);\n  border-radius: 8.4px;\n  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;\n  cursor: pointer;\n"])));
+
+var LinkToResource = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 157px;\n  top: 190px;\n  left: 1095px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumMidnightBlue21px);
+
+var _default = ResourcesV3;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../ResourceAddedOrNotNotAdded":"components/ResourceAddedOrNotNotAdded/index.jsx","../ResourceAddedOrNotResourceAddedOrNo":"components/ResourceAddedOrNotResourceAddedOrNo/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./ResourcesV3.css":"components/ResourcesV3/ResourcesV3.css"}],"components/VoucherToolV3NextSteps/VoucherToolV3NextSteps.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3NextSteps/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3NextSteps.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3NextSteps = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3NextSteps, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3NextSteps);
+
+  function VoucherToolV3NextSteps() {
+    _classCallCheck(this, VoucherToolV3NextSteps);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3NextSteps, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          spanText5 = _this$props.spanText5,
+          spanText6 = _this$props.spanText6,
+          spanText7 = _this$props.spanText7,
+          spanText8 = _this$props.spanText8,
+          givingVoucher1 = _this$props.givingVoucher1,
+          logoProps = _this$props.logoProps,
+          homePageLinkProps = _this$props.homePageLinkProps,
+          moreResourcesProps = _this$props.moreResourcesProps,
+          property1AudioProps = _this$props.property1AudioProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-next-steps screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, {
+        className: logoProps.className
+      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
+        className: homePageLinkProps.className
+      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-5@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(IfYoureConnected, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-30px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-30px"
+      }, spanText4), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText5), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-29px"
+      }, spanText6), /*#__PURE__*/_react.default.createElement(Span6, null, spanText7), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-29px"
+      }, spanText8))), /*#__PURE__*/_react.default.createElement(GivingVoucher1, {
+        src: givingVoucher1
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-rap"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-4@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3NextSteps;
+}(_react.default.Component);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  margin-left: 2px;\n  display: flex;\n  padding: 38px 71px;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 99px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 641px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 511px;\n  cursor: pointer;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  align-self: flex-start;\n  margin-left: 73px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 719px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 2px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 1011px;\n  height: 608px;\n  position: relative;\n"])));
+
+var TextInfo = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  height: 564px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 0 24px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var IfYoureConnected = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  width: 960px;\n  min-height: 533px;\n  margin-bottom: -8px;\n  letter-spacing: 0;\n  line-height: 40px;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var Span6 = _styledComponents.default.span(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 700;\n  color: var(--black);\n  font-size: 29px;\n"])));
+
+var GivingVoucher1 = _styledComponents.default.img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 365px;\n  height: 441px;\n  top: 167px;\n  left: 646px;\n  object-fit: cover;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 66px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3NextSteps;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3NextSteps.css":"components/VoucherToolV3NextSteps/VoucherToolV3NextSteps.css"}],"components/Property1Expanded/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Bix = _interopRequireDefault(require("../Bix"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34137,59 +38991,56 @@ var Property1Expanded = /*#__PURE__*/function (_React$Component) {
           spanText2 = _this$props.spanText2,
           spanText3 = _this$props.spanText3,
           spanText4 = _this$props.spanText4;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "received-voucher-button"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-13"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "ive-applied-for-a-v-2 roboto-medium-white-40px"
-      }, iveAppliedForAV), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-7",
+      return /*#__PURE__*/_react.default.createElement(ReceivedVoucherButton, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, iveAppliedForAV), /*#__PURE__*/_react.default.createElement(Line7, {
         src: "/img/line-7@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-container-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "bix"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "vector-17",
-        src: "/img/vector-26@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "close"
-      }, close)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-5"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/resources-v3-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons"
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/resources-v3-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "go-to-housing-tool"
-      }, goToHousingTool)), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-1",
-        src: "/img/arrow-1-4@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-you-have-applied librebaskerville-normal-white-25px-2"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Bix.default, null), /*#__PURE__*/_react.default.createElement(Close, null, close)), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/resources-v3"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/resources-v3"
+      }, /*#__PURE__*/_react.default.createElement(GoToHousingTool, null, goToHousingTool)), /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(IfYouHaveApplied, null, /*#__PURE__*/_react.default.createElement("span", {
         className: "librebaskerville-normal-white-25px"
       }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1"
+        className: "librebaskerville-normal-cornflower-25px"
       }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
         className: "librebaskerville-normal-white-25px"
-      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span3"
-      }, spanText4))))));
+      }, spanText3), /*#__PURE__*/_react.default.createElement(Span32, null, spanText4))))));
     }
   }]);
 
   return Property1Expanded;
 }(_react.default.Component);
 
+var ReceivedVoucherButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 495px;\n  top: 0;\n  left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 410px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 495px;\n  display: flex;\n  padding: 3px 10px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 1307px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  margin-top: 18px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var Line7 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 2px;\n  height: 440px;\n  align-self: center;\n  margin-left: 10px;\n  margin-bottom: 7px;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 856px;\n  margin-left: 39px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 449px;\n"])));
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 87px;\n  height: 34px;\n  position: relative;\n  align-self: flex-end;\n"])));
+
+var Close = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 71px;\n  top: 4px;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px2);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 812px;\n  height: 405px;\n  position: relative;\n  margin-top: 10px;\n"])));
+
+var TutorialButtons = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 275px;\n  height: 60px;\n  top: 345px;\n  left: 0;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n  cursor: pointer;\n"])));
+
+var GoToHousingTool = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 360px;\n  left: 12px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite25px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 27px;\n  height: 15px;\n  top: 367px;\n  left: 236px;\n"])));
+
+var IfYouHaveApplied = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 812px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 32px;\n"])), _styledMixins.LibrebaskervilleNormalWhite25px2);
+
+var Span32 = _styledComponents.default.span(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 700;\n  color: var(--cornflower);\n  font-size: var(--font-size-m);\n"])));
+
 var _default = Property1Expanded;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Property1Expanded.css":"components/Property1Expanded/Property1Expanded.css"}],"components/VoucherToolsPageReceivedExpand/VoucherToolsPageReceivedExpand.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Bix":"components/Bix/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolsPageReceivedExpand/VoucherToolsPageReceivedExpand.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -34204,21 +39055,29 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
-var _Property1Default = _interopRequireDefault(require("../Property1Default"));
+var _Property1Default = _interopRequireDefault(require("../Property1Default2"));
 
 var _Property1Expanded = _interopRequireDefault(require("../Property1Expanded"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolsPageReceivedExpand.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34262,24 +39121,18 @@ var VoucherToolsPageReceivedExpand = /*#__PURE__*/function (_React$Component) {
           spanText2 = _this$props.spanText2,
           spanText3 = _this$props.spanText3,
           iveAppliedForAV = _this$props.iveAppliedForAV,
+          homePageLinkProps = _this$props.homePageLinkProps,
+          moreResourcesProps = _this$props.moreResourcesProps,
           property1ExpandedProps = _this$props.property1ExpandedProps;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tools-page-received-expand screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-matching header-2"
-      }, resourceMatching), /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-youre-not-sure-w librebaskerville-normal-black-25px"
-      }, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-on-the-section roboto-medium-black-45px"
-      }, clickOnTheSection), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-container"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "button-container"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_Property1Expanded.default, {
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup7, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
+        className: homePageLinkProps.className
+      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      })), /*#__PURE__*/_react.default.createElement(ResourceMatching, null, resourceMatching), /*#__PURE__*/_react.default.createElement(IfYoureNotSureW, null, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement(ClickOnTheSection, null, clickOnTheSection), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_Property1Expanded.default, {
         iveAppliedForAV: property1ExpandedProps.iveAppliedForAV,
         close: property1ExpandedProps.close,
         goToHousingTool: property1ExpandedProps.goToHousingTool,
@@ -34287,2370 +39140,42 @@ var VoucherToolsPageReceivedExpand = /*#__PURE__*/function (_React$Component) {
         spanText2: property1ExpandedProps.spanText2,
         spanText3: property1ExpandedProps.spanText3,
         spanText4: property1ExpandedProps.spanText4
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group4"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "ive-applied-for-a-v roboto-medium-white-40px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      })), /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, /*#__PURE__*/_react.default.createElement("span", {
         className: "roboto-medium-white-40px"
       }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
         className: "roboto-medium-white-40px"
       }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
         className: "roboto-medium-white-40px"
-      }, spanText3))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "ive-applied-for-a-v-1 roboto-medium-white-40px"
-      }, iveAppliedForAV)))));
+      }, spanText3))), /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV1, null, iveAppliedForAV)))));
     }
   }]);
 
   return VoucherToolsPageReceivedExpand;
 }(_react.default.Component);
 
+var OverlapGroup7 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 87px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var ResourceMatching = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 527px;\n  min-height: 68px;\n  margin-top: 39px;\n  margin-left: 1px;\n  font-weight: 500;\n  color: var(--black);\n  text-align: center;\n"])), _styledMixins.Header2);
+
+var IfYoureNotSureW = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 36px;\n  margin-top: 45px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var ClickOnTheSection = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 960px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 37px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  margin-left: 33px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1307px;\n"])));
+
+var ButtonContainer = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 411px;\n  height: 495px;\n  position: relative;\n"])));
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 38px;\n  display: flex;\n  padding: 19px 21px;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--hippie-blue);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 435px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 38px;\n  display: flex;\n  padding: 21px 20px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
 var _default = VoucherToolsPageReceivedExpand;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default":"components/Property1Default/index.jsx","../Property1Expanded":"components/Property1Expanded/index.jsx","./VoucherToolsPageReceivedExpand.css":"components/VoucherToolsPageReceivedExpand/VoucherToolsPageReceivedExpand.css"}],"components/VoucherButtonV2/VoucherButtonV2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherButtonV2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./VoucherButtonV2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherButtonV2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherButtonV2, _React$Component);
-
-  var _super = _createSuper(VoucherButtonV2);
-
-  function VoucherButtonV2() {
-    _classCallCheck(this, VoucherButtonV2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherButtonV2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          iHaveAVoucher = _this$props.iHaveAVoucher,
-          className = _this$props.className;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-button-v2-1 ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "i-have-a-voucher roboto-medium-white-40px"
-      }, iHaveAVoucher), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-1-3",
-        src: "/img/arrow-1-2@2x.svg"
-      }));
-    }
-  }]);
-
-  return VoucherButtonV2;
-}(_react.default.Component);
-
-var _default = VoucherButtonV2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./VoucherButtonV2.css":"components/VoucherButtonV2/VoucherButtonV2.css"}],"components/VoucherButtonV3/VoucherButtonV3.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherButtonV3/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _VoucherButtonV = _interopRequireDefault(require("../VoucherButtonV2"));
-
-require("./VoucherButtonV3.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherButtonV3 = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherButtonV3, _React$Component);
-
-  var _super = _createSuper(VoucherButtonV3);
-
-  function VoucherButtonV3() {
-    _classCallCheck(this, VoucherButtonV3);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherButtonV3, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          voucherButtonV2Props = _this$props.voucherButtonV2Props;
-      return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-starting-screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-button-v3-1 ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement(_VoucherButtonV.default, {
-        iHaveAVoucher: voucherButtonV2Props.iHaveAVoucher,
-        className: voucherButtonV2Props.className
-      })));
-    }
-  }]);
-
-  return VoucherButtonV3;
-}(_react.default.Component);
-
-var _default = VoucherButtonV3;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../VoucherButtonV2":"components/VoucherButtonV2/index.jsx","./VoucherButtonV3.css":"components/VoucherButtonV3/VoucherButtonV3.css"}],"components/HomePageV3/HomePageV3.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/HomePageV3/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _VoucherButtonV = _interopRequireDefault(require("../VoucherButtonV3"));
-
-require("./HomePageV3.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var HomePageV3 = /*#__PURE__*/function (_React$Component) {
-  _inherits(HomePageV3, _React$Component);
-
-  var _super = _createSuper(HomePageV3);
-
-  function HomePageV3() {
-    _classCallCheck(this, HomePageV3);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(HomePageV3, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          title = _this$props.title,
-          connectingHousingR = _this$props.connectingHousingR,
-          whetherYoureACas = _this$props.whetherYoureACas,
-          spanText1 = _this$props.spanText1,
-          spanText2 = _this$props.spanText2,
-          moreInformation = _this$props.moreInformation,
-          ourServices = _this$props.ourServices,
-          weAreCurrentlyTar = _this$props.weAreCurrentlyTar,
-          ourMission = _this$props.ourMission,
-          whatIsAnEmergencyHousingVoucher = _this$props.whatIsAnEmergencyHousingVoucher,
-          noWeCantPersona = _this$props.noWeCantPersona,
-          doWeDistributeVouchers = _this$props.doWeDistributeVouchers,
-          unsureWhichToClick = _this$props.unsureWhichToClick,
-          getMoreInformation = _this$props.getMoreInformation,
-          imInterestedInOtherResources = _this$props.imInterestedInOtherResources,
-          logoProps = _this$props.logoProps,
-          moreResourcesProps = _this$props.moreResourcesProps,
-          voucherButtonV31Props = _this$props.voucherButtonV31Props,
-          voucherButtonV32Props = _this$props.voucherButtonV32Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "home-page-v3 screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-1"
-      }, /*#__PURE__*/_react.default.createElement(_Logo.default, {
-        className: logoProps.className
-      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
-        className: moreResourcesProps.className
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "polygon-1",
-        src: "/img/polygon-1@1x.svg"
-      }), /*#__PURE__*/_react.default.createElement("img", {
-        className: "polygon-2",
-        src: "/img/polygon-2@1x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "ellipse-1"
-      }), /*#__PURE__*/_react.default.createElement("h1", {
-        className: "title"
-      }, title), /*#__PURE__*/_react.default.createElement("div", {
-        className: "connecting-housing-r librebaskerville-normal-black-30px"
-      }, connectingHousingR), /*#__PURE__*/_react.default.createElement("div", {
-        className: "whether-youre-a-cas librebaskerville-normal-black-25px"
-      }, whetherYoureACas), /*#__PURE__*/_react.default.createElement("div", {
-        className: "emergency-housing-vo librebaskerville-normal-white-25px-2"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-25px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1-1"
-      }, spanText2)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "more-information roboto-medium-black-55px"
-      }, moreInformation), /*#__PURE__*/_react.default.createElement("div", {
-        className: "our-services roboto-medium-black-55px"
-      }, ourServices), /*#__PURE__*/_react.default.createElement("div", {
-        className: "we-are-currently-tar librebaskerville-normal-black-25px"
-      }, weAreCurrentlyTar), /*#__PURE__*/_react.default.createElement("div", {
-        className: "our-mission roboto-medium-black-55px"
-      }, ourMission), /*#__PURE__*/_react.default.createElement("div", {
-        className: "what-is-an-emergency-housing-voucher roboto-medium-black-55px"
-      }, whatIsAnEmergencyHousingVoucher), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-2",
-        src: "/img/arrow-2@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "no-we-cant-persona librebaskerville-normal-black-25px"
-      }, noWeCantPersona), /*#__PURE__*/_react.default.createElement("div", {
-        className: "do-we-distribute-vouchers roboto-medium-black-55px"
-      }, doWeDistributeVouchers)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "unsure-which-to-click"
-      }, unsureWhichToClick), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tools-page"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-14"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "get-more-information"
-      }, getMoreInformation), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-1-1",
-        src: "/img/arrow-1-1@2x.svg"
-      })))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-button-v-container"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherButtonV.default, {
-        voucherButtonV2Props: voucherButtonV31Props.voucherButtonV2Props
-      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/resources-v3-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-button-v3"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherButtonV.default, {
-        className: voucherButtonV32Props.className,
-        voucherButtonV2Props: voucherButtonV32Props.voucherButtonV2Props
-      })))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/resources-v3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-button-v2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "im-interested-in-other-resources roboto-medium-white-40px"
-      }, imInterestedInOtherResources), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-1-2",
-        src: "/img/arrow-1-2@2x.svg"
-      })))))));
-    }
-  }]);
-
-  return HomePageV3;
-}(_react.default.Component);
-
-var _default = HomePageV3;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../VoucherButtonV3":"components/VoucherButtonV3/index.jsx","./HomePageV3.css":"components/HomePageV3/HomePageV3.css"}],"components/Property1Audio/Property1Audio.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"C:\\Users\\Allison\\Documents\\college\\info\\info490491\\HomelessHousingHelp\\reactcode4\\static\\img\\vector-4@2x.svg":[["vector-4@2x.2f5ddc41.svg","static/img/vector-4@2x.svg"],"static/img/vector-4@2x.svg"],"C:\\Users\\Allison\\Documents\\college\\info\\info490491\\HomelessHousingHelp\\reactcode4\\static\\img\\vector@2x.svg":[["vector@2x.ea3d0a34.svg","static/img/vector@2x.svg"],"static/img/vector@2x.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Audio/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./Property1Audio.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1Audio = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1Audio, _React$Component);
-
-  var _super = _createSuper(Property1Audio);
-
-  function Property1Audio() {
-    _classCallCheck(this, Property1Audio);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1Audio, [{
-    key: "render",
-    value: function render() {
-      var className = this.props.className;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-3 ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "volume_up"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-6"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "vector-18",
-        src: "/img/vector@2x.png"
-      }))));
-    }
-  }]);
-
-  return Property1Audio;
-}(_react.default.Component);
-
-var _default = Property1Audio;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Audio.css":"components/Property1Audio/Property1Audio.css"}],"components/Property1Welcome/Property1Welcome.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Welcome/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-require("./Property1Welcome.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1Welcome = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1Welcome, _React$Component);
-
-  var _super = _createSuper(Property1Welcome);
-
-  function Property1Welcome() {
-    _classCallCheck(this, Property1Welcome);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1Welcome, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          welcomeThisToolI = _this$props.welcomeThisToolI,
-          clickNextToCont = _this$props.clickNextToCont,
-          tutorial1 = _this$props.tutorial1,
-          skip = _this$props.skip;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "tool-question-screen border-1px-summer-green"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-2 librebaskerville-normal-black-36px"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "welcome-this-tool-i"
-      }, welcomeThisToolI), /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-next-to-cont"
-      }, clickNextToCont), /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-1",
-        src: tutorial1
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-disclaimers"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "skip"
-      }, skip))));
-    }
-  }]);
-
-  return Property1Welcome;
-}(_react.default.Component);
-
-var _default = Property1Welcome;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Property1Welcome.css":"components/Property1Welcome/Property1Welcome.css"}],"components/Property1BackToHome/Property1BackToHome.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1BackToHome/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-require("./Property1BackToHome.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1BackToHome = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1BackToHome, _React$Component);
-
-  var _super = _createSuper(Property1BackToHome);
-
-  function Property1BackToHome() {
-    _classCallCheck(this, Property1BackToHome);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1BackToHome, [{
-    key: "render",
-    value: function render() {
-      var children = this.props.children;
-      return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/home-page-v3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-7"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "back-to-home roboto-medium-white-30px"
-      }, children)));
-    }
-  }]);
-
-  return Property1BackToHome;
-}(_react.default.Component);
-
-var _default = Property1BackToHome;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Property1BackToHome.css":"components/Property1BackToHome/Property1BackToHome.css"}],"components/VoucherToolV3StartingScreen/VoucherToolV3StartingScreen.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3StartingScreen/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
-
-var _Property1Welcome = _interopRequireDefault(require("../Property1Welcome"));
-
-var _Property1BackToHome = _interopRequireDefault(require("../Property1BackToHome"));
-
-require("./VoucherToolV3StartingScreen.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolV3StartingScreen = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3StartingScreen, _React$Component);
-
-  var _super = _createSuper(VoucherToolV3StartingScreen);
-
-  function VoucherToolV3StartingScreen() {
-    _classCallCheck(this, VoucherToolV3StartingScreen);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolV3StartingScreen, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          property1WelcomeProps = _this$props.property1WelcomeProps,
-          property1BackToHomeProps = _this$props.property1BackToHomeProps;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-starting-screen screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-2"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group4-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-3"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(_Property1Welcome.default, {
-        welcomeThisToolI: property1WelcomeProps.welcomeThisToolI,
-        clickNextToCont: property1WelcomeProps.clickNextToCont,
-        tutorial1: property1WelcomeProps.tutorial1,
-        skip: property1WelcomeProps.skip
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container"
-      }, /*#__PURE__*/_react.default.createElement(_Property1BackToHome.default, null, property1BackToHomeProps.children), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-tutorial-next-button"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-2",
-        src: "/img/tutorial-buttons-18@2x.svg"
-      })))));
-    }
-  }]);
-
-  return VoucherToolV3StartingScreen;
-}(_react.default.Component);
-
-var _default = VoucherToolV3StartingScreen;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Welcome":"components/Property1Welcome/index.jsx","../Property1BackToHome":"components/Property1BackToHome/index.jsx","./VoucherToolV3StartingScreen.css":"components/VoucherToolV3StartingScreen/VoucherToolV3StartingScreen.css"}],"components/VoucherToolPopUp2/VoucherToolPopUp2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolPopUp2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-require("./VoucherToolPopUp2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolPopUp2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolPopUp2, _React$Component);
-
-  var _super = _createSuper(VoucherToolPopUp2);
-
-  function VoucherToolPopUp2() {
-    _classCallCheck(this, VoucherToolPopUp2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolPopUp2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          thisWillTakeYouB = _this$props.thisWillTakeYouB,
-          noStayOnTheVoucherTool = _this$props.noStayOnTheVoucherTool,
-          yesTakeMeToTheHomePage = _this$props.yesTakeMeToTheHomePage;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-pop-up-1 border-1px-black-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "this-will-take-you-b roboto-medium-black-38px"
-      }, thisWillTakeYouB), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-container-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-15"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "no-stay-on-the-voucher-tool roboto-medium-white-30px"
-      }, noStayOnTheVoucherTool)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-16"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/home-page-v3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "yes-take-me-to-the-home-page roboto-medium-white-30px"
-      }, yesTakeMeToTheHomePage)))));
-    }
-  }]);
-
-  return VoucherToolPopUp2;
-}(_react.default.Component);
-
-var _default = VoucherToolPopUp2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./VoucherToolPopUp2.css":"components/VoucherToolPopUp2/VoucherToolPopUp2.css"}],"components/VoucherToolPopUp/VoucherToolPopUp.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolPopUp/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _VoucherToolPopUp = _interopRequireDefault(require("../VoucherToolPopUp2"));
-
-require("./VoucherToolPopUp.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolPopUp = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolPopUp, _React$Component);
-
-  var _super = _createSuper(VoucherToolPopUp);
-
-  function VoucherToolPopUp() {
-    _classCallCheck(this, VoucherToolPopUp);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolPopUp, [{
-    key: "render",
-    value: function render() {
-      var voucherToolPopUp2Props = this.props.voucherToolPopUp2Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-pop-up screen"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolPopUp.default, {
-        thisWillTakeYouB: voucherToolPopUp2Props.thisWillTakeYouB,
-        noStayOnTheVoucherTool: voucherToolPopUp2Props.noStayOnTheVoucherTool,
-        yesTakeMeToTheHomePage: voucherToolPopUp2Props.yesTakeMeToTheHomePage
-      })));
-    }
-  }]);
-
-  return VoucherToolPopUp;
-}(_react.default.Component);
-
-var _default = VoucherToolPopUp;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../VoucherToolPopUp2":"components/VoucherToolPopUp2/index.jsx","./VoucherToolPopUp.css":"components/VoucherToolPopUp/VoucherToolPopUp.css"}],"components/Property1Default2/Property1Default2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Default2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./Property1Default2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1Default2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1Default2, _React$Component);
-
-  var _super = _createSuper(Property1Default2);
-
-  function Property1Default2() {
-    _classCallCheck(this, Property1Default2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1Default2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          catholicCommunityServices = _this$props.catholicCommunityServices,
-          className = _this$props.className;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "regional-access-point-v2-1 ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "catholic-community-services roboto-medium-white-29px"
-      }, catholicCommunityServices), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-17"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-for-details roboto-medium-white-21px"
-      }, "Click for Details")));
-    }
-  }]);
-
-  return Property1Default2;
-}(_react.default.Component);
-
-var _default = Property1Default2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Default2.css":"components/Property1Default2/Property1Default2.css"}],"components/RegionalAccessPointsV2/RegionalAccessPointsV2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/RegionalAccessPointsV2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Property1Default = _interopRequireDefault(require("../Property1Default2"));
-
-require("./RegionalAccessPointsV2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var RegionalAccessPointsV2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(RegionalAccessPointsV2, _React$Component);
-
-  var _super = _createSuper(RegionalAccessPointsV2);
-
-  function RegionalAccessPointsV2() {
-    _classCallCheck(this, RegionalAccessPointsV2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(RegionalAccessPointsV2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          regionalAccessPoin = _this$props.regionalAccessPoin,
-          property1Default21Props = _this$props.property1Default21Props,
-          property1Default22Props = _this$props.property1Default22Props,
-          property1Default23Props = _this$props.property1Default23Props,
-          property1Default24Props = _this$props.property1Default24Props,
-          property1Default25Props = _this$props.property1Default25Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "regional-access-points-v2 border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "regional-access-poin librebaskerville-normal-black-28px"
-      }, regionalAccessPoin), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        catholicCommunityServices: property1Default21Props.catholicCommunityServices
-      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        catholicCommunityServices: property1Default22Props.catholicCommunityServices,
-        className: property1Default22Props.className
-      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        catholicCommunityServices: property1Default23Props.catholicCommunityServices,
-        className: property1Default23Props.className
-      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        catholicCommunityServices: property1Default24Props.catholicCommunityServices,
-        className: property1Default24Props.className
-      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        catholicCommunityServices: property1Default25Props.catholicCommunityServices,
-        className: property1Default25Props.className
-      }));
-    }
-  }]);
-
-  return RegionalAccessPointsV2;
-}(_react.default.Component);
-
-var _default = RegionalAccessPointsV2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../Property1Default2":"components/Property1Default2/index.jsx","./RegionalAccessPointsV2.css":"components/RegionalAccessPointsV2/RegionalAccessPointsV2.css"}],"components/VoucherToolV3RAP/VoucherToolV3RAP.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RAP/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
-
-var _RegionalAccessPointsV = _interopRequireDefault(require("../RegionalAccessPointsV2"));
-
-require("./VoucherToolV3RAP.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolV3RAP = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3RAP, _React$Component);
-
-  var _super = _createSuper(VoucherToolV3RAP);
-
-  function VoucherToolV3RAP() {
-    _classCallCheck(this, VoucherToolV3RAP);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolV3RAP, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          regionalAccessPointsV2Props = _this$props.regionalAccessPointsV2Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-rap screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-4"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-1 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-1",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-5"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(_RegionalAccessPointsV.default, {
-        regionalAccessPoin: regionalAccessPointsV2Props.regionalAccessPoin,
-        property1Default21Props: regionalAccessPointsV2Props.property1Default21Props,
-        property1Default22Props: regionalAccessPointsV2Props.property1Default22Props,
-        property1Default23Props: regionalAccessPointsV2Props.property1Default23Props,
-        property1Default24Props: regionalAccessPointsV2Props.property1Default24Props,
-        property1Default25Props: regionalAccessPointsV2Props.property1Default25Props
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-1"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-next-steps",
-        className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-8",
-        src: "/img/tutorial-buttons-10@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-download-info"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-9",
-        src: "/img/tutorial-buttons-11@2x.svg"
-      })))));
-    }
-  }]);
-
-  return VoucherToolV3RAP;
-}(_react.default.Component);
-
-var _default = VoucherToolV3RAP;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../RegionalAccessPointsV2":"components/RegionalAccessPointsV2/index.jsx","./VoucherToolV3RAP.css":"components/VoucherToolV3RAP/VoucherToolV3RAP.css"}],"components/ResourceAddedOrNotNotAdded32/ResourceAddedOrNotNotAdded32.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourceAddedOrNotNotAdded32/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./ResourceAddedOrNotNotAdded32.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourceAddedOrNotNotAdded32 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourceAddedOrNotNotAdded32, _React$Component);
-
-  var _super = _createSuper(ResourceAddedOrNotNotAdded32);
-
-  function ResourceAddedOrNotNotAdded32() {
-    _classCallCheck(this, ResourceAddedOrNotNotAdded32);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourceAddedOrNotNotAdded32, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          affordableHousing = _this$props.affordableHousing,
-          theLargestAndMost = _this$props.theLargestAndMost,
-          linkToResource = _this$props.linkToResource;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-section-housing"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "affordable-housing roboto-medium-white-40px"
-      }, affordableHousing), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-16"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "the-largest-and-most librebaskerville-normal-white-25px"
-      }, theLargestAndMost), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-27"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "link-to-resource roboto-medium-midnight-blue-25px"
-      }, linkToResource)));
-    }
-  }]);
-
-  return ResourceAddedOrNotNotAdded32;
-}(_react.default.Component);
-
-var _default = ResourceAddedOrNotNotAdded32;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResourceAddedOrNotNotAdded32.css":"components/ResourceAddedOrNotNotAdded32/ResourceAddedOrNotNotAdded32.css"}],"components/ResourceAddedOrNotResourceAddedOrNo/ResourceAddedOrNotResourceAddedOrNo.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourceAddedOrNotResourceAddedOrNo/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./ResourceAddedOrNotResourceAddedOrNo.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourceAddedOrNotResourceAddedOrNo = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourceAddedOrNotResourceAddedOrNo, _React$Component);
-
-  var _super = _createSuper(ResourceAddedOrNotResourceAddedOrNo);
-
-  function ResourceAddedOrNotResourceAddedOrNo() {
-    _classCallCheck(this, ResourceAddedOrNotResourceAddedOrNo);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourceAddedOrNotResourceAddedOrNo, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          name = _this$props.name,
-          kchaHelpsRentersI = _this$props.kchaHelpsRentersI,
-          linkToResource = _this$props.linkToResource;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-section-housing-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "name roboto-medium-white-40px"
-      }, name), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "kcha-helps-renters-i librebaskerville-normal-white-25px"
-      }, kchaHelpsRentersI), /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://www.kcha.org/housing/vouchers/search",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-27-1"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "link-to-resource-1"
-      }, linkToResource)));
-    }
-  }]);
-
-  return ResourceAddedOrNotResourceAddedOrNo;
-}(_react.default.Component);
-
-var _default = ResourceAddedOrNotResourceAddedOrNo;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResourceAddedOrNotResourceAddedOrNo.css":"components/ResourceAddedOrNotResourceAddedOrNo/ResourceAddedOrNotResourceAddedOrNo.css"}],"components/ResourcesV3/ResourcesV3.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourcesV3/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _ResourceAddedOrNotNotAdded = _interopRequireDefault(require("../ResourceAddedOrNotNotAdded32"));
-
-var _ResourceAddedOrNotResourceAddedOrNo = _interopRequireDefault(require("../ResourceAddedOrNotResourceAddedOrNo"));
-
-require("./ResourcesV3.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourcesV3 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourcesV3, _React$Component);
-
-  var _super = _createSuper(ResourcesV3);
-
-  function ResourcesV3() {
-    _classCallCheck(this, ResourcesV3);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourcesV3, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          findAHome = _this$props.findAHome,
-          ifYouHaveReceived = _this$props.ifYouHaveReceived,
-          housingSearchResources = _this$props.housingSearchResources,
-          resourceAddedOrNotNotAdded32Props = _this$props.resourceAddedOrNotNotAdded32Props,
-          resourceAddedOrNotResourceAddedOrNoProps = _this$props.resourceAddedOrNotResourceAddedOrNoProps;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "resources-v3-1 screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-6"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "find-a-home header-2"
-      }, findAHome), /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-you-have-received librebaskerville-normal-black-25px"
-      }, ifYouHaveReceived), /*#__PURE__*/_react.default.createElement("div", {
-        className: "housing-search-resources roboto-medium-black-50px"
-      }, housingSearchResources), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotNotAdded.default, {
-        affordableHousing: resourceAddedOrNotNotAdded32Props.affordableHousing,
-        theLargestAndMost: resourceAddedOrNotNotAdded32Props.theLargestAndMost,
-        linkToResource: resourceAddedOrNotNotAdded32Props.linkToResource
-      }), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotResourceAddedOrNo.default, {
-        name: resourceAddedOrNotResourceAddedOrNoProps.name,
-        kchaHelpsRentersI: resourceAddedOrNotResourceAddedOrNoProps.kchaHelpsRentersI,
-        linkToResource: resourceAddedOrNotResourceAddedOrNoProps.linkToResource
-      })));
-    }
-  }]);
-
-  return ResourcesV3;
-}(_react.default.Component);
-
-var _default = ResourcesV3;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../ResourceAddedOrNotNotAdded32":"components/ResourceAddedOrNotNotAdded32/index.jsx","../ResourceAddedOrNotResourceAddedOrNo":"components/ResourceAddedOrNotResourceAddedOrNo/index.jsx","./ResourcesV3.css":"components/ResourcesV3/ResourcesV3.css"}],"components/TextInfo/TextInfo.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/TextInfo/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./TextInfo.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var TextInfo = /*#__PURE__*/function (_React$Component) {
-  _inherits(TextInfo, _React$Component);
-
-  var _super = _createSuper(TextInfo);
-
-  function TextInfo() {
-    _classCallCheck(this, TextInfo);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(TextInfo, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "text-info border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "no-documents-are-nee librebaskerville-normal-black-30px"
-      }, "You\u2019ve reached the end of our voucher tool! ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "If you\u2019d like, please choose how you\u2019d like to get a summary of the information provided by this tool:"));
-    }
-  }]);
-
-  return TextInfo;
-}(_react.default.Component);
-
-var _default = TextInfo;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./TextInfo.css":"components/TextInfo/TextInfo.css"}],"components/IcoutlinePhoneIphone/IcoutlinePhoneIphone.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/IcoutlinePhoneIphone/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./IcoutlinePhoneIphone.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var IcoutlinePhoneIphone = /*#__PURE__*/function (_React$Component) {
-  _inherits(IcoutlinePhoneIphone, _React$Component);
-
-  var _super = _createSuper(IcoutlinePhoneIphone);
-
-  function IcoutlinePhoneIphone() {
-    _classCallCheck(this, IcoutlinePhoneIphone);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(IcoutlinePhoneIphone, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "icoutline-phone-iphone"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "icon-mobile",
-        src: "/img/vector-18@2x.svg"
-      }));
-    }
-  }]);
-
-  return IcoutlinePhoneIphone;
-}(_react.default.Component);
-
-var _default = IcoutlinePhoneIphone;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./IcoutlinePhoneIphone.css":"components/IcoutlinePhoneIphone/IcoutlinePhoneIphone.css"}],"components/UilimageDownload/UilimageDownload.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/UilimageDownload/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./UilimageDownload.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var UilimageDownload = /*#__PURE__*/function (_React$Component) {
-  _inherits(UilimageDownload, _React$Component);
-
-  var _super = _createSuper(UilimageDownload);
-
-  function UilimageDownload() {
-    _classCallCheck(this, UilimageDownload);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(UilimageDownload, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "uilimage-download"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "vector-31",
-        src: "/img/vector-19@2x.svg"
-      }));
-    }
-  }]);
-
-  return UilimageDownload;
-}(_react.default.Component);
-
-var _default = UilimageDownload;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./UilimageDownload.css":"components/UilimageDownload/UilimageDownload.css"}],"components/Property1PhonePopUpDefault/Property1PhonePopUpDefault.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1PhonePopUpDefault/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./Property1PhonePopUpDefault.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1PhonePopUpDefault = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1PhonePopUpDefault, _React$Component);
-
-  var _super = _createSuper(Property1PhonePopUpDefault);
-
-  function Property1PhonePopUpDefault() {
-    _classCallCheck(this, Property1PhonePopUpDefault);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1PhonePopUpDefault, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          wouldYouLikeToGe = _this$props.wouldYouLikeToGe,
-          email = _this$props.email,
-          text = _this$props.text;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "phone-pop-up-v2 border-1px-black-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "would-you-like-to-ge roboto-medium-black-38px"
-      }, wouldYouLikeToGe), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-container-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "email roboto-medium-white-30px"
-      }, email)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group4-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "text roboto-medium-white-30px"
-      }, text))));
-    }
-  }]);
-
-  return Property1PhonePopUpDefault;
-}(_react.default.Component);
-
-var _default = Property1PhonePopUpDefault;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1PhonePopUpDefault.css":"components/Property1PhonePopUpDefault/Property1PhonePopUpDefault.css"}],"components/VoucherToolV3DownloadInfo/VoucherToolV3DownloadInfo.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3DownloadInfo/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _TextInfo = _interopRequireDefault(require("../TextInfo"));
-
-var _IcoutlinePhoneIphone = _interopRequireDefault(require("../IcoutlinePhoneIphone"));
-
-var _UilimageDownload = _interopRequireDefault(require("../UilimageDownload"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1PhonePopUpDefault = _interopRequireDefault(require("../Property1PhonePopUpDefault"));
-
-require("./VoucherToolV3DownloadInfo.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolV3DownloadInfo = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3DownloadInfo, _React$Component);
-
-  var _super = _createSuper(VoucherToolV3DownloadInfo);
-
-  function VoucherToolV3DownloadInfo() {
-    _classCallCheck(this, VoucherToolV3DownloadInfo);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolV3DownloadInfo, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          getSummaryViaTextOrEmail = _this$props.getSummaryViaTextOrEmail,
-          downloadPdfOfSummary = _this$props.downloadPdfOfSummary,
-          property1AudioProps = _this$props.property1AudioProps,
-          logoProps = _this$props.logoProps,
-          homePageLinkProps = _this$props.homePageLinkProps,
-          moreResourcesProps = _this$props.moreResourcesProps,
-          property1PhonePopUpDefaultProps = _this$props.property1PhonePopUpDefaultProps;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-download-info-1 screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-2 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-2",
-        src: line1
-      }), /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
-        className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement(_Logo.default, {
-        className: logoProps.className
-      }), /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-10",
-        src: "/img/tutorial-buttons-12@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-11",
-        src: "/img/tutorial-buttons-13@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
-        className: homePageLinkProps.className
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-4 roboto-medium-white-21px"
-      }, /*#__PURE__*/_react.default.createElement(_TextInfo.default, null), /*#__PURE__*/_react.default.createElement(_IcoutlinePhoneIphone.default, null), /*#__PURE__*/_react.default.createElement(_UilimageDownload.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-35"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "get-summary-via-text-or-email"
-      }, getSummaryViaTextOrEmail), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-36"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "download-pdf-of-summary"
-      }, downloadPdfOfSummary)), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
-        className: moreResourcesProps.className
-      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-download-info"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-60"
-      })), /*#__PURE__*/_react.default.createElement(_Property1PhonePopUpDefault.default, {
-        wouldYouLikeToGe: property1PhonePopUpDefaultProps.wouldYouLikeToGe,
-        email: property1PhonePopUpDefaultProps.email,
-        text: property1PhonePopUpDefaultProps.text
-      }))));
-    }
-  }]);
-
-  return VoucherToolV3DownloadInfo;
-}(_react.default.Component);
-
-var _default = VoucherToolV3DownloadInfo;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Property1Audio":"components/Property1Audio/index.jsx","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../TextInfo":"components/TextInfo/index.jsx","../IcoutlinePhoneIphone":"components/IcoutlinePhoneIphone/index.jsx","../UilimageDownload":"components/UilimageDownload/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1PhonePopUpDefault":"components/Property1PhonePopUpDefault/index.jsx","./VoucherToolV3DownloadInfo.css":"components/VoucherToolV3DownloadInfo/VoucherToolV3DownloadInfo.css"}],"components/ResourceAddedOrNotNotAdded2/ResourceAddedOrNotNotAdded2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourceAddedOrNotNotAdded2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./ResourceAddedOrNotNotAdded2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourceAddedOrNotNotAdded2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourceAddedOrNotNotAdded2, _React$Component);
-
-  var _super = _createSuper(ResourceAddedOrNotNotAdded2);
-
-  function ResourceAddedOrNotNotAdded2() {
-    _classCallCheck(this, ResourceAddedOrNotNotAdded2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourceAddedOrNotNotAdded2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          housingChoiceVouchers = _this$props.housingChoiceVouchers,
-          theHousingChoiceV = _this$props.theHousingChoiceV,
-          linkToResource = _this$props.linkToResource;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-section"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-5"
-      }, /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-26"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "housing-choice-vouchers-1 roboto-medium-white-40px"
-      }, housingChoiceVouchers), /*#__PURE__*/_react.default.createElement("div", {
-        className: "the-housing-choice-v-1 librebaskerville-normal-white-25px"
-      }, theHousingChoiceV), /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-27-3"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "link-to-resource-3 roboto-medium-midnight-blue-25px"
-      }, linkToResource)));
-    }
-  }]);
-
-  return ResourceAddedOrNotNotAdded2;
-}(_react.default.Component);
-
-var _default = ResourceAddedOrNotNotAdded2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResourceAddedOrNotNotAdded2.css":"components/ResourceAddedOrNotNotAdded2/ResourceAddedOrNotNotAdded2.css"}],"components/ResourceAddedOrNotResourceAddedOrNo2/ResourceAddedOrNotResourceAddedOrNo2.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourceAddedOrNotResourceAddedOrNo2/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./ResourceAddedOrNotResourceAddedOrNo2.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourceAddedOrNotResourceAddedOrNo2 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourceAddedOrNotResourceAddedOrNo2, _React$Component);
-
-  var _super = _createSuper(ResourceAddedOrNotResourceAddedOrNo2);
-
-  function ResourceAddedOrNotResourceAddedOrNo2() {
-    _classCallCheck(this, ResourceAddedOrNotResourceAddedOrNo2);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourceAddedOrNotResourceAddedOrNo2, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          universityDistrictFoodBank = _this$props.universityDistrictFoodBank,
-          ourMissionIsToBu = _this$props.ourMissionIsToBu,
-          linkToResource = _this$props.linkToResource;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-section-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-3"
-      }, /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://www.udistrictfoodbank.org/",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-26-1"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "university-district-food-bank roboto-medium-white-40px"
-      }, universityDistrictFoodBank), /*#__PURE__*/_react.default.createElement("div", {
-        className: "our-mission-is-to-bu librebaskerville-normal-white-25px"
-      }, ourMissionIsToBu), /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://www.udistrictfoodbank.org/",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-27-4"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "link-to-resource-4 roboto-medium-midnight-blue-25px"
-      }, linkToResource)));
-    }
-  }]);
-
-  return ResourceAddedOrNotResourceAddedOrNo2;
-}(_react.default.Component);
-
-var _default = ResourceAddedOrNotResourceAddedOrNo2;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResourceAddedOrNotResourceAddedOrNo2.css":"components/ResourceAddedOrNotResourceAddedOrNo2/ResourceAddedOrNotResourceAddedOrNo2.css"}],"components/ResourceAddedOrNotNotAdded3/ResourceAddedOrNotNotAdded3.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourceAddedOrNotNotAdded3/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./ResourceAddedOrNotNotAdded3.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourceAddedOrNotNotAdded3 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourceAddedOrNotNotAdded3, _React$Component);
-
-  var _super = _createSuper(ResourceAddedOrNotNotAdded3);
-
-  function ResourceAddedOrNotNotAdded3() {
-    _classCallCheck(this, ResourceAddedOrNotNotAdded3);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourceAddedOrNotNotAdded3, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          housingChoiceVouchers = _this$props.housingChoiceVouchers,
-          theHousingChoiceV = _this$props.theHousingChoiceV;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-section-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-17"
-      }, /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://lihi.org/rosies-village/",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-26-2"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "housing-choice-vouchers-2 roboto-medium-white-40px"
-      }, housingChoiceVouchers), /*#__PURE__*/_react.default.createElement("div", {
-        className: "the-housing-choice-v-2 librebaskerville-normal-white-25px"
-      }, theHousingChoiceV)));
-    }
-  }]);
-
-  return ResourceAddedOrNotNotAdded3;
-}(_react.default.Component);
-
-var _default = ResourceAddedOrNotNotAdded3;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResourceAddedOrNotNotAdded3.css":"components/ResourceAddedOrNotNotAdded3/ResourceAddedOrNotNotAdded3.css"}],"components/ResourcesV32/ResourcesV32.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourcesV32/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _ResourceAddedOrNotNotAdded = _interopRequireDefault(require("../ResourceAddedOrNotNotAdded2"));
-
-var _ResourceAddedOrNotResourceAddedOrNo = _interopRequireDefault(require("../ResourceAddedOrNotResourceAddedOrNo2"));
-
-var _ResourceAddedOrNotNotAdded2 = _interopRequireDefault(require("../ResourceAddedOrNotNotAdded3"));
-
-require("./ResourcesV32.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ResourcesV32 = /*#__PURE__*/function (_React$Component) {
-  _inherits(ResourcesV32, _React$Component);
-
-  var _super = _createSuper(ResourcesV32);
-
-  function ResourcesV32() {
-    _classCallCheck(this, ResourcesV32);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(ResourcesV32, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          moreResources = _this$props.moreResources,
-          spanText1 = _this$props.spanText1,
-          spanText2 = _this$props.spanText2,
-          otherVoucherPrograms = _this$props.otherVoucherPrograms,
-          housingChoiceVouchers = _this$props.housingChoiceVouchers,
-          theHousingChoiceV = _this$props.theHousingChoiceV,
-          foodAndShelterResources = _this$props.foodAndShelterResources,
-          temporaryHousingResources = _this$props.temporaryHousingResources,
-          linkToResource = _this$props.linkToResource,
-          moreResourcesProps = _this$props.moreResourcesProps,
-          resourceAddedOrNotNotAdded2Props = _this$props.resourceAddedOrNotNotAdded2Props,
-          resourceAddedOrNotResourceAddedOrNo2Props = _this$props.resourceAddedOrNotResourceAddedOrNo2Props,
-          resourceAddedOrNotNotAdded3Props = _this$props.resourceAddedOrNotNotAdded3Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "resources-v3 screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-7"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
-        className: moreResourcesProps.className
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "more-resources-6 header-2"
-      }, moreResources), /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-you-have-already librebaskerville-normal-black-25px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-25px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1-2"
-      }, spanText2)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "other-voucher-programs roboto-medium-black-50px"
-      }, otherVoucherPrograms), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group4-3"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "housing-choice-vouchers roboto-medium-white-40px"
-      }, housingChoiceVouchers), /*#__PURE__*/_react.default.createElement("div", {
-        className: "the-housing-choice-v librebaskerville-normal-white-25px"
-      }, theHousingChoiceV), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotNotAdded.default, {
-        housingChoiceVouchers: resourceAddedOrNotNotAdded2Props.housingChoiceVouchers,
-        theHousingChoiceV: resourceAddedOrNotNotAdded2Props.theHousingChoiceV,
-        linkToResource: resourceAddedOrNotNotAdded2Props.linkToResource
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "food-and-shelter-resources roboto-medium-black-50px"
-      }, foodAndShelterResources), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotResourceAddedOrNo.default, {
-        universityDistrictFoodBank: resourceAddedOrNotResourceAddedOrNo2Props.universityDistrictFoodBank,
-        ourMissionIsToBu: resourceAddedOrNotResourceAddedOrNo2Props.ourMissionIsToBu,
-        linkToResource: resourceAddedOrNotResourceAddedOrNo2Props.linkToResource
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "temporary-housing-resources roboto-medium-black-50px"
-      }, temporaryHousingResources), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5-4"
-      }, /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotNotAdded2.default, {
-        housingChoiceVouchers: resourceAddedOrNotNotAdded3Props.housingChoiceVouchers,
-        theHousingChoiceV: resourceAddedOrNotNotAdded3Props.theHousingChoiceV
-      }), /*#__PURE__*/_react.default.createElement("a", {
-        href: "https://lihi.org/rosies-village/",
-        target: "_blank"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-27-2"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "link-to-resource-2 roboto-medium-midnight-blue-25px"
-      }, linkToResource))));
-    }
-  }]);
-
-  return ResourcesV32;
-}(_react.default.Component);
-
-var _default = ResourcesV32;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../ResourceAddedOrNotNotAdded2":"components/ResourceAddedOrNotNotAdded2/index.jsx","../ResourceAddedOrNotResourceAddedOrNo2":"components/ResourceAddedOrNotResourceAddedOrNo2/index.jsx","../ResourceAddedOrNotNotAdded3":"components/ResourceAddedOrNotNotAdded3/index.jsx","./ResourcesV32.css":"components/ResourcesV32/ResourcesV32.css"}],"components/VoucherToolV3NextSteps/VoucherToolV3NextSteps.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3NextSteps/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
-
-require("./VoucherToolV3NextSteps.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolV3NextSteps = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3NextSteps, _React$Component);
-
-  var _super = _createSuper(VoucherToolV3NextSteps);
-
-  function VoucherToolV3NextSteps() {
-    _classCallCheck(this, VoucherToolV3NextSteps);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolV3NextSteps, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          spanText1 = _this$props.spanText1,
-          spanText2 = _this$props.spanText2,
-          spanText3 = _this$props.spanText3,
-          spanText4 = _this$props.spanText4,
-          spanText5 = _this$props.spanText5,
-          spanText6 = _this$props.spanText6,
-          spanText7 = _this$props.spanText7,
-          spanText8 = _this$props.spanText8,
-          givingVoucher1 = _this$props.givingVoucher1,
-          property1AudioProps = _this$props.property1AudioProps;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-next-steps screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-col"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-8"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-4"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-3 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-3",
-        src: line1
-      }))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-9"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-2"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
-        className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-required-paperwork"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-16",
-        src: "/img/tutorial-buttons-17@2x.svg"
-      }))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-6"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "text-info-2 border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-youre-connected librebaskerville-normal-black-30px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-bold-black-30px"
-      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-bold-black-30px"
-      }, spanText4), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText5), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-29px"
-      }, spanText6), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span6"
-      }, spanText7), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-29px"
-      }, spanText8))), /*#__PURE__*/_react.default.createElement("img", {
-        className: "giving-voucher-1",
-        src: givingVoucher1
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-rap"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-17",
-        src: "/img/tutorial-buttons-16@2x.svg"
-      })))));
-    }
-  }]);
-
-  return VoucherToolV3NextSteps;
-}(_react.default.Component);
-
-var _default = VoucherToolV3NextSteps;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","./VoucherToolV3NextSteps.css":"components/VoucherToolV3NextSteps/VoucherToolV3NextSteps.css"}],"components/VoucherToolV3DownloadInfo2/VoucherToolV3DownloadInfo2.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default2":"components/Property1Default2/index.jsx","../Property1Expanded":"components/Property1Expanded/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolsPageReceivedExpand.css":"components/VoucherToolsPageReceivedExpand/VoucherToolsPageReceivedExpand.css"}],"components/VoucherToolV3DownloadInfo2/VoucherToolV3DownloadInfo2.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -36667,9 +39192,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
@@ -36681,11 +39206,19 @@ var _IcoutlinePhoneIphone = _interopRequireDefault(require("../IcoutlinePhoneIph
 
 var _UilimageDownload = _interopRequireDefault(require("../UilimageDownload"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolV3DownloadInfo2.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -36723,64 +39256,153 @@ var VoucherToolV3DownloadInfo2 = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
           getSummaryViaTextOrEmail = _this$props.getSummaryViaTextOrEmail,
-          downloadPdfOfSummary = _this$props.downloadPdfOfSummary;
+          downloadPdfOfSummary = _this$props.downloadPdfOfSummary,
+          property1AudioProps = _this$props.property1AudioProps;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-download-info screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-10"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-5"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-4 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-4",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-11"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-7"
-      }, /*#__PURE__*/_react.default.createElement(_TextInfo.default, null), /*#__PURE__*/_react.default.createElement(_IcoutlinePhoneIphone.default, null), /*#__PURE__*/_react.default.createElement(_UilimageDownload.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-35-1"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
       }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-rap"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-6@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_TextInfo.default, null), /*#__PURE__*/_react.default.createElement(_IcoutlinePhoneIphone.default, null), /*#__PURE__*/_react.default.createElement(_UilimageDownload.default, null), /*#__PURE__*/_react.default.createElement(Rectangle35, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-download-info-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "get-summary-via-text-or-email-1 roboto-medium-white-21px"
-      }, getSummaryViaTextOrEmail)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-36-1"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "download-pdf-of-summary-1 roboto-medium-white-21px"
-      }, downloadPdfOfSummary))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-3"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-rap",
+      }, /*#__PURE__*/_react.default.createElement(GetSummaryViaTextOrEmail, null, getSummaryViaTextOrEmail)), /*#__PURE__*/_react.default.createElement(Rectangle36, null), /*#__PURE__*/_react.default.createElement(DownloadPDFOfSummary, null, downloadPdfOfSummary)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/home-page-v3",
         className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-18",
-        src: "/img/tutorial-buttons-2@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement("a", {
-        href: "javascript:ShowOverlay('voucher-tool-pop-up', 'animate-appear');"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-19",
-        src: "/img/tutorial-buttons-3@2x.svg"
-      })))));
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-7@2x.svg"
+      }))))));
     }
   }]);
 
   return VoucherToolV3DownloadInfo2;
 }(_react.default.Component);
 
+var OverlapGroup3 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-left: 8px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1362px;\n"])));
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 99px;\n  position: relative;\n  align-self: flex-end;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 641px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 511px;\n  cursor: pointer;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1190px;\n  margin-left: 73px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 776px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  align-self: center;\n  margin-right: 181px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 1011px;\n  height: 564px;\n  position: relative;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 67px;\n  top: 412px;\n  left: 265px;\n  background-color: var(--midnight-blue);\n  border-radius: 12px;\n"])));
+
+var GetSummaryViaTextOrEmail = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 421px;\n  left: 280px;\n  text-align: center;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var Rectangle36 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 67px;\n  top: 412px;\n  left: 542px;\n  background-color: var(--midnight-blue);\n  border-radius: 12px;\n"])));
+
+var DownloadPDFOfSummary = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 421px;\n  left: 557px;\n  text-align: center;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  width: 236px;\n  height: 77px;\n  align-self: flex-end;\n  margin-top: 24px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3DownloadInfo2;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TextInfo":"components/TextInfo/index.jsx","../IcoutlinePhoneIphone":"components/IcoutlinePhoneIphone/index.jsx","../UilimageDownload":"components/UilimageDownload/index.jsx","./VoucherToolV3DownloadInfo2.css":"components/VoucherToolV3DownloadInfo2/VoucherToolV3DownloadInfo2.css"}],"components/VoucherToolV3DisqualificationsNotic/VoucherToolV3DisqualificationsNotic.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TextInfo":"components/TextInfo/index.jsx","../IcoutlinePhoneIphone":"components/IcoutlinePhoneIphone/index.jsx","../UilimageDownload":"components/UilimageDownload/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3DownloadInfo2.css":"components/VoucherToolV3DownloadInfo2/VoucherToolV3DownloadInfo2.css"}],"components/RegionalAccessPointsV23/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default8"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var RegionalAccessPointsV23 = /*#__PURE__*/function (_React$Component) {
+  _inherits(RegionalAccessPointsV23, _React$Component);
+
+  var _super = _createSuper(RegionalAccessPointsV23);
+
+  function RegionalAccessPointsV23() {
+    _classCallCheck(this, RegionalAccessPointsV23);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(RegionalAccessPointsV23, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          property1Default1Props = _this$props.property1Default1Props,
+          property1Default2Props = _this$props.property1Default2Props,
+          property1Default3Props = _this$props.property1Default3Props,
+          property1Default4Props = _this$props.property1Default4Props,
+          property1Default5Props = _this$props.property1Default5Props;
+      return /*#__PURE__*/_react.default.createElement(RegionalAccessPointsV2, null, /*#__PURE__*/_react.default.createElement(RegionalAccessPoin, null, "Regional Access Points (Click for more detailed information)"), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1Default1Props.catholicCommunityServices,
+        className: property1Default1Props.className
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1Default2Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1Default3Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1Default4Props.catholicCommunityServices
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        catholicCommunityServices: property1Default5Props.catholicCommunityServices
+      }));
+    }
+  }]);
+
+  return RegionalAccessPointsV23;
+}(_react.default.Component);
+
+var RegionalAccessPointsV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 1011px;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding: 31px;\n  align-items: flex-start;\n  min-height: 564px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var RegionalAccessPoin = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  min-height: 35px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var _default = RegionalAccessPointsV23;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Property1Default8":"components/Property1Default8/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RAPCCS/VoucherToolV3RAPCCS.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3DisqualificationsNotic/index.jsx":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RAPCCS/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36792,19 +39414,29 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
 var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
-require("./VoucherToolV3DisqualificationsNotic.css");
+var _RegionalAccessPointsV = _interopRequireDefault(require("../RegionalAccessPointsV23"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3RAPCCS.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -36826,88 +39458,73 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var VoucherToolV3DisqualificationsNotic = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3DisqualificationsNotic, _React$Component);
+var VoucherToolV3RAPCCS = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3RAPCCS, _React$Component);
 
-  var _super = _createSuper(VoucherToolV3DisqualificationsNotic);
+  var _super = _createSuper(VoucherToolV3RAPCCS);
 
-  function VoucherToolV3DisqualificationsNotic() {
-    _classCallCheck(this, VoucherToolV3DisqualificationsNotic);
+  function VoucherToolV3RAPCCS() {
+    _classCallCheck(this, VoucherToolV3RAPCCS);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(VoucherToolV3DisqualificationsNotic, [{
+  _createClass(VoucherToolV3RAPCCS, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          spanText1 = _this$props.spanText1,
-          spanText2 = _this$props.spanText2,
-          spanText3 = _this$props.spanText3,
-          spanText4 = _this$props.spanText4,
-          spanText5 = _this$props.spanText5,
-          spanText6 = _this$props.spanText6;
+          regionalAccessPointsV23Props = _this$props.regionalAccessPointsV23Props;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-disqualifications-notice-page screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-12"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-8"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-5 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-5",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-13"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "text-info-3 border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "theres-a-possibilit librebaskerville-normal-black-30px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-bold-black-30px"
-      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-bold-black-30px"
-      }, spanText4), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText5), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-30px"
-      }, spanText6)))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-4"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-disqualifications",
-        className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-20",
-        src: "/img/tutorial-buttons-7@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-required-paperwork"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-21",
-        src: "/img/tutorial-buttons-6@2x.svg"
+        className: "voucher-tool-v3-rap-ccs screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(FlexCol1, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(RegionalAccessPointContainer, null, /*#__PURE__*/_react.default.createElement(_RegionalAccessPointsV.default, {
+        property1Default1Props: regionalAccessPointsV23Props.property1Default1Props,
+        property1Default2Props: regionalAccessPointsV23Props.property1Default2Props,
+        property1Default3Props: regionalAccessPointsV23Props.property1Default3Props,
+        property1Default4Props: regionalAccessPointsV23Props.property1Default4Props,
+        property1Default5Props: regionalAccessPointsV23Props.property1Default5Props
+      }), /*#__PURE__*/_react.default.createElement(RegionalAccessPointV2Variant3, {
+        src: "/img/regional-access-point-v2-variant3@1x.svg"
+      })))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-next-steps"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-8@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-download-info"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-9@2x.svg"
       })))));
     }
   }]);
 
-  return VoucherToolV3DisqualificationsNotic;
+  return VoucherToolV3RAPCCS;
 }(_react.default.Component);
 
-var _default = VoucherToolV3DisqualificationsNotic;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","./VoucherToolV3DisqualificationsNotic.css":"components/VoucherToolV3DisqualificationsNotic/VoucherToolV3DisqualificationsNotic.css"}],"components/Property1IneligibleButton/Property1IneligibleButton.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+var OverlapGroup6 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1IneligibleButton/index.jsx":[function(require,module,exports) {
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1183px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var FlexCol1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  margin-left: 115px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 2px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var RegionalAccessPointContainer = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 1011px;\n  height: 564px;\n  position: relative;\n"])));
+
+var RegionalAccessPointV2Variant3 = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 961px;\n  height: 222px;\n  top: 13px;\n  left: 24px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 25px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  width: 125px;\n  height: 77px;\n  margin-left: 40px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3RAPCCS;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../RegionalAccessPointsV23":"components/RegionalAccessPointsV23/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RAPCCS.css":"components/VoucherToolV3RAPCCS/VoucherToolV3RAPCCS.css"}],"components/Property1Variant5/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36917,261 +39534,19 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./Property1IneligibleButton.css");
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1IneligibleButton = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1IneligibleButton, _React$Component);
-
-  var _super = _createSuper(Property1IneligibleButton);
-
-  function Property1IneligibleButton() {
-    _classCallCheck(this, Property1IneligibleButton);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1IneligibleButton, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          spanText1 = _this$props.spanText1,
-          spanText2 = _this$props.spanText2,
-          spanText3 = _this$props.spanText3;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "waitlisted"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "ive-applied-for-a-v-3 roboto-medium-white-40px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "roboto-medium-white-40px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "roboto-medium-white-40px"
-      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
-        className: "roboto-medium-white-40px"
-      }, spanText3)));
-    }
-  }]);
-
-  return Property1IneligibleButton;
-}(_react.default.Component);
-
-var _default = Property1IneligibleButton;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1IneligibleButton.css":"components/Property1IneligibleButton/Property1IneligibleButton.css"}],"components/Property1Default3/Property1Default3.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Default3/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./Property1Default3.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Property1Default3 = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1Default3, _React$Component);
-
-  var _super = _createSuper(Property1Default3);
-
-  function Property1Default3() {
-    _classCallCheck(this, Property1Default3);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Property1Default3, [{
-    key: "render",
-    value: function render() {
-      var children = this.props.children;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "received-voucher-button-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "ive-applied-for-a-v-4 roboto-medium-white-40px"
-      }, children));
-    }
-  }]);
-
-  return Property1Default3;
-}(_react.default.Component);
-
-var _default = Property1Default3;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Default3.css":"components/Property1Default3/Property1Default3.css"}],"components/VoucherToolsPage/VoucherToolsPage.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolsPage/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
-var _Logo = _interopRequireDefault(require("../Logo"));
-
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1Default = _interopRequireDefault(require("../Property1Default"));
-
-var _Property1IneligibleButton = _interopRequireDefault(require("../Property1IneligibleButton"));
-
-var _Property1Default2 = _interopRequireDefault(require("../Property1Default3"));
-
-require("./VoucherToolsPage.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var VoucherToolsPage = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolsPage, _React$Component);
-
-  var _super = _createSuper(VoucherToolsPage);
-
-  function VoucherToolsPage() {
-    _classCallCheck(this, VoucherToolsPage);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(VoucherToolsPage, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          resourceMatching = _this$props.resourceMatching,
-          ifYoureNotSureW = _this$props.ifYoureNotSureW,
-          clickOnTheSection = _this$props.clickOnTheSection,
-          property1DefaultProps = _this$props.property1DefaultProps,
-          property1IneligibleButtonProps = _this$props.property1IneligibleButtonProps,
-          property1Default3Props = _this$props.property1Default3Props;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-center-horizontal"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tools-page screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-14"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "resource-matching-1 header-2"
-      }, resourceMatching), /*#__PURE__*/_react.default.createElement("div", {
-        className: "if-youre-not-sure-w-1 librebaskerville-normal-black-25px"
-      }, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-on-the-section-1 roboto-medium-black-45px"
-      }, clickOnTheSection), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-15"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        className: property1DefaultProps.className
-      }), /*#__PURE__*/_react.default.createElement(_Property1IneligibleButton.default, {
-        spanText1: property1IneligibleButtonProps.spanText1,
-        spanText2: property1IneligibleButtonProps.spanText2,
-        spanText3: property1IneligibleButtonProps.spanText3
-      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, null, property1Default3Props.children))));
-    }
-  }]);
-
-  return VoucherToolsPage;
-}(_react.default.Component);
-
-var _default = VoucherToolsPage;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default":"components/Property1Default/index.jsx","../Property1IneligibleButton":"components/Property1IneligibleButton/index.jsx","../Property1Default3":"components/Property1Default3/index.jsx","./VoucherToolsPage.css":"components/VoucherToolsPage/VoucherToolsPage.css"}],"components/Property1Variant5/Property1Variant5.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Variant5/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./Property1Variant5.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37207,27 +39582,236 @@ var Property1Variant5 = /*#__PURE__*/function (_React$Component) {
   _createClass(Property1Variant5, [{
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          proofOfIncome = _this$props.proofOfIncome,
-          className = _this$props.className;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "document-button ".concat(className || "")
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "proof-of-income roboto-medium-white-30px"
-      }, proofOfIncome), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-19"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-for-details-2 roboto-medium-white-21px"
-      }, "Click for Details")));
+      return /*#__PURE__*/_react.default.createElement(DocumentButton, null, /*#__PURE__*/_react.default.createElement(ProofOfIncome, null, "Proof of Income"), /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork-poi"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(ClickForDetails, null, "Click for Details")));
     }
   }]);
 
   return Property1Variant5;
 }(_react.default.Component);
 
+var DocumentButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 316px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var ProofOfIncome = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var DocumentButton1 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 316px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var ProofOfIncome1 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup21 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle351 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
 var _default = Property1Variant5;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Variant5.css":"components/Property1Variant5/Property1Variant5.css"}],"components/VoucherToolV3RequiredPaperwork/VoucherToolV3RequiredPaperwork.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1Variant3/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Variant3 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Variant3, _React$Component);
+
+  var _super = _createSuper(Property1Variant3);
+
+  function Property1Variant3() {
+    _classCallCheck(this, Property1Variant3);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Variant3, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(DocumentButton, null, /*#__PURE__*/_react.default.createElement(ProofOfDateOfBirth, null, "Proof of Date of Birth"), /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork-dob"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(ClickForDetails, null, "Click for Details")));
+    }
+  }]);
+
+  return Property1Variant3;
+}(_react.default.Component);
+
+var DocumentButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 218px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var ProofOfDateOfBirth = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var DocumentButton1 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 218px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var ProofOfDateOfBirth1 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup31 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle351 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var DocumentButton2 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 218px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var ProofOfDateOfBirth2 = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup32 = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle352 = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails2 = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var _default = Property1Variant3;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1Default4/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default4 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default4, _React$Component);
+
+  var _super = _createSuper(Property1Default4);
+
+  function Property1Default4() {
+    _classCallCheck(this, Property1Default4);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default4, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(DocumentButton, null, /*#__PURE__*/_react.default.createElement(SocialSecurityNumber, null, "Social Security Number"), /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork-ssn"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(ClickForDetails, null, "Click for Details")));
+    }
+  }]);
+
+  return Property1Default4;
+}(_react.default.Component);
+
+var DocumentButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 120px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var SocialSecurityNumber = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var DocumentButton1 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 120px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var SocialSecurityNumber1 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup41 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle351 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var DocumentButton2 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 120px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var SocialSecurityNumber2 = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup42 = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-left: 372px;\n  border-radius: 12px;\n"])));
+
+var Rectangle352 = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var ClickForDetails2 = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 152px;\n  top: 9px;\n  left: 15px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var _default = Property1Default4;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RequiredPaperwork/VoucherToolV3RequiredPaperwork.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -37244,9 +39828,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
@@ -37254,11 +39838,23 @@ var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
 var _Property1Variant = _interopRequireDefault(require("../Property1Variant5"));
 
+var _Property1Variant2 = _interopRequireDefault(require("../Property1Variant3"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default4"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolV3RequiredPaperwork.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37303,67 +39899,32 @@ var VoucherToolV3RequiredPaperwork = /*#__PURE__*/function (_React$Component) {
           spanText4 = _this$props.spanText4,
           ownerCertification = _this$props.ownerCertification,
           clickForDetails = _this$props.clickForDetails,
-          property1Variant51Props = _this$props.property1Variant51Props,
-          property1Variant52Props = _this$props.property1Variant52Props,
-          property1Variant53Props = _this$props.property1Variant53Props;
+          property1AudioProps = _this$props.property1AudioProps;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-required-paperwork screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-16"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group6"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-6 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-6",
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup7, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup8, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
         src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-17"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "text-info-4 border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group5-5"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "no-documents-are-nee-2 librebaskerville-normal-black-27px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(NoDocumentsAreNee, null, /*#__PURE__*/_react.default.createElement("span", {
         className: "librebaskerville-normal-black-27px"
       }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1-3"
+        className: "librebaskerville-bold-black-27px"
       }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
         className: "librebaskerville-normal-black-27px"
       }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
         className: "librebaskerville-normal-black-30px"
-      }, spanText4)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-18"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "owner-certification roboto-medium-white-30px"
-      }, ownerCertification), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group1-18"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "click-for-details-1 roboto-medium-white-21px"
-      }, clickForDetails))), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, {
-        proofOfIncome: property1Variant51Props.proofOfIncome
-      }), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, {
-        proofOfIncome: property1Variant52Props.proofOfIncome,
-        className: property1Variant52Props.className
-      }), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, {
-        proofOfIncome: property1Variant53Props.proofOfIncome,
-        className: property1Variant53Props.className
-      })))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-5"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-disqualifications-notice-page",
+      }, spanText4)), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(OwnerCertification, null, ownerCertification), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(ClickForDetails, null, clickForDetails))), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, null), /*#__PURE__*/_react.default.createElement(_Property1Variant2.default, null), /*#__PURE__*/_react.default.createElement(_Property1Default.default, null)))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications",
         className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-22",
-        src: "/img/tutorial-buttons-1@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-11@2x.svg"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-next-steps"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-23",
-        src: "/img/tutorial-buttons@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-10@2x.svg"
       })))));
     }
   }]);
@@ -37371,14 +39932,39 @@ var VoucherToolV3RequiredPaperwork = /*#__PURE__*/function (_React$Component) {
   return VoucherToolV3RequiredPaperwork;
 }(_react.default.Component);
 
+var OverlapGroup7 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup8 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var TextInfo = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  margin-left: 115px;\n  display: flex;\n  padding: 19px 34px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 930px;\n  height: 514px;\n  position: relative;\n"])));
+
+var NoDocumentsAreNee = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 911px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack27px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 416px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: flex-start;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var OwnerCertification = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  height: 42px;\n  align-self: center;\n  margin-left: 372px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 24px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3RequiredPaperwork;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Variant5":"components/Property1Variant5/index.jsx","./VoucherToolV3RequiredPaperwork.css":"components/VoucherToolV3RequiredPaperwork/VoucherToolV3RequiredPaperwork.css"}],"components/Property1Default4/Property1Default4.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Property1Default4/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Variant5":"components/Property1Variant5/index.jsx","../Property1Variant3":"components/Property1Variant3/index.jsx","../Property1Default4":"components/Property1Default4/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RequiredPaperwork.css":"components/VoucherToolV3RequiredPaperwork/VoucherToolV3RequiredPaperwork.css"}],"components/Property1Variant53/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37388,11 +39974,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./Property1Default4.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37414,54 +40006,409 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var Property1Default4 = /*#__PURE__*/function (_React$Component) {
-  _inherits(Property1Default4, _React$Component);
+var Property1Variant53 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Variant53, _React$Component);
 
-  var _super = _createSuper(Property1Default4);
+  var _super = _createSuper(Property1Variant53);
 
-  function Property1Default4() {
-    _classCallCheck(this, Property1Default4);
+  function Property1Variant53() {
+    _classCallCheck(this, Property1Variant53);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(Property1Default4, [{
+  _createClass(Property1Variant53, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          proofOfIncome = _this$props.proofOfIncome,
+          className = _this$props.className;
+      return /*#__PURE__*/_react.default.createElement(DocumentButton, {
+        className: "document-button-3 ".concat(className || "")
+      }, /*#__PURE__*/_react.default.createElement(ProofOfIncome, {
+        className: "proof-of-income-1"
+      }, proofOfIncome), /*#__PURE__*/_react.default.createElement(OverlapGroup2, {
+        className: "overlap-group2-6"
+      }, /*#__PURE__*/_react.default.createElement(ClickForDetails, {
+        className: "click-for-details-7"
+      }, "Click for Details")));
+    }
+  }]);
+
+  return Property1Variant53;
+}(_react.default.Component);
+
+var DocumentButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 316px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: center;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n\n  &.document-button-3.document-button-4 {\n    top: 218px;\n  }\n\n  &.document-button-3.document-button-5 {\n    top: 120px;\n  }\n"])));
+
+var ProofOfIncome = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  align-self: flex-end;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 42px;\n  margin-left: 372px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var _default = Property1Variant53;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/DocumentButtonVariant7/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var DocumentButtonVariant7 = /*#__PURE__*/function (_React$Component) {
+  _inherits(DocumentButtonVariant7, _React$Component);
+
+  var _super = _createSuper(DocumentButtonVariant7);
+
+  function DocumentButtonVariant7() {
+    _classCallCheck(this, DocumentButtonVariant7);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(DocumentButtonVariant7, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          proofOfDateOfBirth = _this$props.proofOfDateOfBirth,
+          aBirthCertificate = _this$props.aBirthCertificate,
+          closeDetails = _this$props.closeDetails,
+          dobHelp = _this$props.dobHelp;
+      return /*#__PURE__*/_react.default.createElement(DocumentButtonVariant71, null, /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(BirthContainer, null, /*#__PURE__*/_react.default.createElement(ProofOfDateOfBirth, null, proofOfDateOfBirth), /*#__PURE__*/_react.default.createElement(ABirthCertificate, null, aBirthCertificate)), /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(Vector, {
+        src: "/img/vector-39@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(CloseDetails, null, closeDetails)))), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(DOBHelp, null, dobHelp)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.ssa.gov/ssnumber/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1-1@2x.svg"
+      })))));
+    }
+  }]);
+
+  return DocumentButtonVariant7;
+}(_react.default.Component);
+
+var DocumentButtonVariant71 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 218px;\n  left: 14px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  min-width: 916px;\n"])));
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 926px;\n  margin-bottom: -114px;\n  display: flex;\n  flex-direction: column;\n  padding: 19px 0;\n  align-items: flex-end;\n  min-height: 201px;\n  background-image: url(/img/rectangle-43@1x.svg);\n  background-size: 100% 100%;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  align-self: center;\n  display: flex;\n  align-items: flex-start;\n  min-width: 878px;\n"])));
+
+var BirthContainer = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 695px;\n  height: 101px;\n  position: relative;\n"])));
+
+var ProofOfDateOfBirth = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 323px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var ABirthCertificate = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 695px;\n  top: 46px;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite20px);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  height: 42px;\n  margin-top: 4px;\n  display: flex;\n  padding: 9px 10px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var Vector = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 16px;\n  height: 2px;\n  align-self: center;\n"])));
+
+var CloseDetails = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  width: 133px;\n  min-height: 23px;\n  margin-left: 7px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  width: 146px;\n  height: 33px;\n  position: relative;\n  margin-top: 16px;\n  margin-right: 71px;\n  background-color: var(--blue-zodiac);\n  border-radius: 10px;\n"])));
+
+var DOBHelp = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 120px;\n  top: 6px;\n  left: 18px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite20px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 11px;\n  top: 11px;\n  left: 110px;\n  cursor: pointer;\n"])));
+
+var _default = DocumentButtonVariant7;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RequiredPaperworkDOB/VoucherToolV3RequiredPaperworkDOB.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RequiredPaperworkDOB/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _Property1Variant = _interopRequireDefault(require("../Property1Variant53"));
+
+var _Property1Variant2 = _interopRequireDefault(require("../Property1Variant3"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default4"));
+
+var _DocumentButtonVariant = _interopRequireDefault(require("../DocumentButtonVariant7"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3RequiredPaperworkDOB.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3RequiredPaperworkDOB = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3RequiredPaperworkDOB, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3RequiredPaperworkDOB);
+
+  function VoucherToolV3RequiredPaperworkDOB() {
+    _classCallCheck(this, VoucherToolV3RequiredPaperworkDOB);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3RequiredPaperworkDOB, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          line1 = _this$props.line1,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          ownerCertification = _this$props.ownerCertification,
+          clickForDetails = _this$props.clickForDetails,
+          property1AudioProps = _this$props.property1AudioProps,
+          property1Variant53Props = _this$props.property1Variant53Props,
+          documentButtonVariant7Props = _this$props.documentButtonVariant7Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-required-paperwork-dob screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup8, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup9, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
+        src: line1
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(NoDocumentsAreNee, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-27px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText4)), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(OwnerCertification, null, ownerCertification), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(ClickForDetails, null, clickForDetails))), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, {
+        proofOfIncome: property1Variant53Props.proofOfIncome
+      }), /*#__PURE__*/_react.default.createElement(_Property1Variant2.default, null), /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_DocumentButtonVariant.default, {
+        proofOfDateOfBirth: documentButtonVariant7Props.proofOfDateOfBirth,
+        aBirthCertificate: documentButtonVariant7Props.aBirthCertificate,
+        closeDetails: documentButtonVariant7Props.closeDetails,
+        dobHelp: documentButtonVariant7Props.dobHelp
+      })))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications",
+        className: "align-self-flex-end"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-13@2x.svg"
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-next-steps"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-12@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3RequiredPaperworkDOB;
+}(_react.default.Component);
+
+var OverlapGroup8 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup9 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var TextInfo = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  margin-left: 115px;\n  display: flex;\n  padding: 19px 34px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 930px;\n  height: 514px;\n  position: relative;\n"])));
+
+var NoDocumentsAreNee = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 911px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack27px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 416px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: flex-start;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var OwnerCertification = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  height: 42px;\n  align-self: center;\n  margin-left: 372px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 24px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3RequiredPaperworkDOB;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Variant53":"components/Property1Variant53/index.jsx","../Property1Variant3":"components/Property1Variant3/index.jsx","../Property1Default4":"components/Property1Default4/index.jsx","../DocumentButtonVariant7":"components/DocumentButtonVariant7/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RequiredPaperworkDOB.css":"components/VoucherToolV3RequiredPaperworkDOB/VoucherToolV3RequiredPaperworkDOB.css"}],"components/Property1Default3/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default3 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default3, _React$Component);
+
+  var _super = _createSuper(Property1Default3);
+
+  function Property1Default3() {
+    _classCallCheck(this, Property1Default3);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default3, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
           checkIfAnyOfThe = _this$props.checkIfAnyOfThe,
           youreARegistered = _this$props.youreARegistered;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "disqualification-questions-v2 librebaskerville-normal-black-28px border-1px-black-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "check-if-any-of-the"
-      }, checkIfAnyOfThe), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-20"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-col-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-24 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("img", {
-        className: "rectangle-23",
+      return /*#__PURE__*/_react.default.createElement(DisqualificationQuestionsV2, null, /*#__PURE__*/_react.default.createElement(CheckIfAnyOfThe, null, checkIfAnyOfThe), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(Rectangle24, null), /*#__PURE__*/_react.default.createElement(Rectangle23, {
         src: "/img/rectangle-23@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-2 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-16 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-2 border-2-5px-black"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "youre-a-registered"
-      }, youreARegistered)));
+      }), /*#__PURE__*/_react.default.createElement(Rectangle22, null), /*#__PURE__*/_react.default.createElement(Rectangle16, null)), /*#__PURE__*/_react.default.createElement(YoureARegistered, null, youreARegistered)));
     }
   }]);
 
-  return Property1Default4;
+  return Property1Default3;
 }(_react.default.Component);
 
-var _default = Property1Default4;
+var DisqualificationQuestionsV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  ", "\n            position: absolute;\n  width: 1005px;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding: 19.7px 29.8px;\n  align-items: flex-start;\n  min-height: 556px;\n  background-color: var(--white);\n"])), _styledMixins.LibrebaskervilleNormalBlack28px, _styledMixins.Border1pxBlack2);
+
+var CheckIfAnyOfThe = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 902px;\n  min-height: 51px;\n  margin-top: 13px;\n  letter-spacing: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 452px;\n  align-self: flex-end;\n  margin-top: 1px;\n  margin-right: 32.81px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 874px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 32px;\n  margin-top: 10.84px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 303px;\n"])));
+
+var Rectangle24 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-left: 0.59px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle23 = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 32px;\n  height: 32px;\n  margin-top: 24px;\n"])));
+
+var Rectangle22 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-top: 75px;\n  margin-left: 0.59px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle16 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-top: 78px;\n  margin-left: 0.59px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var YoureARegistered = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 818px;\n  min-height: 452px;\n  margin-left: 24px;\n  letter-spacing: 0;\n  line-height: 55px;\n"])));
+
+var _default = Property1Default3;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Property1Default4.css":"components/Property1Default4/Property1Default4.css"}],"components/VoucherToolV3Disqualifications/VoucherToolV3Disqualifications.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3Disqualifications/VoucherToolV3Disqualifications.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -37478,21 +40425,29 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
 var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
-var _Property1Default = _interopRequireDefault(require("../Property1Default4"));
+var _Property1Default = _interopRequireDefault(require("../Property1Default3"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
 
 require("./VoucherToolV3Disqualifications.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37531,38 +40486,33 @@ var VoucherToolV3Disqualifications = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
           line1 = _this$props.line1,
-          property1Default4Props = _this$props.property1Default4Props;
+          noneOfTheAboveApplyToMe = _this$props.noneOfTheAboveApplyToMe,
+          property1AudioProps = _this$props.property1AudioProps,
+          property1Default3Props = _this$props.property1Default3Props;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-disqualifications screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-18"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-9"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-7 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-7",
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
         src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-19"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
-        checkIfAnyOfThe: property1Default4Props.checkIfAnyOfThe,
-        youreARegistered: property1Default4Props.youreARegistered
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-6"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        checkIfAnyOfThe: property1Default3Props.checkIfAnyOfThe,
+        youreARegistered: property1Default3Props.youreARegistered
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications-checked"
+      }, /*#__PURE__*/_react.default.createElement(NoneOfTheAboveApplyToMe, null, noneOfTheAboveApplyToMe)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications-checked"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle90, null)))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-eligibility-questions",
         className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-24",
-        src: "/img/tutorial-buttons-22@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-15@2x.svg"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-disqualifications-notice-page"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-25",
-        src: "/img/tutorial-buttons-21@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-14@2x.svg"
       })))));
     }
   }]);
@@ -37570,9 +40520,569 @@ var VoucherToolV3Disqualifications = /*#__PURE__*/function (_React$Component) {
   return VoucherToolV3Disqualifications;
 }(_react.default.Component);
 
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 1005px;\n  height: 556px;\n  position: relative;\n  margin-left: 121px;\n"])));
+
+var NoneOfTheAboveApplyToMe = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 823px;\n  top: 466px;\n  left: 119px;\n  letter-spacing: 0;\n  line-height: 55px;\n  white-space: nowrap;\n  cursor: pointer;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var Rectangle90 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 31px;\n  height: 30px;\n  top: 480px;\n  left: 68px;\n  background-color: var(--white);\n  cursor: pointer;\n"])), _styledMixins.Border25pxBlack);
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 32px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3Disqualifications;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Default4":"components/Property1Default4/index.jsx","./VoucherToolV3Disqualifications.css":"components/VoucherToolV3Disqualifications/VoucherToolV3Disqualifications.css"}],"components/VoucherToolV3Disclaimers/VoucherToolV3Disclaimers.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Default3":"components/Property1Default3/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3Disqualifications.css":"components/VoucherToolV3Disqualifications/VoucherToolV3Disqualifications.css"}],"components/Property1Expanded2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Bix = _interopRequireDefault(require("../Bix"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Expanded2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Expanded2, _React$Component);
+
+  var _super = _createSuper(Property1Expanded2);
+
+  function Property1Expanded2() {
+    _classCallCheck(this, Property1Expanded2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Expanded2, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          close = _this$props.close,
+          goToMoreResources = _this$props.goToMoreResources,
+          spanText4 = _this$props.spanText4,
+          spanText5 = _this$props.spanText5,
+          spanText6 = _this$props.spanText6,
+          spanText7 = _this$props.spanText7,
+          spanText8 = _this$props.spanText8,
+          spanText9 = _this$props.spanText9;
+      return /*#__PURE__*/_react.default.createElement(Waitlisted, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText3)), /*#__PURE__*/_react.default.createElement(Line7, {
+        src: "/img/line-7@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Bix.default, null), /*#__PURE__*/_react.default.createElement(Close, null, close)), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(TutorialButtons, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/resources-v3-1"
+      }, /*#__PURE__*/_react.default.createElement(GoToMoreResources, null, goToMoreResources)), /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(IfYouAreOnTheVo, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText4), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-cornflower-25px"
+      }, spanText5), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-25px"
+      }, spanText6), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-edgewater-25px"
+      }, spanText7), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-edgewater-25px"
+      }, spanText8), /*#__PURE__*/_react.default.createElement(Span51, null, spanText9))))));
+    }
+  }]);
+
+  return Property1Expanded2;
+}(_react.default.Component);
+
+var Waitlisted = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 495px;\n  top: 0;\n  left: 0;\n  display: flex;\n  align-items: flex-start;\n  min-width: 410px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 495px;\n  display: flex;\n  padding: 3px 10px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1307px;\n  background-color: var(--hippie-blue);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 435px;\n  margin-bottom: 22px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var Line7 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 2px;\n  height: 440px;\n  margin-left: 11px;\n  margin-bottom: 7px;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 858px;\n  align-self: flex-start;\n  margin-left: 37px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 459px;\n"])));
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 87px;\n  height: 34px;\n  position: relative;\n  align-self: flex-end;\n"])));
+
+var Close = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 71px;\n  top: 4px;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px2);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 812px;\n  height: 403px;\n  position: relative;\n  margin-top: 22px;\n"])));
+
+var TutorialButtons = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 318px;\n  height: 60px;\n  top: 310px;\n  left: 358px;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n"])));
+
+var GoToMoreResources = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  top: 325px;\n  left: 375px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite25px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 27px;\n  height: 15px;\n  top: 332px;\n  left: 632px;\n"])));
+
+var IfYouAreOnTheVo = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 812px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 32px;\n"])), _styledMixins.LibrebaskervilleNormalWhite25px2);
+
+var Span51 = _styledComponents.default.span(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 700;\n  color: var(--midnight-blue);\n  font-size: var(--font-size-m);\n"])));
+
+var _default = Property1Expanded2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Bix":"components/Bix/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolsPageWaitlistExpand/VoucherToolsPageWaitlistExpand.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolsPageWaitlistExpand/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default2"));
+
+var _Property1Expanded = _interopRequireDefault(require("../Property1Expanded2"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolsPageWaitlistExpand.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolsPageWaitlistExpand = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolsPageWaitlistExpand, _React$Component);
+
+  var _super = _createSuper(VoucherToolsPageWaitlistExpand);
+
+  function VoucherToolsPageWaitlistExpand() {
+    _classCallCheck(this, VoucherToolsPageWaitlistExpand);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolsPageWaitlistExpand, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          resourceMatching = _this$props.resourceMatching,
+          ifYoureNotSureW = _this$props.ifYoureNotSureW,
+          clickOnTheSection = _this$props.clickOnTheSection,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          iveAppliedForAV = _this$props.iveAppliedForAV,
+          logoProps = _this$props.logoProps,
+          homePageLinkProps = _this$props.homePageLinkProps,
+          moreResourcesProps = _this$props.moreResourcesProps,
+          property1Expanded2Props = _this$props.property1Expanded2Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tools-page-waitlist-expand screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Logo.default, {
+        className: logoProps.className
+      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
+        className: homePageLinkProps.className
+      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      })), /*#__PURE__*/_react.default.createElement(ResourceMatching, null, resourceMatching), /*#__PURE__*/_react.default.createElement(IfYoureNotSureW, null, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement(ClickOnTheSection, null, clickOnTheSection), /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup7, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_Property1Expanded.default, property1Expanded2Props)), /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText3))), /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(IveAppliedForAV1, null, iveAppliedForAV)))));
+    }
+  }]);
+
+  return VoucherToolsPageWaitlistExpand;
+}(_react.default.Component);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 83px;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var ResourceMatching = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 534px;\n  min-height: 68px;\n  margin-top: 39px;\n  font-weight: 500;\n  color: var(--black);\n  text-align: center;\n"])), _styledMixins.Header2);
+
+var IfYoureNotSureW = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 36px;\n  margin-top: 45px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var ClickOnTheSection = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 960px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 37px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  margin-left: 33px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1307px;\n"])));
+
+var OverlapGroup7 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 410px;\n  height: 495px;\n  position: relative;\n"])));
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 39px;\n  display: flex;\n  padding: 19px 21px;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--hippie-blue);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 435px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 38px;\n  display: flex;\n  padding: 21px 20px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var _default = VoucherToolsPageWaitlistExpand;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default2":"components/Property1Default2/index.jsx","../Property1Expanded2":"components/Property1Expanded2/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolsPageWaitlistExpand.css":"components/VoucherToolsPageWaitlistExpand/VoucherToolsPageWaitlistExpand.css"}],"components/DocumentButtonVariant72/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var DocumentButtonVariant72 = /*#__PURE__*/function (_React$Component) {
+  _inherits(DocumentButtonVariant72, _React$Component);
+
+  var _super = _createSuper(DocumentButtonVariant72);
+
+  function DocumentButtonVariant72() {
+    _classCallCheck(this, DocumentButtonVariant72);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(DocumentButtonVariant72, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          ifYouKnowYourSoc = _this$props.ifYouKnowYourSoc,
+          socialSecurityNumber = _this$props.socialSecurityNumber,
+          closeDetails = _this$props.closeDetails,
+          ssnHelp = _this$props.ssnHelp;
+      return /*#__PURE__*/_react.default.createElement(DocumentButtonVariant7, null, /*#__PURE__*/_react.default.createElement(OverlapGroup5, null, /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(IfYouKnowYourSoc, null, ifYouKnowYourSoc), /*#__PURE__*/_react.default.createElement(SocialSecurityNumber, null, socialSecurityNumber)), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(CloseDetails, null, closeDetails)), /*#__PURE__*/_react.default.createElement(Vector, {
+        src: "/img/vector-39@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.ssa.gov/ssnumber/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(SSNHelp, null, ssnHelp)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.ssa.gov/ssnumber/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1-1@2x.svg"
+      })))));
+    }
+  }]);
+
+  return DocumentButtonVariant72;
+}(_react.default.Component);
+
+var DocumentButtonVariant7 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 120px;\n  left: 14px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  min-width: 916px;\n"])));
+
+var OverlapGroup5 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 926px;\n  margin-bottom: -114px;\n  display: flex;\n  flex-direction: column;\n  padding: 19px 0;\n  align-items: flex-end;\n  min-height: 201px;\n  background-image: url(/img/rectangle-43-1@1x.svg);\n  background-size: 100% 100%;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  align-self: center;\n  display: flex;\n  align-items: flex-start;\n  min-width: 878px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 695px;\n  height: 101px;\n  position: relative;\n"])));
+
+var IfYouKnowYourSoc = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 695px;\n  top: 46px;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalWhite20px);
+
+var SocialSecurityNumber = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 323px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 183px;\n  height: 42px;\n  position: relative;\n  margin-top: 4px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var CloseDetails = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 133px;\n  top: 9px;\n  left: 40px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var Vector = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 16px;\n  height: 2px;\n  top: 20px;\n  left: 17px;\n"])));
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  width: 146px;\n  height: 33px;\n  position: relative;\n  margin-top: 16px;\n  margin-right: 71px;\n  background-color: var(--blue-zodiac);\n  border-radius: 10px;\n"])));
+
+var SSNHelp = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 120px;\n  top: 6px;\n  left: 18px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite20px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 11px;\n  top: 11px;\n  left: 110px;\n  cursor: pointer;\n"])));
+
+var _default = DocumentButtonVariant72;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RequiredPaperworkSSN/VoucherToolV3RequiredPaperworkSSN.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RequiredPaperworkSSN/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _Property1Variant = _interopRequireDefault(require("../Property1Variant5"));
+
+var _Property1Variant2 = _interopRequireDefault(require("../Property1Variant53"));
+
+var _DocumentButtonVariant = _interopRequireDefault(require("../DocumentButtonVariant72"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3RequiredPaperworkSSN.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3RequiredPaperworkSSN = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3RequiredPaperworkSSN, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3RequiredPaperworkSSN);
+
+  function VoucherToolV3RequiredPaperworkSSN() {
+    _classCallCheck(this, VoucherToolV3RequiredPaperworkSSN);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3RequiredPaperworkSSN, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          line1 = _this$props.line1,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          ownerCertification = _this$props.ownerCertification,
+          clickForDetails = _this$props.clickForDetails,
+          property1AudioProps = _this$props.property1AudioProps,
+          property1Variant531Props = _this$props.property1Variant531Props,
+          property1Variant532Props = _this$props.property1Variant532Props,
+          documentButtonVariant72Props = _this$props.documentButtonVariant72Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-required-paperwork-ssn screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup8, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup9, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
+        src: line1
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(NoDocumentsAreNee, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-27px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText4)), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(OwnerCertification, null, ownerCertification), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(ClickForDetails, null, clickForDetails))), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, null), /*#__PURE__*/_react.default.createElement(_Property1Variant2.default, {
+        proofOfIncome: property1Variant531Props.proofOfIncome,
+        className: property1Variant531Props.className
+      }), /*#__PURE__*/_react.default.createElement(_Property1Variant2.default, {
+        proofOfIncome: property1Variant532Props.proofOfIncome,
+        className: property1Variant532Props.className
+      }), /*#__PURE__*/_react.default.createElement(_DocumentButtonVariant.default, {
+        ifYouKnowYourSoc: documentButtonVariant72Props.ifYouKnowYourSoc,
+        socialSecurityNumber: documentButtonVariant72Props.socialSecurityNumber,
+        closeDetails: documentButtonVariant72Props.closeDetails,
+        ssnHelp: documentButtonVariant72Props.ssnHelp
+      })))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications",
+        className: "align-self-flex-end"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-17@2x.svg"
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-next-steps"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-16@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3RequiredPaperworkSSN;
+}(_react.default.Component);
+
+var OverlapGroup8 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup9 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var TextInfo = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  margin-left: 115px;\n  display: flex;\n  padding: 19px 34px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 930px;\n  height: 514px;\n  position: relative;\n"])));
+
+var NoDocumentsAreNee = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 911px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack27px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 416px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: flex-start;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var OwnerCertification = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  height: 42px;\n  align-self: center;\n  margin-left: 372px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 24px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3RequiredPaperworkSSN;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Variant5":"components/Property1Variant5/index.jsx","../Property1Variant53":"components/Property1Variant53/index.jsx","../DocumentButtonVariant72":"components/DocumentButtonVariant72/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RequiredPaperworkSSN.css":"components/VoucherToolV3RequiredPaperworkSSN/VoucherToolV3RequiredPaperworkSSN.css"}],"components/VoucherToolV3Disclaimers/VoucherToolV3Disclaimers.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -37589,19 +41099,27 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
 var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolV3Disclaimers.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37639,7 +41157,6 @@ var VoucherToolV3Disclaimers = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
           spanText1 = _this$props.spanText1,
           spanText2 = _this$props.spanText2,
           spanText3 = _this$props.spanText3,
@@ -37648,42 +41165,22 @@ var VoucherToolV3Disclaimers = /*#__PURE__*/function (_React$Component) {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-disclaimers screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-21"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-10"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-8 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-8",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-22"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tool-question-screen-1 border-1px-summer-green"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-20"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "obot librebaskerville-normal-black-35px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-35px"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(ToolContainer, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(ToolQuestionScreen, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(Obot, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
       }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1-4"
+        className: "librebaskerville-bold-black-30px"
       }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
-        className: "librebaskerville-normal-black-35px"
-      }, spanText3)), /*#__PURE__*/_react.default.createElement("img", {
-        className: "voucher-applying-1",
+        className: "librebaskerville-normal-black-30px"
+      }, spanText3)), /*#__PURE__*/_react.default.createElement(VoucherApplying1, {
         src: voucherApplying1
-      })))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-7"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-26",
-        src: "/img/tutorial-buttons-24@2x.svg"
-      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      }))))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-19@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-eligibility-questions"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-27",
-        src: "/img/tutorial-buttons-23@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-18@2x.svg"
       })))));
     }
   }]);
@@ -37691,14 +41188,33 @@ var VoucherToolV3Disclaimers = /*#__PURE__*/function (_React$Component) {
   return VoucherToolV3Disclaimers;
 }(_react.default.Component);
 
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1193px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1192px;\n"])));
+
+var ToolContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  margin-left: 125px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 22px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var ToolQuestionScreen = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border1pxSummerGreen);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 1002px;\n  height: 609px;\n  position: relative;\n  margin-bottom: -91px;\n"])));
+
+var Obot = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 892px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 50px;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var VoucherApplying1 = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 524px;\n  height: 524px;\n  top: 85px;\n  left: 478px;\n  object-fit: cover;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 25px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 56px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3Disclaimers;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","./VoucherToolV3Disclaimers.css":"components/VoucherToolV3Disclaimers/VoucherToolV3Disclaimers.css"}],"components/TipTypeBackButton/TipTypeBackButton.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/TipTypeBackButton/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3Disclaimers.css":"components/VoucherToolV3Disclaimers/VoucherToolV3Disclaimers.css"}],"components/TipTypeBackButton/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37708,11 +41224,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./TipTypeBackButton.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37749,16 +41271,7 @@ var TipTypeBackButton = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var thisButtonWillTak = this.props.thisButtonWillTak;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "tip-box"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-21"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-6 border-3px-summer-green"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "this-button-will-tak librebaskerville-normal-black-30px"
-      }, thisButtonWillTak), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-3",
+      return /*#__PURE__*/_react.default.createElement(TipBox, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(Rectangle6, null), /*#__PURE__*/_react.default.createElement(ThisButtonWillTak, null, thisButtonWillTak), /*#__PURE__*/_react.default.createElement(Arrow3, {
         src: "/img/arrow-3@2x.svg"
       })));
     }
@@ -37767,9 +41280,19 @@ var TipTypeBackButton = /*#__PURE__*/function (_React$Component) {
   return TipTypeBackButton;
 }(_react.default.Component);
 
+var TipBox = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 272px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 0 0px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 623px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 573px;\n  height: 171px;\n  position: relative;\n"])));
+
+var Rectangle6 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 573px;\n  height: 127px;\n  top: 0;\n  left: 0;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border3pxSummerGreen);
+
+var ThisButtonWillTak = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 526px;\n  top: 13px;\n  left: 18px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var Arrow3 = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 45px;\n  top: 126px;\n  left: 34px;\n"])));
+
 var _default = TipTypeBackButton;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./TipTypeBackButton.css":"components/TipTypeBackButton/TipTypeBackButton.css"}],"components/VoucherToolV3TutorialBackButton/VoucherToolV3TutorialBackButton.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3TutorialBackButton/VoucherToolV3TutorialBackButton.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -37786,9 +41309,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
@@ -37796,11 +41319,19 @@ var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
 var _TipTypeBackButton = _interopRequireDefault(require("../TipTypeBackButton"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolV3TutorialBackButton.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37838,40 +41369,24 @@ var VoucherToolV3TutorialBackButton = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
           property1AudioProps = _this$props.property1AudioProps,
           tipTypeBackButtonProps = _this$props.tipTypeBackButtonProps;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-tutorial-back-button screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-23"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-6"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-9 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-9",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
         className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-24"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-11"
-      }, /*#__PURE__*/_react.default.createElement(_TipTypeBackButton.default, {
+      }), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(_TipTypeBackButton.default, {
         thisButtonWillTak: tipTypeBackButtonProps.thisButtonWillTak
       }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-tutorial-next-button"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-28",
-        src: "/img/tutorial-buttons-15@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-21@2x.svg"
       }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-tutorial-audio-button"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-29",
-        src: "/img/tutorial-buttons-14@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-20@2x.svg"
       })))));
     }
   }]);
@@ -37879,90 +41394,21 @@ var VoucherToolV3TutorialBackButton = /*#__PURE__*/function (_React$Component) {
   return VoucherToolV3TutorialBackButton;
 }(_react.default.Component);
 
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  align-self: center;\n  margin-top: 63px;\n  margin-right: 1px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var FlexRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin-top: 322px;\n  margin-left: -8px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1399px;\n"])));
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 623px;\n  height: 272px;\n  position: relative;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 99px;\n  height: 77px;\n  top: 189px;\n  left: 51px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 677px;\n  margin-bottom: 7px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3TutorialBackButton;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeBackButton":"components/TipTypeBackButton/index.jsx","./VoucherToolV3TutorialBackButton.css":"components/VoucherToolV3TutorialBackButton/VoucherToolV3TutorialBackButton.css"}],"components/TipTypeAudioButton/TipTypeAudioButton.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/TipTypeAudioButton/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./TipTypeAudioButton.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var TipTypeAudioButton = /*#__PURE__*/function (_React$Component) {
-  _inherits(TipTypeAudioButton, _React$Component);
-
-  var _super = _createSuper(TipTypeAudioButton);
-
-  function TipTypeAudioButton() {
-    _classCallCheck(this, TipTypeAudioButton);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(TipTypeAudioButton, [{
-    key: "render",
-    value: function render() {
-      var thisButtonWillRea = this.props.thisButtonWillRea;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "tip-box-1"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-22"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-6-1 border-3px-summer-green"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "this-button-will-rea librebaskerville-normal-black-30px"
-      }, thisButtonWillRea), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-3-1",
-        src: "/img/arrow-3@2x.svg"
-      })));
-    }
-  }]);
-
-  return TipTypeAudioButton;
-}(_react.default.Component);
-
-var _default = TipTypeAudioButton;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./TipTypeAudioButton.css":"components/TipTypeAudioButton/TipTypeAudioButton.css"}],"components/VoucherToolV3TutorialAudioButton/VoucherToolV3TutorialAudioButton.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3TutorialAudioButton/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeBackButton":"components/TipTypeBackButton/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3TutorialBackButton.css":"components/VoucherToolV3TutorialBackButton/VoucherToolV3TutorialBackButton.css"}],"components/DocumentButtonVariant73/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37974,21 +41420,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Logo = _interopRequireDefault(require("../Logo"));
+var _styledMixins = require("../../styledMixins");
 
-var _MoreResources = _interopRequireDefault(require("../MoreResources"));
-
-var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
-
-var _TipTypeAudioButton = _interopRequireDefault(require("../TipTypeAudioButton"));
-
-require("./VoucherToolV3TutorialAudioButton.css");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -38010,148 +41452,252 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var VoucherToolV3TutorialAudioButton = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3TutorialAudioButton, _React$Component);
+var DocumentButtonVariant73 = /*#__PURE__*/function (_React$Component) {
+  _inherits(DocumentButtonVariant73, _React$Component);
 
-  var _super = _createSuper(VoucherToolV3TutorialAudioButton);
+  var _super = _createSuper(DocumentButtonVariant73);
 
-  function VoucherToolV3TutorialAudioButton() {
-    _classCallCheck(this, VoucherToolV3TutorialAudioButton);
+  function DocumentButtonVariant73() {
+    _classCallCheck(this, DocumentButtonVariant73);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(VoucherToolV3TutorialAudioButton, [{
+  _createClass(DocumentButtonVariant73, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          proofOfIncome = _this$props.proofOfIncome,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          incomeHelp = _this$props.incomeHelp,
+          closeDetails = _this$props.closeDetails;
+      return /*#__PURE__*/_react.default.createElement(DocumentButtonVariant7, null, /*#__PURE__*/_react.default.createElement(OverlapGroupContainer, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(ProofOfIncome, null, proofOfIncome), /*#__PURE__*/_react.default.createElement(TheFollowingArticl, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-20px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement(Span117, null, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-white-20px"
+      }, spanText3)), /*#__PURE__*/_react.default.createElement(Rectangle44, null), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(IncomeHelp, null, incomeHelp)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.seattlehousing.org/housing/housing-choice-vouchers/eligibility/income-level-housing-choice-voucher-program",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Arrow1, {
+        src: "/img/arrow-1-1@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle35, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(CloseDetails, null, closeDetails)), /*#__PURE__*/_react.default.createElement(Vector, {
+        src: "/img/vector-39@2x.svg"
+      }))));
+    }
+  }]);
+
+  return DocumentButtonVariant73;
+}(_react.default.Component);
+
+var DocumentButtonVariant7 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 316px;\n  left: 14px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  min-width: 916px;\n"])));
+
+var OverlapGroupContainer = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 926px;\n  height: 263px;\n  position: relative;\n  margin-bottom: -176px;\n  background-image: url(/img/rectangle-43-2@1x.svg);\n  background-size: 100% 100%;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 849px;\n  height: 228px;\n  top: 19px;\n  left: 24px;\n"])));
+
+var ProofOfIncome = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 323px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var TheFollowingArticl = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 695px;\n  top: 46px;\n  left: 0;\n  font-family: var(--font-family-libre_baskerville);\n  font-weight: 400;\n  color: transparent;\n  font-size: 20px;\n  letter-spacing: 0;\n"])));
+
+var Span117 = _styledComponents.default.span(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  color: var(--cornflower);\n  text-decoration: underline;\n"])));
+
+var Rectangle44 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 174px;\n  height: 33px;\n  top: 192px;\n  left: 675px;\n  background-color: var(--blue-zodiac);\n  border-radius: 10px;\n"])));
+
+var IncomeHelp = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 120px;\n  top: 198px;\n  left: 693px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite20px);
+
+var Arrow1 = _styledComponents.default.img(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 11px;\n  top: 203px;\n  left: 812px;\n  cursor: pointer;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 23px;\n  left: 719px;\n  border-radius: 12px;\n"])));
+
+var Rectangle35 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 183px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n  cursor: pointer;\n"])));
+
+var CloseDetails = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 133px;\n  top: 9px;\n  left: 40px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var Vector = _styledComponents.default.img(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 16px;\n  height: 2px;\n  top: 20px;\n  left: 17px;\n"])));
+
+var _default = DocumentButtonVariant73;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3RequiredPaperworkPOI/VoucherToolV3RequiredPaperworkPOI.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3RequiredPaperworkPOI/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _Property1Variant = _interopRequireDefault(require("../Property1Variant53"));
+
+var _Property1Variant2 = _interopRequireDefault(require("../Property1Variant3"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default4"));
+
+var _DocumentButtonVariant = _interopRequireDefault(require("../DocumentButtonVariant73"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3RequiredPaperworkPOI.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3RequiredPaperworkPOI = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3RequiredPaperworkPOI, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3RequiredPaperworkPOI);
+
+  function VoucherToolV3RequiredPaperworkPOI() {
+    _classCallCheck(this, VoucherToolV3RequiredPaperworkPOI);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3RequiredPaperworkPOI, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
           line1 = _this$props.line1,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          ownerCertification = _this$props.ownerCertification,
+          clickForDetails = _this$props.clickForDetails,
           property1AudioProps = _this$props.property1AudioProps,
-          tipTypeAudioButtonProps = _this$props.tipTypeAudioButtonProps;
+          property1Variant53Props = _this$props.property1Variant53Props,
+          documentButtonVariant73Props = _this$props.documentButtonVariant73Props;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-tutorial-audio-button screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-25"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-12"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-10 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-10",
+        className: "voucher-tool-v3-required-paperwork-poi screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup8, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup9, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
         src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-26"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
         className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement(_TipTypeAudioButton.default, {
-        thisButtonWillRea: tipTypeAudioButtonProps.thisButtonWillRea
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-8"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-tutorial-back-button",
+      }), /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(OverlapGroup6, null, /*#__PURE__*/_react.default.createElement(NoDocumentsAreNee, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-27px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-27px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText4)), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(OwnerCertification, null, ownerCertification), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(ClickForDetails, null, clickForDetails))), /*#__PURE__*/_react.default.createElement(_Property1Variant.default, {
+        proofOfIncome: property1Variant53Props.proofOfIncome
+      }), /*#__PURE__*/_react.default.createElement(_Property1Variant2.default, null), /*#__PURE__*/_react.default.createElement(_Property1Default.default, null), /*#__PURE__*/_react.default.createElement(_DocumentButtonVariant.default, {
+        proofOfIncome: documentButtonVariant73Props.proofOfIncome,
+        spanText1: documentButtonVariant73Props.spanText1,
+        spanText2: documentButtonVariant73Props.spanText2,
+        spanText3: documentButtonVariant73Props.spanText3,
+        incomeHelp: documentButtonVariant73Props.incomeHelp,
+        closeDetails: documentButtonVariant73Props.closeDetails
+      })))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications",
         className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-30",
-        src: "/img/tutorial-buttons-5@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-23@2x.svg"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-disclaimers"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-31",
-        src: "/img/tutorial-buttons-4@2x.svg"
+        to: "/voucher-tool-v3-next-steps"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-22@2x.svg"
       })))));
     }
   }]);
 
-  return VoucherToolV3TutorialAudioButton;
+  return VoucherToolV3RequiredPaperworkPOI;
 }(_react.default.Component);
 
-var _default = VoucherToolV3TutorialAudioButton;
+var OverlapGroup8 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup9 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var TextInfo = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  margin-left: 115px;\n  display: flex;\n  padding: 19px 34px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var OverlapGroup6 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 930px;\n  height: 514px;\n  position: relative;\n"])));
+
+var NoDocumentsAreNee = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 911px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack27px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 86px;\n  top: 416px;\n  left: 14px;\n  display: flex;\n  padding: 17px 19px;\n  align-items: flex-start;\n  min-width: 916px;\n  background-color: var(--midnight-blue);\n"])));
+
+var OwnerCertification = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  width: 323px;\n  min-height: 51px;\n  letter-spacing: 0;\n  line-height: 45px;\n  white-space: nowrap;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  height: 42px;\n  align-self: center;\n  margin-left: 372px;\n  display: flex;\n  padding: 9px 15px;\n  align-items: flex-start;\n  min-width: 183px;\n  background-color: var(--cornflower);\n  border-radius: 12px;\n"])));
+
+var ClickForDetails = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  width: 152px;\n  min-height: 23px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite21px);
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 24px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3RequiredPaperworkPOI;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeAudioButton":"components/TipTypeAudioButton/index.jsx","./VoucherToolV3TutorialAudioButton.css":"components/VoucherToolV3TutorialAudioButton/VoucherToolV3TutorialAudioButton.css"}],"components/TipTypeNextButton/TipTypeNextButton.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Variant53":"components/Property1Variant53/index.jsx","../Property1Variant3":"components/Property1Variant3/index.jsx","../Property1Default4":"components/Property1Default4/index.jsx","../DocumentButtonVariant73":"components/DocumentButtonVariant73/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3RequiredPaperworkPOI.css":"components/VoucherToolV3RequiredPaperworkPOI/VoucherToolV3RequiredPaperworkPOI.css"}],"components/VoucherToolV3DisqualificationsNotic/VoucherToolV3DisqualificationsNotic.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/TipTypeNextButton/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-require("./TipTypeNextButton.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var TipTypeNextButton = /*#__PURE__*/function (_React$Component) {
-  _inherits(TipTypeNextButton, _React$Component);
-
-  var _super = _createSuper(TipTypeNextButton);
-
-  function TipTypeNextButton() {
-    _classCallCheck(this, TipTypeNextButton);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(TipTypeNextButton, [{
-    key: "render",
-    value: function render() {
-      var thisButtonWillTak = this.props.thisButtonWillTak;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "tip-box-2"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group-23"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-6-2 border-3px-summer-green"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "this-button-will-tak-1 librebaskerville-normal-black-30px"
-      }, thisButtonWillTak), /*#__PURE__*/_react.default.createElement("img", {
-        className: "arrow-3-2",
-        src: "/img/arrow-3-1@2x.svg"
-      })));
-    }
-  }]);
-
-  return TipTypeNextButton;
-}(_react.default.Component);
-
-var _default = TipTypeNextButton;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./TipTypeNextButton.css":"components/TipTypeNextButton/TipTypeNextButton.css"}],"components/VoucherToolV3TutorialNextButton/VoucherToolV3TutorialNextButton.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3TutorialNextButton/index.jsx":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3DisqualificationsNotic/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38163,21 +41709,27 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
 var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
-var _TipTypeNextButton = _interopRequireDefault(require("../TipTypeNextButton"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-require("./VoucherToolV3TutorialNextButton.css");
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3DisqualificationsNotic.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -38199,72 +41751,82 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var VoucherToolV3TutorialNextButton = /*#__PURE__*/function (_React$Component) {
-  _inherits(VoucherToolV3TutorialNextButton, _React$Component);
+var VoucherToolV3DisqualificationsNotic = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3DisqualificationsNotic, _React$Component);
 
-  var _super = _createSuper(VoucherToolV3TutorialNextButton);
+  var _super = _createSuper(VoucherToolV3DisqualificationsNotic);
 
-  function VoucherToolV3TutorialNextButton() {
-    _classCallCheck(this, VoucherToolV3TutorialNextButton);
+  function VoucherToolV3DisqualificationsNotic() {
+    _classCallCheck(this, VoucherToolV3DisqualificationsNotic);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(VoucherToolV3TutorialNextButton, [{
+  _createClass(VoucherToolV3DisqualificationsNotic, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          property1AudioProps = _this$props.property1AudioProps,
-          tipTypeNextButtonProps = _this$props.tipTypeNextButtonProps;
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          spanText4 = _this$props.spanText4,
+          spanText5 = _this$props.spanText5,
+          spanText6 = _this$props.spanText6;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-v3-tutorial-next-button screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-27"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-13"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-11 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-11",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
-        className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-28"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-starting-screen",
-        className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-32",
-        src: "/img/tutorial-buttons-9@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-7"
-      }, /*#__PURE__*/_react.default.createElement(_TipTypeNextButton.default, {
-        thisButtonWillTak: tipTypeNextButtonProps.thisButtonWillTak
-      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-tutorial-back-button"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-33",
-        src: "/img/tutorial-buttons-8@2x.svg"
-      }))))));
+        className: "voucher-tool-v3-disqualifications-notice-page screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(FlexCol1, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(TextInfo, null, /*#__PURE__*/_react.default.createElement(TheresAPossibilit, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-30px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText3), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-30px"
+      }, spanText4), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText5), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-30px"
+      }, spanText6))))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-25@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-24@2x.svg"
+      })))));
     }
   }]);
 
-  return VoucherToolV3TutorialNextButton;
+  return VoucherToolV3DisqualificationsNotic;
 }(_react.default.Component);
 
-var _default = VoucherToolV3TutorialNextButton;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeNextButton":"components/TipTypeNextButton/index.jsx","./VoucherToolV3TutorialNextButton.css":"components/VoucherToolV3TutorialNextButton/VoucherToolV3TutorialNextButton.css"}],"components/SelectionsDefault/SelectionsDefault.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/SelectionsDefault/index.jsx":[function(require,module,exports) {
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1183px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var FlexCol1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  margin-left: 115px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 2px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TextInfo = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  display: flex;\n  padding: 26px 51px;\n  align-items: flex-start;\n  min-width: 1011px;\n  background-color: var(--white);\n"])), _styledMixins.Border1pxBlack2);
+
+var TheresAPossibilit = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 907px;\n  min-height: 475px;\n  letter-spacing: 0;\n  line-height: 38px;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 25px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 66px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3DisqualificationsNotic;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3DisqualificationsNotic.css":"components/VoucherToolV3DisqualificationsNotic/VoucherToolV3DisqualificationsNotic.css"}],"components/SelectionsDefault/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38274,11 +41836,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./SelectionsDefault.css");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -38318,44 +41886,44 @@ var SelectionsDefault = /*#__PURE__*/function (_React$Component) {
           spanText1 = _this$props.spanText1,
           spanText2 = _this$props.spanText2,
           homelessAtRiskOf = _this$props.homelessAtRiskOf;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "eligibility-questions border-1px-summer-green"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group3-8"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group2-14"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "in-order-to-be-eligi librebaskerville-normal-black-28px"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "span0-2 librebaskerville-normal-black-28px"
-      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
-        className: "span1-5 librebaskerville-normal-black-28px"
-      }, spanText2)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "homeless-at-risk-of librebaskerville-normal-black-30px"
-      }, homelessAtRiskOf), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-12 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-13 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-14 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-15 border-2-5px-black"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-16-1 border-2-5px-black"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-17 border-2-5px-black"
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "rectangle-18 border-2-5px-black"
-      }));
+      return /*#__PURE__*/_react.default.createElement(EligibilityQuestions, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(InOrderToBeEligi, null, /*#__PURE__*/_react.default.createElement(Span019, null, spanText1), /*#__PURE__*/_react.default.createElement(Span119, null, spanText2)), /*#__PURE__*/_react.default.createElement(HomelessAtRiskOf, null, homelessAtRiskOf), /*#__PURE__*/_react.default.createElement(Rectangle12, null), /*#__PURE__*/_react.default.createElement(Rectangle13, null), /*#__PURE__*/_react.default.createElement(Rectangle14, null), /*#__PURE__*/_react.default.createElement(Rectangle15, null)), /*#__PURE__*/_react.default.createElement(Rectangle16, null), /*#__PURE__*/_react.default.createElement(Rectangle17, null)), /*#__PURE__*/_react.default.createElement(Rectangle18, null));
     }
   }]);
 
   return SelectionsDefault;
 }(_react.default.Component);
 
+var EligibilityQuestions = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  width: 1011px;\n  display: flex;\n  flex-direction: column;\n  padding: 17px 0;\n  align-items: flex-start;\n  min-height: 564px;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border1pxSummerGreen);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 958px;\n  height: 454px;\n  position: relative;\n  align-self: flex-end;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 958px;\n  height: 446px;\n  top: 0;\n  left: 0;\n"])));
+
+var InOrderToBeEligi = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 905px;\n  top: 0;\n  left: 0;\n  letter-spacing: 0;\n  line-height: 28px;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var Span019 = _styledComponents.default.span(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  line-height: 37px;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var Span119 = _styledComponents.default.span(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  line-height: 25px;\n"])), _styledMixins.LibrebaskervilleNormalBlack28px);
+
+var HomelessAtRiskOf = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 839px;\n  top: 138px;\n  left: 119px;\n  letter-spacing: 0;\n  line-height: 55px;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var Rectangle12 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 149px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle13 = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 204px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle14 = _styledComponents.default.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 260px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle15 = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 313px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle16 = _styledComponents.default.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 369px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle17 = _styledComponents.default.div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  top: 422px;\n  left: 64px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle18 = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-top: 23px;\n  margin-left: 116px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
 var _default = SelectionsDefault;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./SelectionsDefault.css":"components/SelectionsDefault/SelectionsDefault.css"}],"components/VoucherToolV3EligibilityQuestions/VoucherToolV3EligibilityQuestions.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3EligibilityQuestions/VoucherToolV3EligibilityQuestions.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -38372,9 +41940,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
-
 var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
 var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
@@ -38382,11 +41950,19 @@ var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
 
 var _SelectionsDefault = _interopRequireDefault(require("../SelectionsDefault"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
 require("./VoucherToolV3EligibilityQuestions.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -38424,43 +42000,23 @@ var VoucherToolV3EligibilityQuestions = /*#__PURE__*/function (_React$Component)
     value: function render() {
       var _this$props = this.props,
           voucherTool = _this$props.voucherTool,
-          line1 = _this$props.line1,
-          property1AudioProps = _this$props.property1AudioProps,
           selectionsDefaultProps = _this$props.selectionsDefaultProps;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "container-center-horizontal"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "voucher-tool-v3-eligibility-questions screen"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-29"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "overlap-group4-4"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "voucher-tool-12 header-2"
-      }, voucherTool), /*#__PURE__*/_react.default.createElement("img", {
-        className: "line-1-12",
-        src: line1
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "flex-row-30"
-      }, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
-        className: property1AudioProps.className
-      }), /*#__PURE__*/_react.default.createElement(_SelectionsDefault.default, {
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(FlexCol1, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_SelectionsDefault.default, {
         spanText1: selectionsDefaultProps.spanText1,
         spanText2: selectionsDefaultProps.spanText2,
         homelessAtRiskOf: selectionsDefaultProps.homelessAtRiskOf
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tutorial-buttons-container-9"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/voucher-tool-v3-disclaimers",
-        className: "align-self-flex-end"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-34",
-        src: "/img/tutorial-buttons-20@2x.svg"
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disclaimers"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-27@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/voucher-tool-v3-disqualifications"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        className: "tutorial-buttons-35",
-        src: "/img/tutorial-buttons-19@2x.svg"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-26@2x.svg"
       })))));
     }
   }]);
@@ -38468,9 +42024,25 @@ var VoucherToolV3EligibilityQuestions = /*#__PURE__*/function (_React$Component)
   return VoucherToolV3EligibilityQuestions;
 }(_react.default.Component);
 
+var OverlapGroup4 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1193px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1192px;\n"])));
+
+var FlexCol1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  position: relative;\n  margin-left: 125px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  margin-right: 22px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 25px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 56px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
 var _default = VoucherToolV3EligibilityQuestions;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../HomePageLink":"components/HomePageLink/index.jsx","../Logo":"components/Logo/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../SelectionsDefault":"components/SelectionsDefault/index.jsx","./VoucherToolV3EligibilityQuestions.css":"components/VoucherToolV3EligibilityQuestions/VoucherToolV3EligibilityQuestions.css"}],"App.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../SelectionsDefault":"components/SelectionsDefault/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3EligibilityQuestions.css":"components/VoucherToolV3EligibilityQuestions/VoucherToolV3EligibilityQuestions.css"}],"components/Property1Default42/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38478,49 +42050,1525 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-require("./App.css");
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default42 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default42, _React$Component);
+
+  var _super = _createSuper(Property1Default42);
+
+  function Property1Default42() {
+    _classCallCheck(this, Property1Default42);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default42, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          checkIfAnyOfThe = _this$props.checkIfAnyOfThe,
+          youreARegistered = _this$props.youreARegistered;
+      return /*#__PURE__*/_react.default.createElement(DisqualificationQuestionsV2, null, /*#__PURE__*/_react.default.createElement(CheckIfAnyOfThe, null, checkIfAnyOfThe), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(Rectangle24, null), /*#__PURE__*/_react.default.createElement(Rectangle23, {
+        src: "/img/rectangle-23-1@2x.svg"
+      }), /*#__PURE__*/_react.default.createElement(Rectangle22, null), /*#__PURE__*/_react.default.createElement(Rectangle16, null), /*#__PURE__*/_react.default.createElement(Rectangle22, null)), /*#__PURE__*/_react.default.createElement(YoureARegistered, null, youreARegistered)));
+    }
+  }]);
+
+  return Property1Default42;
+}(_react.default.Component);
+
+var DisqualificationQuestionsV2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  ", "\n            position: absolute;\n  width: 1011px;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding: 20px 30px;\n  align-items: flex-start;\n  min-height: 564px;\n  background-color: var(--white);\n"])), _styledMixins.LibrebaskervilleNormalBlack28px, _styledMixins.Border1pxBlack2);
+
+var CheckIfAnyOfThe = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 907px;\n  min-height: 52px;\n  margin-top: 13px;\n  letter-spacing: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 458px;\n  align-self: flex-end;\n  margin-top: 1px;\n  margin-right: 33px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 879px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 32px;\n  margin-top: 11px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 414px;\n"])));
+
+var Rectangle24 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle23 = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 32px;\n  height: 32px;\n  margin-top: 25px;\n"])));
+
+var Rectangle22 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-top: 75px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var Rectangle16 = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  ", "\n  width: 32px;\n  height: 32px;\n  margin-top: 79px;\n  background-color: var(--white);\n"])), _styledMixins.Border25pxBlack);
+
+var YoureARegistered = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 823px;\n  min-height: 458px;\n  margin-left: 24px;\n  letter-spacing: 0;\n  line-height: 55px;\n"])));
+
+var _default = Property1Default42;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3DisqualificationsCheck/VoucherToolV3DisqualificationsCheck.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3DisqualificationsCheck/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _VoucherToolsPageReceivedExpand = _interopRequireDefault(require("./components/VoucherToolsPageReceivedExpand"));
+var _Logo = _interopRequireDefault(require("../Logo"));
 
-var _HomePageV = _interopRequireDefault(require("./components/HomePageV3"));
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
 
-var _VoucherToolV3StartingScreen = _interopRequireDefault(require("./components/VoucherToolV3StartingScreen"));
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
 
-var _VoucherToolPopUp = _interopRequireDefault(require("./components/VoucherToolPopUp"));
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default42"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3DisqualificationsCheck.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3DisqualificationsCheck = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3DisqualificationsCheck, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3DisqualificationsCheck);
+
+  function VoucherToolV3DisqualificationsCheck() {
+    _classCallCheck(this, VoucherToolV3DisqualificationsCheck);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3DisqualificationsCheck, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          line1 = _this$props.line1,
+          property1AudioProps = _this$props.property1AudioProps,
+          property1Default42Props = _this$props.property1Default42Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-disqualifications-checked screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(Line1, {
+        src: line1
+      })), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        checkIfAnyOfThe: property1Default42Props.checkIfAnyOfThe,
+        youreARegistered: property1Default42Props.youreARegistered
+      }), /*#__PURE__*/_react.default.createElement(IconCheckMark, {
+        src: "/img/vector-75@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disqualifications",
+        className: "align-self-flex-end"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-29@2x.svg"
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-required-paperwork"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-28@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3DisqualificationsCheck;
+}(_react.default.Component);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 1440px;\n  height: 111px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 63px;\n  margin-right: -5px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 405px;\n  top: 0;\n  left: 512px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var Line1 = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 1440px;\n  height: 1px;\n  top: 82px;\n  left: 0;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 44px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1182px;\n"])));
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 1011px;\n  height: 564px;\n  position: relative;\n  margin-left: 115px;\n"])));
+
+var IconCheckMark = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 24px;\n  height: 18px;\n  top: 486px;\n  left: 73px;\n"])));
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  height: 78px;\n  align-self: center;\n  margin-top: 24px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 1150px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3DisqualificationsCheck;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Default42":"components/Property1Default42/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3DisqualificationsCheck.css":"components/VoucherToolV3DisqualificationsCheck/VoucherToolV3DisqualificationsCheck.css"}],"components/TipTypeAudioButton/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var TipTypeAudioButton = /*#__PURE__*/function (_React$Component) {
+  _inherits(TipTypeAudioButton, _React$Component);
+
+  var _super = _createSuper(TipTypeAudioButton);
+
+  function TipTypeAudioButton() {
+    _classCallCheck(this, TipTypeAudioButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TipTypeAudioButton, [{
+    key: "render",
+    value: function render() {
+      var thisButtonWillRea = this.props.thisButtonWillRea;
+      return /*#__PURE__*/_react.default.createElement(TipBox, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(Rectangle6, null), /*#__PURE__*/_react.default.createElement(ThisButtonWillRea, null, thisButtonWillRea), /*#__PURE__*/_react.default.createElement(Arrow3, {
+        src: "/img/arrow-3-1@2x.svg"
+      })));
+    }
+  }]);
+
+  return TipTypeAudioButton;
+}(_react.default.Component);
+
+var TipBox = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 315px;\n  margin-top: 12px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 623px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 624px;\n  height: 305px;\n  position: relative;\n  margin-left: -1px;\n"])));
+
+var Rectangle6 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 573px;\n  height: 127px;\n  top: 0;\n  left: 51px;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border3pxSummerGreen);
+
+var ThisButtonWillRea = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 546px;\n  top: 15px;\n  left: 69px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var Arrow3 = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 52px;\n  height: 22px;\n  top: 19px;\n  left: 0;\n"])));
+
+var _default = TipTypeAudioButton;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3TutorialAudioButton/VoucherToolV3TutorialAudioButton.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3TutorialAudioButton/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _TipTypeAudioButton = _interopRequireDefault(require("../TipTypeAudioButton"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3TutorialAudioButton.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3TutorialAudioButton = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3TutorialAudioButton, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3TutorialAudioButton);
+
+  function VoucherToolV3TutorialAudioButton() {
+    _classCallCheck(this, VoucherToolV3TutorialAudioButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3TutorialAudioButton, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          property1AudioProps = _this$props.property1AudioProps,
+          tipTypeAudioButtonProps = _this$props.tipTypeAudioButtonProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-tutorial-audio-button screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(FlexCol1, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_TipTypeAudioButton.default, {
+        thisButtonWillRea: tipTypeAudioButtonProps.thisButtonWillRea
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-tutorial-back-button"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-31@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disclaimers"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-30@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3TutorialAudioButton;
+}(_react.default.Component);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-end;\n  min-width: 1348px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 879px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 777px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 438px;\n  position: relative;\n  margin-left: 1px;\n  display: flex;\n  align-items: center;\n  min-width: 878px;\n"])));
+
+var FlexCol1 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 802px;\n  position: relative;\n  margin-left: 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 438px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 405px;\n  min-height: 111px;\n  align-self: flex-end;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 262px;\n  cursor: pointer;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-left: 370px;\n  margin-bottom: 1px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3TutorialAudioButton;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeAudioButton":"components/TipTypeAudioButton/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3TutorialAudioButton.css":"components/VoucherToolV3TutorialAudioButton/VoucherToolV3TutorialAudioButton.css"}],"components/Property1Welcome/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Welcome = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Welcome, _React$Component);
+
+  var _super = _createSuper(Property1Welcome);
+
+  function Property1Welcome() {
+    _classCallCheck(this, Property1Welcome);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Welcome, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          welcomeThisToolI = _this$props.welcomeThisToolI,
+          clickNextToCont = _this$props.clickNextToCont,
+          tutorial1 = _this$props.tutorial1,
+          skip = _this$props.skip;
+      return /*#__PURE__*/_react.default.createElement(ToolQuestionScreen, null, /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(WelcomeThisToolI, null, welcomeThisToolI), /*#__PURE__*/_react.default.createElement(ClickNextToCont, null, clickNextToCont), /*#__PURE__*/_react.default.createElement(Tutorial1, {
+        src: tutorial1
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-disclaimers"
+      }, /*#__PURE__*/_react.default.createElement(Skip, null, skip))));
+    }
+  }]);
+
+  return Property1Welcome;
+}(_react.default.Component);
+
+var ToolQuestionScreen = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  ", "\n  height: 564px;\n  display: flex;\n  padding: 0 10px;\n  align-items: flex-end;\n  min-width: 1011px;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border1pxSummerGreen);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 985px;\n  height: 525px;\n  position: relative;\n"])));
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 985px;\n  height: 525px;\n  top: 0;\n  left: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var WelcomeThisToolI = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 942px;\n  top: 0;\n  left: 43px;\n  letter-spacing: 0;\n"])));
+
+var ClickNextToCont = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 516px;\n  top: 314px;\n  left: 469px;\n  letter-spacing: 0;\n"])));
+
+var Tutorial1 = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 431px;\n  height: 385px;\n  top: 140px;\n  left: 0;\n  object-fit: cover;\n"])));
+
+var Skip = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 69px;\n  top: 469px;\n  left: 916px;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: var(--black-2);\n  font-size: var(--font-size-xxl);\n  letter-spacing: 0;\n  cursor: pointer;\n"])));
+
+var _default = Property1Welcome;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1BackToHome/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1BackToHome = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1BackToHome, _React$Component);
+
+  var _super = _createSuper(Property1BackToHome);
+
+  function Property1BackToHome() {
+    _classCallCheck(this, Property1BackToHome);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1BackToHome, [{
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/home-page-v3"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, null, /*#__PURE__*/_react.default.createElement(BackToHome, null, children)));
+    }
+  }]);
+
+  return Property1BackToHome;
+}(_react.default.Component);
+
+var TutorialButtons = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 67px;\n  margin-top: 28px;\n  display: flex;\n  padding: 0 11px;\n  align-items: center;\n  min-width: 211px;\n  background-color: var(--summer-green);\n  border-radius: 5px;\n  box-shadow: 3px 3px 4px #00000026;\n  cursor: pointer;\n"])));
+
+var BackToHome = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  min-height: 35px;\n  min-width: 189px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite30px);
+
+var _default = Property1BackToHome;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3StartingScreen/VoucherToolV3StartingScreen.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3StartingScreen/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _Property1Welcome = _interopRequireDefault(require("../Property1Welcome"));
+
+var _Property1BackToHome = _interopRequireDefault(require("../Property1BackToHome"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3StartingScreen.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3StartingScreen = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3StartingScreen, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3StartingScreen);
+
+  function VoucherToolV3StartingScreen() {
+    _classCallCheck(this, VoucherToolV3StartingScreen);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3StartingScreen, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          property1WelcomeProps = _this$props.property1WelcomeProps,
+          property1BackToHomeProps = _this$props.property1BackToHomeProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-starting-screen screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup4, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(FlexRow1, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, null), /*#__PURE__*/_react.default.createElement(ToolContainer, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(_Property1Welcome.default, {
+        welcomeThisToolI: property1WelcomeProps.welcomeThisToolI,
+        clickNextToCont: property1WelcomeProps.clickNextToCont,
+        tutorial1: property1WelcomeProps.tutorial1,
+        skip: property1WelcomeProps.skip
+      }))), /*#__PURE__*/_react.default.createElement(_Property1BackToHome.default, null, property1BackToHomeProps.children)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-tutorial-next-button",
+        className: "align-self-flex-end"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-32@2x.svg"
+      })))));
+    }
+  }]);
+
+  return VoucherToolV3StartingScreen;
+}(_react.default.Component);
+
+var OverlapGroup4 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 776px;\n  margin-top: 63px;\n  margin-right: 5px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1347px;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 1192px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 770px;\n"])));
+
+var FlexRow1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 675px;\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1192px;\n"])));
+
+var ToolContainer = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1011px;\n  position: relative;\n  margin-left: 125px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 675px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 356px;\n  min-height: 111px;\n  margin-right: 21px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var TutorialButtons = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  align-self: flex-end;\n  margin-left: 56px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3StartingScreen;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../Property1Welcome":"components/Property1Welcome/index.jsx","../Property1BackToHome":"components/Property1BackToHome/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3StartingScreen.css":"components/VoucherToolV3StartingScreen/VoucherToolV3StartingScreen.css"}],"components/TipTypeNextButton/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var TipTypeNextButton = /*#__PURE__*/function (_React$Component) {
+  _inherits(TipTypeNextButton, _React$Component);
+
+  var _super = _createSuper(TipTypeNextButton);
+
+  function TipTypeNextButton() {
+    _classCallCheck(this, TipTypeNextButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TipTypeNextButton, [{
+    key: "render",
+    value: function render() {
+      var thisButtonWillTak = this.props.thisButtonWillTak;
+      return /*#__PURE__*/_react.default.createElement(TipBox, null, /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement(Rectangle6, null), /*#__PURE__*/_react.default.createElement(ThisButtonWillTak, null, thisButtonWillTak), /*#__PURE__*/_react.default.createElement(Arrow3, {
+        src: "/img/arrow-3-2@2x.svg"
+      })));
+    }
+  }]);
+
+  return TipTypeNextButton;
+}(_react.default.Component);
+
+var TipBox = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: absolute;\n  height: 253px;\n  top: 0;\n  left: 0;\n  display: flex;\n  padding: 21.3px 0;\n  justify-content: flex-end;\n  align-items: flex-end;\n  min-width: 623px;\n"])));
+
+var OverlapGroup = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 573px;\n  height: 158px;\n  position: relative;\n"])));
+
+var Rectangle6 = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 573px;\n  height: 117px;\n  top: 0;\n  left: 0;\n  background-color: var(--white);\n  border-radius: 5px;\n"])), _styledMixins.Border3pxSummerGreen);
+
+var ThisButtonWillTak = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 526px;\n  top: 21px;\n  left: 18px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack30px);
+
+var Arrow3 = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 22px;\n  height: 42px;\n  top: 116px;\n  left: 510px;\n"])));
+
+var _default = TipTypeNextButton;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolV3TutorialNextButton/VoucherToolV3TutorialNextButton.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolV3TutorialNextButton/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Audio = _interopRequireDefault(require("../Property1Audio"));
+
+var _TipTypeNextButton = _interopRequireDefault(require("../TipTypeNextButton"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolV3TutorialNextButton.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolV3TutorialNextButton = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolV3TutorialNextButton, _React$Component);
+
+  var _super = _createSuper(VoucherToolV3TutorialNextButton);
+
+  function VoucherToolV3TutorialNextButton() {
+    _classCallCheck(this, VoucherToolV3TutorialNextButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolV3TutorialNextButton, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          voucherTool = _this$props.voucherTool,
+          property1AudioProps = _this$props.property1AudioProps,
+          tipTypeNextButtonProps = _this$props.tipTypeNextButtonProps;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tool-v3-tutorial-next-button screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(TutorialButtonsContainer, null, /*#__PURE__*/_react.default.createElement(_Property1Audio.default, {
+        className: property1AudioProps.className
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons, {
+        src: "/img/tutorial-buttons-34@2x.svg"
+      }))), /*#__PURE__*/_react.default.createElement(FlexCol, null, /*#__PURE__*/_react.default.createElement(VoucherTool, null, voucherTool), /*#__PURE__*/_react.default.createElement(OverlapGroup2, null, /*#__PURE__*/_react.default.createElement(_TipTypeNextButton.default, {
+        thisButtonWillTak: tipTypeNextButtonProps.thisButtonWillTak
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tool-v3-tutorial-back-button"
+      }, /*#__PURE__*/_react.default.createElement(TutorialButtons1, {
+        src: "/img/tutorial-buttons-33@2x.svg"
+      })))))));
+    }
+  }]);
+
+  return VoucherToolV3TutorialNextButton;
+}(_react.default.Component);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FlexRow = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 777px;\n  margin-top: 63px;\n  margin-right: 6px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1348px;\n"])));
+
+var TutorialButtonsContainer = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 99px;\n  position: relative;\n  align-self: flex-end;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 641px;\n"])));
+
+var TutorialButtons = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 99px;\n  height: 77px;\n  margin-top: 511px;\n  cursor: pointer;\n"])));
+
+var FlexCol = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 874px;\n  margin-left: 375px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  min-height: 776px;\n"])));
+
+var VoucherTool = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  width: 389px;\n  min-height: 111px;\n  font-weight: 500;\n  color: var(--black);\n"])), _styledMixins.Header2);
+
+var OverlapGroup2 = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  width: 623px;\n  height: 329px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 336px;\n"])));
+
+var TutorialButtons1 = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 99px;\n  height: 77px;\n  top: 252px;\n  left: 524px;\n  cursor: pointer;\n"])));
+
+var _default = VoucherToolV3TutorialNextButton;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Audio":"components/Property1Audio/index.jsx","../TipTypeNextButton":"components/TipTypeNextButton/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolV3TutorialNextButton.css":"components/VoucherToolV3TutorialNextButton/VoucherToolV3TutorialNextButton.css"}],"components/Property1IneligibleButton/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1IneligibleButton = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1IneligibleButton, _React$Component);
+
+  var _super = _createSuper(Property1IneligibleButton);
+
+  function Property1IneligibleButton() {
+    _classCallCheck(this, Property1IneligibleButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1IneligibleButton, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3;
+      return /*#__PURE__*/_react.default.createElement(Waitlisted, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tools-page-waitlist-expand"
+      }, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "roboto-medium-white-40px"
+      }, spanText3))));
+    }
+  }]);
+
+  return Property1IneligibleButton;
+}(_react.default.Component);
+
+var Waitlisted = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 39px;\n  display: flex;\n  padding: 19px 21px;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--hippie-blue);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 435px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var _default = Property1IneligibleButton;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/Property1Default7/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Property1Default7 = /*#__PURE__*/function (_React$Component) {
+  _inherits(Property1Default7, _React$Component);
+
+  var _super = _createSuper(Property1Default7);
+
+  function Property1Default7() {
+    _classCallCheck(this, Property1Default7);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Property1Default7, [{
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      return /*#__PURE__*/_react.default.createElement(ReceivedVoucherButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: "/voucher-tools-page-received-expand"
+      }, /*#__PURE__*/_react.default.createElement(IveAppliedForAV, null, children)));
+    }
+  }]);
+
+  return Property1Default7;
+}(_react.default.Component);
+
+var ReceivedVoucherButton = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 495px;\n  margin-left: 38px;\n  display: flex;\n  padding: 21px 20px;\n  justify-content: flex-end;\n  align-items: flex-start;\n  min-width: 410px;\n  background-color: var(--amazon);\n  border-radius: 5px;\n"])));
+
+var IveAppliedForAV = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 368px;\n  min-height: 75px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumWhite40px);
+
+var _default = Property1Default7;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/VoucherToolsPage/VoucherToolsPage.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/VoucherToolsPage/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _Property1Default = _interopRequireDefault(require("../Property1Default2"));
+
+var _Property1IneligibleButton = _interopRequireDefault(require("../Property1IneligibleButton"));
+
+var _Property1Default2 = _interopRequireDefault(require("../Property1Default7"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./VoucherToolsPage.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var VoucherToolsPage = /*#__PURE__*/function (_React$Component) {
+  _inherits(VoucherToolsPage, _React$Component);
+
+  var _super = _createSuper(VoucherToolsPage);
+
+  function VoucherToolsPage() {
+    _classCallCheck(this, VoucherToolsPage);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(VoucherToolsPage, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          resourceMatching = _this$props.resourceMatching,
+          ifYoureNotSureW = _this$props.ifYoureNotSureW,
+          clickOnTheSection = _this$props.clickOnTheSection,
+          logoProps = _this$props.logoProps,
+          homePageLinkProps = _this$props.homePageLinkProps,
+          moreResourcesProps = _this$props.moreResourcesProps,
+          property1Default2Props = _this$props.property1Default2Props,
+          property1IneligibleButtonProps = _this$props.property1IneligibleButtonProps,
+          property1Default7Props = _this$props.property1Default7Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "voucher-tools-page screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement(_Logo.default, {
+        className: logoProps.className
+      }), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, {
+        className: homePageLinkProps.className
+      }), /*#__PURE__*/_react.default.createElement(_MoreResources.default, {
+        className: moreResourcesProps.className
+      })), /*#__PURE__*/_react.default.createElement(ResourceMatching, null, resourceMatching), /*#__PURE__*/_react.default.createElement(IfYoureNotSureW, null, ifYoureNotSureW), /*#__PURE__*/_react.default.createElement(ClickOnTheSection, null, clickOnTheSection), /*#__PURE__*/_react.default.createElement(FlexRow, null, /*#__PURE__*/_react.default.createElement(_Property1Default.default, {
+        className: property1Default2Props.className
+      }), /*#__PURE__*/_react.default.createElement(_Property1IneligibleButton.default, {
+        spanText1: property1IneligibleButtonProps.spanText1,
+        spanText2: property1IneligibleButtonProps.spanText2,
+        spanText3: property1IneligibleButtonProps.spanText3
+      }), /*#__PURE__*/_react.default.createElement(_Property1Default2.default, null, property1Default7Props.children))));
+    }
+  }]);
+
+  return VoucherToolsPage;
+}(_react.default.Component);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  margin-left: 2px;\n  display: flex;\n  padding: 38px 82px;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var ResourceMatching = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 526px;\n  min-height: 68px;\n  margin-top: 39px;\n  margin-left: 2px;\n  font-weight: 500;\n  color: var(--black);\n  text-align: center;\n"])), _styledMixins.Header2);
+
+var IfYoureNotSureW = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 36px;\n  margin-top: 45px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var ClickOnTheSection = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 960px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 37px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack45px);
+
+var FlexRow = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  height: 495px;\n  position: relative;\n  margin-left: 33px;\n  display: flex;\n  align-items: flex-start;\n  min-width: 1307px;\n"])));
+
+var _default = VoucherToolsPage;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../Property1Default2":"components/Property1Default2/index.jsx","../Property1IneligibleButton":"components/Property1IneligibleButton/index.jsx","../Property1Default7":"components/Property1Default7/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./VoucherToolsPage.css":"components/VoucherToolsPage/VoucherToolsPage.css"}],"components/ResourceAddedOrNotNotAdded2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourceAddedOrNotNotAdded2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourceAddedOrNotNotAdded2, _React$Component);
+
+  var _super = _createSuper(ResourceAddedOrNotNotAdded2);
+
+  function ResourceAddedOrNotNotAdded2() {
+    _classCallCheck(this, ResourceAddedOrNotNotAdded2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourceAddedOrNotNotAdded2, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          affordableHousing = _this$props.affordableHousing,
+          theLargestAndMost = _this$props.theLargestAndMost,
+          linkToResource = _this$props.linkToResource;
+      return /*#__PURE__*/_react.default.createElement(ResourceSectionHousing, null, /*#__PURE__*/_react.default.createElement(AffordableHousing, null, affordableHousing), /*#__PURE__*/_react.default.createElement(TheLargestAndMost, null, theLargestAndMost), /*#__PURE__*/_react.default.createElement(OverlapGroup, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.affordablehousing.com/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle27, null)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.affordablehousing.com/",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(LinkToResource, null, linkToResource))));
+    }
+  }]);
+
+  return ResourceAddedOrNotNotAdded2;
+}(_react.default.Component);
+
+var ResourceSectionHousing = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 1293px;\n  margin-top: 9px;\n  margin-right: 1px;\n  display: flex;\n  flex-direction: column;\n  padding: 12px 21px;\n  align-items: flex-start;\n  min-height: 208px;\n  background-color: var(--midnight-blue);\n  border-radius: 2px;\n"])));
+
+var AffordableHousing = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 349px;\n  min-height: 40px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite35px);
+
+var TheLargestAndMost = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1247px;\n  min-height: 63px;\n  margin-top: 20px;\n  letter-spacing: 0;\n  line-height: 35px;\n"])), _styledMixins.LibrebaskervilleNormalWhite22px);
+
+var OverlapGroup = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 186px;\n  height: 42px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 10px;\n  margin-right: 3.52px;\n  border-radius: 8.4px;\n"])));
+
+var Rectangle27 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 186px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--white);\n  border-radius: 8.4px;\n  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;\n  cursor: pointer;\n"])));
+
+var LinkToResource = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  ", "\n  position: absolute;\n  width: 157px;\n  top: 10px;\n  left: 14px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])), _styledMixins.RobotoMediumMidnightBlue21px);
+
+var _default = ResourceAddedOrNotNotAdded2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/ResourceAddedOrNotResourceAddedOrNo2/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourceAddedOrNotResourceAddedOrNo2 = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourceAddedOrNotResourceAddedOrNo2, _React$Component);
+
+  var _super = _createSuper(ResourceAddedOrNotResourceAddedOrNo2);
+
+  function ResourceAddedOrNotResourceAddedOrNo2() {
+    _classCallCheck(this, ResourceAddedOrNotResourceAddedOrNo2);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourceAddedOrNotResourceAddedOrNo2, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          name = _this$props.name,
+          kchaHelpsRentersI = _this$props.kchaHelpsRentersI,
+          linkToResource = _this$props.linkToResource;
+      return /*#__PURE__*/_react.default.createElement(ResourceSectionHousing, null, /*#__PURE__*/_react.default.createElement(Name, null, name), /*#__PURE__*/_react.default.createElement(KCHAHelpsRentersI, null, kchaHelpsRentersI), /*#__PURE__*/_react.default.createElement(OverlapGroup1, null, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.kcha.org/housing/vouchers/search",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(Rectangle27, null)), /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.kcha.org/housing/vouchers/search",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement(LinkToResource, null, linkToResource))));
+    }
+  }]);
+
+  return ResourceAddedOrNotResourceAddedOrNo2;
+}(_react.default.Component);
+
+var ResourceSectionHousing = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 1293px;\n  margin-top: 36px;\n  margin-right: 1px;\n  display: flex;\n  flex-direction: column;\n  padding: 12px 21px;\n  align-items: flex-start;\n  min-height: 208px;\n  background-color: var(--hippie-blue);\n  border-radius: 2px;\n"])));
+
+var Name = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 839px;\n  min-height: 40px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumWhite35px);
+
+var KCHAHelpsRentersI = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1217px;\n  min-height: 63px;\n  margin-top: 22px;\n  letter-spacing: 0;\n  line-height: 35px;\n"])), _styledMixins.LibrebaskervilleNormalWhite22px);
+
+var OverlapGroup1 = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  width: 186px;\n  height: 42px;\n  position: relative;\n  align-self: flex-end;\n  margin-top: 10px;\n  margin-right: 0.52px;\n  border-radius: 8.4px;\n"])));
+
+var Rectangle27 = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 186px;\n  height: 42px;\n  top: 0;\n  left: 0;\n  background-color: var(--white);\n  border-radius: 8.4px;\n  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;\n  cursor: pointer;\n"])));
+
+var LinkToResource = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 157px;\n  top: 10px;\n  left: 14px;\n  font-family: var(--font-family-roboto);\n  font-weight: 500;\n  color: var(--hippie-blue);\n  font-size: 21px;\n  letter-spacing: 0;\n  cursor: pointer;\n"])));
+
+var _default = ResourceAddedOrNotResourceAddedOrNo2;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js"}],"components/ResourcesV32/ResourcesV32.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ResourcesV32/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Logo = _interopRequireDefault(require("../Logo"));
+
+var _HomePageLink = _interopRequireDefault(require("../HomePageLink"));
+
+var _MoreResources = _interopRequireDefault(require("../MoreResources"));
+
+var _ResourceAddedOrNotNotAdded = _interopRequireDefault(require("../ResourceAddedOrNotNotAdded2"));
+
+var _ResourceAddedOrNotResourceAddedOrNo = _interopRequireDefault(require("../ResourceAddedOrNotResourceAddedOrNo2"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledMixins = require("../../styledMixins");
+
+require("./ResourcesV32.css");
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ResourcesV32 = /*#__PURE__*/function (_React$Component) {
+  _inherits(ResourcesV32, _React$Component);
+
+  var _super = _createSuper(ResourcesV32);
+
+  function ResourcesV32() {
+    _classCallCheck(this, ResourcesV32);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ResourcesV32, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          findAHome = _this$props.findAHome,
+          spanText1 = _this$props.spanText1,
+          spanText2 = _this$props.spanText2,
+          spanText3 = _this$props.spanText3,
+          housingSearchResources = _this$props.housingSearchResources,
+          resourceAddedOrNotNotAdded2Props = _this$props.resourceAddedOrNotNotAdded2Props,
+          resourceAddedOrNotResourceAddedOrNo2Props = _this$props.resourceAddedOrNotResourceAddedOrNo2Props;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "container-center-horizontal"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "resources-v3 screen"
+      }, /*#__PURE__*/_react.default.createElement(OverlapGroup3, null, /*#__PURE__*/_react.default.createElement(_Logo.default, null), /*#__PURE__*/_react.default.createElement(_HomePageLink.default, null), /*#__PURE__*/_react.default.createElement(_MoreResources.default, null)), /*#__PURE__*/_react.default.createElement(FindAHome, null, findAHome), /*#__PURE__*/_react.default.createElement(IfYouHaveReceived, null, /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-25px"
+      }, spanText1), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-bold-black-25px"
+      }, spanText2), /*#__PURE__*/_react.default.createElement("span", {
+        className: "librebaskerville-normal-black-25px"
+      }, spanText3)), /*#__PURE__*/_react.default.createElement(HousingSearchResources, null, housingSearchResources), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotNotAdded.default, {
+        affordableHousing: resourceAddedOrNotNotAdded2Props.affordableHousing,
+        theLargestAndMost: resourceAddedOrNotNotAdded2Props.theLargestAndMost,
+        linkToResource: resourceAddedOrNotNotAdded2Props.linkToResource
+      }), /*#__PURE__*/_react.default.createElement(_ResourceAddedOrNotResourceAddedOrNo.default, {
+        name: resourceAddedOrNotResourceAddedOrNo2Props.name,
+        kchaHelpsRentersI: resourceAddedOrNotResourceAddedOrNo2Props.kchaHelpsRentersI,
+        linkToResource: resourceAddedOrNotResourceAddedOrNo2Props.linkToResource
+      })));
+    }
+  }]);
+
+  return ResourcesV32;
+}(_react.default.Component);
+
+var OverlapGroup3 = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  height: 152px;\n  position: relative;\n  display: flex;\n  padding: 38px 85px;\n  justify-content: flex-end;\n  align-items: center;\n  min-width: 1440px;\n  background-color: var(--white);\n  box-shadow: 0px 4px 4px #00000040;\n"])));
+
+var FindAHome = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  ", "\n  width: 343px;\n  min-height: 75px;\n  margin-top: 39px;\n  margin-right: 1px;\n  font-weight: 500;\n  color: var(--black);\n  text-align: center;\n"])), _styledMixins.Header2);
+
+var IfYouHaveReceived = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  ", "\n  width: 1262px;\n  min-height: 100px;\n  margin-top: 36px;\n  margin-right: 12px;\n  letter-spacing: 0;\n"])), _styledMixins.LibrebaskervilleNormalBlack25px);
+
+var HousingSearchResources = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n  width: 663px;\n  min-height: 75px;\n  align-self: flex-start;\n  margin-top: 36px;\n  margin-left: 83px;\n  letter-spacing: 0;\n"])), _styledMixins.RobotoMediumBlack50px);
+
+var _default = ResourcesV32;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Logo":"components/Logo/index.jsx","../HomePageLink":"components/HomePageLink/index.jsx","../MoreResources":"components/MoreResources/index.jsx","../ResourceAddedOrNotNotAdded2":"components/ResourceAddedOrNotNotAdded2/index.jsx","../ResourceAddedOrNotResourceAddedOrNo2":"components/ResourceAddedOrNotResourceAddedOrNo2/index.jsx","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../styledMixins":"styledMixins.js","./ResourcesV32.css":"components/ResourcesV32/ResourcesV32.css"}],"App.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _LandingPage = _interopRequireDefault(require("./components/LandingPage"));
 
 var _VoucherToolV3RAP = _interopRequireDefault(require("./components/VoucherToolV3RAP"));
 
-var _ResourcesV = _interopRequireDefault(require("./components/ResourcesV3"));
+var _VoucherToolsPageVoucherExpand = _interopRequireDefault(require("./components/VoucherToolsPageVoucherExpand"));
+
+var _HomePageV = _interopRequireDefault(require("./components/HomePageV3"));
 
 var _VoucherToolV3DownloadInfo = _interopRequireDefault(require("./components/VoucherToolV3DownloadInfo"));
 
-var _ResourcesV2 = _interopRequireDefault(require("./components/ResourcesV32"));
+var _ResourcesV = _interopRequireDefault(require("./components/ResourcesV3"));
 
 var _VoucherToolV3NextSteps = _interopRequireDefault(require("./components/VoucherToolV3NextSteps"));
 
+var _VoucherToolsPageReceivedExpand = _interopRequireDefault(require("./components/VoucherToolsPageReceivedExpand"));
+
 var _VoucherToolV3DownloadInfo2 = _interopRequireDefault(require("./components/VoucherToolV3DownloadInfo2"));
 
-var _VoucherToolV3DisqualificationsNotic = _interopRequireDefault(require("./components/VoucherToolV3DisqualificationsNotic"));
-
-var _VoucherToolsPage = _interopRequireDefault(require("./components/VoucherToolsPage"));
+var _VoucherToolV3RAPCCS = _interopRequireDefault(require("./components/VoucherToolV3RAPCCS"));
 
 var _VoucherToolV3RequiredPaperwork = _interopRequireDefault(require("./components/VoucherToolV3RequiredPaperwork"));
 
+var _VoucherToolV3RequiredPaperworkDOB = _interopRequireDefault(require("./components/VoucherToolV3RequiredPaperworkDOB"));
+
 var _VoucherToolV3Disqualifications = _interopRequireDefault(require("./components/VoucherToolV3Disqualifications"));
+
+var _VoucherToolsPageWaitlistExpand = _interopRequireDefault(require("./components/VoucherToolsPageWaitlistExpand"));
+
+var _VoucherToolV3RequiredPaperworkSSN = _interopRequireDefault(require("./components/VoucherToolV3RequiredPaperworkSSN"));
 
 var _VoucherToolV3Disclaimers = _interopRequireDefault(require("./components/VoucherToolV3Disclaimers"));
 
 var _VoucherToolV3TutorialBackButton = _interopRequireDefault(require("./components/VoucherToolV3TutorialBackButton"));
 
+var _VoucherToolV3RequiredPaperworkPOI = _interopRequireDefault(require("./components/VoucherToolV3RequiredPaperworkPOI"));
+
+var _VoucherToolV3DisqualificationsNotic = _interopRequireDefault(require("./components/VoucherToolV3DisqualificationsNotic"));
+
+var _VoucherToolV3EligibilityQuestions = _interopRequireDefault(require("./components/VoucherToolV3EligibilityQuestions"));
+
+var _VoucherToolV3DisqualificationsCheck = _interopRequireDefault(require("./components/VoucherToolV3DisqualificationsCheck"));
+
 var _VoucherToolV3TutorialAudioButton = _interopRequireDefault(require("./components/VoucherToolV3TutorialAudioButton"));
+
+var _VoucherToolV3StartingScreen = _interopRequireDefault(require("./components/VoucherToolV3StartingScreen"));
 
 var _VoucherToolV3TutorialNextButton = _interopRequireDefault(require("./components/VoucherToolV3TutorialNextButton"));
 
-var _VoucherToolV3EligibilityQuestions = _interopRequireDefault(require("./components/VoucherToolV3EligibilityQuestions"));
+var _VoucherToolsPage = _interopRequireDefault(require("./components/VoucherToolsPage"));
+
+var _ResourcesV2 = _interopRequireDefault(require("./components/ResourcesV32"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38561,103 +43609,126 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tools-page-received-expand"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPageReceivedExpand.default, voucherToolsPageReceivedExpandData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/:path(|home-page-v3)"
-      }, /*#__PURE__*/_react.default.createElement(_HomePageV.default, homePageV3Data)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tool-v3-starting-screen"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3StartingScreen.default, {
-        voucherTool: "Voucher Tool",
-        line1: "",
-        property1WelcomeProps: voucherToolV3StartingScreenData.property1WelcomeProps,
-        property1BackToHomeProps: voucherToolV3StartingScreenData.property1BackToHomeProps
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tool-pop-up"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolPopUp.default, {
-        voucherToolPopUp2Props: voucherToolPopUpData.voucherToolPopUp2Props
+        path: "/landing-page"
+      }, /*#__PURE__*/_react.default.createElement(_LandingPage.default, {
+        spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " ", "Housing Voucher Help: ", /*#__PURE__*/_react.default.createElement("br", null)),
+        spanText2: "Resources ",
+        spanText3: "for Homeless Relief",
+        simplyifyingHousing: "Simplyifying Housing Resources for the Homeless Community",
+        getHousingResources: "Get Housing Resources"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-rap"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RAP.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
         regionalAccessPointsV2Props: voucherToolV3RAPData.regionalAccessPointsV2Props
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/resources-v3-1"
-      }, /*#__PURE__*/_react.default.createElement(_ResourcesV.default, {
-        findAHome: "Find a Home",
-        ifYouHaveReceived: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you have received your voucher and are interested in other resources, you\u2019re in the right place!", " ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Click on any resource to learn more."),
-        housingSearchResources: "Housing Search Resources",
-        resourceAddedOrNotNotAdded32Props: resourcesV3Data.resourceAddedOrNotNotAdded32Props,
-        resourceAddedOrNotResourceAddedOrNoProps: resourcesV3Data.resourceAddedOrNotResourceAddedOrNoProps
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tools-page-voucher-expand"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPageVoucherExpand.default, voucherToolsPageVoucherExpandData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/:path(|home-page-v3)"
+      }, /*#__PURE__*/_react.default.createElement(_HomePageV.default, homePageV3Data)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-download-info-1"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3DownloadInfo.default, voucherToolV3DownloadInfoData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/resources-v3"
-      }, /*#__PURE__*/_react.default.createElement(_ResourcesV2.default, resourcesV32Data)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/resources-v3-1"
+      }, /*#__PURE__*/_react.default.createElement(_ResourcesV.default, resourcesV3Data)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-next-steps"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3NextSteps.default, voucherToolV3NextStepsData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tools-page-received-expand"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPageReceivedExpand.default, voucherToolsPageReceivedExpandData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-download-info"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3DownloadInfo2.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
         getSummaryViaTextOrEmail: "Get summary via text or email",
-        downloadPdfOfSummary: "Download PDF of summary"
+        downloadPdfOfSummary: "Download PDF of summary",
+        property1AudioProps: voucherToolV3DownloadInfo2Data.property1AudioProps
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tool-v3-disqualifications-notice-page"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3DisqualificationsNotic.default, voucherToolV3DisqualificationsNoticData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tools-page"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPage.default, {
-        resourceMatching: "Resource Matching",
-        ifYoureNotSureW: "If you\u2019re not sure which of our resources is right for you, get more information below.",
-        clickOnTheSection: "Click on the section which best describes you:",
-        property1DefaultProps: voucherToolsPageData.property1DefaultProps,
-        property1IneligibleButtonProps: voucherToolsPageData.property1IneligibleButtonProps,
-        property1Default3Props: voucherToolsPageData.property1Default3Props
+        path: "/voucher-tool-v3-rap-ccs"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RAPCCS.default, {
+        voucherTool: "Voucher Tool",
+        regionalAccessPointsV23Props: voucherToolV3RAPCCSData.regionalAccessPointsV23Props
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-required-paperwork"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RequiredPaperwork.default, voucherToolV3RequiredPaperworkData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-required-paperwork-dob"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RequiredPaperworkDOB.default, voucherToolV3RequiredPaperworkDOBData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-disqualifications"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3Disqualifications.default, {
         voucherTool: "Voucher Tool",
         line1: "",
-        property1Default4Props: voucherToolV3DisqualificationsData.property1Default4Props
+        noneOfTheAboveApplyToMe: "None of the above apply to me",
+        property1AudioProps: voucherToolV3DisqualificationsData.property1AudioProps,
+        property1Default3Props: voucherToolV3DisqualificationsData.property1Default3Props
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tools-page-waitlist-expand"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPageWaitlistExpand.default, voucherToolsPageWaitlistExpandData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-required-paperwork-ssn"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RequiredPaperworkSSN.default, voucherToolV3RequiredPaperworkSSNData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-disclaimers"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3Disclaimers.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
         spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "One final note before you begin:", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "We", " "),
         spanText2: "cannot distribute vouchers",
-        spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ", but this tool will help you know what resources you will need to apply, your voucher eligibility,", " ", /*#__PURE__*/_react.default.createElement("br", null), "and where to go to apply. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Click \u201CNext\u201D to continue."),
+        spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, ", but this tool will help you know what resources you will need to apply, your voucher eligibility, and where to go to apply. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Click \u201CNext\u201D to continue."),
         voucherApplying1: "/img/voucher-applying-1@1x.png"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-tutorial-back-button"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3TutorialBackButton.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
         property1AudioProps: voucherToolV3TutorialBackButtonData.property1AudioProps,
         tipTypeBackButtonProps: voucherToolV3TutorialBackButtonData.tipTypeBackButtonProps
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tool-v3-tutorial-audio-button"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3TutorialAudioButton.default, {
+        path: "/voucher-tool-v3-required-paperwork-poi"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3RequiredPaperworkPOI.default, voucherToolV3RequiredPaperworkPOIData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-disqualifications-notice-page"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3DisqualificationsNotic.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
-        property1AudioProps: voucherToolV3TutorialAudioButtonData.property1AudioProps,
-        tipTypeAudioButtonProps: voucherToolV3TutorialAudioButtonData.tipTypeAudioButtonProps
-      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-        path: "/voucher-tool-v3-tutorial-next-button"
-      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3TutorialNextButton.default, {
-        voucherTool: "Voucher Tool",
-        line1: "",
-        property1AudioProps: voucherToolV3TutorialNextButtonData.property1AudioProps,
-        tipTypeNextButtonProps: voucherToolV3TutorialNextButtonData.tipTypeNextButtonProps
+        spanText1: "There\u2019s a possibility you might be disqualified for the voucher if you apply, based on the box you checked on the previous page. You can still apply, but your application is likely to be disqualified. Refer to the ",
+        spanText2: "\u201CMore Resources\u201D ",
+        spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "page in the upper right-hand corner of the screen for other programs you may be eligible for.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+        spanText4: "Note:",
+        spanText5: " ",
+        spanText6: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "There are exceptions under the federal Violence Against Women Act for survivors who were convicted of producing methamphetamines if the conviction was due ", /*#__PURE__*/_react.default.createElement("br", null), "to abuse.")
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
         path: "/voucher-tool-v3-eligibility-questions"
       }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3EligibilityQuestions.default, {
         voucherTool: "Voucher Tool",
-        line1: "",
-        property1AudioProps: voucherToolV3EligibilityQuestionsData.property1AudioProps,
         selectionsDefaultProps: voucherToolV3EligibilityQuestionsData.selectionsDefaultProps
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-disqualifications-checked"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3DisqualificationsCheck.default, {
+        voucherTool: "Voucher Tool",
+        line1: "",
+        property1AudioProps: voucherToolV3DisqualificationsCheckData.property1AudioProps,
+        property1Default42Props: voucherToolV3DisqualificationsCheckData.property1Default42Props
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-tutorial-audio-button"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3TutorialAudioButton.default, {
+        voucherTool: "Voucher Tool",
+        property1AudioProps: voucherToolV3TutorialAudioButtonData.property1AudioProps,
+        tipTypeAudioButtonProps: voucherToolV3TutorialAudioButtonData.tipTypeAudioButtonProps
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-starting-screen"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3StartingScreen.default, {
+        voucherTool: "Voucher Tool",
+        property1WelcomeProps: voucherToolV3StartingScreenData.property1WelcomeProps,
+        property1BackToHomeProps: voucherToolV3StartingScreenData.property1BackToHomeProps
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tool-v3-tutorial-next-button"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolV3TutorialNextButton.default, {
+        voucherTool: "Voucher Tool",
+        property1AudioProps: voucherToolV3TutorialNextButtonData.property1AudioProps,
+        tipTypeNextButtonProps: voucherToolV3TutorialNextButtonData.tipTypeNextButtonProps
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/voucher-tools-page"
+      }, /*#__PURE__*/_react.default.createElement(_VoucherToolsPage.default, voucherToolsPageData)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/resources-v3"
+      }, /*#__PURE__*/_react.default.createElement(_ResourcesV2.default, {
+        findAHome: "Find a Home",
+        spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you have received your voucher and are interested in housing search resources, you\u2019re in the right place! ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+        spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Click on any resource to learn more. ", /*#__PURE__*/_react.default.createElement("br", null)),
+        spanText3: "",
+        housingSearchResources: "Housing Search Resources",
+        resourceAddedOrNotNotAdded2Props: resourcesV32Data.resourceAddedOrNotNotAdded2Props,
+        resourceAddedOrNotResourceAddedOrNo2Props: resourcesV32Data.resourceAddedOrNotResourceAddedOrNo2Props
       }))));
     }
   }]);
@@ -38667,6 +43738,172 @@ var App = /*#__PURE__*/function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
+var property1DefaultData = {
+  catholicCommunityServices: "Catholic Community Services - Seattle",
+  clickForDetails: "Click for Details"
+};
+var property1Default81Data = {
+  catholicCommunityServices: "Multi-Service Center - Federal Way"
+};
+var property1Default82Data = {
+  catholicCommunityServices: "YWCA - Renton"
+};
+var property1Default83Data = {
+  catholicCommunityServices: "Solid Ground - Seattle"
+};
+var property1Default84Data = {
+  catholicCommunityServices: "Catholic Community Services - Bellevue"
+};
+var regionalAccessPointsV2Data = {
+  regionalAccessPoin: "Regional Access Points (Click for more detailed information)",
+  property1DefaultProps: property1DefaultData,
+  property1Default81Props: property1Default81Data,
+  property1Default82Props: property1Default82Data,
+  property1Default83Props: property1Default83Data,
+  property1Default84Props: property1Default84Data
+};
+var voucherToolV3RAPData = {
+  regionalAccessPointsV2Props: regionalAccessPointsV2Data
+};
+var haventAppliedButtonVariant4Data = {
+  iHaventAppliedFo: "I haven’t applied for a voucher but would like to.",
+  close: "Close",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you haven\u2019t yet applied for a voucher, but are interested in applying and finding out more about this program, these are the tools we have to help you:", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "What is the emergency housing voucher program?", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Emergency Housing Vouchers, or EHVs, target people who are currently experiencing or at risk of homelessness. EHV\u2019s offer limited financial assistance for move in and housing navigation, but do not include any supportive services. For more details on EHV\u2019s, go to: "),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "https://www.hud.gov/ehv", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText4: "Get help applying with ",
+  spanText5: "our voucher tool:",
+  goToVoucherTool: "Go to Voucher Tool"
+};
+var voucherToolsPageVoucherExpandData = {
+  resourceMatching: "Resource Matching",
+  ifYoureNotSureW: "If you’re not sure which of our resources is right for you, get more information below.",
+  clickOnTheSection: "Click on the section which best describes you:",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "I\u2019ve applied for a voucher but haven\u2019t received one.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible."),
+  iveAppliedForAV: "I’ve applied for a voucher and have received one.",
+  haventAppliedButtonVariant4Props: haventAppliedButtonVariant4Data
+};
+var logo3Data = {
+  className: "logo-2"
+};
+var homePageLink22Data = {
+  children: "About"
+};
+var moreResources3Data = {
+  className: "more-resources-3"
+};
+var homePageV3Data = {
+  housingVoucherHelp: "Housing Voucher Help",
+  connectingHousingR: "Connecting housing resources with the Seattle homeless community.",
+  whetherYoureACas: "Whether you’re a case manager guiding a client through this process or you’re getting an emergency housing voucher for yourself, we provide you with the tools necessary to help you achieve your goals.",
+  emergencyHousingVo: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Emergency Housing Vouchers, or EHVs, target people who are currently experiencing or at risk of homelessness. EHV\u2019s offer limited financial assistance for move in and housing navigation, but do not include any supportive services. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "For more details on EHV\u2019s, go to:"),
+  httpsWwwHudGovEhv: "https://www.hud.gov/ehv",
+  moreInformation: "More Information",
+  ourServices: "Our Services",
+  noWeCantPersona: "No, we can’t personally distribute emergency housing vouchers. Vouchers have been given to specific organizations, but we will help you find out whether you’re eligible and where you can go to apply.",
+  weAreCurrentlyTar: "We are currently targeting the underuse of emergency housing vouchers in the Seattle area. We also aim to help you at every step - whether you need a voucher, are on the waitlist and want information about other resources, or have been granted a voucher - we’re here to help.",
+  ourMission: "Our Mission",
+  unsureWhichToClick: "Unsure which to click?",
+  whatIsAnEmergencyHousingVoucher: "What is an emergency housing voucher?",
+  getMoreInformation: "Get more information",
+  doWeDistributeVouchers: "Do we distribute vouchers?",
+  imInterestedInOtherResources: "I’m interested in other resources",
+  iNeedAVoucher: "I need a voucher.",
+  iHaveAVoucher: "I have a voucher.",
+  logoProps: logo3Data,
+  homePageLink2Props: homePageLink22Data,
+  moreResourcesProps: moreResources3Data
+};
+var property1Audio2Data = {
+  className: "tutorial-buttons-4"
+};
+var property1PhonePopUpDefaultData = {
+  wouldYouLikeToGe: "Would you like to get a text or an email?",
+  email: "Email",
+  text: "Text"
+};
+var homePageLink3Data = {
+  className: "home-page-link-2"
+};
+var moreResources4Data = {
+  className: "more-resources-4"
+};
+var logo4Data = {
+  className: "logo-3"
+};
+var voucherToolV3DownloadInfoData = {
+  voucherTool: "Voucher Tool",
+  getSummaryViaTextOrEmail: "Get summary via text or email",
+  downloadPdfOfSummary: "Download PDF of summary",
+  property1AudioProps: property1Audio2Data,
+  property1PhonePopUpDefaultProps: property1PhonePopUpDefaultData,
+  homePageLinkProps: homePageLink3Data,
+  moreResourcesProps: moreResources4Data,
+  logoProps: logo4Data
+};
+var resourceAddedOrNotNotAddedData = {
+  housingChoiceVouchers: "Housing Choice Vouchers",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "The Housing Choice Voucher program (formerly Section 8), helps low-income families, individuals, seniors and people with disabilities pay their monthly rent in privately owned apartments or houses.", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: "",
+  linkToResource: "Link to Resource"
+};
+var resourceAddedOrNotResourceAddedOrNoData = {
+  universityDistrictFoodBank: "University District Food Bank",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Our mission is to build a hunger-free Northeast Seattle by providing our neighbors with reliable access to healthy food and life-changing resources.", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: "",
+  linkToResource: "Link to Resource"
+};
+var resourcesV3Data = {
+  moreResources: "More Resources",
+  spanText1: "If you have already used our voucher tools and are interested in other resources, you’re in the right place! ",
+  spanText2: "Click on any resource to learn more.",
+  otherVoucherPrograms: "Other Voucher Programs",
+  housingChoiceVouchers1: "Housing Choice Vouchers",
+  theHousingChoiceV: "The Housing Choice Voucher program (formerly Section 8), helps low-income families, individuals, seniors and people with disabilities pay their monthly rent in privately owned apartments or houses.",
+  foodAndShelterResources: "Food and Shelter Resources",
+  temporaryHousingResources: "Temporary Housing Resources",
+  housingChoiceVouchers2: "Rosie’s Tiny House Village",
+  lihiProvidesAVari: "LIHI provides a variety of supportive services to help residents maintain their housing and develop self-sufficiency. Our Tiny House Villages provide shelter and case management for residents of 36 tiny houses.",
+  linkToResource: "Link to Resource",
+  resourceAddedOrNotNotAddedProps: resourceAddedOrNotNotAddedData,
+  resourceAddedOrNotResourceAddedOrNoProps: resourceAddedOrNotResourceAddedOrNoData
+};
+var logo6Data = {
+  className: "logo-1"
+};
+var homePageLink5Data = {
+  className: "home-page-link-3"
+};
+var moreResources6Data = {
+  className: "more-resources-5"
+};
+var property1Audio3Data = {
+  className: "tutorial-buttons-5"
+};
+var voucherToolV3NextStepsData = {
+  voucherTool: "Voucher Tool",
+  spanText1: "If you’re connected to a homeless service provider: ",
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "contact them for how to apply.", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "If you\u2019re not connected to a homeless service provider: ", /*#__PURE__*/_react.default.createElement("br", null), "schedule an appointment through one ", /*#__PURE__*/_react.default.createElement("br", null), "of King County\u2019s Coordinated Entry for ", /*#__PURE__*/_react.default.createElement("br", null), "All "),
+  spanText4: "Regional Access Points",
+  spanText5: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " on the ", /*#__PURE__*/_react.default.createElement("br", null), "next page.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText6: "Click ",
+  spanText7: "next",
+  spanText8: " to see the Regional Access Points.",
+  givingVoucher1: "/img/giving-voucher-1@2x.png",
+  logoProps: logo6Data,
+  homePageLinkProps: homePageLink5Data,
+  moreResourcesProps: moreResources6Data,
+  property1AudioProps: property1Audio3Data
+};
+var homePageLink6Data = {
+  className: "home-page-link-4"
+};
+var moreResources7Data = {
+  className: "more-resources-6"
+};
 var property1ExpandedData = {
   iveAppliedForAV: "I’ve applied for a voucher and have received one.",
   close: "Close",
@@ -38684,49 +43921,223 @@ var voucherToolsPageReceivedExpandData = {
   spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
   spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible."),
   iveAppliedForAV: "I’ve applied for a voucher and have received one.",
+  homePageLinkProps: homePageLink6Data,
+  moreResourcesProps: moreResources7Data,
   property1ExpandedProps: property1ExpandedData
 };
-var logo2Data = {
+var property1Audio4Data = {
+  className: "tutorial-buttons-6"
+};
+var voucherToolV3DownloadInfo2Data = {
+  property1AudioProps: property1Audio4Data
+};
+var property1Default85Data = {
+  catholicCommunityServices: "Catholic Community Services - Seattle",
+  className: "regional-access-point-v2-3"
+};
+var property1Default86Data = {
+  catholicCommunityServices: "Multi-Service Center - Federal Way"
+};
+var property1Default87Data = {
+  catholicCommunityServices: "YWCA - Renton"
+};
+var property1Default88Data = {
+  catholicCommunityServices: "Solid Ground - Seattle"
+};
+var property1Default89Data = {
+  catholicCommunityServices: "Catholic Community Services - Bellevue"
+};
+var regionalAccessPointsV23Data = {
+  property1Default1Props: property1Default85Data,
+  property1Default2Props: property1Default86Data,
+  property1Default3Props: property1Default87Data,
+  property1Default4Props: property1Default88Data,
+  property1Default5Props: property1Default89Data
+};
+var voucherToolV3RAPCCSData = {
+  regionalAccessPointsV23Props: regionalAccessPointsV23Data
+};
+var property1Audio6Data = {
+  className: "tutorial-buttons-8"
+};
+var voucherToolV3RequiredPaperworkData = {
+  voucherTool: "Voucher Tool",
+  line1: "",
+  spanText1: "No documents are needed ",
+  spanText2: "at the time of application",
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " for an emergency housing voucher, however, you will need the following within 6 months of using the voucher:", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText4: "",
+  ownerCertification: "Owner Certification",
+  clickForDetails: "Click for Details",
+  property1AudioProps: property1Audio6Data
+};
+var property1Audio7Data = {
+  className: "tutorial-buttons-9"
+};
+var property1Variant531Data = {
+  proofOfIncome: "Proof of Income"
+};
+var documentButtonVariant7Data = {
+  proofOfDateOfBirth: "Proof of Date of Birth",
+  aBirthCertificate: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "A birth certificate is the primary document to provide proof of date of birth.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "For more information and help with this documentation, refer to:"),
+  closeDetails: "Close Details",
+  dobHelp: "DOB Help"
+};
+var voucherToolV3RequiredPaperworkDOBData = {
+  voucherTool: "Voucher Tool",
+  line1: "",
+  spanText1: "No documents are needed ",
+  spanText2: "at the time of application",
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " for an emergency housing voucher, however, you will need the following within 6 months of using the voucher:", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText4: "",
+  ownerCertification: "Owner Certification",
+  clickForDetails: "Click for Details",
+  property1AudioProps: property1Audio7Data,
+  property1Variant53Props: property1Variant531Data,
+  documentButtonVariant7Props: documentButtonVariant7Data
+};
+var property1Audio8Data = {
+  className: "tutorial-buttons-10"
+};
+var property1Default3Data = {
+  checkIfAnyOfThe: "Check if any of the following apply to you:",
+  youreARegistered: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "You\u2019re a registered lifetime sex offender", /*#__PURE__*/_react.default.createElement("br", null), "You have been convicted of the production of methamphetamines in federally assisted housing", /*#__PURE__*/_react.default.createElement("br", null), "You have a history of violence or abuse towards Public Housing Agencies staff", /*#__PURE__*/_react.default.createElement("br", null), "Nobody in the applying household is documented for residency status")
+};
+var voucherToolV3DisqualificationsData = {
+  property1AudioProps: property1Audio8Data,
+  property1Default3Props: property1Default3Data
+};
+var logo13Data = {
   className: "logo-1"
 };
-var moreResources2Data = {
-  className: "more-resources-2"
+var homePageLink12Data = {
+  className: "home-page-link-5"
 };
-var voucherButtonV21Data = {
-  iHaveAVoucher: "I need a voucher.",
-  className: ""
+var moreResources13Data = {
+  className: "more-resources-7"
 };
-var voucherButtonV31Data = {
-  voucherButtonV2Props: voucherButtonV21Data
+var property1Expanded2Data = {
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "I\u2019ve applied for a voucher but haven\u2019t received one yet.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible."),
+  close: "Close",
+  goToMoreResources: "Go to More Resources",
+  spanText4: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you are on the voucher waitlist or you used our voucher tool and were told you were potentially ineligible, there are other resources you can utilize.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Our \u201CMore Resources\u201D page has other voucher programs you can apply to, as well as general resources for the homeless community. You can access it in the upper right hand corner of your screen, or below:", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText5: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText6: "Go to ",
+  spanText7: "our other resources",
+  spanText8: ":",
+  spanText9: ""
 };
-var voucherButtonV22Data = {
-  iHaveAVoucher: "I have a voucher.",
-  className: "voucher-button-v2-2"
+var voucherToolsPageWaitlistExpandData = {
+  resourceMatching: "Resource Matching",
+  ifYoureNotSureW: "If you’re not sure which of our resources is right for you, get more information below.",
+  clickOnTheSection: "Click on the section which best describes you:",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "I\u2019ve applied for a voucher but haven\u2019t received one.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible."),
+  iveAppliedForAV: "I’ve applied for a voucher and have received one.",
+  logoProps: logo13Data,
+  homePageLinkProps: homePageLink12Data,
+  moreResourcesProps: moreResources13Data,
+  property1Expanded2Props: property1Expanded2Data
 };
-var voucherButtonV32Data = {
-  className: "voucher-button-v3-2",
-  voucherButtonV2Props: voucherButtonV22Data
+var property1Audio9Data = {
+  className: "tutorial-buttons-11"
 };
-var homePageV3Data = {
-  title: "Housing Voucher Help",
-  connectingHousingR: "Connecting housing resources with the people who need them.",
-  whetherYoureACas: "Whether you’re a case manager guiding a client through this process or you’re getting an emergency housing voucher for yourself, we provide you with the tools necessary to help you achieve your goals.",
-  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Emergency Housing Vouchers, or EHVs, target people who are currently experiencing or at risk of homelessness. EHV\u2019s offer limited financial assistance for move in and housing navigation, but do not include any supportive services. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "For more details on EHV\u2019s, go to: "),
-  spanText2: "https://www.hud.gov/ehv",
-  moreInformation: "More Information",
-  ourServices: "Our Services",
-  weAreCurrentlyTar: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "We are currently targeting the underuse of emergency housing vouchers in the Seattle area. We also aim to help you at every step - whether you need a voucher, are on the waitlist and want information about other resources, or have been granted a voucher - we\u2019re here to help. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Keep scrolling for more information on the vouchers!"),
-  ourMission: "Our Mission",
-  whatIsAnEmergencyHousingVoucher: "What is an emergency housing voucher?",
-  noWeCantPersona: "No, we can’t personally distribute emergency housing vouchers. Vouchers have been given to specific organizations, but we will help you find out whether you’re eligible and where you can go to apply.",
-  doWeDistributeVouchers: "Do we distribute vouchers?",
-  unsureWhichToClick: "Unsure which to click?",
-  getMoreInformation: "Get more information",
-  imInterestedInOtherResources: "I’m interested in other resources",
-  logoProps: logo2Data,
-  moreResourcesProps: moreResources2Data,
-  voucherButtonV31Props: voucherButtonV31Data,
-  voucherButtonV32Props: voucherButtonV32Data
+var property1Variant532Data = {
+  proofOfIncome: "Proof of Date of Birth",
+  className: "document-button-4"
+};
+var property1Variant533Data = {
+  proofOfIncome: "Social Security Number",
+  className: "document-button-5"
+};
+var documentButtonVariant72Data = {
+  ifYouKnowYourSoc: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you know your social security number, this may be sufficient. However, it is best to have your social security card. ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "For more information and help with this documentation, refer to:"),
+  socialSecurityNumber: "Social Security Number",
+  closeDetails: "Close Details",
+  ssnHelp: "SSN Help"
+};
+var voucherToolV3RequiredPaperworkSSNData = {
+  voucherTool: "Voucher Tool",
+  line1: "",
+  spanText1: "No documents are needed ",
+  spanText2: "at the time of application",
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " for an emergency housing voucher, however, you will need the following within 6 months of using the voucher:", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText4: "",
+  ownerCertification: "Owner Certification",
+  clickForDetails: "Click for Details",
+  property1AudioProps: property1Audio9Data,
+  property1Variant531Props: property1Variant532Data,
+  property1Variant532Props: property1Variant533Data,
+  documentButtonVariant72Props: documentButtonVariant72Data
+};
+var property1Audio11Data = {
+  className: "tutorial-buttons-12"
+};
+var tipTypeBackButtonData = {
+  thisButtonWillTak: "This button will take you to the previous screen."
+};
+var voucherToolV3TutorialBackButtonData = {
+  property1AudioProps: property1Audio11Data,
+  tipTypeBackButtonProps: tipTypeBackButtonData
+};
+var property1Audio12Data = {
+  className: "tutorial-buttons-13"
+};
+var property1Variant534Data = {
+  proofOfIncome: "Proof of Income"
+};
+var documentButtonVariant73Data = {
+  proofOfIncome: "Proof of Income",
+  spanText1: "The following article outlines 10 different ways to provide proof of income: ",
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "10 Ways Tenants Can Show Proof of Income", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Additionally, households with 30% area median income or below will be prioritized in their voucher applications.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "For more information about the 30% AMI prioritization, refer to:"),
+  incomeHelp: "Income Help",
+  closeDetails: "Close Details"
+};
+var voucherToolV3RequiredPaperworkPOIData = {
+  voucherTool: "Voucher Tool",
+  line1: "",
+  spanText1: "No documents are needed ",
+  spanText2: "at the time of application",
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " for an emergency housing voucher, however, you will need the following within 6 months of using the voucher:", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText4: "",
+  ownerCertification: "Owner Certification",
+  clickForDetails: "Click for Details",
+  property1AudioProps: property1Audio12Data,
+  property1Variant53Props: property1Variant534Data,
+  documentButtonVariant73Props: documentButtonVariant73Data
+};
+var selectionsDefaultData = {
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "In order to be eligible for an emergency housing voucher, you must be experiencing one of the following.", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "Please select all that apply to you."),
+  homelessAtRiskOf: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Homeless  ", /*#__PURE__*/_react.default.createElement("br", null), "At Risk of Homelessness", /*#__PURE__*/_react.default.createElement("br", null), "Fleeing or attempting to flee domestic violence", /*#__PURE__*/_react.default.createElement("br", null), "Dating violence", /*#__PURE__*/_react.default.createElement("br", null), "Sexual assault", /*#__PURE__*/_react.default.createElement("br", null), "Stalking or human trafficking", /*#__PURE__*/_react.default.createElement("br", null), "None of the above apply to me")
+};
+var voucherToolV3EligibilityQuestionsData = {
+  selectionsDefaultProps: selectionsDefaultData
+};
+var property1Audio15Data = {
+  className: "tutorial-buttons-14"
+};
+var property1Default422Data = {
+  checkIfAnyOfThe: "Check if any of the following apply to you:",
+  youreARegistered: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "You\u2019re a registered lifetime sex offender", /*#__PURE__*/_react.default.createElement("br", null), "You have been convicted of the production of methamphetamines in federally assisted housing", /*#__PURE__*/_react.default.createElement("br", null), "You have a history of violence or abuse towards Public Housing Agencies staff", /*#__PURE__*/_react.default.createElement("br", null), "Nobody in the applying household is documented for residency status", /*#__PURE__*/_react.default.createElement("br", null), "None of the above apply to me")
+};
+var voucherToolV3DisqualificationsCheckData = {
+  property1AudioProps: property1Audio15Data,
+  property1Default42Props: property1Default422Data
+};
+var property1Audio16Data = {
+  className: "tutorial-buttons-15"
+};
+var tipTypeAudioButtonData = {
+  thisButtonWillRea: "This button will read the text on the screen out loud to you."
+};
+var voucherToolV3TutorialAudioButtonData = {
+  property1AudioProps: property1Audio16Data,
+  tipTypeAudioButtonProps: tipTypeAudioButtonData
 };
 var property1WelcomeData = {
   welcomeThisToolI: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Welcome! ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "This tool is meant to help connect people like you with an emergency housing voucher. Before we begin, we\u2019ll show you a few helpful features!"),
@@ -38741,235 +44152,67 @@ var voucherToolV3StartingScreenData = {
   property1WelcomeProps: property1WelcomeData,
   property1BackToHomeProps: property1BackToHomeData
 };
-var voucherToolPopUp2Data = {
-  thisWillTakeYouB: "This will take you back to the home page. Are you sure that you would like to exit?",
-  noStayOnTheVoucherTool: "No, stay on the voucher tool",
-  yesTakeMeToTheHomePage: "Yes, take me to the home page"
-};
-var voucherToolPopUpData = {
-  voucherToolPopUp2Props: voucherToolPopUp2Data
-};
-var property1Default21Data = {
-  catholicCommunityServices: "Catholic Community Services - Seattle"
-};
-var property1Default22Data = {
-  catholicCommunityServices: "Multi-Service Center - Federal Way",
-  className: "regional-access-point-v2"
-};
-var property1Default23Data = {
-  catholicCommunityServices: "YWCA - Renton",
-  className: "regional-access-point-v2"
-};
-var property1Default24Data = {
-  catholicCommunityServices: "Solid Ground - Seattle",
-  className: "regional-access-point-v2"
-};
-var property1Default25Data = {
-  catholicCommunityServices: "Catholic Community Services - Bellevue",
-  className: "regional-access-point-v2"
-};
-var regionalAccessPointsV2Data = {
-  regionalAccessPoin: "Regional Access Points (Click for more detailed information)",
-  property1Default21Props: property1Default21Data,
-  property1Default22Props: property1Default22Data,
-  property1Default23Props: property1Default23Data,
-  property1Default24Props: property1Default24Data,
-  property1Default25Props: property1Default25Data
-};
-var voucherToolV3RAPData = {
-  regionalAccessPointsV2Props: regionalAccessPointsV2Data
-};
-var resourceAddedOrNotNotAdded32Data = {
-  affordableHousing: "Affordable Housing",
-  theLargestAndMost: "The largest and most trusted source for all Affordable Housing properties and programs in the United States.",
-  linkToResource: "Link to Resource"
-};
-var resourceAddedOrNotResourceAddedOrNoData = {
-  name: "King County Housing Authority Rental Search",
-  kchaHelpsRentersI: "KCHA helps renters in King County find affordable, private-market homes. You can use either site to search for homes based on location, features, and nearby services.",
-  linkToResource: "Link to Resource"
-};
-var resourcesV3Data = {
-  resourceAddedOrNotNotAdded32Props: resourceAddedOrNotNotAdded32Data,
-  resourceAddedOrNotResourceAddedOrNoProps: resourceAddedOrNotResourceAddedOrNoData
-};
-var property1Audio3Data = {
-  className: "tutorial-buttons-5"
-};
-var logo6Data = {
-  className: "logo-5"
-};
-var homePageLink5Data = {
-  className: "home-page-link-4"
-};
-var moreResources6Data = {
-  className: "more-resources-10"
-};
-var property1PhonePopUpDefaultData = {
-  wouldYouLikeToGe: "Would you like to get a text or an email?",
-  email: "Email",
-  text: "Text"
-};
-var voucherToolV3DownloadInfoData = {
-  voucherTool: "Voucher Tool",
-  line1: "",
-  getSummaryViaTextOrEmail: "Get summary via text or email",
-  downloadPdfOfSummary: "Download PDF of summary",
-  property1AudioProps: property1Audio3Data,
-  logoProps: logo6Data,
-  homePageLinkProps: homePageLink5Data,
-  moreResourcesProps: moreResources6Data,
-  property1PhonePopUpDefaultProps: property1PhonePopUpDefaultData
-};
-var moreResources7Data = {
-  className: "more-resources-12"
-};
-var resourceAddedOrNotNotAdded2Data = {
-  housingChoiceVouchers: "Housing Choice Vouchers",
-  theHousingChoiceV: "The Housing Choice Voucher program (formerly Section 8), helps low-income families, individuals, seniors and people with disabilities pay their monthly rent in privately owned apartments or houses.",
-  linkToResource: "Link to Resource"
-};
-var resourceAddedOrNotResourceAddedOrNo2Data = {
-  universityDistrictFoodBank: "University District Food Bank",
-  ourMissionIsToBu: "Our mission is to build a hunger-free Northeast Seattle by providing our neighbors with reliable access to healthy food and life-changing resources.",
-  linkToResource: "Link to Resource"
-};
-var resourceAddedOrNotNotAdded3Data = {
-  housingChoiceVouchers: "Rosie’s Tiny House Village",
-  theHousingChoiceV: "LIHI provides a variety of supportive services to help residents maintain their housing and develop self-sufficiency. Our Tiny House Villages provide shelter and case management for residents of 36 tiny houses."
-};
-var resourcesV32Data = {
-  moreResources: "More Resources",
-  spanText1: "If you have already used our voucher tools and are interested in other resources, you’re in the right place! ",
-  spanText2: "Click on any resource to learn more.",
-  otherVoucherPrograms: "Other Voucher Programs",
-  housingChoiceVouchers: "Housing Choice Vouchers",
-  theHousingChoiceV: "The Housing Choice Voucher program (formerly Section 8), helps low-income families, individuals, seniors and people with disabilities pay their monthly rent in privately owned apartments or houses.",
-  foodAndShelterResources: "Food and Shelter Resources",
-  temporaryHousingResources: "Temporary Housing Resources",
-  linkToResource: "Link to Resource",
-  moreResourcesProps: moreResources7Data,
-  resourceAddedOrNotNotAdded2Props: resourceAddedOrNotNotAdded2Data,
-  resourceAddedOrNotResourceAddedOrNo2Props: resourceAddedOrNotResourceAddedOrNo2Data,
-  resourceAddedOrNotNotAdded3Props: resourceAddedOrNotNotAdded3Data
-};
-var property1Audio4Data = {
-  className: "tutorial-buttons-6"
-};
-var voucherToolV3NextStepsData = {
-  voucherTool: "Voucher Tool",
-  line1: "",
-  spanText1: "If you’re connected to a homeless service provider: ",
-  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "contact them for how to apply.", /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "If you\u2019re not connected to a homeless service provider: ", /*#__PURE__*/_react.default.createElement("br", null), "schedule an appointment through one ", /*#__PURE__*/_react.default.createElement("br", null), "of King County\u2019s Coordinated Entry for ", /*#__PURE__*/_react.default.createElement("br", null), "All "),
-  spanText4: "Regional Access Points",
-  spanText5: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " on the ", /*#__PURE__*/_react.default.createElement("br", null), "next page.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText6: "Click ",
-  spanText7: "next",
-  spanText8: " to see the Regional Access Points.",
-  givingVoucher1: "/img/giving-voucher-1@2x.png",
-  property1AudioProps: property1Audio4Data
-};
-var voucherToolV3DisqualificationsNoticData = {
-  voucherTool: "Voucher Tool",
-  line1: "",
-  spanText1: "There’s a possibility you might be disqualified for the voucher if you apply, based on the box you checked on the previous page. You can still apply, but your application is likely to be disqualified. Refer to the ",
-  spanText2: "“More Resources” ",
-  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "page in the upper right-hand corner of the screen for other programs you may be eligible for.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText4: "Note:",
-  spanText5: " ",
-  spanText6: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "There are exceptions under the federal Violence Against Women Act for survivors who were convicted of producing methamphetamines if the conviction was due ", /*#__PURE__*/_react.default.createElement("br", null), "to abuse.")
-};
-var property1Default3Data = {
-  className: "havent-applied-button-1"
-};
-var property1IneligibleButtonData = {
-  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "I\u2019ve applied for a voucher but haven\u2019t received one.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible.")
-};
-var property1Default32Data = {
-  children: "I’ve applied for a voucher and have received one."
-};
-var voucherToolsPageData = {
-  property1DefaultProps: property1Default3Data,
-  property1IneligibleButtonProps: property1IneligibleButtonData,
-  property1Default3Props: property1Default32Data
-};
-var property1Variant51Data = {
-  proofOfIncome: "Proof of Income"
-};
-var property1Variant52Data = {
-  proofOfIncome: "Proof of Date of Birth",
-  className: "document-button-1"
-};
-var property1Variant53Data = {
-  proofOfIncome: "Social Security Number",
-  className: "document-button-2"
-};
-var voucherToolV3RequiredPaperworkData = {
-  voucherTool: "Voucher Tool",
-  line1: "",
-  spanText1: "No documents are needed ",
-  spanText2: "at the time of application",
-  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, " for an emergency housing voucher, however, you will need the following within 6 months of using the voucher:", /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText4: "",
-  ownerCertification: "Owner Certification",
-  clickForDetails: "Click for Details",
-  property1Variant51Props: property1Variant51Data,
-  property1Variant52Props: property1Variant52Data,
-  property1Variant53Props: property1Variant53Data
-};
-var property1Default4Data = {
-  checkIfAnyOfThe: "Check if any of the following apply to you:",
-  youreARegistered: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "You\u2019re a registered lifetime sex offender", /*#__PURE__*/_react.default.createElement("br", null), "You have been convicted of the production of methamphetamines in federally assisted housing", /*#__PURE__*/_react.default.createElement("br", null), "You have a history of violence or abuse towards Public Housing Agencies staff", /*#__PURE__*/_react.default.createElement("br", null), "Nobody in the applying household is documented for residency status", /*#__PURE__*/_react.default.createElement("br", null), "None of the above apply to me")
-};
-var voucherToolV3DisqualificationsData = {
-  property1Default4Props: property1Default4Data
-};
-var property1Audio10Data = {
-  className: "tutorial-buttons-12"
-};
-var tipTypeBackButtonData = {
-  thisButtonWillTak: "This button will take you to the previous screen."
-};
-var voucherToolV3TutorialBackButtonData = {
-  property1AudioProps: property1Audio10Data,
-  tipTypeBackButtonProps: tipTypeBackButtonData
-};
-var property1Audio11Data = {
-  className: "tutorial-buttons-13"
-};
-var tipTypeAudioButtonData = {
-  thisButtonWillRea: "This button will read the text on the screen out loud to you."
-};
-var voucherToolV3TutorialAudioButtonData = {
-  property1AudioProps: property1Audio11Data,
-  tipTypeAudioButtonProps: tipTypeAudioButtonData
-};
-var property1Audio12Data = {
-  className: "tutorial-buttons-14"
+var property1Audio18Data = {
+  className: "tutorial-buttons-16"
 };
 var tipTypeNextButtonData = {
   thisButtonWillTak: "This button will take you to the next section."
 };
 var voucherToolV3TutorialNextButtonData = {
-  property1AudioProps: property1Audio12Data,
+  property1AudioProps: property1Audio18Data,
   tipTypeNextButtonProps: tipTypeNextButtonData
 };
-var property1Audio13Data = {
-  className: "tutorial-buttons-15"
+var logo24Data = {
+  className: "logo-1"
 };
-var selectionsDefaultData = {
-  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "In order to be eligible for an emergency housing voucher, you must be experiencing one of the following.", /*#__PURE__*/_react.default.createElement("br", null)),
-  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "Please select all that apply to you."),
-  homelessAtRiskOf: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Homeless  ", /*#__PURE__*/_react.default.createElement("br", null), "At Risk of Homelessness", /*#__PURE__*/_react.default.createElement("br", null), "Fleeing or attempting to flee domestic violence", /*#__PURE__*/_react.default.createElement("br", null), "Dating violence", /*#__PURE__*/_react.default.createElement("br", null), "Sexual assault", /*#__PURE__*/_react.default.createElement("br", null), "Stalking or human trafficking", /*#__PURE__*/_react.default.createElement("br", null), "None of the above apply to me")
+var homePageLink24Data = {
+  className: "home-page-link-6"
 };
-var voucherToolV3EligibilityQuestionsData = {
-  property1AudioProps: property1Audio13Data,
-  selectionsDefaultProps: selectionsDefaultData
+var moreResources24Data = {
+  className: "more-resources-8"
 };
-},{"./App.css":"App.css","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/VoucherToolsPageReceivedExpand":"components/VoucherToolsPageReceivedExpand/index.jsx","./components/HomePageV3":"components/HomePageV3/index.jsx","./components/VoucherToolV3StartingScreen":"components/VoucherToolV3StartingScreen/index.jsx","./components/VoucherToolPopUp":"components/VoucherToolPopUp/index.jsx","./components/VoucherToolV3RAP":"components/VoucherToolV3RAP/index.jsx","./components/ResourcesV3":"components/ResourcesV3/index.jsx","./components/VoucherToolV3DownloadInfo":"components/VoucherToolV3DownloadInfo/index.jsx","./components/ResourcesV32":"components/ResourcesV32/index.jsx","./components/VoucherToolV3NextSteps":"components/VoucherToolV3NextSteps/index.jsx","./components/VoucherToolV3DownloadInfo2":"components/VoucherToolV3DownloadInfo2/index.jsx","./components/VoucherToolV3DisqualificationsNotic":"components/VoucherToolV3DisqualificationsNotic/index.jsx","./components/VoucherToolsPage":"components/VoucherToolsPage/index.jsx","./components/VoucherToolV3RequiredPaperwork":"components/VoucherToolV3RequiredPaperwork/index.jsx","./components/VoucherToolV3Disqualifications":"components/VoucherToolV3Disqualifications/index.jsx","./components/VoucherToolV3Disclaimers":"components/VoucherToolV3Disclaimers/index.jsx","./components/VoucherToolV3TutorialBackButton":"components/VoucherToolV3TutorialBackButton/index.jsx","./components/VoucherToolV3TutorialAudioButton":"components/VoucherToolV3TutorialAudioButton/index.jsx","./components/VoucherToolV3TutorialNextButton":"components/VoucherToolV3TutorialNextButton/index.jsx","./components/VoucherToolV3EligibilityQuestions":"components/VoucherToolV3EligibilityQuestions/index.jsx"}],"index.js":[function(require,module,exports) {
+var property1Default24Data = {
+  className: "havent-applied-button-2"
+};
+var property1IneligibleButtonData = {
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "I\u2019ve applied for a voucher but haven\u2019t received one yet.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "OR", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("br", null), "I\u2019ve applied for a voucher and am ineligible.")
+};
+var property1Default7Data = {
+  children: "I’ve applied for a voucher and have received one."
+};
+var voucherToolsPageData = {
+  resourceMatching: "Resource Matching",
+  ifYoureNotSureW: "If you’re not sure which of our resources is right for you, get more information below.",
+  clickOnTheSection: "Click on the section which best describes you:",
+  logoProps: logo24Data,
+  homePageLinkProps: homePageLink24Data,
+  moreResourcesProps: moreResources24Data,
+  property1Default2Props: property1Default24Data,
+  property1IneligibleButtonProps: property1IneligibleButtonData,
+  property1Default7Props: property1Default7Data
+};
+var resourceAddedOrNotNotAdded2Data = {
+  affordableHousing: "Affordable Housing",
+  theLargestAndMost: "The largest and most trusted source for all Affordable Housing properties and programs in the United States.",
+  linkToResource: "Link to Resource"
+};
+var resourceAddedOrNotResourceAddedOrNo2Data = {
+  name: "King County Housing Authority Rental Search",
+  kchaHelpsRentersI: "KCHA helps renters in King County find affordable, private-market homes. You can use either site to search for homes based on location, features, and nearby services.",
+  linkToResource: "Link to Resource"
+};
+var resourcesV32Data = {
+  findAHome: "Find a Home",
+  spanText1: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "If you have received your voucher and are interested in housing search resources, you\u2019re in the right place! ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText2: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Click on any resource to learn more. ", /*#__PURE__*/_react.default.createElement("br", null)),
+  spanText3: "",
+  housingSearchResources: "Housing Search Resources",
+  resourceAddedOrNotNotAdded2Props: resourceAddedOrNotNotAdded2Data,
+  resourceAddedOrNotResourceAddedOrNo2Props: resourceAddedOrNotResourceAddedOrNo2Data
+};
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/LandingPage":"components/LandingPage/index.jsx","./components/VoucherToolV3RAP":"components/VoucherToolV3RAP/index.jsx","./components/VoucherToolsPageVoucherExpand":"components/VoucherToolsPageVoucherExpand/index.jsx","./components/HomePageV3":"components/HomePageV3/index.jsx","./components/VoucherToolV3DownloadInfo":"components/VoucherToolV3DownloadInfo/index.jsx","./components/ResourcesV3":"components/ResourcesV3/index.jsx","./components/VoucherToolV3NextSteps":"components/VoucherToolV3NextSteps/index.jsx","./components/VoucherToolsPageReceivedExpand":"components/VoucherToolsPageReceivedExpand/index.jsx","./components/VoucherToolV3DownloadInfo2":"components/VoucherToolV3DownloadInfo2/index.jsx","./components/VoucherToolV3RAPCCS":"components/VoucherToolV3RAPCCS/index.jsx","./components/VoucherToolV3RequiredPaperwork":"components/VoucherToolV3RequiredPaperwork/index.jsx","./components/VoucherToolV3RequiredPaperworkDOB":"components/VoucherToolV3RequiredPaperworkDOB/index.jsx","./components/VoucherToolV3Disqualifications":"components/VoucherToolV3Disqualifications/index.jsx","./components/VoucherToolsPageWaitlistExpand":"components/VoucherToolsPageWaitlistExpand/index.jsx","./components/VoucherToolV3RequiredPaperworkSSN":"components/VoucherToolV3RequiredPaperworkSSN/index.jsx","./components/VoucherToolV3Disclaimers":"components/VoucherToolV3Disclaimers/index.jsx","./components/VoucherToolV3TutorialBackButton":"components/VoucherToolV3TutorialBackButton/index.jsx","./components/VoucherToolV3RequiredPaperworkPOI":"components/VoucherToolV3RequiredPaperworkPOI/index.jsx","./components/VoucherToolV3DisqualificationsNotic":"components/VoucherToolV3DisqualificationsNotic/index.jsx","./components/VoucherToolV3EligibilityQuestions":"components/VoucherToolV3EligibilityQuestions/index.jsx","./components/VoucherToolV3DisqualificationsCheck":"components/VoucherToolV3DisqualificationsCheck/index.jsx","./components/VoucherToolV3TutorialAudioButton":"components/VoucherToolV3TutorialAudioButton/index.jsx","./components/VoucherToolV3StartingScreen":"components/VoucherToolV3StartingScreen/index.jsx","./components/VoucherToolV3TutorialNextButton":"components/VoucherToolV3TutorialNextButton/index.jsx","./components/VoucherToolsPage":"components/VoucherToolsPage/index.jsx","./components/ResourcesV32":"components/ResourcesV32/index.jsx"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -39013,7 +44256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62048" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61838" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

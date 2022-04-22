@@ -1,0 +1,10 @@
+.voucher-tool-v3-required-paperwork-ssn {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  width: 1440px;
+}
+

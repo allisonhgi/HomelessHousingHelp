@@ -1,26 +1,92 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Property1Welcome.css";
+import styled from "styled-components";
+import { Border1pxSummerGreen, LibrebaskervilleNormalBlack30px } from "../../styledMixins";
+
 
 class Property1Welcome extends React.Component {
   render() {
     const { welcomeThisToolI, clickNextToCont, tutorial1, skip } = this.props;
 
     return (
-      <div className="tool-question-screen border-1px-summer-green">
-        <div className="overlap-group3-1">
-          <div className="overlap-group2-2 librebaskerville-normal-black-36px">
-            <div className="welcome-this-tool-i">{welcomeThisToolI}</div>
-            <div className="click-next-to-cont">{clickNextToCont}</div>
-            <img className="tutorial-1" src={tutorial1} />
-          </div>
+      <ToolQuestionScreen>
+        <OverlapGroup2>
+          <OverlapGroup1>
+            <WelcomeThisToolI>{welcomeThisToolI}</WelcomeThisToolI>
+            <ClickNextToCont>{clickNextToCont}</ClickNextToCont>
+            <Tutorial1 src={tutorial1} />
+          </OverlapGroup1>
           <Link to="/voucher-tool-v3-disclaimers">
-            <div className="skip">{skip}</div>
+            <Skip>{skip}</Skip>
           </Link>
-        </div>
-      </div>
+        </OverlapGroup2>
+      </ToolQuestionScreen>
     );
   }
 }
+
+const ToolQuestionScreen = styled.div`
+  ${Border1pxSummerGreen}
+  height: 564px;
+  display: flex;
+  padding: 0 10px;
+  align-items: flex-end;
+  min-width: 1011px;
+  background-color: var(--white);
+  border-radius: 5px;
+`;
+
+const OverlapGroup2 = styled.div`
+  width: 985px;
+  height: 525px;
+  position: relative;
+`;
+
+const OverlapGroup1 = styled.div`
+  ${LibrebaskervilleNormalBlack30px}
+  position: absolute;
+  width: 985px;
+  height: 525px;
+  top: 0;
+  left: 0;
+`;
+
+const WelcomeThisToolI = styled.div`
+  position: absolute;
+  width: 942px;
+  top: 0;
+  left: 43px;
+  letter-spacing: 0;
+`;
+
+const ClickNextToCont = styled.div`
+  position: absolute;
+  width: 516px;
+  top: 314px;
+  left: 469px;
+  letter-spacing: 0;
+`;
+
+const Tutorial1 = styled.img`
+  position: absolute;
+  width: 431px;
+  height: 385px;
+  top: 140px;
+  left: 0;
+  object-fit: cover;
+`;
+
+const Skip = styled.div`
+  position: absolute;
+  width: 69px;
+  top: 469px;
+  left: 916px;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: var(--black-2);
+  font-size: var(--font-size-xxl);
+  letter-spacing: 0;
+  cursor: pointer;
+`;
 
 export default Property1Welcome;

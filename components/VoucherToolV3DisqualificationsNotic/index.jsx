@@ -1,52 +1,144 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HomePageLink from "../HomePageLink";
 import Logo from "../Logo";
+import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
 import Property1Audio from "../Property1Audio";
+import styled from "styled-components";
+import { Header2, Border1pxBlack2, LibrebaskervilleNormalBlack30px } from "../../styledMixins";
 import "./VoucherToolV3DisqualificationsNotic.css";
 
 class VoucherToolV3DisqualificationsNotic extends React.Component {
   render() {
-    const { voucherTool, line1, spanText1, spanText2, spanText3, spanText4, spanText5, spanText6 } = this.props;
+    const { voucherTool, spanText1, spanText2, spanText3, spanText4, spanText5, spanText6 } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-disqualifications-notice-page screen">
-          <div className="flex-row-12">
-            <HomePageLink />
+          <OverlapGroup2>
             <Logo />
+            <HomePageLink />
             <MoreResources />
-          </div>
-          <div className="overlap-group2-8">
-            <div className="voucher-tool-5 header-2">{voucherTool}</div>
-            <img className="line-1-5" src={line1} />
-          </div>
-          <div className="flex-row-13">
-            <Property1Audio />
-            <div className="text-info-3 border-1px-black-2">
-              <div className="theres-a-possibilit librebaskerville-normal-black-30px">
-                <span className="librebaskerville-normal-black-30px">{spanText1}</span>
-                <span className="librebaskerville-bold-black-30px">{spanText2}</span>
-                <span className="librebaskerville-normal-black-30px">{spanText3}</span>
-                <span className="librebaskerville-bold-black-30px">{spanText4}</span>
-                <span className="librebaskerville-normal-black-30px">{spanText5}</span>
-                <span className="librebaskerville-normal-black-30px">{spanText6}</span>
-              </div>
-            </div>
-          </div>
-          <div className="tutorial-buttons-container-4">
-            <Link to="/voucher-tool-v3-disqualifications" className="align-self-flex-end">
-              <img className="tutorial-buttons-20" src="/img/tutorial-buttons-7@2x.svg" />
-            </Link>
+          </OverlapGroup2>
+          <FlexRow>
+            <FlexCol>
+              <FlexRow1>
+                <Property1Audio />
+                <FlexCol1>
+                  <VoucherTool>{voucherTool}</VoucherTool>
+                  <TextInfo>
+                    <TheresAPossibilit>
+                      <span className="librebaskerville-normal-black-30px">{spanText1}</span>
+                      <span className="librebaskerville-bold-black-30px">{spanText2}</span>
+                      <span className="librebaskerville-normal-black-30px">{spanText3}</span>
+                      <span className="librebaskerville-bold-black-30px">{spanText4}</span>
+                      <span className="librebaskerville-normal-black-30px">{spanText5}</span>
+                      <span className="librebaskerville-normal-black-30px">{spanText6}</span>
+                    </TheresAPossibilit>
+                  </TextInfo>
+                </FlexCol1>
+              </FlexRow1>
+              <Link to="/voucher-tool-v3-disqualifications">
+                <TutorialButtons src="/img/tutorial-buttons-25@2x.svg" />
+              </Link>
+            </FlexCol>
             <Link to="/voucher-tool-v3-required-paperwork">
-              <img className="tutorial-buttons-21" src="/img/tutorial-buttons-6@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-24@2x.svg" />
             </Link>
-          </div>
+          </FlexRow>
         </div>
       </div>
     );
   }
 }
+
+const OverlapGroup2 = styled.div`
+  height: 152px;
+  position: relative;
+  display: flex;
+  padding: 38px 85px;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 1440px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px #00000040;
+`;
+
+const FlexRow = styled.div`
+  height: 777px;
+  margin-top: 63px;
+  margin-right: 6px;
+  display: flex;
+  align-items: flex-end;
+  min-width: 1348px;
+`;
+
+const FlexCol = styled.div`
+  width: 1183px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 777px;
+`;
+
+const FlexRow1 = styled.div`
+  height: 675px;
+  position: relative;
+  margin-left: 1px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 1182px;
+`;
+
+const FlexCol1 = styled.div`
+  width: 1011px;
+  margin-left: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 675px;
+`;
+
+const VoucherTool = styled.div`
+  ${Header2}
+  width: 405px;
+  min-height: 111px;
+  margin-right: 2px;
+  font-weight: 500;
+  color: var(--black);
+`;
+
+const TextInfo = styled.div`
+  ${Border1pxBlack2}
+  height: 564px;
+  display: flex;
+  padding: 26px 51px;
+  align-items: flex-start;
+  min-width: 1011px;
+  background-color: var(--white);
+`;
+
+const TheresAPossibilit = styled.div`
+  ${LibrebaskervilleNormalBlack30px}
+  width: 907px;
+  min-height: 475px;
+  letter-spacing: 0;
+  line-height: 38px;
+`;
+
+const TutorialButtons = styled.img`
+  width: 99px;
+  height: 77px;
+  margin-top: 25px;
+  cursor: pointer;
+`;
+
+const TutorialButtons1 = styled.img`
+  width: 99px;
+  height: 77px;
+  margin-left: 66px;
+  margin-bottom: 1px;
+  cursor: pointer;
+`;
 
 export default VoucherToolV3DisqualificationsNotic;
