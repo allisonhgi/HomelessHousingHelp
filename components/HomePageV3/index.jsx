@@ -6,10 +6,11 @@ import MoreResources from "../MoreResources";
 import styled from "styled-components";
 import {
   RobotoMediumBlack50px,
-  LibrebaskervilleNormalBlack23px,
   RobotoMediumBlack90px,
+  LibrebaskervilleNormalBlack23px,
   LibrebaskervilleNormalBlack30px,
   RobotoMediumWhite40px,
+  RobotoMediumWhite35px,
 } from "../../styledMixins";
 import "./HomePageV3.css";
 
@@ -18,17 +19,14 @@ class HomePageV3 extends React.Component {
     const {
       housingVoucherHelp,
       connectingHousingR,
-      whetherYoureACas,
       emergencyHousingVo,
-      httpsWwwHudGovEhv,
       moreInformation,
       ourServices,
-      noWeCantPersona,
       weAreCurrentlyTar,
-      ourMission,
+      noWeCantPersona,
       unsureWhichToClick,
-      whatIsAnEmergencyHousingVoucher,
       getMoreInformation,
+      whatIsAnEmergencyHousingVoucher,
       doWeDistributeVouchers,
       imInterestedInOtherResources,
       iNeedAVoucher,
@@ -41,48 +39,45 @@ class HomePageV3 extends React.Component {
     return (
       <div className="container-center-horizontal">
         <div className="home-page-v3 screen">
-          <OverlapGroup4>
+          <OverlapGroup3>
             <Logo className={logoProps.className} />
             <HomePageLink2>{homePageLink2Props.children}</HomePageLink2>
             <MoreResources className={moreResourcesProps.className} />
-          </OverlapGroup4>
+          </OverlapGroup3>
           <OverlapGroup6>
-            <OverlapGroup5>
+            <OverlapGroup4>
               <Polygon1 src="/img/polygon-1-1@1x.svg" />
               <Ellipse1></Ellipse1>
               <HousingVoucherHelp>{housingVoucherHelp}</HousingVoucherHelp>
               <ConnectingHousingR>{connectingHousingR}</ConnectingHousingR>
-              <WhetherYoureACas>{whetherYoureACas}</WhetherYoureACas>
-              <EmergencyHousingVo>{emergencyHousingVo}</EmergencyHousingVo>
               <a href="https://www.hud.gov/ehv" target="_blank">
-                <Httpswwwhudgovehv>{httpsWwwHudGovEhv}</Httpswwwhudgovehv>
+                <EmergencyHousingVo>{emergencyHousingVo}</EmergencyHousingVo>
               </a>
               <MoreInformation>{moreInformation}</MoreInformation>
               <OurServices>{ourServices}</OurServices>
+              <WeAreCurrentlyTar>{weAreCurrentlyTar}</WeAreCurrentlyTar>
               <Arrow2 src="/img/arrow-2@2x.svg" />
               <NoWeCantPersona>{noWeCantPersona}</NoWeCantPersona>
+            </OverlapGroup4>
+            <Polygon2 src="/img/polygon-2@1x.svg" />
+            <OverlapGroup5>
+              <UnsureWhichToClick>{unsureWhichToClick}</UnsureWhichToClick>
+              <Link to="/resource-matching">
+                <TutorialButtons>
+                  <OverlapGroup>
+                    <GetMoreInformation>{getMoreInformation}</GetMoreInformation>
+                    <Arrow1 src="/img/arrow-1@2x.svg" />
+                  </OverlapGroup>
+                </TutorialButtons>
+              </Link>
             </OverlapGroup5>
-            <OverlapGroup3>
-              <Polygon2 src="/img/polygon-2@1x.svg" />
-              <WeAreCurrentlyTar>{weAreCurrentlyTar}</WeAreCurrentlyTar>
-              <OurMission>{ourMission}</OurMission>
-            </OverlapGroup3>
-            <UnsureWhichToClick>{unsureWhichToClick}</UnsureWhichToClick>
             <WhatIsAnEmergencyHousingVoucher>{whatIsAnEmergencyHousingVoucher}</WhatIsAnEmergencyHousingVoucher>
-            <Link to="/voucher-tools-page">
-              <TutorialButtons>
-                <OverlapGroup>
-                  <GetMoreInformation>{getMoreInformation}</GetMoreInformation>
-                  <Arrow1 src="/img/arrow-1-1@2x.svg" />
-                </OverlapGroup>
-              </TutorialButtons>
-            </Link>
             <DoWeDistributeVouchers>{doWeDistributeVouchers}</DoWeDistributeVouchers>
-            <Link to="/resources-v3-1">
+            <Link to="/resources-v3">
               <VoucherButtonV2>
                 <OverlapGroup1>
                   <ImInterestedInOtherResources>{imInterestedInOtherResources}</ImInterestedInOtherResources>
-                  <Arrow11 src="/img/arrow-1-2@2x.svg" />
+                  <Arrow11 src="/img/arrow-1-1@2x.svg" />
                 </OverlapGroup1>
               </VoucherButtonV2>
             </Link>
@@ -91,13 +86,13 @@ class HomePageV3 extends React.Component {
                 <Link to="/voucher-tool-v3-starting-screen">
                   <INeedAVoucher>{iNeedAVoucher}</INeedAVoucher>
                 </Link>
-                <Arrow12 src="/img/arrow-1-3@2x.svg" />
+                <Arrow12 src="/img/arrow-1-1@2x.svg" />
               </VoucherButtonV1>
             </Link>
-            <Link to="/resources-v3">
+            <Link to="/find-a-home">
               <VoucherButtonV4>
                 <IHaveAVoucher>{iHaveAVoucher}</IHaveAVoucher>
-                <Arrow13 src="/img/arrow-1-2@2x.svg" />
+                <Arrow13 src="/img/arrow-1-1@2x.svg" />
               </VoucherButtonV4>
             </Link>
           </OverlapGroup6>
@@ -107,7 +102,7 @@ class HomePageV3 extends React.Component {
   }
 }
 
-const OverlapGroup4 = styled.div`
+const OverlapGroup3 = styled.div`
   height: 152px;
   position: relative;
   display: flex;
@@ -120,14 +115,15 @@ const OverlapGroup4 = styled.div`
 `;
 
 const OverlapGroup6 = styled.div`
+  ${RobotoMediumBlack50px}
   width: 1819px;
-  height: 2088px;
+  height: 1978px;
   position: relative;
   margin-top: 79px;
   margin-left: -246px;
 `;
 
-const OverlapGroup5 = styled.div`
+const OverlapGroup4 = styled.div`
   position: absolute;
   width: 1819px;
   height: 1685px;
@@ -149,7 +145,7 @@ const Ellipse1 = styled.div`
   height: 818px;
   top: 167px;
   left: 0;
-  background-color: var(--jagged-ice);
+  background-color: #bee9e880;
   border-radius: 409px;
 `;
 
@@ -171,15 +167,6 @@ const ConnectingHousingR = styled.div`
   letter-spacing: 0;
 `;
 
-const WhetherYoureACas = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 853px;
-  top: 797px;
-  left: 693px;
-  letter-spacing: 0;
-`;
-
 const EmergencyHousingVo = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
@@ -187,19 +174,6 @@ const EmergencyHousingVo = styled.div`
   top: 1053px;
   left: 867px;
   letter-spacing: 0;
-`;
-
-const Httpswwwhudgovehv = styled.div`
-  position: absolute;
-  width: 301px;
-  top: 1198px;
-  left: 1263px;
-  font-family: var(--font-family-libre_baskerville);
-  font-weight: 400;
-  color: #16375e;
-  font-size: var(--font-size-s);
-  letter-spacing: 0;
-  text-decoration: underline;
   cursor: pointer;
 `;
 
@@ -222,6 +196,15 @@ const OurServices = styled.div`
   letter-spacing: 0;
 `;
 
+const WeAreCurrentlyTar = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  position: absolute;
+  width: 854px;
+  top: 809px;
+  left: 741px;
+  letter-spacing: 0;
+`;
+
 const Arrow2 = styled.img`
   position: absolute;
   width: 32px;
@@ -239,54 +222,76 @@ const NoWeCantPersona = styled.div`
   letter-spacing: 0;
 `;
 
-const OverlapGroup3 = styled.div`
-  position: absolute;
-  width: 1392px;
-  height: 532px;
-  top: 1556px;
-  left: 155px;
-`;
-
 const Polygon2 = styled.img`
   position: absolute;
   width: 733px;
-  height: 532px;
-  top: 0;
-  left: 0;
+  height: 311px;
+  top: 1667px;
+  left: 155px;
 `;
 
-const WeAreCurrentlyTar = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
+const OverlapGroup5 = styled.div`
   position: absolute;
-  width: 854px;
-  top: 135px;
-  left: 538px;
-  letter-spacing: 0;
-`;
-
-const OurMission = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 282px;
-  top: 131px;
-  left: 182px;
-  letter-spacing: 0;
+  width: 491px;
+  height: 41px;
+  top: 449px;
+  left: 1088px;
 `;
 
 const UnsureWhichToClick = styled.div`
   position: absolute;
   width: 241px;
-  top: 455px;
-  left: 1088px;
-  font-family: var(--font-family-libre_baskerville);
+  top: 8px;
+  left: 0;
+  font-family: var(--font-family-roboto);
   font-weight: 400;
   color: var(--black);
-  font-size: 21px;
+  font-size: var(--font-size-xxxxs);
   letter-spacing: 0;
 `;
 
+const TutorialButtons = styled.div`
+  position: absolute;
+  height: 41px;
+  top: 0;
+  left: 228px;
+  display: flex;
+  padding: 8.8px 13.8px;
+  align-items: flex-end;
+  min-width: 263px;
+  background-color: var(--amazon);
+  border-radius: 10px;
+  box-shadow: 3.501018762588501px 3.501018762588501px 4.668025016784668px #00000026;
+  cursor: pointer;
+`;
+
+const OverlapGroup = styled.div`
+  width: 235px;
+  height: 22px;
+  position: relative;
+`;
+
+const GetMoreInformation = styled.div`
+  position: absolute;
+  width: 235px;
+  top: 0;
+  left: 0;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: #fffffff2;
+  font-size: 20px;
+  letter-spacing: 0;
+`;
+
+const Arrow1 = styled.img`
+  position: absolute;
+  width: 25px;
+  height: 13px;
+  top: 4px;
+  left: 206px;
+`;
+
 const WhatIsAnEmergencyHousingVoucher = styled.div`
-  ${RobotoMediumBlack50px}
   position: absolute;
   width: 509px;
   top: 1040px;
@@ -294,49 +299,7 @@ const WhatIsAnEmergencyHousingVoucher = styled.div`
   letter-spacing: 0;
 `;
 
-const TutorialButtons = styled.div`
-  position: absolute;
-  height: 35px;
-  top: 450px;
-  left: 1350px;
-  display: flex;
-  padding: 8px;
-  align-items: flex-start;
-  min-width: 225px;
-  background-color: var(--amazon);
-  border-radius: 5px;
-  box-shadow: 3px 3px 4px #00000026;
-  cursor: pointer;
-`;
-
-const OverlapGroup = styled.div`
-  width: 208px;
-  height: 19px;
-  position: relative;
-`;
-
-const GetMoreInformation = styled.div`
-  position: absolute;
-  width: 201px;
-  top: 0;
-  left: 0;
-  font-family: var(--font-family-roboto);
-  font-weight: 500;
-  color: #fffffff2;
-  font-size: 19px;
-  letter-spacing: 0;
-`;
-
-const Arrow1 = styled.img`
-  position: absolute;
-  width: 22px;
-  height: 11px;
-  top: 5px;
-  left: 186px;
-`;
-
 const DoWeDistributeVouchers = styled.div`
-  ${RobotoMediumBlack50px}
   position: absolute;
   width: 374px;
   top: 1382px;
@@ -366,14 +329,11 @@ const OverlapGroup1 = styled.div`
 `;
 
 const ImInterestedInOtherResources = styled.div`
+  ${RobotoMediumWhite35px}
   position: absolute;
   width: 468px;
   top: 0;
   left: 0;
-  font-family: var(--font-family-roboto);
-  font-weight: 500;
-  color: var(--white);
-  font-size: 37px;
   letter-spacing: 0;
 `;
 

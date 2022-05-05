@@ -11,10 +11,10 @@ class Logo extends React.Component {
     return (
       <Link to="/home-page-v3" className="align-self-flex-start">
         <Logo1 className={`logo ${className || ""}`}>
-          <OverlapGroup5 className="overlap-group5">
-            <Vector className="vector" src="/img/vector-3@2x.svg" />
+          <OverlapGroup className="overlap-group-1">
+            <Vector className="vector" src="/img/vector-1@2x.svg" />
             <HVH className="hvh">HVH</HVH>
-          </OverlapGroup5>
+          </OverlapGroup>
         </Logo1>
       </Link>
     );
@@ -29,19 +29,27 @@ const Logo1 = styled.div`
   min-width: 93px;
   cursor: pointer;
 
-  &.logo.logo-2 {
+  &.logo.logo-1 {
     cursor: unset;
   }
 
-  &.logo.logo-3 {
+  &.logo.logo-2 {
     position: absolute;
     top: 38px;
     left: 91px;
     align-self: unset;
   }
+
+  &.logo.logo-4 {
+    height: 77px;
+  }
+
+  &.logo.logo-5 {
+    height: 73px;
+  }
 `;
 
-const OverlapGroup5 = styled.div`
+const OverlapGroup = styled.div`
   width: 93px;
   height: 78px;
   position: relative;
@@ -63,6 +71,48 @@ const HVH = styled.div`
   top: 40px;
   left: 0;
   letter-spacing: 0;
+`;
+
+const OverlapGroup3 = styled.div`
+  .logo.logo-4 & {
+    height: 79px;
+    margin-top: -2.33px;
+  }
+`;
+
+const IconHome = styled.img`
+  .logo.logo-4 & {
+    width: 53px;
+  }
+`;
+
+const HVH1 = styled.div`
+  ${RobotoMediumSummerGreen436px}
+
+  .logo.logo-4  & {
+    top: 41px;
+  }
+`;
+
+const OverlapGroup14 = styled.div`
+  .logo.logo-5 & {
+    height: 76px;
+    margin-top: -2.7px;
+  }
+`;
+
+const IconHome1 = styled.img`
+  .logo.logo-5 & {
+    height: 41px;
+  }
+`;
+
+const HVH2 = styled.div`
+  ${RobotoMediumSummerGreen436px}
+
+  .logo.logo-5  & {
+    top: 39px;
+  }
 `;
 
 export default Logo;

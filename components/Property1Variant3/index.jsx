@@ -92,7 +92,7 @@ const ProofOfDateOfBirth1 = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup31 = styled.div`
+const OverlapGroup = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
@@ -142,7 +142,7 @@ const ProofOfDateOfBirth2 = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup32 = styled.div`
+const OverlapGroup1 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;

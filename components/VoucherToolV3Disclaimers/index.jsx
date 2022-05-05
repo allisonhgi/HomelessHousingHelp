@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import styled from "styled-components";
 import { Border1pxSummerGreen, Header2, LibrebaskervilleNormalBlack30px } from "../../styledMixins";
 import "./VoucherToolV3Disclaimers.css";
@@ -23,7 +22,7 @@ class VoucherToolV3Disclaimers extends React.Component {
           <FlexRow>
             <FlexCol>
               <FlexRow1>
-                <Property1Audio />
+                <TutorialButtons src="/img/tutorial-buttons-48@2x.svg" />
                 <ToolContainer>
                   <VoucherTool>{voucherTool}</VoucherTool>
                   <ToolQuestionScreen>
@@ -39,11 +38,11 @@ class VoucherToolV3Disclaimers extends React.Component {
                 </ToolContainer>
               </FlexRow1>
               <Link to="/voucher-tool-v3-starting-screen">
-                <TutorialButtons src="/img/tutorial-buttons-19@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-49@2x.svg" />
               </Link>
             </FlexCol>
             <Link to="/voucher-tool-v3-eligibility-questions">
-              <TutorialButtons1 src="/img/tutorial-buttons-18@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-47@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -83,16 +82,20 @@ const FlexCol = styled.div`
 
 const FlexRow1 = styled.div`
   height: 675px;
-  position: relative;
-  margin-left: 1px;
   display: flex;
   align-items: flex-start;
-  min-width: 1192px;
+  min-width: 1193px;
+`;
+
+const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+  margin-top: 135px;
 `;
 
 const ToolContainer = styled.div`
   width: 1011px;
-  margin-left: 125px;
+  margin-left: 118px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,14 +148,14 @@ const VoucherApplying1 = styled.img`
   object-fit: cover;
 `;
 
-const TutorialButtons = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-top: 25px;
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 56px;

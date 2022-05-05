@@ -3,43 +3,43 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   RobotoMediumWhite21px,
-  LibrebaskervilleNormalWhite20px,
   RobotoMediumWhite30px,
+  LibrebaskervilleNormalWhite20px,
   RobotoMediumWhite20px,
 } from "../../styledMixins";
 
 
 class DocumentButtonVariant72 extends React.Component {
   render() {
-    const { ifYouKnowYourSoc, socialSecurityNumber, closeDetails, ssnHelp } = this.props;
+    const { proofOfDateOfBirth, aBirthCertificate, closeDetails, dobHelp } = this.props;
 
     return (
       <DocumentButtonVariant7>
-        <OverlapGroup5>
+        <OverlapGroup3>
           <OverlapGroupContainer>
-            <OverlapGroup>
-              <IfYouKnowYourSoc>{ifYouKnowYourSoc}</IfYouKnowYourSoc>
-              <SocialSecurityNumber>{socialSecurityNumber}</SocialSecurityNumber>
-            </OverlapGroup>
-            <OverlapGroup1>
-              <Link to="/voucher-tool-v3-required-paperwork">
-                <Rectangle35></Rectangle35>
-              </Link>
+            <BirthContainer>
+              <ProofOfDateOfBirth>{proofOfDateOfBirth}</ProofOfDateOfBirth>
+              <ABirthCertificate>{aBirthCertificate}</ABirthCertificate>
+            </BirthContainer>
+            <OverlapGroup2>
+              <Vector src="/img/vector-11@2x.svg" />
               <Link to="/voucher-tool-v3-required-paperwork">
                 <CloseDetails>{closeDetails}</CloseDetails>
               </Link>
-              <Vector src="/img/vector-39@2x.svg" />
-            </OverlapGroup1>
+            </OverlapGroup2>
           </OverlapGroupContainer>
-          <OverlapGroup2>
-            <a href="https://www.ssa.gov/ssnumber/" target="_blank">
-              <SSNHelp>{ssnHelp}</SSNHelp>
+          <OverlapGroup>
+            <a
+              href="https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record"
+              target="_blank"
+            >
+              <DOBHelp>{dobHelp}</DOBHelp>
             </a>
             <a href="https://www.ssa.gov/ssnumber/" target="_blank">
-              <Arrow1 src="/img/arrow-1-1@2x.svg" />
+              <Arrow1 src="/img/arrow-1-4@2x.svg" />
             </a>
-          </OverlapGroup2>
-        </OverlapGroup5>
+          </OverlapGroup>
+        </OverlapGroup3>
       </DocumentButtonVariant7>
     );
   }
@@ -48,7 +48,7 @@ class DocumentButtonVariant72 extends React.Component {
 const DocumentButtonVariant7 = styled.div`
   position: absolute;
   height: 86px;
-  top: 120px;
+  top: 218px;
   left: 14px;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@ const DocumentButtonVariant7 = styled.div`
   min-width: 916px;
 `;
 
-const OverlapGroup5 = styled.div`
+const OverlapGroup3 = styled.div`
   width: 926px;
   margin-bottom: -114px;
   display: flex;
@@ -75,22 +75,13 @@ const OverlapGroupContainer = styled.div`
   min-width: 878px;
 `;
 
-const OverlapGroup = styled.div`
+const BirthContainer = styled.div`
   width: 695px;
   height: 101px;
   position: relative;
 `;
 
-const IfYouKnowYourSoc = styled.div`
-  ${LibrebaskervilleNormalWhite20px}
-  position: absolute;
-  width: 695px;
-  top: 46px;
-  left: 0;
-  letter-spacing: 0;
-`;
-
-const SocialSecurityNumber = styled.div`
+const ProofOfDateOfBirth = styled.div`
   ${RobotoMediumWhite30px}
   position: absolute;
   width: 323px;
@@ -101,44 +92,43 @@ const SocialSecurityNumber = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup1 = styled.div`
-  width: 183px;
+const ABirthCertificate = styled.div`
+  ${LibrebaskervilleNormalWhite20px}
+  position: absolute;
+  width: 695px;
+  top: 46px;
+  left: 0;
+  letter-spacing: 0;
+`;
+
+const OverlapGroup2 = styled.div`
   height: 42px;
-  position: relative;
   margin-top: 4px;
+  display: flex;
+  padding: 9px 10px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 183px;
+  background-color: var(--cornflower);
   border-radius: 12px;
 `;
 
-const Rectangle35 = styled.div`
-  position: absolute;
-  width: 183px;
-  height: 42px;
-  top: 0;
-  left: 0;
-  background-color: var(--cornflower);
-  border-radius: 12px;
-  cursor: pointer;
+const Vector = styled.img`
+  width: 16px;
+  height: 2px;
+  align-self: center;
 `;
 
 const CloseDetails = styled.div`
   ${RobotoMediumWhite21px}
-  position: absolute;
   width: 133px;
-  top: 9px;
-  left: 40px;
+  min-height: 23px;
+  margin-left: 7px;
   letter-spacing: 0;
   cursor: pointer;
 `;
 
-const Vector = styled.img`
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  top: 20px;
-  left: 17px;
-`;
-
-const OverlapGroup2 = styled.div`
+const OverlapGroup = styled.div`
   width: 146px;
   height: 33px;
   position: relative;
@@ -148,7 +138,7 @@ const OverlapGroup2 = styled.div`
   border-radius: 10px;
 `;
 
-const SSNHelp = styled.div`
+const DOBHelp = styled.div`
   ${RobotoMediumWhite20px}
   position: absolute;
   width: 120px;

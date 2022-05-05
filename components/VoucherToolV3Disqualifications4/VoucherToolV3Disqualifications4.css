@@ -1,0 +1,10 @@
+.voucher-tool-v3-disqualifications-4 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  width: 1440px;
+}
+

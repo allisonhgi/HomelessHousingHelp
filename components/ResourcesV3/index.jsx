@@ -2,18 +2,19 @@ import React from "react";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import ResourceAddedOrNotNotAdded from "../ResourceAddedOrNotNotAdded";
-import ResourceAddedOrNotResourceAddedOrNo from "../ResourceAddedOrNotResourceAddedOrNo";
+import ResourceAddedOrNotNotAdded2 from "../ResourceAddedOrNotNotAdded2";
+import ResourceAddedOrNotResourceAddedOrNo2 from "../ResourceAddedOrNotResourceAddedOrNo2";
+import ResourceAddedOrNotResourceAddedOrNo3 from "../ResourceAddedOrNotResourceAddedOrNo3";
 import styled from "styled-components";
 import {
+  RobotoMediumBlack45px,
+  RobotoMediumMidnightBlue21px,
+  RobotoMediumWhite35px,
   LibrebaskervilleNormalWhite22px,
   LibrebaskervilleNormalWhite25px,
   LibrebaskervilleNormalBlack25px,
   Header2,
-  RobotoMediumBlack45px,
   RobotoMediumWhite40px,
-  RobotoMediumMidnightBlue21px,
-  RobotoMediumWhite35px,
 } from "../../styledMixins";
 import "./ResourcesV3.css";
 
@@ -27,72 +28,210 @@ class ResourcesV3 extends React.Component {
       housingChoiceVouchers1,
       theHousingChoiceV,
       foodAndShelterResources,
+      universityDistrictFoodBank,
+      ourMissionIsToBu,
+      linkToResource1,
       temporaryHousingResources,
       housingChoiceVouchers2,
       lihiProvidesAVari,
-      linkToResource,
-      resourceAddedOrNotNotAddedProps,
-      resourceAddedOrNotResourceAddedOrNoProps,
+      linkToResource2,
+      confidentialEmergen,
+      weOfferSafeConfi,
+      linkToResource3,
+      catholicHousingSer,
+      transitionalHousing,
+      linkToResource4,
+      breadOfLife,
+      whenSomeoneComesT,
+      linkToResource5,
+      name1,
+      name2,
+      linkToResource6,
+      ottosPlace,
+      ottosPlaceIsAnE,
+      linkToResource7,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
+      resourceAddedOrNotNotAdded2Props,
+      resourceAddedOrNotResourceAddedOrNo2Props,
+      resourceAddedOrNotResourceAddedOrNo31Props,
+      resourceAddedOrNotResourceAddedOrNo32Props,
+      resourceAddedOrNotResourceAddedOrNo33Props,
+      resourceAddedOrNotResourceAddedOrNo34Props,
+      resourceAddedOrNotResourceAddedOrNo35Props,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
-        <div className="resources-v3-1 screen">
-          <OverlapGroup6>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
-          </OverlapGroup6>
+        <div className="resources-v3 screen">
+          <OverlapGroup15>
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
+          </OverlapGroup15>
           <MoreResources1>{moreResources}</MoreResources1>
           <IfYouHaveAlready>
             <span className="librebaskerville-normal-black-25px">{spanText1}</span>
             <span className="librebaskerville-bold-black-25px">{spanText2}</span>
           </IfYouHaveAlready>
           <OtherVoucherPrograms>{otherVoucherPrograms}</OtherVoucherPrograms>
-          <OverlapGroup5>
+          <OverlapGroup17>
             <HousingChoiceVouchers>{housingChoiceVouchers1}</HousingChoiceVouchers>
             <TheHousingChoiceV>{theHousingChoiceV}</TheHousingChoiceV>
-            <ResourceAddedOrNotNotAdded
-              housingChoiceVouchers={resourceAddedOrNotNotAddedProps.housingChoiceVouchers}
-              spanText1={resourceAddedOrNotNotAddedProps.spanText1}
-              spanText2={resourceAddedOrNotNotAddedProps.spanText2}
-              linkToResource={resourceAddedOrNotNotAddedProps.linkToResource}
+            <ResourceAddedOrNotNotAdded2
+              housingChoiceVouchers={resourceAddedOrNotNotAdded2Props.housingChoiceVouchers}
+              spanText1={resourceAddedOrNotNotAdded2Props.spanText1}
+              spanText2={resourceAddedOrNotNotAdded2Props.spanText2}
+              linkToResource={resourceAddedOrNotNotAdded2Props.linkToResource}
             />
-          </OverlapGroup5>
+          </OverlapGroup17>
           <FoodAndShelterResources>{foodAndShelterResources}</FoodAndShelterResources>
-          <ResourceAddedOrNotResourceAddedOrNo
-            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNoProps.universityDistrictFoodBank}
-            spanText1={resourceAddedOrNotResourceAddedOrNoProps.spanText1}
-            spanText2={resourceAddedOrNotResourceAddedOrNoProps.spanText2}
-            linkToResource={resourceAddedOrNotResourceAddedOrNoProps.linkToResource}
+          <ResourceAddedOrNotResourceAddedOrNo2
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo2Props.universityDistrictFoodBank}
+            spanText1={resourceAddedOrNotResourceAddedOrNo2Props.spanText1}
+            spanText2={resourceAddedOrNotResourceAddedOrNo2Props.spanText2}
+            linkToResource={resourceAddedOrNotResourceAddedOrNo2Props.linkToResource}
           />
-          <TemporaryHousingResources>{temporaryHousingResources}</TemporaryHousingResources>
-          <OverlapGroup5>
-            <OverlapGroup>
-              <a href="https://lihi.org/rosies-village/" target="_blank">
+          <ResourceAddedOrNotResourceAddedOrNo3
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo31Props.universityDistrictFoodBank}
+            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo31Props.ourMissionIsToBu}
+          />
+          <ResourceAddedOrNotResourceAddedOrNo3
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo32Props.universityDistrictFoodBank}
+            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo32Props.ourMissionIsToBu}
+            className={resourceAddedOrNotResourceAddedOrNo32Props.className}
+          />
+          <ResourceAddedOrNotResourceAddedOrNo3
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo33Props.universityDistrictFoodBank}
+            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo33Props.ourMissionIsToBu}
+          />
+          <OverlapGroup16>
+            <OverlapGroup13>
+              <a href="https://eghseattle.org/" target="_blank">
                 <Rectangle26></Rectangle26>
               </a>
-              <HousingChoiceVouchers1>{housingChoiceVouchers2}</HousingChoiceVouchers1>
-              <LIHIProvidesAVari>{lihiProvidesAVari}</LIHIProvidesAVari>
-            </OverlapGroup>
-            <a href="https://lihi.org/rosies-village/" target="_blank">
+              <UniversityDistrictFoodBank>{universityDistrictFoodBank}</UniversityDistrictFoodBank>
+              <OurMissionIsToBu>{ourMissionIsToBu}</OurMissionIsToBu>
+            </OverlapGroup13>
+            <a href="https://eghseattle.org/" target="_blank">
               <Rectangle27></Rectangle27>
             </a>
-            <a href="https://lihi.org/rosies-village/" target="_blank">
-              <LinkToResource>{linkToResource}</LinkToResource>
+            <a href="https://familyworksseattle.org/" target="_blank">
+              <LinkToResource>{linkToResource1}</LinkToResource>
             </a>
-          </OverlapGroup5>
+          </OverlapGroup16>
+          <ResourceAddedOrNotResourceAddedOrNo3
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo34Props.universityDistrictFoodBank}
+            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo34Props.ourMissionIsToBu}
+            className={resourceAddedOrNotResourceAddedOrNo34Props.className}
+          />
+          <ResourceAddedOrNotResourceAddedOrNo3
+            universityDistrictFoodBank={resourceAddedOrNotResourceAddedOrNo35Props.universityDistrictFoodBank}
+            ourMissionIsToBu={resourceAddedOrNotResourceAddedOrNo35Props.ourMissionIsToBu}
+          />
+          <TemporaryHousingResources>{temporaryHousingResources}</TemporaryHousingResources>
+          <ResourceSection>
+            <OverlapGroup>
+              <a href="https://lihi.org/rosies-village/" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{housingChoiceVouchers2}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{lihiProvidesAVari}</OurMissionIsToBu>
+              <a href="https://lihi.org/rosies-village/" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://lihi.org/rosies-village/" target="_blank">
+                <LinkToResource1>{linkToResource2}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection>
+          <ResourceSection1>
+            <OverlapGroup>
+              <a href="https://www.dawnrising.org/resources/blog-post-title-three-bs5df" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{confidentialEmergen}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{weOfferSafeConfi}</OurMissionIsToBu>
+              <a href="https://lihi.org/rosies-village/" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://www.dawnrising.org/resources/blog-post-title-three-bs5df" target="_blank">
+                <LinkToResource1>{linkToResource3}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection1>
+          <ResourceSection1>
+            <OverlapGroup>
+              <a href="https://ccsww.org/get-help/housing/transitional-housing/" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{catholicHousingSer}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{transitionalHousing}</OurMissionIsToBu>
+              <a href="https://lihi.org/rosies-village/" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://ccsww.org/get-help/housing/transitional-housing/" target="_blank">
+                <LinkToResource1>{linkToResource4}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection1>
+          <ResourceSection1>
+            <OverlapGroup>
+              <a href="https://www.breadoflifemission.org/emergency-services-overview" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{breadOfLife}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{whenSomeoneComesT}</OurMissionIsToBu>
+              <a href="https://www.breadoflifemission.org/emergency-services-overview" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://ccsww.org/get-help/housing/transitional-housing/" target="_blank">
+                <LinkToResource1>{linkToResource5}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection1>
+          <ResourceSection1>
+            <OverlapGroup>
+              <a href="https://www.compasshousingalliance.org/emergency-programs/janpetersplace/" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{name1}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{name2}</OurMissionIsToBu>
+              <a href="https://www.compasshousingalliance.org/emergency-programs/janpetersplace/" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://ccsww.org/get-help/housing/transitional-housing/" target="_blank">
+                <LinkToResource1>{linkToResource6}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection1>
+          <ResourceSection1>
+            <OverlapGroup>
+              <a href="https://www.compasshousingalliance.org/emergency-programs/ottos-place/" target="_blank">
+                <Rectangle261></Rectangle261>
+              </a>
+              <HousingChoiceVouchers1>{ottosPlace}</HousingChoiceVouchers1>
+              <OurMissionIsToBu>{ottosPlaceIsAnE}</OurMissionIsToBu>
+              <a href="https://www.compasshousingalliance.org/emergency-programs/ottos-place/" target="_blank">
+                <Rectangle271></Rectangle271>
+              </a>
+              <a href="https://ccsww.org/get-help/housing/transitional-housing/" target="_blank">
+                <LinkToResource1>{linkToResource7}</LinkToResource1>
+              </a>
+            </OverlapGroup>
+          </ResourceSection1>
         </div>
       </div>
     );
   }
 }
 
-const OverlapGroup6 = styled.div`
-  height: 152px;
+const OverlapGroup15 = styled.div`
+  height: 148px;
   position: relative;
   display: flex;
-  padding: 38px 85px;
+  padding: 37.1px 85px;
   justify-content: flex-end;
   align-items: center;
   min-width: 1440px;
@@ -104,7 +243,7 @@ const MoreResources1 = styled.div`
   ${Header2}
   width: 440px;
   min-height: 75px;
-  margin-top: 39px;
+  margin-top: 43px;
   margin-left: 2px;
   font-weight: 500;
   color: var(--black);
@@ -129,7 +268,7 @@ const OtherVoucherPrograms = styled.div`
   letter-spacing: 0;
 `;
 
-const OverlapGroup5 = styled.div`
+const OverlapGroup17 = styled.div`
   width: 1293px;
   height: 242px;
   position: relative;
@@ -163,26 +302,99 @@ const FoodAndShelterResources = styled.div`
   letter-spacing: 0;
 `;
 
-const TemporaryHousingResources = styled.div`
-  ${RobotoMediumBlack45px}
-  width: 789px;
-  min-height: 75px;
-  align-self: flex-start;
-  margin-top: 36px;
-  margin-left: 83px;
-  letter-spacing: 0;
+const OverlapGroup16 = styled.div`
+  width: 1293px;
+  height: 226px;
+  position: relative;
+  margin-top: 33px;
+  margin-left: 19px;
 `;
 
-const OverlapGroup = styled.div`
+const OverlapGroup13 = styled.div`
   position: absolute;
   width: 1293px;
-  height: 242px;
+  height: 257px;
   top: 0;
   left: 0;
   border-radius: 2px;
 `;
 
 const Rectangle26 = styled.div`
+  position: absolute;
+  width: 1293px;
+  height: 257px;
+  top: 0;
+  left: 0;
+  background-color: var(--hippie-blue);
+  border-radius: 2px;
+  cursor: pointer;
+`;
+
+const UniversityDistrictFoodBank = styled.div`
+  ${RobotoMediumWhite35px}
+  position: absolute;
+  width: 1247px;
+  top: 13px;
+  left: 21px;
+  letter-spacing: 0;
+`;
+
+const OurMissionIsToBu = styled.div`
+  ${LibrebaskervilleNormalWhite22px}
+  position: absolute;
+  width: 1217px;
+  top: 84px;
+  left: 21px;
+  letter-spacing: 0;
+`;
+
+const Rectangle27 = styled.div`
+  position: absolute;
+  width: 186px;
+  height: 41px;
+  top: 185px;
+  left: 1082px;
+  background-color: var(--white);
+  border-radius: 8.4px;
+  box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;
+  cursor: pointer;
+`;
+
+const LinkToResource = styled.div`
+  ${RobotoMediumMidnightBlue21px}
+  position: absolute;
+  width: 157px;
+  top: 195px;
+  left: 1096px;
+  letter-spacing: 0;
+  cursor: pointer;
+`;
+
+const TemporaryHousingResources = styled.div`
+  ${RobotoMediumBlack45px}
+  width: 789px;
+  min-height: 75px;
+  align-self: flex-start;
+  margin-top: 54px;
+  margin-left: 83px;
+  letter-spacing: 0;
+`;
+
+const ResourceSection = styled.div`
+  margin-left: 19px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 1293px;
+`;
+
+const OverlapGroup = styled.div`
+  width: 1293px;
+  height: 242px;
+  position: relative;
+  border-radius: 2px;
+`;
+
+const Rectangle261 = styled.div`
   position: absolute;
   width: 1293px;
   height: 242px;
@@ -201,35 +413,34 @@ const HousingChoiceVouchers1 = styled.div`
   letter-spacing: 0;
 `;
 
-const LIHIProvidesAVari = styled.div`
-  ${LibrebaskervilleNormalWhite22px}
-  position: absolute;
-  width: 1217px;
-  top: 84px;
-  left: 21px;
-  letter-spacing: 0;
-`;
-
-const Rectangle27 = styled.div`
+const Rectangle271 = styled.div`
   position: absolute;
   width: 186px;
   height: 42px;
-  top: 180px;
-  left: 1081px;
+  top: 178px;
+  left: 1071px;
   background-color: var(--white);
   border-radius: 8.4px;
   box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;
   cursor: pointer;
 `;
 
-const LinkToResource = styled.div`
+const LinkToResource1 = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 190px;
-  left: 1095px;
+  top: 188px;
+  left: 1085px;
   letter-spacing: 0;
   cursor: pointer;
+`;
+
+const ResourceSection1 = styled.div`
+  margin-top: 33px;
+  margin-left: 19px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 1293px;
 `;
 
 export default ResourcesV3;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import styled from "styled-components";
 import { Header2, Border1pxBlack2, LibrebaskervilleNormalBlack30px } from "../../styledMixins";
 import "./VoucherToolV3DisqualificationsNotic.css";
@@ -15,15 +14,15 @@ class VoucherToolV3DisqualificationsNotic extends React.Component {
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-disqualifications-notice-page screen">
-          <OverlapGroup2>
+          <OverlapGroup1>
             <Logo />
             <HomePageLink />
             <MoreResources />
-          </OverlapGroup2>
+          </OverlapGroup1>
           <FlexRow>
             <FlexCol>
               <FlexRow1>
-                <Property1Audio />
+                <TutorialButtons src="/img/tutorial-buttons-54@2x.svg" />
                 <FlexCol1>
                   <VoucherTool>{voucherTool}</VoucherTool>
                   <TextInfo>
@@ -39,11 +38,11 @@ class VoucherToolV3DisqualificationsNotic extends React.Component {
                 </FlexCol1>
               </FlexRow1>
               <Link to="/voucher-tool-v3-disqualifications">
-                <TutorialButtons src="/img/tutorial-buttons-25@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-55@2x.svg" />
               </Link>
             </FlexCol>
             <Link to="/voucher-tool-v3-required-paperwork">
-              <TutorialButtons1 src="/img/tutorial-buttons-24@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-53@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -52,7 +51,7 @@ class VoucherToolV3DisqualificationsNotic extends React.Component {
   }
 }
 
-const OverlapGroup2 = styled.div`
+const OverlapGroup1 = styled.div`
   height: 152px;
   position: relative;
   display: flex;
@@ -83,16 +82,20 @@ const FlexCol = styled.div`
 
 const FlexRow1 = styled.div`
   height: 675px;
-  position: relative;
-  margin-left: 1px;
   display: flex;
   align-items: flex-start;
-  min-width: 1182px;
+  min-width: 1183px;
+`;
+
+const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+  margin-top: 135px;
 `;
 
 const FlexCol1 = styled.div`
   width: 1011px;
-  margin-left: 115px;
+  margin-left: 108px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,14 +129,14 @@ const TheresAPossibilit = styled.div`
   line-height: 38px;
 `;
 
-const TutorialButtons = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-top: 25px;
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 66px;

@@ -92,7 +92,7 @@ const SocialSecurityNumber1 = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup41 = styled.div`
+const OverlapGroup1 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
@@ -142,7 +142,7 @@ const SocialSecurityNumber2 = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup42 = styled.div`
+const OverlapGroup2 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
@@ -162,6 +162,56 @@ const Rectangle352 = styled.div`
 `;
 
 const ClickForDetails2 = styled.div`
+  ${RobotoMediumWhite21px}
+  position: absolute;
+  width: 152px;
+  top: 9px;
+  left: 15px;
+  letter-spacing: 0;
+`;
+
+const DocumentButton3 = styled.div`
+  position: absolute;
+  height: 86px;
+  top: 120px;
+  left: 14px;
+  display: flex;
+  padding: 17px 19px;
+  align-items: center;
+  min-width: 916px;
+  background-color: var(--midnight-blue);
+`;
+
+const SocialSecurityNumber3 = styled.div`
+  ${RobotoMediumWhite30px}
+  width: 323px;
+  min-height: 51px;
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 45px;
+  white-space: nowrap;
+`;
+
+const OverlapGroup21 = styled.div`
+  width: 183px;
+  height: 42px;
+  position: relative;
+  margin-left: 372px;
+  border-radius: 12px;
+`;
+
+const Rectangle353 = styled.div`
+  position: absolute;
+  width: 183px;
+  height: 42px;
+  top: 0;
+  left: 0;
+  background-color: var(--cornflower);
+  border-radius: 12px;
+  cursor: pointer;
+`;
+
+const ClickForDetails3 = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;

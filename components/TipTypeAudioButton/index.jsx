@@ -12,7 +12,7 @@ class TipTypeAudioButton extends React.Component {
         <OverlapGroup>
           <Rectangle6></Rectangle6>
           <ThisButtonWillRea>{thisButtonWillRea}</ThisButtonWillRea>
-          <Arrow3 src="/img/arrow-3-1@2x.svg" />
+          <Arrow3 src="/img/arrow-3-2@2x.svg" />
         </OverlapGroup>
       </TipBox>
     );

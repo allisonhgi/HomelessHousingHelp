@@ -3,48 +3,50 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
-import TextInfo from "../TextInfo";
-import IcoutlinePhoneIphone from "../IcoutlinePhoneIphone";
-import UilimageDownload from "../UilimageDownload";
+import TextInfo22 from "../TextInfo22";
 import styled from "styled-components";
 import { Header2, RobotoMediumWhite21px } from "../../styledMixins";
 import "./VoucherToolV3DownloadInfo2.css";
 
 class VoucherToolV3DownloadInfo2 extends React.Component {
   render() {
-    const { voucherTool, getSummaryViaTextOrEmail, downloadPdfOfSummary, property1AudioProps } = this.props;
+    const { voucherTool, getSummaryViaTextOrEmail, downloadPdfOfSummary, textInfo22Props } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-download-info screen">
-          <OverlapGroup3>
+          <OverlapGroup2>
             <Logo />
             <HomePageLink />
             <MoreResources />
-          </OverlapGroup3>
+          </OverlapGroup2>
           <FlexRow>
             <TutorialButtonsContainer>
-              <Property1Audio className={property1AudioProps.className} />
+              <TutorialButtons src="/img/tutorial-buttons-9@2x.svg" />
               <Link to="/voucher-tool-v3-rap">
-                <TutorialButtons src="/img/tutorial-buttons-6@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-10@2x.svg" />
               </Link>
             </TutorialButtonsContainer>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
-              <OverlapGroup1>
-                <TextInfo />
-                <IcoutlinePhoneIphone />
-                <UilimageDownload />
+              <OverlapGroup>
+                <TextInfo22>{textInfo22Props.children}</TextInfo22>
+                <IconMobile src="/img/ic-outline-phone-iphone@2x.svg" />
+                <UilimageDownload src="/img/uil-image-download@2x.svg" />
                 <Rectangle35></Rectangle35>
                 <Link to="/voucher-tool-v3-download-info-1">
                   <GetSummaryViaTextOrEmail>{getSummaryViaTextOrEmail}</GetSummaryViaTextOrEmail>
                 </Link>
-                <Rectangle36></Rectangle36>
+                <a
+                  href="https://docs.google.com/document/d/1pH1V7t7kWOHSYoNQlIX0ria-Goz603yV88uAGlaEhe8/export?format=pdf"
+                  target="_blank"
+                >
+                  <Rectangle36></Rectangle36>
+                </a>
                 <DownloadPDFOfSummary>{downloadPdfOfSummary}</DownloadPDFOfSummary>
-              </OverlapGroup1>
+              </OverlapGroup>
               <Link to="/home-page-v3" className="align-self-flex-end">
-                <TutorialButtons1 src="/img/tutorial-buttons-7@2x.svg" />
+                <TutorialButtons2 src="/img/tutorial-buttons-11@2x.svg" />
               </Link>
             </FlexCol>
           </FlexRow>
@@ -54,7 +56,7 @@ class VoucherToolV3DownloadInfo2 extends React.Component {
   }
 }
 
-const OverlapGroup3 = styled.div`
+const OverlapGroup2 = styled.div`
   height: 152px;
   position: relative;
   display: flex;
@@ -77,18 +79,22 @@ const FlexRow = styled.div`
 
 const TutorialButtonsContainer = styled.div`
   width: 99px;
-  position: relative;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 641px;
+  min-height: 642px;
 `;
 
 const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+`;
+
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 511px;
+  margin-top: 504px;
   cursor: pointer;
 `;
 
@@ -111,10 +117,26 @@ const VoucherTool = styled.div`
   color: var(--black);
 `;
 
-const OverlapGroup1 = styled.div`
+const OverlapGroup = styled.div`
   width: 1011px;
   height: 564px;
   position: relative;
+`;
+
+const IconMobile = styled.img`
+  position: absolute;
+  width: 171px;
+  height: 171px;
+  top: 225px;
+  left: 271px;
+`;
+
+const UilimageDownload = styled.img`
+  position: absolute;
+  width: 196px;
+  height: 196px;
+  top: 200px;
+  left: 535px;
 `;
 
 const Rectangle35 = styled.div`
@@ -146,6 +168,7 @@ const Rectangle36 = styled.div`
   left: 542px;
   background-color: var(--midnight-blue);
   border-radius: 12px;
+  cursor: pointer;
 `;
 
 const DownloadPDFOfSummary = styled.div`
@@ -158,7 +181,7 @@ const DownloadPDFOfSummary = styled.div`
   letter-spacing: 0;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 236px;
   height: 77px;
   align-self: flex-end;

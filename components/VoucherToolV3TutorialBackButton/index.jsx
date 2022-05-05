@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import TipTypeBackButton from "../TipTypeBackButton";
 import styled from "styled-components";
 import { Header2 } from "../../styledMixins";
@@ -11,7 +10,7 @@ import "./VoucherToolV3TutorialBackButton.css";
 
 class VoucherToolV3TutorialBackButton extends React.Component {
   render() {
-    const { voucherTool, property1AudioProps, tipTypeBackButtonProps } = this.props;
+    const { voucherTool, tipTypeBackButtonProps } = this.props;
 
     return (
       <div className="container-center-horizontal">
@@ -22,16 +21,16 @@ class VoucherToolV3TutorialBackButton extends React.Component {
             <MoreResources />
           </OverlapGroup2>
           <VoucherTool>{voucherTool}</VoucherTool>
-          <Property1Audio className={property1AudioProps.className} />
+          <TutorialButtons src="/img/tutorial-buttons-52@2x.svg" />
           <FlexRow>
             <OverlapGroup3>
               <TipTypeBackButton thisButtonWillTak={tipTypeBackButtonProps.thisButtonWillTak} />
               <Link to="/voucher-tool-v3-tutorial-next-button">
-                <TutorialButtons src="/img/tutorial-buttons-21@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-51@2x.svg" />
               </Link>
             </OverlapGroup3>
             <Link to="/voucher-tool-v3-tutorial-audio-button">
-              <TutorialButtons1 src="/img/tutorial-buttons-20@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-50@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -63,8 +62,15 @@ const VoucherTool = styled.div`
   color: var(--black);
 `;
 
+const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+  margin-top: 24px;
+  margin-left: 43px;
+`;
+
 const FlexRow = styled.div`
-  margin-top: 322px;
+  margin-top: 315px;
   margin-left: -8px;
   display: flex;
   align-items: flex-end;
@@ -77,7 +83,7 @@ const OverlapGroup3 = styled.div`
   position: relative;
 `;
 
-const TutorialButtons = styled.img`
+const TutorialButtons1 = styled.img`
   position: absolute;
   width: 99px;
   height: 77px;
@@ -86,7 +92,7 @@ const TutorialButtons = styled.img`
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 677px;

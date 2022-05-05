@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import styled from "styled-components";
 import { Header2, Border1pxBlack2, LibrebaskervilleNormalBlack30px } from "../../styledMixins";
 import "./VoucherToolV3NextSteps.css";
@@ -21,30 +20,28 @@ class VoucherToolV3NextSteps extends React.Component {
       spanText7,
       spanText8,
       givingVoucher1,
-      logoProps,
       homePageLinkProps,
       moreResourcesProps,
-      property1AudioProps,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-next-steps screen">
-          <OverlapGroup2>
-            <Logo className={logoProps.className} />
+          <OverlapGroup1>
+            <Logo />
             <HomePageLink className={homePageLinkProps.className} />
             <MoreResources className={moreResourcesProps.className} />
-          </OverlapGroup2>
+          </OverlapGroup1>
           <FlexRow>
             <TutorialButtonsContainer>
-              <Property1Audio className={property1AudioProps.className} />
+              <TutorialButtons src="/img/tutorial-buttons-7@2x.svg" />
               <Link to="/voucher-tool-v3-required-paperwork">
-                <TutorialButtons src="/img/tutorial-buttons-5@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-8@2x.svg" />
               </Link>
             </TutorialButtonsContainer>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
-              <OverlapGroup3>
+              <OverlapGroup2>
                 <TextInfo>
                   <IfYoureConnected>
                     <span className="librebaskerville-normal-black-30px">{spanText1}</span>
@@ -58,10 +55,10 @@ class VoucherToolV3NextSteps extends React.Component {
                   </IfYoureConnected>
                 </TextInfo>
                 <GivingVoucher1 src={givingVoucher1} />
-              </OverlapGroup3>
+              </OverlapGroup2>
             </FlexCol>
             <Link to="/voucher-tool-v3-rap">
-              <TutorialButtons1 src="/img/tutorial-buttons-4@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-6@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -70,12 +67,13 @@ class VoucherToolV3NextSteps extends React.Component {
   }
 }
 
-const OverlapGroup2 = styled.div`
+const OverlapGroup1 = styled.div`
   height: 152px;
   position: relative;
   margin-left: 2px;
   display: flex;
-  padding: 38px 71px;
+  padding: 38px 83px;
+  justify-content: flex-end;
   align-items: center;
   min-width: 1440px;
   background-color: var(--white);
@@ -93,17 +91,21 @@ const FlexRow = styled.div`
 
 const TutorialButtonsContainer = styled.div`
   width: 99px;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 641px;
+  min-height: 642px;
 `;
 
 const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+`;
+
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 511px;
+  margin-top: 504px;
   cursor: pointer;
 `;
 
@@ -126,7 +128,7 @@ const VoucherTool = styled.div`
   color: var(--black);
 `;
 
-const OverlapGroup3 = styled.div`
+const OverlapGroup2 = styled.div`
   width: 1011px;
   height: 608px;
   position: relative;
@@ -170,7 +172,7 @@ const GivingVoucher1 = styled.img`
   object-fit: cover;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 66px;

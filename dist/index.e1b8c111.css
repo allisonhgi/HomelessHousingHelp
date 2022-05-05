@@ -1,0 +1,416 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import "https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Roboto:400,500";
+@import "https://px.animaapp.com/621fec582592cbf202936905.621fec5aac60947c06215bb7.m7oH3JL.rcp.png";
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+
+.container-center-horizontal {
+  pointer-events: none;
+  width: 100%;
+  zoom: 88%;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --amazon: #4a7c59;
+  --black: #000;
+  --black-2: #0006;
+  --blue-zodiac: #092649;
+  --cornflower: #a3cef1;
+  --hippie-blue: #6096ba;
+  --midnight-blue: #274c77;
+  --summer-green: #8fc0a9;
+  --white: #fff;
+  --font-size-60px: 60px;
+  --font-size-l: 30px;
+  --font-size-m: 28px;
+  --font-size-s: 27px;
+  --font-size-xs: 25px;
+  --font-size-xxs: 23px;
+  --font-size-xxxs: 22px;
+  --font-size-xxxxs: 21px;
+  --font-family-libre_baskerville: "Libre Baskerville", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+
+.landing-page {
+  background-color: var(--white);
+  height: 4310px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 102px 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-rap {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.resource-matching {
+  background-color: var(--white);
+  height: 1042px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.home-page-v3 {
+  background-color: var(--white);
+  height: 1905px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-download-info-1 {
+  background-color: var(--white);
+  width: 1440px;
+  align-items: flex-start;
+  display: flex;
+}
+
+.voucher-tool-v3-next-steps {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.find-a-home {
+  background-color: var(--white);
+  height: 1292px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.voucher-tool-v3-download-info {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-rap-ccsb {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.resources-v3 {
+  background-color: var(--white);
+  height: 4475px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.voucher-tool-v3-rap-sg {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-starting-screen {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-rap-ymca {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-rap-msc {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-rap-ccs {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-required-paperwork {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-required-paperwork-poi {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-required-paperwork-dob {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-eligibility-2 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-required-paperwork-ssn {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-eligibility-questions {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-disclaimers {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-tutorial-back-button {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-notice-page {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-required-paperwork-oc {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-checked {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-1 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-2 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-3 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-4 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-eligibility-3 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-tutorial-audio-button {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-tutorial-next-button {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-1 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-7 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-6 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-5 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-4 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.e1b8c111.css.map */

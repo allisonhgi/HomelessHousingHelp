@@ -9,7 +9,7 @@ class MoreResources extends React.Component {
     const { className } = this.props;
 
     return (
-      <Link to="/resources-v3-1">
+      <Link to="/resources-v3">
         <MoreResources1 className={`more-resources ${className || ""}`}>
           <MoreResources2 className="more-resources-1">More Resources</MoreResources2>
         </MoreResources1>
@@ -27,11 +27,11 @@ const MoreResources1 = styled.div`
   min-width: 184px;
   cursor: pointer;
 
-  &.more-resources.more-resources-3 {
+  &.more-resources.more-resources-2 {
     cursor: unset;
   }
 
-  &.more-resources.more-resources-4 {
+  &.more-resources.more-resources-3 {
     position: absolute;
     top: 63px;
     left: 1171px;
@@ -39,23 +39,20 @@ const MoreResources1 = styled.div`
     margin-bottom: unset;
   }
 
-  &.more-resources.more-resources-5 {
+  &.more-resources.more-resources-4 {
     margin-left: 33px;
     margin-top: 1px;
     margin-bottom: unset;
   }
 
-  &.more-resources.more-resources-6 {
-    margin-left: 28px;
+  &.more-resources.more-resources-5 {
+    height: 26px;
+    margin-bottom: 1.02px;
   }
 
   &.more-resources.more-resources-7 {
-    margin-left: 19px;
-  }
-
-  &.more-resources.more-resources-8 {
-    margin-left: 32px;
-    margin-bottom: 3px;
+    height: 24px;
+    margin-bottom: 0.98px;
   }
 `;
 
@@ -69,8 +66,24 @@ const MoreResources2 = styled.div`
 const MoreResources3 = styled.div`
   ${RobotoNormalSummerGreen25px}
 
-  .more-resources.more-resources-3  & {
+  .more-resources.more-resources-2  & {
     cursor: pointer;
+  }
+`;
+
+const MoreResources4 = styled.div`
+  ${RobotoNormalSummerGreen25px}
+
+  .more-resources.more-resources-5  & {
+    min-height: 26px;
+  }
+`;
+
+const MoreResources5 = styled.div`
+  ${RobotoNormalSummerGreen25px}
+
+  .more-resources.more-resources-7  & {
+    min-height: 24px;
   }
 `;
 

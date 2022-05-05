@@ -1,6 +1,5 @@
 import React from "react";
 import Property1Default from "../Property1Default";
-import Property1Default8 from "../Property1Default8";
 import styled from "styled-components";
 import { LibrebaskervilleNormalBlack28px, Border1pxBlack2 } from "../../styledMixins";
 
@@ -9,24 +8,28 @@ class RegionalAccessPointsV2 extends React.Component {
   render() {
     const {
       regionalAccessPoin,
-      property1DefaultProps,
-      property1Default81Props,
-      property1Default82Props,
-      property1Default83Props,
-      property1Default84Props,
+      property1Default1Props,
+      property1Default2Props,
+      property1Default3Props,
+      property1Default4Props,
     } = this.props;
 
     return (
       <RegionalAccessPointsV21>
         <RegionalAccessPoin>{regionalAccessPoin}</RegionalAccessPoin>
+        <Property1Default catholicCommunityServices={property1Default1Props.catholicCommunityServices} />
         <Property1Default
-          catholicCommunityServices={property1DefaultProps.catholicCommunityServices}
-          clickForDetails={property1DefaultProps.clickForDetails}
+          catholicCommunityServices={property1Default2Props.catholicCommunityServices}
+          className={property1Default2Props.className}
         />
-        <Property1Default8 catholicCommunityServices={property1Default81Props.catholicCommunityServices} />
-        <Property1Default8 catholicCommunityServices={property1Default82Props.catholicCommunityServices} />
-        <Property1Default8 catholicCommunityServices={property1Default83Props.catholicCommunityServices} />
-        <Property1Default8 catholicCommunityServices={property1Default84Props.catholicCommunityServices} />
+        <Property1Default
+          catholicCommunityServices={property1Default3Props.catholicCommunityServices}
+          className={property1Default3Props.className}
+        />
+        <Property1Default
+          catholicCommunityServices={property1Default4Props.catholicCommunityServices}
+          className={property1Default4Props.className}
+        />
       </RegionalAccessPointsV21>
     );
   }
@@ -34,8 +37,10 @@ class RegionalAccessPointsV2 extends React.Component {
 
 const RegionalAccessPointsV21 = styled.div`
   ${Border1pxBlack2}
+  position: absolute;
   width: 1011px;
-  position: relative;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   padding: 31px;

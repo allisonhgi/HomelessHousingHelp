@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
-import Property1Default42 from "../Property1Default42";
 import styled from "styled-components";
-import { Header2 } from "../../styledMixins";
+import { LibrebaskervilleNormalBlack28px, Header2, Border25pxBlack, Border1pxBlack } from "../../styledMixins";
 import "./VoucherToolV3DisqualificationsCheck.css";
 
 class VoucherToolV3DisqualificationsCheck extends React.Component {
   render() {
-    const { voucherTool, line1, property1AudioProps, property1Default42Props } = this.props;
+    const {
+      voucherTool,
+      checkWhichOneAppliesToYou,
+      youreARegistered,
+      youHaveBeenConvic,
+      youHaveAHistoryO,
+      spanText1,
+      spanText2,
+      noneOfTheAboveApplyToMe,
+    } = this.props;
 
     return (
       <div className="container-center-horizontal">
@@ -23,24 +30,45 @@ class VoucherToolV3DisqualificationsCheck extends React.Component {
           </OverlapGroup2>
           <OverlapGroup3>
             <VoucherTool>{voucherTool}</VoucherTool>
-            <Line1 src={line1} />
+            <Line1 src="/img/line-1@1x.svg" />
           </OverlapGroup3>
           <FlexRow>
-            <Property1Audio className={property1AudioProps.className} />
-            <OverlapGroup4>
-              <Property1Default42
-                checkIfAnyOfThe={property1Default42Props.checkIfAnyOfThe}
-                youreARegistered={property1Default42Props.youreARegistered}
-              />
-              <IconCheckMark src="/img/vector-75@2x.svg" />
-            </OverlapGroup4>
+            <TutorialButtons src="/img/tutorial-buttons-66@2x.svg" />
+            <OverlapGroup1>
+              <CheckWhichOneAppliesToYou>{checkWhichOneAppliesToYou}</CheckWhichOneAppliesToYou>
+              <FlexRow1>
+                <FlexCol>
+                  <Rectangle130></Rectangle130>
+                  <Rectangle131></Rectangle131>
+                  <Rectangle132></Rectangle132>
+                  <Rectangle133></Rectangle133>
+                  <OverlapGroup4>
+                    <Link to="/voucher-tool-v3-disqualifications">
+                      <IconCheckMark src="/img/vector-64@2x.svg" />
+                    </Link>
+                  </OverlapGroup4>
+                </FlexCol>
+                <FlexCol1>
+                  <YoureARegistered>{youreARegistered}</YoureARegistered>
+                  <YouHaveBeenConvic>{youHaveBeenConvic}</YouHaveBeenConvic>
+                  <YouHaveAHistoryO>{youHaveAHistoryO}</YouHaveAHistoryO>
+                  <NobodyInTheApplyi>
+                    <span className="librebaskerville-normal-black-28px">{spanText1}</span>
+                    <Span117>{spanText2}</Span117>
+                  </NobodyInTheApplyi>
+                  <Link to="/voucher-tool-v3-disqualifications">
+                    <NoneOfTheAboveApplyToMe>{noneOfTheAboveApplyToMe}</NoneOfTheAboveApplyToMe>
+                  </Link>
+                </FlexCol1>
+              </FlexRow1>
+            </OverlapGroup1>
           </FlexRow>
           <TutorialButtonsContainer>
             <Link to="/voucher-tool-v3-disqualifications" className="align-self-flex-end">
-              <TutorialButtons src="/img/tutorial-buttons-29@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-67@2x.svg" />
             </Link>
             <Link to="/voucher-tool-v3-required-paperwork">
-              <TutorialButtons1 src="/img/tutorial-buttons-28@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-65@2x.svg" />
             </Link>
           </TutorialButtonsContainer>
         </div>
@@ -89,46 +117,179 @@ const Line1 = styled.img`
 `;
 
 const FlexRow = styled.div`
-  position: relative;
-  margin-left: 44px;
+  height: 556px;
+  margin-top: 4px;
+  margin-left: 43px;
   display: flex;
   align-items: flex-start;
-  min-width: 1182px;
+  min-width: 1179px;
+`;
+
+const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+  margin-top: 20px;
+`;
+
+const OverlapGroup1 = styled.div`
+  ${Border1pxBlack}
+  width: 1005px;
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+  align-items: flex-start;
+  min-height: 556px;
+  background-color: var(--white);
+`;
+
+const CheckWhichOneAppliesToYou = styled.div`
+  ${LibrebaskervilleNormalBlack28px}
+  width: 824px;
+  min-height: 53px;
+  margin-left: 45px;
+  letter-spacing: 0;
+`;
+
+const FlexRow1 = styled.div`
+  height: 446px;
+  align-self: center;
+  margin-top: 7px;
+  margin-left: 27px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 888px;
+`;
+
+const FlexCol = styled.div`
+  width: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 432px;
+`;
+
+const Rectangle130 = styled.div`
+  ${Border25pxBlack}
+  width: 31px;
+  height: 30px;
+  background-color: var(--white);
+`;
+
+const Rectangle131 = styled.div`
+  ${Border25pxBlack}
+  width: 31px;
+  height: 30px;
+  margin-top: 30px;
+  background-color: var(--white);
+`;
+
+const Rectangle132 = styled.div`
+  ${Border25pxBlack}
+  width: 31px;
+  height: 30px;
+  margin-top: 80px;
+  background-color: var(--white);
+`;
+
+const Rectangle133 = styled.div`
+  ${Border25pxBlack}
+  width: 31px;
+  height: 30px;
+  margin-top: 81px;
+  background-color: var(--white);
 `;
 
 const OverlapGroup4 = styled.div`
-  width: 1011px;
-  height: 564px;
-  position: relative;
-  margin-left: 115px;
+  ${Border25pxBlack}
+  height: 30px;
+  margin-top: 91px;
+  display: flex;
+  padding: 3.5px 1.5px;
+  align-items: flex-start;
+  min-width: 31px;
+  background-color: var(--white);
 `;
 
 const IconCheckMark = styled.img`
-  position: absolute;
   width: 24px;
   height: 18px;
-  top: 486px;
-  left: 73px;
+  cursor: pointer;
+`;
+
+const FlexCol1 = styled.div`
+  ${LibrebaskervilleNormalBlack28px}
+  width: 837px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 446px;
+`;
+
+const YoureARegistered = styled.div`
+  width: 622px;
+  min-height: 49px;
+  letter-spacing: 0;
+`;
+
+const YouHaveBeenConvic = styled.div`
+  width: 832px;
+  min-height: 112px;
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 55px;
+`;
+
+const YouHaveAHistoryO = styled.div`
+  width: 775px;
+  min-height: 120px;
+  margin-left: 5px;
+  letter-spacing: 0;
+  line-height: 55px;
+`;
+
+const NobodyInTheApplyi = styled.div`
+  width: 818px;
+  min-height: 107px;
+  align-self: center;
+  margin-right: 9px;
+  letter-spacing: 0;
+  line-height: 28px;
+`;
+
+const Span117 = styled.span`
+  ${LibrebaskervilleNormalBlack28px}
+  line-height: 55px;
+`;
+
+const NoneOfTheAboveApplyToMe = styled.div`
+  ${LibrebaskervilleNormalBlack28px}
+  min-height: 58px;
+  letter-spacing: 0;
+  line-height: 55px;
+  white-space: nowrap;
+  cursor: pointer;
 `;
 
 const TutorialButtonsContainer = styled.div`
   height: 78px;
   align-self: center;
-  margin-top: 24px;
+  margin-top: 28px;
   margin-right: 6px;
   display: flex;
   align-items: flex-start;
   min-width: 1348px;
 `;
 
-const TutorialButtons = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   align-self: flex-end;
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 1150px;

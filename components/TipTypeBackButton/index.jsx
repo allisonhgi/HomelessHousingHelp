@@ -12,7 +12,7 @@ class TipTypeBackButton extends React.Component {
         <OverlapGroup>
           <Rectangle6></Rectangle6>
           <ThisButtonWillTak>{thisButtonWillTak}</ThisButtonWillTak>
-          <Arrow3 src="/img/arrow-3@2x.svg" />
+          <Arrow3 src="/img/arrow-3-1@2x.svg" />
         </OverlapGroup>
       </TipBox>
     );

@@ -21,6 +21,7 @@ class Property1BackToHome extends React.Component {
 const TutorialButtons = styled.div`
   height: 67px;
   margin-top: 28px;
+  margin-left: 1px;
   display: flex;
   padding: 0 11px;
   align-items: center;

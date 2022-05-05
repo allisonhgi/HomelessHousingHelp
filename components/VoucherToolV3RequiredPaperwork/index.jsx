@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import Property1Variant5 from "../Property1Variant5";
 import Property1Variant3 from "../Property1Variant3";
 import Property1Default4 from "../Property1Default4";
@@ -19,17 +18,7 @@ import "./VoucherToolV3RequiredPaperwork.css";
 
 class VoucherToolV3RequiredPaperwork extends React.Component {
   render() {
-    const {
-      voucherTool,
-      line1,
-      spanText1,
-      spanText2,
-      spanText3,
-      spanText4,
-      ownerCertification,
-      clickForDetails,
-      property1AudioProps,
-    } = this.props;
+    const { voucherTool, spanText1, spanText2, spanText3, spanText4, ownerCertification, clickForDetails } = this.props;
 
     return (
       <div className="container-center-horizontal">
@@ -41,10 +30,10 @@ class VoucherToolV3RequiredPaperwork extends React.Component {
           </OverlapGroup7>
           <OverlapGroup8>
             <VoucherTool>{voucherTool}</VoucherTool>
-            <Line1 src={line1} />
+            <Line1 src="/img/line-1@1x.svg" />
           </OverlapGroup8>
           <FlexRow>
-            <Property1Audio className={property1AudioProps.className} />
+            <TutorialButtons src="/img/tutorial-buttons-30@2x.svg" />
             <TextInfo>
               <OverlapGroup5>
                 <NoDocumentsAreNee>
@@ -53,12 +42,21 @@ class VoucherToolV3RequiredPaperwork extends React.Component {
                   <span className="librebaskerville-normal-black-27px">{spanText3}</span>
                   <span className="librebaskerville-normal-black-30px">{spanText4}</span>
                 </NoDocumentsAreNee>
-                <OverlapGroup>
-                  <OwnerCertification>{ownerCertification}</OwnerCertification>
-                  <OverlapGroup1>
-                    <ClickForDetails>{clickForDetails}</ClickForDetails>
-                  </OverlapGroup1>
-                </OverlapGroup>
+                <Link to="/voucher-tool-v3-required-paperwork-oc">
+                  <OwnerCert>
+                    <OverlapGroup>
+                      <OwnerCertification>{ownerCertification}</OwnerCertification>
+                      <OverlapGroup1>
+                        <Link to="/voucher-tool-v3-required-paperwork-oc">
+                          <Rectangle49></Rectangle49>
+                        </Link>
+                        <Link to="/voucher-tool-v3-required-paperwork-oc">
+                          <ClickForDetails>{clickForDetails}</ClickForDetails>
+                        </Link>
+                      </OverlapGroup1>
+                    </OverlapGroup>
+                  </OwnerCert>
+                </Link>
                 <Property1Variant5 />
                 <Property1Variant3 />
                 <Property1Default4 />
@@ -67,10 +65,10 @@ class VoucherToolV3RequiredPaperwork extends React.Component {
           </FlexRow>
           <TutorialButtonsContainer>
             <Link to="/voucher-tool-v3-disqualifications" className="align-self-flex-end">
-              <TutorialButtons src="/img/tutorial-buttons-11@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-31@2x.svg" />
             </Link>
             <Link to="/voucher-tool-v3-next-steps">
-              <TutorialButtons1 src="/img/tutorial-buttons-10@2x.svg" />
+              <TutorialButtons2 src="/img/tutorial-buttons-29@2x.svg" />
             </Link>
           </TutorialButtonsContainer>
         </div>
@@ -119,17 +117,22 @@ const Line1 = styled.img`
 `;
 
 const FlexRow = styled.div`
-  position: relative;
-  margin-left: 44px;
+  margin-left: 43px;
   display: flex;
   align-items: flex-start;
-  min-width: 1182px;
+  min-width: 1183px;
+`;
+
+const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+  margin-top: 24px;
 `;
 
 const TextInfo = styled.div`
   ${Border1pxBlack2}
   height: 564px;
-  margin-left: 115px;
+  margin-left: 108px;
   display: flex;
   padding: 19px 34px;
   align-items: flex-end;
@@ -138,7 +141,7 @@ const TextInfo = styled.div`
 `;
 
 const OverlapGroup5 = styled.div`
-  width: 930px;
+  width: 934px;
   height: 514px;
   position: relative;
 `;
@@ -152,11 +155,19 @@ const NoDocumentsAreNee = styled.div`
   letter-spacing: 0;
 `;
 
-const OverlapGroup = styled.div`
+const OwnerCert = styled.div`
   position: absolute;
   height: 86px;
   top: 416px;
   left: 14px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 920px;
+  cursor: pointer;
+`;
+
+const OverlapGroup = styled.div`
+  height: 86px;
   display: flex;
   padding: 17px 19px;
   align-items: flex-start;
@@ -174,22 +185,33 @@ const OwnerCertification = styled.div`
 `;
 
 const OverlapGroup1 = styled.div`
+  width: 183px;
   height: 42px;
+  position: relative;
   align-self: center;
   margin-left: 372px;
-  display: flex;
-  padding: 9px 15px;
-  align-items: flex-start;
-  min-width: 183px;
+  border-radius: 12px;
+`;
+
+const Rectangle49 = styled.div`
+  position: absolute;
+  width: 183px;
+  height: 42px;
+  top: 0;
+  left: 0;
   background-color: var(--cornflower);
   border-radius: 12px;
+  cursor: pointer;
 `;
 
 const ClickForDetails = styled.div`
   ${RobotoMediumWhite21px}
+  position: absolute;
   width: 152px;
-  min-height: 23px;
+  top: 9px;
+  left: 15px;
   letter-spacing: 0;
+  cursor: pointer;
 `;
 
 const TutorialButtonsContainer = styled.div`
@@ -202,14 +224,14 @@ const TutorialButtonsContainer = styled.div`
   min-width: 1348px;
 `;
 
-const TutorialButtons = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   align-self: flex-end;
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 1150px;

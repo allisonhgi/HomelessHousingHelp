@@ -5,14 +5,14 @@ import { RobotoMediumWhite21px, RobotoMediumWhite30px } from "../../styledMixins
 
 class Property1Variant53 extends React.Component {
   render() {
-    const { proofOfIncome, className } = this.props;
+    const { proofOfIncome } = this.props;
 
     return (
-      <DocumentButton className={`document-button-3 ${className || ""}`}>
-        <ProofOfIncome className="proof-of-income-1">{proofOfIncome}</ProofOfIncome>
-        <OverlapGroup2 className="overlap-group2-6">
-          <ClickForDetails className="click-for-details-7">Click for Details</ClickForDetails>
-        </OverlapGroup2>
+      <DocumentButton>
+        <ProofOfIncome>{proofOfIncome}</ProofOfIncome>
+        <OverlapGroup>
+          <ClickForDetails>Click for Details</ClickForDetails>
+        </OverlapGroup>
       </DocumentButton>
     );
   }
@@ -28,14 +28,6 @@ const DocumentButton = styled.div`
   align-items: center;
   min-width: 916px;
   background-color: var(--midnight-blue);
-
-  &.document-button-3.document-button-4 {
-    top: 218px;
-  }
-
-  &.document-button-3.document-button-5 {
-    top: 120px;
-  }
 `;
 
 const ProofOfIncome = styled.div`
@@ -48,7 +40,7 @@ const ProofOfIncome = styled.div`
   white-space: nowrap;
 `;
 
-const OverlapGroup2 = styled.div`
+const OverlapGroup = styled.div`
   height: 42px;
   margin-left: 372px;
   display: flex;

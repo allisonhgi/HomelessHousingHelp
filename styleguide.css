@@ -4,22 +4,19 @@
   --black-2: #00000066;
   --blue-zodiac: #092649;
   --cornflower: #a3cef1;
-  --edgewater: #c2e4d4;
   --hippie-blue: #6096ba;
-  --jagged-ice: #bee9e880;
   --midnight-blue: #274c77;
   --summer-green: #8fc0a9;
   --white: #ffffff;
-  --white-2: #ffffff78;
  
   --font-size-60px: 60px;
-  --font-size-l: 27px;
-  --font-size-m: 25px;
-  --font-size-s: 23px;
-  --font-size-xl: 28px;
-  --font-size-xs: 22px;
-  --font-size-xxl: 30px;
-  --font-size-xxxl: 40px;
+  --font-size-l: 30px;
+  --font-size-m: 28px;
+  --font-size-s: 27px;
+  --font-size-xs: 25px;
+  --font-size-xxs: 23px;
+  --font-size-xxxs: 22px;
+  --font-size-xxxxs: 21px;
  
   --font-family-libre_baskerville: "Libre Baskerville", Helvetica;
   --font-family-roboto: "Roboto", Helvetica;

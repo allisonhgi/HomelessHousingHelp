@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import Property1Audio from "../Property1Audio";
 import TipTypeNextButton from "../TipTypeNextButton";
 import styled from "styled-components";
 import { Header2 } from "../../styledMixins";
@@ -11,7 +10,7 @@ import "./VoucherToolV3TutorialNextButton.css";
 
 class VoucherToolV3TutorialNextButton extends React.Component {
   render() {
-    const { voucherTool, property1AudioProps, tipTypeNextButtonProps } = this.props;
+    const { voucherTool, tipTypeNextButtonProps } = this.props;
 
     return (
       <div className="container-center-horizontal">
@@ -23,9 +22,9 @@ class VoucherToolV3TutorialNextButton extends React.Component {
           </OverlapGroup3>
           <FlexRow>
             <TutorialButtonsContainer>
-              <Property1Audio className={property1AudioProps.className} />
+              <TutorialButtons src="/img/tutorial-buttons-37@2x.svg" />
               <Link to="/voucher-tool-v3-starting-screen">
-                <TutorialButtons src="/img/tutorial-buttons-34@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-36@2x.svg" />
               </Link>
             </TutorialButtonsContainer>
             <FlexCol>
@@ -33,7 +32,7 @@ class VoucherToolV3TutorialNextButton extends React.Component {
               <OverlapGroup2>
                 <TipTypeNextButton thisButtonWillTak={tipTypeNextButtonProps.thisButtonWillTak} />
                 <Link to="/voucher-tool-v3-tutorial-back-button">
-                  <TutorialButtons1 src="/img/tutorial-buttons-33@2x.svg" />
+                  <TutorialButtons2 src="/img/tutorial-buttons-35@2x.svg" />
                 </Link>
               </OverlapGroup2>
             </FlexCol>
@@ -67,18 +66,22 @@ const FlexRow = styled.div`
 
 const TutorialButtonsContainer = styled.div`
   width: 99px;
-  position: relative;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 641px;
+  min-height: 642px;
 `;
 
 const TutorialButtons = styled.img`
+  width: 64px;
+  height: 61px;
+`;
+
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 511px;
+  margin-top: 504px;
   cursor: pointer;
 `;
 
@@ -107,7 +110,7 @@ const OverlapGroup2 = styled.div`
   margin-top: 336px;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons2 = styled.img`
   position: absolute;
   width: 99px;
   height: 77px;

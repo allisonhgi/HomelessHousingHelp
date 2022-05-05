@@ -10,16 +10,16 @@ class Property1Welcome extends React.Component {
 
     return (
       <ToolQuestionScreen>
-        <OverlapGroup2>
-          <OverlapGroup1>
+        <OverlapGroup1>
+          <OverlapGroup>
             <WelcomeThisToolI>{welcomeThisToolI}</WelcomeThisToolI>
             <ClickNextToCont>{clickNextToCont}</ClickNextToCont>
             <Tutorial1 src={tutorial1} />
-          </OverlapGroup1>
+          </OverlapGroup>
           <Link to="/voucher-tool-v3-disclaimers">
             <Skip>{skip}</Skip>
           </Link>
-        </OverlapGroup2>
+        </OverlapGroup1>
       </ToolQuestionScreen>
     );
   }
@@ -36,13 +36,13 @@ const ToolQuestionScreen = styled.div`
   border-radius: 5px;
 `;
 
-const OverlapGroup2 = styled.div`
+const OverlapGroup1 = styled.div`
   width: 985px;
   height: 525px;
   position: relative;
 `;
 
-const OverlapGroup1 = styled.div`
+const OverlapGroup = styled.div`
   ${LibrebaskervilleNormalBlack30px}
   position: absolute;
   width: 985px;
@@ -84,7 +84,7 @@ const Skip = styled.div`
   font-family: var(--font-family-roboto);
   font-weight: 500;
   color: var(--black-2);
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-l);
   letter-spacing: 0;
   cursor: pointer;
 `;

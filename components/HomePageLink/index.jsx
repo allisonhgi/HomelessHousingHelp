@@ -11,7 +11,7 @@ class HomePageLink extends React.Component {
     return (
       <Link to="/home-page-v3">
         <HomePageLink1 className={`home-page-link ${className || ""}`}>
-          <Vector className="vector-1" src="/img/vector-2@2x.svg" />
+          <Vector className="vector-1" src="/img/vector@2x.svg" />
           <HomePage className="home-page">Home Page</HomePage>
         </HomePageLink1>
       </Link>
@@ -28,7 +28,7 @@ const HomePageLink1 = styled.div`
   min-width: 191px;
   cursor: pointer;
 
-  &.home-page-link.home-page-link-2 {
+  &.home-page-link.home-page-link-1 {
     position: absolute;
     top: 62px;
     left: 949px;
@@ -36,19 +36,38 @@ const HomePageLink1 = styled.div`
     margin-bottom: unset;
   }
 
-  &.home-page-link.home-page-link-3 {
-    margin-left: 785px;
+  &.home-page-link.home-page-link-2 {
+    margin-left: 766px;
   }
 
-  &.home-page-link.home-page-link-4 {
-    margin-left: 769px;
+  &.home-page-link.home-page-link-3 {
+    height: 28px;
+    margin-bottom: 1.02px;
   }
 
   &.home-page-link.home-page-link-5 {
-    margin-left: 780px;
+    height: 26px;
+    margin-bottom: 0.98px;
+    padding: 1px 0;
   }
 
   &.home-page-link.home-page-link-6 {
+    margin-left: 766px;
+  }
+
+  &.home-page-link.home-page-link-7 {
+    margin-left: 766px;
+  }
+
+  &.home-page-link.home-page-link-8 {
+    margin-left: 766px;
+  }
+
+  &.home-page-link.home-page-link-9 {
+    margin-left: 766px;
+  }
+
+  &.home-page-link.home-page-link-10 {
     margin-left: 766px;
   }
 `;
@@ -66,6 +85,38 @@ const HomePage = styled.div`
   min-height: 25px;
   margin-left: 7px;
   letter-spacing: 0;
+`;
+
+const Vector1 = styled.img`
+  .home-page-link.home-page-link-3 & {
+    height: 24px;
+    margin-bottom: 0.21px;
+  }
+`;
+
+const HomePage1 = styled.div`
+  ${RobotoNormalSummerGreen25px}
+
+  .home-page-link.home-page-link-3  & {
+    min-height: 26px;
+  }
+`;
+
+const Vector2 = styled.img`
+  .home-page-link.home-page-link-5 & {
+    width: 32px;
+    margin-bottom: 0.2px;
+  }
+`;
+
+const HomePage2 = styled.div`
+  ${RobotoNormalSummerGreen25px}
+
+  .home-page-link.home-page-link-5  & {
+    min-height: 24px;
+    align-self: flex-end;
+    margin-left: 6px;
+  }
 `;
 
 export default HomePageLink;

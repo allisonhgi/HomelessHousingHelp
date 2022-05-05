@@ -9,70 +9,82 @@ import {
 
 class ResourceAddedOrNotNotAdded2 extends React.Component {
   render() {
-    const { affordableHousing, theLargestAndMost, linkToResource } = this.props;
+    const { housingChoiceVouchers, spanText1, spanText2, linkToResource } = this.props;
 
     return (
-      <ResourceSectionHousing>
-        <AffordableHousing>{affordableHousing}</AffordableHousing>
-        <TheLargestAndMost>{theLargestAndMost}</TheLargestAndMost>
-        <OverlapGroup>
-          <a href="https://www.affordablehousing.com/" target="_blank">
+      <ResourceSection>
+        <OverlapGroup6>
+          <a href="https://www.seattlehousing.org/housing/housing-choice-vouchers" target="_blank">
+            <Rectangle26></Rectangle26>
+          </a>
+          <HousingChoiceVouchers>{housingChoiceVouchers}</HousingChoiceVouchers>
+          <TheHousingChoiceV>
+            <span className="librebaskerville-normal-white-22px">{spanText1}</span>
+            <span className="librebaskerville-normal-white-25px">{spanText2}</span>
+          </TheHousingChoiceV>
+          <a href="https://www.seattlehousing.org/housing/housing-choice-vouchers" target="_blank">
             <Rectangle27></Rectangle27>
           </a>
-          <a href="https://www.affordablehousing.com/" target="_blank">
+          <a href="https://www.seattlehousing.org/housing/housing-choice-vouchers" target="_blank">
             <LinkToResource>{linkToResource}</LinkToResource>
           </a>
-        </OverlapGroup>
-      </ResourceSectionHousing>
+        </OverlapGroup6>
+      </ResourceSection>
     );
   }
 }
 
-const ResourceSectionHousing = styled.div`
-  width: 1293px;
-  margin-top: 9px;
-  margin-right: 1px;
+const ResourceSection = styled.div`
+  position: absolute;
+  height: 242px;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  padding: 12px 21px;
   align-items: flex-start;
-  min-height: 208px;
-  background-color: var(--midnight-blue);
+  min-width: 1293px;
+`;
+
+const OverlapGroup6 = styled.div`
+  width: 1293px;
+  height: 242px;
+  position: relative;
   border-radius: 2px;
 `;
 
-const AffordableHousing = styled.div`
+const Rectangle26 = styled.div`
+  position: absolute;
+  width: 1293px;
+  height: 242px;
+  top: 0;
+  left: 0;
+  background-color: var(--midnight-blue);
+  border-radius: 2px;
+  cursor: pointer;
+`;
+
+const HousingChoiceVouchers = styled.div`
   ${RobotoMediumWhite35px}
-  width: 349px;
-  min-height: 40px;
+  position: absolute;
+  top: 14px;
+  left: 21px;
   letter-spacing: 0;
 `;
 
-const TheLargestAndMost = styled.div`
+const TheHousingChoiceV = styled.div`
   ${LibrebaskervilleNormalWhite22px}
-  width: 1247px;
-  min-height: 63px;
-  margin-top: 20px;
+  position: absolute;
+  width: 1217px;
+  top: 84px;
+  left: 21px;
   letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const OverlapGroup = styled.div`
-  width: 186px;
-  height: 42px;
-  position: relative;
-  align-self: flex-end;
-  margin-top: 10px;
-  margin-right: 3.52px;
-  border-radius: 8.4px;
 `;
 
 const Rectangle27 = styled.div`
   position: absolute;
   width: 186px;
   height: 42px;
-  top: 0;
-  left: 0;
+  top: 178px;
+  left: 1081px;
   background-color: var(--white);
   border-radius: 8.4px;
   box-shadow: 2.5199999809265137px 2.5199999809265137px 3.3600001335144043px #00000080;
@@ -83,8 +95,8 @@ const LinkToResource = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 10px;
-  left: 14px;
+  top: 188px;
+  left: 1095px;
   letter-spacing: 0;
   cursor: pointer;
 `;

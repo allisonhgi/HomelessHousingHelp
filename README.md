@@ -1,15 +1,13 @@
 ## HomelessHousingHelp
 Capstone 2022
 
-# We will be updating this more Spring quarter, but for Winter quarter our MVP is on figma:
-https://www.figma.com/proto/fNmuCptdwD7pzYZcBjvICm/INFO-Capstone-2022---Homeless-Housing-Help?node-id=177%3A382&scaling=scale-down&page-id=2%3A3&starting-point-node-id=177%3A382
+# Our Project:
+As Seattle’s homeless population grows, countless resources attempt to combat this problem. The emergency housing voucher is one program that was implemented to help homeless people afford rent, but a year after distribution, less than half of them have been awarded in Seattle. Many homeless people face the barrier of low tech literacy, so our website is a design-sensitive solution that fills this gap, empowering the homeless community to get the resources they need. We aim to increase voucher applications so that 100% of Seattle vouchers are utilized to connect people with stable housing that could change their lives.
 
-What the code includes: rough pages based on our figma, not everything is clickable yet
+Hosted Site: https://housing-voucher-help.netlify.app 
 
-How to build and deploy the code: run on local server with npm start until we deploy it
+# Our Group:
 
-How to contribute to the code: pull to local server and push any changes back to main branch
+Members: Nate Nguyen, Alex Gherman, Allison Gibbons, Waheeda Hakim
 
-Contact information for group: nathan.nguyen425@gmail.com, allig67@uw.edu, gherma@uw.edu, waheedahakim99@gmail.com
-
-Spring qtr update: https://housing-voucher-help.netlify.app 
+Sponsor: Frank Martinez (will be passed off to him after Spring Quarter 2022)
