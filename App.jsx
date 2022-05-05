@@ -46,7 +46,7 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path="/landing-page">
+          <Route path="/:path(|landing-page)">
             <LandingPage {...landingPageData} />
           </Route>
           <Route path="/voucher-tool-v3-rap">
@@ -55,7 +55,7 @@ class App extends React.Component {
           <Route path="/resource-matching">
             <ResourceMatching {...resourceMatchingData} />
           </Route>
-          <Route path="/:path(|home-page-v3)">
+          <Route path="/home-page-v3">
             <HomePageV3 {...homePageV3Data} />
           </Route>
           <Route path="/voucher-tool-v3-download-info-1">

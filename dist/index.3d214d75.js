@@ -22730,7 +22730,7 @@ class App extends _reactDefault.default.Component {
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Switch, {
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "/landing-page",
+                        path: "/:path(|landing-page)",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_landingPageDefault.default, {
                             ...landingPageData
                         }, void 0, false, {
@@ -22772,7 +22772,7 @@ class App extends _reactDefault.default.Component {
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "/:path(|home-page-v3)",
+                        path: "/home-page-v3",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_homePageV3Default.default, {
                             ...homePageV3Data
                         }, void 0, false, {
