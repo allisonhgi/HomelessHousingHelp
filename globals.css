@@ -19,15 +19,15 @@
   zoom: 100%;
 }
 
-/*@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .container-center-horizontal {zoom: 88%;}
 }
 
-@media (max-width: 1024) {
+/*@media screen and (max-width: 1024) {
   .container-center-horizontal {zoom: 80%;}
 }
 
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 992px) {
   .container-center-horizontal {zoom: 73%;}
 }
 
@@ -37,7 +37,7 @@
 
 /*@media screen and (max-width: 576px) {
   .container-center-horizontal {zoom: 50%;}
-}/*
+}*/
 
 .container-center-horizontal > * {
   flex-shrink: 0;
