@@ -243,7 +243,7 @@ const LandingGraphic1 = styled.img`
 `;
 
 const OverlapGroup6 = styled.div`
-  width: 1894px;
+  width: 1650px;
   height: 1865px;
   position: relative;
   margin-top: 76px;
@@ -351,7 +351,7 @@ const WhyHomelessRelief = styled.div`
 
 const OverlapGroup4 = styled.div`
   ${LibrebaskervilleNormalBlack23px}
-  width: 1826px;
+  width: 1600px;
   height: 1659px;
   position: relative;
   margin-top: 34px;

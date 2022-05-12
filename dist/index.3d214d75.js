@@ -29084,7 +29084,7 @@ const LandingGraphic1 = _styledComponentsDefault.default.img`
 `;
 _c10 = LandingGraphic1;
 const OverlapGroup6 = _styledComponentsDefault.default.div`
-  width: 1894px;
+  width: 1650px;
   height: 1865px;
   position: relative;
   margin-top: 76px;
@@ -29192,7 +29192,7 @@ const WhyHomelessRelief = _styledComponentsDefault.default.div`
 _c22 = WhyHomelessRelief;
 const OverlapGroup4 = _styledComponentsDefault.default.div`
   ${_styledMixins.LibrebaskervilleNormalBlack23px}
-  width: 1826px;
+  width: 1600px;
   height: 1659px;
   position: relative;
   margin-top: 34px;
