@@ -21,6 +21,30 @@
   }
 }
 
+@media screen and (max-width: 1024) {
+  .container-center-horizontal {
+    zoom: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-center-horizontal {
+    zoom: 73%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-center-horizontal {
+    zoom: 73%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-center-horizontal {
+    zoom: 50%;
+  }
+}
+
 .container-center-horizontal > * {
   pointer-events: auto;
   flex-shrink: 0;
