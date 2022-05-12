@@ -14,12 +14,13 @@ class DocumentButtonVariant73 extends React.Component {
     const { ifYouKnowYourSoc, socialSecurityNumber, closeDetails, ssnHelp } = this.props;
 
     return (
-      <Link to="/voucher-tool-v3-required-paperwork">
         <DocumentButtonVariant7>
           <OverlapGroup3>
             <OverlapGroupContainer>
               <OverlapGroup>
-                <IfYouKnowYourSoc>{ifYouKnowYourSoc}</IfYouKnowYourSoc>
+                <a href="https://www.ssa.gov/ssnumber/" target="_blank">
+                  <IfYouKnowYourSoc>{ifYouKnowYourSoc}</IfYouKnowYourSoc>
+                </a>
                 <SocialSecurityNumber>{socialSecurityNumber}</SocialSecurityNumber>
               </OverlapGroup>
               <OverlapGroup1>
@@ -34,6 +35,9 @@ class DocumentButtonVariant73 extends React.Component {
             </OverlapGroupContainer>
             <OverlapGroup2>
               <a href="https://www.ssa.gov/ssnumber/" target="_blank">
+                <Rectangle351></Rectangle351>
+              </a>
+              <a href="https://www.ssa.gov/ssnumber/" target="_blank">
                 <SSNHelp>{ssnHelp}</SSNHelp>
               </a>
               <a href="https://www.ssa.gov/ssnumber/" target="_blank">
@@ -42,7 +46,6 @@ class DocumentButtonVariant73 extends React.Component {
             </OverlapGroup2>
           </OverlapGroup3>
         </DocumentButtonVariant7>
-      </Link>
     );
   }
 }
@@ -50,7 +53,7 @@ class DocumentButtonVariant73 extends React.Component {
 const DocumentButtonVariant7 = styled.div`
   position: absolute;
   height: 86px;
-  top: 120px;
+  top: 121px;
   left: 14px;
   display: flex;
   justify-content: center;
@@ -64,7 +67,7 @@ const OverlapGroup3 = styled.div`
   margin-bottom: -114px;
   display: flex;
   flex-direction: column;
-  padding: 19px 0;
+  padding: 18px 0;
   align-items: flex-end;
   min-height: 201px;
   background-image: url(/img/rectangle-43-2@1x.svg);
@@ -91,6 +94,7 @@ const IfYouKnowYourSoc = styled.div`
   top: 46px;
   left: 0;
   letter-spacing: 0;
+  cursor: pointer;
 `;
 
 const SocialSecurityNumber = styled.div`
@@ -108,7 +112,7 @@ const OverlapGroup1 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
-  margin-top: 4px;
+  margin-top: 5px;
   border-radius: 12px;
 `;
 
@@ -127,7 +131,7 @@ const CloseDetails = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 133px;
-  top: 9px;
+  top: 8px;
   left: 40px;
   letter-spacing: 0;
   cursor: pointer;
@@ -145,17 +149,27 @@ const OverlapGroup2 = styled.div`
   width: 146px;
   height: 33px;
   position: relative;
-  margin-top: 16px;
+  margin-top: 17px;
   margin-right: 71px;
+  border-radius: 10px;
+`;
+
+const Rectangle351 = styled.div`
+  position: absolute;
+  width: 146px;
+  height: 33px;
+  top: 0;
+  left: 0;
   background-color: var(--blue-zodiac);
   border-radius: 10px;
+  cursor: pointer;
 `;
 
 const SSNHelp = styled.div`
   ${RobotoMediumWhite20px}
   position: absolute;
   width: 120px;
-  top: 6px;
+  top: 5px;
   left: 18px;
   letter-spacing: 0;
   cursor: pointer;

@@ -25,6 +25,9 @@ class VoucherToolV3RequiredPaperworkSSN extends React.Component {
       spanText4,
       ownerCertification,
       clickForDetails,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
       documentButtonVariant73Props,
     } = this.props;
 
@@ -32,16 +35,15 @@ class VoucherToolV3RequiredPaperworkSSN extends React.Component {
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-required-paperwork-ssn screen">
           <OverlapGroup6>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup6>
           <OverlapGroup7>
             <VoucherTool>{voucherTool}</VoucherTool>
             <Line1 src="/img/line-1@1x.svg" />
           </OverlapGroup7>
-          <FlexRow>
-            <TutorialButtons src="/img/tutorial-buttons-45@2x.svg" />
+          <Frame1>
             <TextInfo>
               <OverlapGroup4>
                 <NoDocumentsAreNee>
@@ -69,18 +71,18 @@ class VoucherToolV3RequiredPaperworkSSN extends React.Component {
                 <DocumentButtonVariant73
                   ifYouKnowYourSoc={documentButtonVariant73Props.ifYouKnowYourSoc}
                   socialSecurityNumber={documentButtonVariant73Props.socialSecurityNumber}
-                  closeDetails={documentButtonVariant73Props.closeDetails}
+                  closeDetails={documentButtonVariant73Props.closeDetails}  
                   ssnHelp={documentButtonVariant73Props.ssnHelp}
                 />
               </OverlapGroup4>
             </TextInfo>
-          </FlexRow>
+          </Frame1>
           <TutorialButtonsContainer>
             <Link to="/voucher-tool-v3-disqualifications" className="align-self-flex-end">
-              <TutorialButtons1 src="/img/tutorial-buttons-46@2x.svg" />
+              <TutorialButtons src="/img/tutorial-buttons-46@2x.svg" />
             </Link>
             <Link to="/voucher-tool-v3-next-steps">
-              <TutorialButtons2 src="/img/tutorial-buttons-44@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-44@2x.svg" />
             </Link>
           </TutorialButtonsContainer>
         </div>
@@ -106,7 +108,7 @@ const OverlapGroup7 = styled.div`
   height: 111px;
   position: relative;
   align-self: flex-end;
-  margin-top: 63px;
+  margin-top: 62px;
   margin-right: -5px;
 `;
 
@@ -128,25 +130,19 @@ const Line1 = styled.img`
   left: 0;
 `;
 
-const FlexRow = styled.div`
-  margin-left: 43px;
+const Frame1 = styled.div`
+  margin-top: 1px;
+  margin-left: 1px;
   display: flex;
   align-items: flex-start;
-  min-width: 1183px;
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 24px;
+  min-width: 1011px;
 `;
 
 const TextInfo = styled.div`
   ${Border1pxBlack2}
   height: 564px;
-  margin-left: 108px;
   display: flex;
-  padding: 19px 34px;
+  padding: 20px 34px;
   align-items: flex-end;
   min-width: 1011px;
   background-color: var(--white);
@@ -170,7 +166,7 @@ const NoDocumentsAreNee = styled.div`
 const OwnerCert = styled.div`
   position: absolute;
   height: 86px;
-  top: 416px;
+  top: 417px;
   left: 14px;
   display: flex;
   align-items: flex-start;
@@ -228,7 +224,6 @@ const ClickForDetails = styled.div`
 
 const TutorialButtonsContainer = styled.div`
   height: 78px;
-  align-self: center;
   margin-top: 24px;
   margin-right: 6px;
   display: flex;
@@ -236,14 +231,14 @@ const TutorialButtonsContainer = styled.div`
   min-width: 1348px;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons = styled.img`
   width: 99px;
   height: 77px;
   align-self: flex-end;
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 1150px;

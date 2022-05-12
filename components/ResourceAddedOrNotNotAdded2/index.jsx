@@ -65,7 +65,7 @@ const Rectangle26 = styled.div`
 const HousingChoiceVouchers = styled.div`
   ${RobotoMediumWhite35px}
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -74,7 +74,7 @@ const TheHousingChoiceV = styled.div`
   ${LibrebaskervilleNormalWhite22px}
   position: absolute;
   width: 1217px;
-  top: 84px;
+  top: 83px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -95,7 +95,7 @@ const LinkToResource = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 188px;
+  top: 187px;
   left: 1095px;
   letter-spacing: 0;
   cursor: pointer;

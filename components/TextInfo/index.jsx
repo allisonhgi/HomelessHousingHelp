@@ -22,7 +22,7 @@ const TextInfo1 = styled.div`
   top: 0;
   left: 0;
   display: flex;
-  padding: 1px 58px;
+  padding: 2px 58px;
   justify-content: flex-end;
   align-items: flex-end;
   min-width: 1011px;

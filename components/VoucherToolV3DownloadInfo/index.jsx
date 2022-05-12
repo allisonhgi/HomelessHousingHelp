@@ -27,9 +27,8 @@ class VoucherToolV3DownloadInfo extends React.Component {
         <div className="voucher-tool-v3-download-info-1 screen">
           <OverlapGroup2>
             <VoucherTool>{voucherTool}</VoucherTool>
-            <TutorialButtons src="/img/tutorial-buttons-3@2x.svg" />
-            <TutorialButtons1 src="/img/tutorial-buttons-4@2x.svg" />
-            <TutorialButtons2 src="/img/tutorial-buttons-5@2x.svg" />
+            <TutorialButtons src="/img/tutorial-buttons-4@2x.svg" />
+            <TutorialButtons1 src="/img/tutorial-buttons-5@2x.svg" />
             <OverlapGroup>
               <TextInfo>{textInfoProps.children}</TextInfo>
               <IconMobile src="/img/ic-outline-phone-iphone@2x.svg" />
@@ -64,7 +63,7 @@ const VoucherTool = styled.div`
   ${Header2}
   position: absolute;
   width: 405px;
-  top: 215px;
+  top: 214px;
   left: 517px;
   font-weight: 500;
   color: var(--black);
@@ -72,21 +71,13 @@ const VoucherTool = styled.div`
 
 const TutorialButtons = styled.img`
   position: absolute;
-  width: 64px;
-  height: 61px;
-  top: 350px;
-  left: 43px;
-`;
-
-const TutorialButtons1 = styled.img`
-  position: absolute;
   width: 99px;
   height: 77px;
   top: 915px;
   left: 43px;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   position: absolute;
   width: 236px;
   height: 77px;
@@ -132,7 +123,7 @@ const Rectangle35 = styled.div`
 const GetSummaryViaTextOrEmail = styled.div`
   position: absolute;
   width: 152px;
-  top: 421px;
+  top: 420px;
   left: 280px;
   text-align: center;
   letter-spacing: 0;
@@ -151,7 +142,7 @@ const Rectangle36 = styled.div`
 const DownloadPDFOfSummary = styled.div`
   position: absolute;
   width: 152px;
-  top: 421px;
+  top: 420px;
   left: 557px;
   text-align: center;
   letter-spacing: 0;

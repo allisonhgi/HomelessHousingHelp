@@ -10,15 +10,15 @@ import "./VoucherToolV3TutorialAudioButton.css";
 
 class VoucherToolV3TutorialAudioButton extends React.Component {
   render() {
-    const { voucherTool, tipTypeAudioButtonProps } = this.props;
+    const { voucherTool, logoProps, homePageLinkProps, moreResourcesProps, tipTypeAudioButtonProps } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-tutorial-audio-button screen">
           <OverlapGroup2>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
           <FlexRow>
             <FlexCol>

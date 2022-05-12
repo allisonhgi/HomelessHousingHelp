@@ -32,11 +32,11 @@ class ResourceAddedOrNotNotAdded extends React.Component {
 
 const ResourceSectionHousing = styled.div`
   width: 1293px;
-  margin-top: 9px;
+  margin-top: 10px;
   margin-right: 1px;
   display: flex;
   flex-direction: column;
-  padding: 12px 21px;
+  padding: 11px 21px;
   align-items: flex-start;
   min-height: 208px;
   background-color: var(--midnight-blue);
@@ -65,7 +65,7 @@ const OverlapGroup = styled.div`
   height: 42px;
   position: relative;
   align-self: flex-end;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-right: 3.52px;
   border-radius: 8.4px;
 `;
@@ -86,7 +86,7 @@ const LinkToResource = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 10px;
+  top: 9px;
   left: 14px;
   letter-spacing: 0;
   cursor: pointer;

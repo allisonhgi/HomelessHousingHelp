@@ -76,19 +76,19 @@ export const LibrebaskervilleNormalWhite22px = css`
   font-style: normal;
 `;
 
-export const RobotoMediumWhite35px = css`
-  color: var(--white);
-  font-family: var(--font-family-roboto);
-  font-size: 35px;
-  font-weight: 500;
-  font-style: normal;
-`;
-
 export const LibrebaskervilleNormalBlack23px = css`
   color: var(--black);
   font-family: var(--font-family-libre_baskerville);
   font-size: var(--font-size-xxs);
   font-weight: 400;
+  font-style: normal;
+`;
+
+export const RobotoMediumWhite35px = css`
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 35px;
+  font-weight: 500;
   font-style: normal;
 `;
 
@@ -124,14 +124,6 @@ export const RobotoMediumBlack50px = css`
   font-style: normal;
 `;
 
-export const LibrebaskervilleNormalWhite25px = css`
-  color: var(--white);
-  font-family: var(--font-family-libre_baskerville);
-  font-size: var(--font-size-xs);
-  font-weight: 400;
-  font-style: normal;
-`;
-
 export const LibrebaskervilleNormalBlack25px = css`
   color: var(--black);
   font-family: var(--font-family-libre_baskerville);
@@ -140,10 +132,10 @@ export const LibrebaskervilleNormalBlack25px = css`
   font-style: normal;
 `;
 
-export const LibrebaskervilleNormalBlack20px = css`
-  color: var(--black);
+export const LibrebaskervilleNormalWhite25px = css`
+  color: var(--white);
   font-family: var(--font-family-libre_baskerville);
-  font-size: 20px;
+  font-size: var(--font-size-xs);
   font-weight: 400;
   font-style: normal;
 `;
@@ -156,6 +148,14 @@ export const LibrebaskervilleBoldBlack30px = css`
   font-style: normal;
 `;
 
+export const LibrebaskervilleNormalBlack20px = css`
+  color: var(--black);
+  font-family: var(--font-family-libre_baskerville);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+`;
+
 export const LibrebaskervilleBoldBlack27px = css`
   color: var(--black);
   font-family: var(--font-family-libre_baskerville);
@@ -164,10 +164,18 @@ export const LibrebaskervilleBoldBlack27px = css`
   font-style: normal;
 `;
 
-export const LibrebaskervilleNormalWhite20px = css`
+export const RobotoMediumWhite20px = css`
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+`;
+
+export const LibrebaskervilleNormalWhite195px = css`
   color: var(--white);
   font-family: var(--font-family-libre_baskerville);
-  font-size: 20px;
+  font-size: 19.5px;
   font-weight: 400;
   font-style: normal;
 `;
@@ -212,22 +220,6 @@ export const RobotoMediumBlack45px = css`
   font-style: normal;
 `;
 
-export const RobotoMediumWhite20px = css`
-  color: var(--white);
-  font-family: var(--font-family-roboto);
-  font-size: 20px;
-  font-weight: 500;
-  font-style: normal;
-`;
-
-export const RobotoMediumBlack90px = css`
-  color: var(--black);
-  font-family: var(--font-family-roboto);
-  font-size: 90px;
-  font-weight: 500;
-  font-style: normal;
-`;
-
 export const LibrebaskervilleNormalBlack29px = css`
   color: var(--black);
   font-family: var(--font-family-libre_baskerville);
@@ -241,6 +233,14 @@ export const LibrebaskervilleBoldBlack25px = css`
   font-family: var(--font-family-libre_baskerville);
   font-size: var(--font-size-xs);
   font-weight: 700;
+  font-style: normal;
+`;
+
+export const LibrebaskervilleNormalWhite20px = css`
+  color: var(--white);
+  font-family: var(--font-family-libre_baskerville);
+  font-size: 20px;
+  font-weight: 400;
   font-style: normal;
 `;
 

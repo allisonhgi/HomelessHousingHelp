@@ -1,29 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../Logo";
+import HomePageLink from "../HomePageLink";
+import MoreResources from "../MoreResources";
 import styled from "styled-components";
 import {
   RobotoMediumBlack50px,
   LibrebaskervilleNormalBlack20px,
-  RobotoMediumBlack90px,
   LibrebaskervilleNormalBlack23px,
+  Header2,
 } from "../../styledMixins";
 import "./LandingPage.css";
 
 class LandingPage extends React.Component {
   render() {
     const {
-      simplyifyingHousing,
-      ourTeam,
-      nate1,
+      resourcesForHomelessRelief,
       housingVoucherHelp,
-      getHousingResources,
-      ourProject,
-      asSeattlesHomeles,
-      spanText1,
-      spanText2,
-      waheeda1,
+      howWereSimplifyin,
+      landinggraphic1,
       whatWeDid,
       withTheGoalOfInc,
+      weAlsoIncludedAdd,
+      asSeattlesHomeles,
+      matchingdemo1,
+      vouchertooldemo1,
+      moreresourcesdemo1,
+      whyHomelessRelief,
+      projectStatus,
+      ourTargetAudience,
+      bySimplifyingAnOt,
+      ourUsers,
+      theBenefit,
+      ourTeam,
+      nate1,
+      alex1,
+      me1,
+      waheeda1,
+      weWillBePassingT,
+      spanText1,
+      spanText2,
       spanText3,
       spanText4,
       spanText5,
@@ -31,100 +47,114 @@ class LandingPage extends React.Component {
       spanText7,
       spanText8,
       spanText9,
-      alex1,
-      me1,
-      vouchertooldemo1,
-      weAlsoIncludedAdd,
-      matchingdemo1,
-      moreresourcesdemo1,
-      projectStatus,
-      ourTargetAudience,
-      bySimplifyingAnOt,
-      weWillBePassingT,
-      ourUsers,
-      theBenefit,
+      exploreOurServices,
+      text,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="landing-page screen">
-          <OverlapGroup5>
-            <OverlapGroup>
-              <Ellipse1></Ellipse1>
-              <SimplyifyingHousing>{simplyifyingHousing}</SimplyifyingHousing>
-              <OurTeam>{ourTeam}</OurTeam>
-              <Nate1 src={nate1} />
-              <HousingVoucherHelp>{housingVoucherHelp}</HousingVoucherHelp>
-            </OverlapGroup>
-            <Link to="/home-page-v3">
-              <TutorialButtons>
-                <GetHousingResources>{getHousingResources}</GetHousingResources>
-              </TutorialButtons>
-            </Link>
-            <OverlapGroup1>
-              <Polygon1 src="/img/polygon-1@1x.svg" />
-              <OurProject>{ourProject}</OurProject>
-              <AsSeattlesHomeles>{asSeattlesHomeles}</AsSeattlesHomeles>
-              <WaheedaHakimDataAnalyst>
+          <OverlapGroupContainer>
+            <OverlapGroup5>
+              <OverlapGroup2>
+                <Ellipse1></Ellipse1>
+                <ResourcesForHomelessRelief>{resourcesForHomelessRelief}</ResourcesForHomelessRelief>
+                <HousingVoucherHelp>{housingVoucherHelp}</HousingVoucherHelp>
+                <NavBar src="/img/nav-bar@1x.svg" />
+                <HowWereSimplifyin>{howWereSimplifyin}</HowWereSimplifyin>
+                <Arrow2 src="/img/arrow-2@2x.svg" />
+                <Rectangle67></Rectangle67>
+                <Logo />
+                <HomePageLink />
+                <MoreResources />
+              </OverlapGroup2>
+              <LandingGraphic1 src={landinggraphic1} />
+            </OverlapGroup5>
+            <OverlapGroup6>
+              <OverlapGroup3>
+                <Polygon1 src="/img/polygon-1-1@1x.svg" />
+                <Polygon3 src="/img/polygon-3@1x.svg" />
+                <WhatWeDid>{whatWeDid}</WhatWeDid>
+                <WithTheGoalOfInc>{withTheGoalOfInc}</WithTheGoalOfInc>
+                <WeAlsoIncludedAdd>{weAlsoIncludedAdd}</WeAlsoIncludedAdd>
+                <AsSeattlesHomeles>{asSeattlesHomeles}</AsSeattlesHomeles>
+                <MatchingDemo1 src={matchingdemo1} />
+                <VoucherToolDemo1 src={vouchertooldemo1} />
+                <MoreResourcesDemo1 src={moreresourcesdemo1} />
+              </OverlapGroup3>
+              <WhyHomelessRelief>{whyHomelessRelief}</WhyHomelessRelief>
+            </OverlapGroup6>
+            <OverlapGroup4>
+              <OverlapGroup1>
+                <Polygon11 src="/img/polygon-1@1x.svg" />
+                <ProjectStatus>{projectStatus}</ProjectStatus>
+                <OurTargetAudience>{ourTargetAudience}</OurTargetAudience>
+                <BySimplifyingAnOt>{bySimplifyingAnOt}</BySimplifyingAnOt>
+                <OurUsers>{ourUsers}</OurUsers>
+                <TheBenefit>{theBenefit}</TheBenefit>
+                <Ellipse11></Ellipse11>
+                <OurTeam>{ourTeam}</OurTeam>
+                <Nate1 src={nate1} />
+                <Alex1 src={alex1} />
+                <Me1 src={me1} />
+                <Waheeda1 src={waheeda1} />
+              </OverlapGroup1>
+              <WeWillBePassingT>{weWillBePassingT}</WeWillBePassingT>
+              <NateNguyenProjectManager>
                 <span className="librebaskerville-normal-black-23px">{spanText1}</span>
                 <span className="librebaskerville-normal-black-20px">{spanText2}</span>
+              </NateNguyenProjectManager>
+              <WaheedaHakimDataAnalyst>
+                <span className="librebaskerville-normal-black-23px">{spanText3}</span>
+                <span className="librebaskerville-normal-black-20px">{spanText4}</span>
               </WaheedaHakimDataAnalyst>
-              <Waheeda1 src={waheeda1} />
-            </OverlapGroup1>
-            <OverlapGroup4>
-              <Polygon3 src="/img/polygon-3@1x.svg" />
-              <WhatWeDid>{whatWeDid}</WhatWeDid>
-              <WithTheGoalOfInc>{withTheGoalOfInc}</WithTheGoalOfInc>
+              <Name>
+                <span className="librebaskerville-normal-black-23px">{spanText5}</span>
+                <span className="librebaskerville-normal-black-20px">{spanText6}</span>
+              </Name>
+              <Name1>
+                <Span03>{spanText7}</Span03>
+                <Span13>{spanText8}</Span13>
+                <Span2>{spanText9}</Span2>
+              </Name1>
+              <Link to="/home-page-v3">
+                <VoucherButtonV3>
+                  <VoucherButtonV2>
+                    <ExploreOurServices>{exploreOurServices}</ExploreOurServices>
+                    <Arrow1 src="/img/arrow-1@2x.svg" />
+                  </VoucherButtonV2>
+                </VoucherButtonV3>
+              </Link>
             </OverlapGroup4>
-            <NateNguyenProjectManager>
-              <span className="librebaskerville-normal-black-23px">{spanText3}</span>
-              <span className="librebaskerville-normal-black-20px">{spanText4}</span>
-            </NateNguyenProjectManager>
-            <Name>
-              <span className="librebaskerville-normal-black-23px">{spanText5}</span>
-              <span className="librebaskerville-normal-black-20px">{spanText6}</span>
-            </Name>
-            <Name1>
-              <Span03>{spanText7}</Span03>
-              <Span13>{spanText8}</Span13>
-              <Span2>{spanText9}</Span2>
-            </Name1>
-            <Alex1 src={alex1} />
-            <Me1 src={me1} />
-            <VoucherToolDemo1 src={vouchertooldemo1} />
-          </OverlapGroup5>
-          <OverlapGroup3>
-            <WeAlsoIncludedAdd>{weAlsoIncludedAdd}</WeAlsoIncludedAdd>
-            <MatchingDemo1 src={matchingdemo1} />
-            <MoreResourcesDemo1 src={moreresourcesdemo1} />
-          </OverlapGroup3>
-          <OverlapGroup2>
-            <ProjectStatus>{projectStatus}</ProjectStatus>
-            <OurTargetAudience>{ourTargetAudience}</OurTargetAudience>
-            <BySimplifyingAnOt>{bySimplifyingAnOt}</BySimplifyingAnOt>
-            <WeWillBePassingT>{weWillBePassingT}</WeWillBePassingT>
-            <OurUsers>{ourUsers}</OurUsers>
-            <TheBenefit>{theBenefit}</TheBenefit>
-            <Ellipse11></Ellipse11>
-          </OverlapGroup2>
+          </OverlapGroupContainer>
+          <Text>{text}</Text>
         </div>
       </div>
     );
   }
 }
 
-const OverlapGroup5 = styled.div`
-  width: 2021px;
-  height: 2403px;
-  position: relative;
-  margin-top: 19px;
-  margin-right: -232.13px;
+const OverlapGroupContainer = styled.div`
+  width: 2042px;
+  margin-left: -349px;
+  margin-top: -7.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 4580px;
 `;
 
-const OverlapGroup = styled.div`
+const OverlapGroup5 = styled.div`
+  width: 1789px;
+  height: 946px;
+  position: relative;
+  align-self: flex-start;
+`;
+
+const OverlapGroup2 = styled.div`
   position: absolute;
-  width: 1715px;
-  height: 954px;
+  width: 1789px;
+  height: 946px;
   top: 0;
   left: 0;
 `;
@@ -133,148 +163,114 @@ const Ellipse1 = styled.div`
   position: absolute;
   width: 818px;
   height: 818px;
-  top: 0;
+  top: 128px;
   left: 0;
   background-color: #8fc0a924;
   border-radius: 409px;
 `;
 
-const SimplyifyingHousing = styled.div`
+const ResourcesForHomelessRelief = styled.div`
+  ${Header2}
   position: absolute;
-  width: 1157px;
-  top: 385px;
-  left: 491px;
-  transform: rotate(-0.05deg);
-  font-family: var(--font-family-libre_baskerville);
-  font-weight: 400;
+  width: 651px;
+  top: 476px;
+  left: 425px;
+  font-weight: 500;
+  color: var(--amazon);
+  line-height: 80px;
+`;
+
+const HousingVoucherHelp = styled.div`
+  position: absolute;
+  width: 579px;
+  top: 266px;
+  left: 427px;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
   color: var(--black);
-  font-size: 35px;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: 100px;
+`;
+
+const NavBar = styled.img`
+  position: absolute;
+  width: 1440px;
+  height: 149px;
+  top: 0;
+  left: 349px;
+`;
+
+const HowWereSimplifyin = styled.div`
+  position: absolute;
+  width: 777px;
+  top: 768px;
+  left: 680px;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: var(--black);
+  font-size: 40px;
   text-align: center;
   letter-spacing: 0;
-`;
-
-const OurTeam = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 338px;
-  top: 804px;
-  left: 422px;
-  letter-spacing: 0;
-`;
-
-const Nate1 = styled.img`
-  position: absolute;
-  width: 152px;
-  height: 150px;
-  top: 804px;
-  left: 804px;
-  object-fit: cover;
-`;
-
-const HousingVoucherHelp = styled.h1`
-  ${RobotoMediumBlack90px}
-  position: absolute;
-  width: 1293px;
-  top: 54px;
-  left: 422px;
-  text-align: center;
-  letter-spacing: 0;
-`;
-
-const TutorialButtons = styled.div`
-  position: absolute;
-  height: 69px;
-  top: 525px;
-  left: 864px;
-  display: flex;
-  padding: 14.4px 37px;
-  align-items: flex-end;
-  min-width: 410px;
-  background-color: var(--white);
-  border-radius: 10.49px;
-  border: 2px solid var(--amazon);
-  box-shadow: 5.465005874633789px 5.465005874633789px 7.2866740226745605px #0000000d;
   cursor: pointer;
 `;
 
-const GetHousingResources = styled.div`
-  width: 336px;
-  min-height: 39px;
-  font-family: var(--font-family-roboto);
-  font-weight: 500;
-  color: var(--amazon);
-  font-size: 31.5px;
-  letter-spacing: 0;
+const Arrow2 = styled.img`
+  position: absolute;
+  width: 22px;
+  height: 30px;
+  top: 824px;
+  left: 1292px;
 `;
 
-const OverlapGroup1 = styled.div`
+const Rectangle67 = styled.div`
   position: absolute;
-  width: 1599px;
-  height: 829px;
-  top: 802px;
-  left: 422px;
+  width: 1440px;
+  height: 152px;
+  top: 8px;
+  left: 349px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px #00000040;
+`;
+
+const LandingGraphic1 = styled.img`
+  position: absolute;
+  width: 527px;
+  height: 506px;
+  top: 192px;
+  left: 1144px;
+  object-fit: cover;
+`;
+
+const OverlapGroup6 = styled.div`
+  width: 1894px;
+  height: 1865px;
+  position: relative;
+  margin-top: 76px;
+  margin-right: 6.73px;
+`;
+
+const OverlapGroup3 = styled.div`
+  position: absolute;
+  width: 1894px;
+  height: 1855px;
+  top: 10px;
+  left: 0;
 `;
 
 const Polygon1 = styled.img`
   position: absolute;
-  width: 423px;
-  height: 776px;
-  top: 53px;
-  left: 1176px;
-`;
-
-const OurProject = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 338px;
-  top: 417px;
-  left: 0;
-  letter-spacing: 0;
-`;
-
-const AsSeattlesHomeles = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 944px;
-  top: 421px;
-  left: 298px;
-  letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const WaheedaHakimDataAnalyst = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 212px;
-  top: 174px;
-  left: 1077px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const Waheeda1 = styled.img`
-  position: absolute;
-  width: 152px;
-  height: 152px;
-  top: 0;
-  left: 1104px;
-  object-fit: cover;
-`;
-
-const OverlapGroup4 = styled.div`
-  position: absolute;
-  width: 1541px;
-  height: 750px;
-  top: 1513px;
-  left: 152px;
+  width: 483px;
+  height: 752px;
+  top: 7px;
+  left: 1411px;
 `;
 
 const Polygon3 = styled.img`
   position: absolute;
-  width: 521px;
+  width: 501px;
   height: 750px;
-  top: 0;
+  top: 547px;
   left: 0;
 `;
 
@@ -282,8 +278,8 @@ const WhatWeDid = styled.div`
   ${RobotoMediumBlack50px}
   position: absolute;
   width: 338px;
-  top: 166px;
-  left: 270px;
+  top: 463px;
+  left: 287px;
   letter-spacing: 0;
 `;
 
@@ -291,40 +287,238 @@ const WithTheGoalOfInc = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 944px;
-  top: 166px;
-  left: 597px;
+  top: 463px;
+  left: 614px;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const WeAlsoIncludedAdd = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  position: absolute;
+  width: 1271px;
+  top: 1273px;
+  left: 287px;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const AsSeattlesHomeles = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  position: absolute;
+  width: 892px;
+  top: 0;
+  left: 676px;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const MatchingDemo1 = styled.img`
+  position: absolute;
+  width: 645px;
+  height: 464px;
+  top: 1391px;
+  left: 278px;
+  object-fit: cover;
+`;
+
+const VoucherToolDemo1 = styled.img`
+  position: absolute;
+  width: 738px;
+  height: 533px;
+  top: 655px;
+  left: 791px;
+  object-fit: cover;
+`;
+
+const MoreResourcesDemo1 = styled.img`
+  position: absolute;
+  width: 638px;
+  height: 464px;
+  top: 1391px;
+  left: 934px;
+  object-fit: cover;
+`;
+
+const WhyHomelessRelief = styled.div`
+  ${RobotoMediumBlack50px}
+  position: absolute;
+  width: 338px;
+  top: 0;
+  left: 287px;
+  letter-spacing: 0;
+`;
+
+const OverlapGroup4 = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  width: 1826px;
+  height: 1659px;
+  position: relative;
+  margin-top: 34px;
+`;
+
+const OverlapGroup1 = styled.div`
+  position: absolute;
+  width: 1826px;
+  height: 1658px;
+  top: 0;
+  left: 0;
+`;
+
+const Polygon11 = styled.img`
+  position: absolute;
+  width: 526px;
+  height: 752px;
+  top: 907px;
+  left: 0;
+`;
+
+const ProjectStatus = styled.div`
+  ${RobotoMediumBlack50px}
+  position: absolute;
+  width: 338px;
+  top: 1243px;
+  left: 213px;
+  letter-spacing: 0;
+`;
+
+const OurTargetAudience = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  position: absolute;
+  width: 998px;
+  top: 91px;
+  left: 486px;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const BySimplifyingAnOt = styled.div`
+  ${LibrebaskervilleNormalBlack23px}
+  position: absolute;
+  width: 953px;
+  top: 506px;
+  left: 531px;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const OurUsers = styled.div`
+  ${RobotoMediumBlack50px}
+  position: absolute;
+  width: 338px;
+  top: 91px;
+  left: 213px;
+  letter-spacing: 0;
+`;
+
+const TheBenefit = styled.div`
+  ${RobotoMediumBlack50px}
+  position: absolute;
+  width: 338px;
+  top: 500px;
+  left: 213px;
+  letter-spacing: 0;
+`;
+
+const Ellipse11 = styled.div`
+  position: absolute;
+  width: 818px;
+  height: 818px;
+  top: 0;
+  left: 1008px;
+  background-color: #8fc0a926;
+  border-radius: 409px;
+`;
+
+const OurTeam = styled.div`
+  ${RobotoMediumBlack50px}
+  position: absolute;
+  width: 338px;
+  top: 859px;
+  left: 208px;
+  letter-spacing: 0;
+`;
+
+const Nate1 = styled.img`
+  position: absolute;
+  width: 152px;
+  height: 150px;
+  top: 860px;
+  left: 561px;
+  object-fit: cover;
+`;
+
+const Alex1 = styled.img`
+  position: absolute;
+  width: 152px;
+  height: 151px;
+  top: 860px;
+  left: 809px;
+  object-fit: cover;
+`;
+
+const Me1 = styled.img`
+  position: absolute;
+  width: 152px;
+  height: 155px;
+  top: 860px;
+  left: 1057px;
+  object-fit: cover;
+`;
+
+const Waheeda1 = styled.img`
+  position: absolute;
+  width: 152px;
+  height: 152px;
+  top: 860px;
+  left: 1298px;
+  object-fit: cover;
+`;
+
+const WeWillBePassingT = styled.div`
+  position: absolute;
+  width: 897px;
+  top: 1252px;
+  left: 578px;
   letter-spacing: 0;
   line-height: 35px;
 `;
 
 const NateNguyenProjectManager = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 212px;
-  top: 976px;
-  left: 774px;
+  top: 1031px;
+  left: 531px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 35px;
+`;
+
+const WaheedaHakimDataAnalyst = styled.div`
+  position: absolute;
+  width: 212px;
+  top: 1033px;
+  left: 1271px;
   text-align: center;
   letter-spacing: 0;
   line-height: 35px;
 `;
 
 const Name = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 212px;
-  top: 982px;
-  left: 1248px;
+  top: 1037px;
+  left: 1027px;
   text-align: center;
   letter-spacing: 0;
   line-height: 35px;
 `;
 
 const Name1 = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
   position: absolute;
-  width: 248px;
-  top: 976px;
-  left: 993px;
+  width: 221px;
+  top: 1032px;
+  left: 774px;
   text-align: center;
   letter-spacing: 0;
   line-height: 23px;
@@ -345,143 +539,55 @@ const Span2 = styled.span`
   line-height: 30px;
 `;
 
-const Alex1 = styled.img`
+const VoucherButtonV3 = styled.div`
   position: absolute;
-  width: 152px;
-  height: 151px;
-  top: 803px;
-  left: 1041px;
-  object-fit: cover;
+  height: 106px;
+  top: 1553px;
+  left: 663px;
+  display: flex;
+  padding: 0px 0px;
+  align-items: flex-end;
+  min-width: 443px;
+  cursor: pointer;
 `;
 
-const Me1 = styled.img`
-  position: absolute;
-  width: 152px;
-  height: 155px;
-  top: 804px;
-  left: 1278px;
-  object-fit: cover;
+const VoucherButtonV2 = styled.div`
+  height: 99px;
+  display: flex;
+  padding: 29.5px 24.4px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 409px;
+  background-color: var(--midnight-blue);
+  border-radius: 39.85px;
 `;
 
-const VoucherToolDemo1 = styled.img`
-  position: absolute;
-  width: 738px;
-  height: 533px;
-  top: 1870px;
-  left: 926px;
-  object-fit: cover;
+const ExploreOurServices = styled.div`
+  min-height: 37px;
+  min-width: 296px;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: var(--white);
+  font-size: 31.9px;
+  letter-spacing: 0;
 `;
 
-const OverlapGroup3 = styled.div`
-  width: 1294px;
-  height: 581px;
-  position: relative;
+const Arrow1 = styled.img`
+  width: 39px;
+  height: 23px;
   align-self: center;
-  margin-top: 86px;
-  margin-right: 18px;
+  margin-left: 22px;
+  margin-bottom: 1.53px;
 `;
 
-const WeAlsoIncludedAdd = styled.div`
+const Text = styled.div`
   ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 1271px;
-  top: 0;
-  left: 9px;
+  min-height: 29px;
+  margin-left: 1587px;
+  margin-top: 1370.34px;
+  min-width: 1px;
+  text-align: center;
   letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const MatchingDemo1 = styled.img`
-  position: absolute;
-  width: 645px;
-  height: 464px;
-  top: 117px;
-  left: 0;
-  object-fit: cover;
-`;
-
-const MoreResourcesDemo1 = styled.img`
-  position: absolute;
-  width: 638px;
-  height: 464px;
-  top: 117px;
-  left: 656px;
-  object-fit: cover;
-`;
-
-const OverlapGroup2 = styled.div`
-  width: 1597px;
-  height: 891px;
-  position: relative;
-  margin-top: 126px;
-  margin-right: -221px;
-`;
-
-const ProjectStatus = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 338px;
-  top: 745px;
-  left: 0;
-  letter-spacing: 0;
-`;
-
-const OurTargetAudience = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 998px;
-  top: 0;
-  left: 282px;
-  letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const BySimplifyingAnOt = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 953px;
-  top: 415px;
-  left: 327px;
-  letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const WeWillBePassingT = styled.div`
-  ${LibrebaskervilleNormalBlack23px}
-  position: absolute;
-  width: 897px;
-  top: 754px;
-  left: 365px;
-  letter-spacing: 0;
-  line-height: 35px;
-`;
-
-const OurUsers = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 338px;
-  top: 0;
-  left: 9px;
-  letter-spacing: 0;
-`;
-
-const TheBenefit = styled.div`
-  ${RobotoMediumBlack50px}
-  position: absolute;
-  width: 338px;
-  top: 409px;
-  left: 9px;
-  letter-spacing: 0;
-`;
-
-const Ellipse11 = styled.div`
-  position: absolute;
-  width: 818px;
-  height: 818px;
-  top: 0;
-  left: 779px;
-  background-color: #8fc0a947;
-  border-radius: 409px;
 `;
 
 export default LandingPage;

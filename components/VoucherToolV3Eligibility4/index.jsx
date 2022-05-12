@@ -4,7 +4,7 @@ import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
 import styled from "styled-components";
-import { LibrebaskervilleNormalBlack28px, Header2, Border1pxBlack } from "../../styledMixins";
+import { LibrebaskervilleNormalBlack28px, Header2, Border1pxBlack, Border2pxBlack } from "../../styledMixins";
 import "./VoucherToolV3Eligibility4.css";
 
 class VoucherToolV3Eligibility4 extends React.Component {
@@ -19,23 +19,23 @@ class VoucherToolV3Eligibility4 extends React.Component {
       sexualAssault,
       stalkingOrHumanTrafficking,
       noneOfTheAboveApplyToMe,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-eligibility-4 screen">
           <OverlapGroup1>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup1>
           <FlexRow>
-            <TutorialButtonsContainer>
-              <TutorialButtons src="/img/tutorial-buttons-99@2x.svg" />
-              <Link to="/voucher-tool-v3-disclaimers">
-                <TutorialButtons1 src="/img/tutorial-buttons-100@2x.svg" />
-              </Link>
-            </TutorialButtonsContainer>
+            <Link to="/voucher-tool-v3-disclaimers">
+              <TutorialButtons src="/img/tutorial-buttons-100@2x.svg" />
+            </Link>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
               <OverlapGroup2>
@@ -45,11 +45,11 @@ class VoucherToolV3Eligibility4 extends React.Component {
                   <Homeless>{homeless}</Homeless>
                 </FlexRow1>
                 <FlexRow2>
-                  <Rectangle122></Rectangle122>
+                  <Rectangle116></Rectangle116>
                   <Homeless>{atRiskOfHomelessness}</Homeless>
                 </FlexRow2>
                 <FlexRow2>
-                  <Rectangle122></Rectangle122>
+                  <Rectangle116></Rectangle116>
                   <Homeless>{fleeingOrAttemptin}</Homeless>
                 </FlexRow2>
                 <FlexRow2>
@@ -64,21 +64,21 @@ class VoucherToolV3Eligibility4 extends React.Component {
                   </Link>
                 </FlexRow2>
                 <FlexRow2>
-                  <Rectangle122></Rectangle122>
+                  <Rectangle116></Rectangle116>
                   <Homeless>{sexualAssault}</Homeless>
                 </FlexRow2>
                 <FlexRow2>
-                  <Rectangle122></Rectangle122>
+                  <Rectangle116></Rectangle116>
                   <Homeless>{stalkingOrHumanTrafficking}</Homeless>
                 </FlexRow2>
                 <FlexRow2>
-                  <Rectangle122></Rectangle122>
+                  <Rectangle116></Rectangle116>
                   <Homeless>{noneOfTheAboveApplyToMe}</Homeless>
                 </FlexRow2>
               </OverlapGroup2>
             </FlexCol>
             <Link to="/voucher-tool-v3-disqualifications">
-              <TutorialButtons2 src="/img/tutorial-buttons-98@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-98@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -100,31 +100,17 @@ const OverlapGroup1 = styled.div`
 `;
 
 const FlexRow = styled.div`
-  height: 777px;
-  margin-top: 63px;
+  height: 778px;
+  margin-top: 62px;
   margin-right: 6px;
   display: flex;
   align-items: flex-end;
   min-width: 1348px;
 `;
 
-const TutorialButtonsContainer = styled.div`
-  width: 99px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 642px;
-`;
-
 const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-`;
-
-const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 504px;
   cursor: pointer;
 `;
 
@@ -135,7 +121,7 @@ const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 700px;
+  min-height: 701px;
 `;
 
 const VoucherTool = styled.div`
@@ -147,19 +133,19 @@ const VoucherTool = styled.div`
 `;
 
 const OverlapGroup2 = styled.div`
-  ${LibrebaskervilleNormalBlack28px}
   ${Border1pxBlack}
-            width: 1011px;
-  margin-top: 25px;
+  width: 1011px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-  padding: 13px 29px;
+  padding: 12px 29px;
   align-items: flex-end;
   min-height: 564px;
   background-color: var(--white);
 `;
 
 const InOrderToBeEligi = styled.div`
+  ${LibrebaskervilleNormalBlack28px}
   width: 949px;
   min-height: 131px;
   margin-right: 1px;
@@ -170,19 +156,20 @@ const FlexRow1 = styled.div`
   height: 40px;
   margin-top: 34px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   min-width: 892px;
 `;
 
 const Rectangle116 = styled.div`
-  ${Border1pxBlack}
+  ${Border2pxBlack}
   width: 27px;
   height: 27px;
-  margin-bottom: 1px;
+  margin-top: 1px;
   background-color: var(--white);
 `;
 
 const Homeless = styled.div`
+  ${LibrebaskervilleNormalBlack28px}
   width: 853px;
   min-height: 40px;
   margin-left: 12px;
@@ -197,21 +184,15 @@ const FlexRow2 = styled.div`
   min-width: 892px;
 `;
 
-const Rectangle122 = styled.div`
-  ${Border1pxBlack}
-  width: 27px;
-  height: 27px;
-  background-color: var(--white);
-`;
-
 const OverlapGroup3 = styled.div`
   width: 27px;
   height: 27px;
   position: relative;
+  margin-top: 1px;
 `;
 
 const Rectangle120 = styled.div`
-  ${Border1pxBlack}
+  ${Border2pxBlack}
   position: absolute;
   width: 27px;
   height: 27px;
@@ -238,7 +219,7 @@ const DatingViolence = styled.div`
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 67px;

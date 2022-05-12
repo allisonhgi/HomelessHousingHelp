@@ -29,6 +29,12 @@ class DocumentButtonVariant7 extends React.Component {
                 href="https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record"
                 target="_blank"
               >
+                <Rectangle44></Rectangle44>
+              </a>
+              <a
+                href="https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record"
+                target="_blank"
+              >
                 <IncomeHelp>{incomeHelp}</IncomeHelp>
               </a>
               <a
@@ -48,7 +54,7 @@ class DocumentButtonVariant7 extends React.Component {
 const DocumentButtonVariant71 = styled.div`
   position: absolute;
   height: 86px;
-  top: 316px;
+  top: 317px;
   left: 14px;
   display: flex;
   justify-content: center;
@@ -62,7 +68,7 @@ const OverlapGroup2 = styled.div`
   margin-bottom: -176px;
   display: flex;
   flex-direction: column;
-  padding: 19px 0;
+  padding: 18px 0;
   align-items: flex-end;
   min-height: 263px;
   background-image: url(/img/rectangle-43@1x.svg);
@@ -91,7 +97,7 @@ const OverlapGroup1 = styled.div`
   height: 42px;
   position: relative;
   margin-left: 372px;
-  margin-bottom: 1px;
+  margin-top: 1px;
   border-radius: 12px;
 `;
 
@@ -110,7 +116,7 @@ const CloseDetails = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 133px;
-  top: 9px;
+  top: 8px;
   left: 40px;
   letter-spacing: 0;
   cursor: pointer;
@@ -128,17 +134,27 @@ const OverlapGroup = styled.div`
   width: 174px;
   height: 33px;
   position: relative;
-  margin-top: 141px;
+  margin-top: 142px;
   margin-right: 53px;
+  border-radius: 10px;
+`;
+
+const Rectangle44 = styled.div`
+  position: absolute;
+  width: 174px;
+  height: 33px;
+  top: 0;
+  left: 0;
   background-color: var(--blue-zodiac);
   border-radius: 10px;
+  cursor: pointer;
 `;
 
 const IncomeHelp = styled.div`
   ${RobotoMediumWhite20px}
   position: absolute;
   width: 120px;
-  top: 6px;
+  top: 5px;
   left: 18px;
   letter-spacing: 0;
   cursor: pointer;

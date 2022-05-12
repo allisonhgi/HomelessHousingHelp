@@ -21,6 +21,9 @@ class VoucherToolV3RAPCCSB extends React.Component {
       address11061Ne2N,
       closeDetails,
       viewOnMap,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
       regionalAccessPointsV2Props,
     } = this.props;
 
@@ -28,17 +31,14 @@ class VoucherToolV3RAPCCSB extends React.Component {
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-rap-ccsb screen">
           <OverlapGroup6>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup6>
           <FlexRow>
-            <TutorialButtonsContainer>
-              <TutorialButtons src="/img/tutorial-buttons-23@2x.svg" />
-              <Link to="/voucher-tool-v3-next-steps">
-                <TutorialButtons1 src="/img/tutorial-buttons-24@2x.svg" />
-              </Link>
-            </TutorialButtonsContainer>
+            <Link to="/voucher-tool-v3-next-steps">
+              <TutorialButtons src="/img/tutorial-buttons-24@2x.svg" />
+            </Link>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
               <OverlapGroup5>
@@ -49,13 +49,13 @@ class VoucherToolV3RAPCCSB extends React.Component {
                   property1Default3Props={regionalAccessPointsV2Props.property1Default3Props}
                   property1Default4Props={regionalAccessPointsV2Props.property1Default4Props}
                 />
-                <Rectangle100></Rectangle100>
+                <Rectangle100 src="/img/rectangle-100@1x.svg" />
                 <CatholicCommunityServicesBellevue>
                   {catholicCommunityServicesBellevue}
                 </CatholicCommunityServicesBellevue>
                 <Address11061NE2n>{address11061Ne2N}</Address11061NE2n>
                 <Link to="/voucher-tool-v3-rap">
-                  <Rectangle101 src="/img/rectangle-101@2x.svg" />
+                  <Rectangle101 src="/img/rectangle-111@2x.svg" />
                 </Link>
                 <a
                   href="https://www.google.com/maps/place/11061+NE+2nd+St,+Bellevue,+WA+98004/data=!4m2!3m1!1s0x54906c62eefea6c7:0xcd2c90d00b771419?sa=X&ved=2ahUKEwilqsWx-Mb3AhXBKH0KHakHDpgQ8gF6BAgCEAE"
@@ -77,7 +77,7 @@ class VoucherToolV3RAPCCSB extends React.Component {
               </OverlapGroup5>
             </FlexCol>
             <Link to="/voucher-tool-v3-download-info">
-              <TutorialButtons2 src="/img/tutorial-buttons-25@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-25@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -99,42 +99,28 @@ const OverlapGroup6 = styled.div`
 `;
 
 const FlexRow = styled.div`
-  height: 777px;
-  margin-top: 63px;
+  height: 789px;
+  margin-top: 62px;
   margin-right: 6px;
   display: flex;
   align-items: flex-end;
   min-width: 1348px;
 `;
 
-const TutorialButtonsContainer = styled.div`
-  width: 99px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 642px;
-`;
-
 const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-`;
-
-const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 504px;
+  margin-bottom: 11px;
   cursor: pointer;
 `;
 
 const FlexCol = styled.div`
   width: 1011px;
-  align-self: flex-start;
   margin-left: 73px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 776px;
+  min-height: 789px;
 `;
 
 const VoucherTool = styled.div`
@@ -148,25 +134,24 @@ const VoucherTool = styled.div`
 
 const OverlapGroup5 = styled.div`
   width: 1011px;
-  height: 665px;
+  height: 677px;
   position: relative;
+  margin-top: 1px;
 `;
 
-const Rectangle100 = styled.div`
+const Rectangle100 = styled.img`
   position: absolute;
-  width: 945px;
-  height: 206px;
-  top: 459px;
-  left: 32px;
-  background-color: var(--midnight-blue);
-  box-shadow: 0px 4px 4px #00000040;
+  width: 961px;
+  height: 222px;
+  top: 455px;
+  left: 24px;
 `;
 
 const CatholicCommunityServicesBellevue = styled.div`
   ${RobotoMediumWhite29px}
   position: absolute;
   width: 522px;
-  top: 483px;
+  top: 482px;
   left: 52px;
   letter-spacing: 0;
 `;
@@ -175,7 +160,7 @@ const Address11061NE2n = styled.div`
   ${LibrebaskervilleNormalWhite25px}
   position: absolute;
   width: 907px;
-  top: 532px;
+  top: 531px;
   left: 58px;
   letter-spacing: 0;
   line-height: 42px;
@@ -183,8 +168,8 @@ const Address11061NE2n = styled.div`
 
 const Rectangle101 = styled.img`
   position: absolute;
-  width: 186px;
-  height: 41px;
+  width: 183px;
+  height: 42px;
   top: 477px;
   left: 779px;
   cursor: pointer;
@@ -221,7 +206,7 @@ const ViewOnMap = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 163px;
-  top: 532px;
+  top: 531px;
   left: 391px;
   letter-spacing: 0;
   line-height: 42px;
@@ -237,11 +222,11 @@ const IconCursor = styled.img`
   left: 521px;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 125px;
   height: 77px;
   margin-left: 40px;
-  margin-bottom: 1px;
+  margin-bottom: 12px;
   cursor: pointer;
 `;
 

@@ -7,12 +7,7 @@ import Property1Variant53 from "../Property1Variant53";
 import Property1Variant3 from "../Property1Variant3";
 import Property1Default4 from "../Property1Default4";
 import styled from "styled-components";
-import {
-  LibrebaskervilleNormalWhite20px,
-  Header2,
-  Border1pxBlack2,
-  LibrebaskervilleNormalBlack27px,
-} from "../../styledMixins";
+import { Header2, Border1pxBlack2, LibrebaskervilleNormalBlack27px, RobotoMediumWhite20px } from "../../styledMixins";
 import "./VoucherToolV3RequiredPaperworkOC.css";
 
 class VoucherToolV3RequiredPaperworkOC extends React.Component {
@@ -25,7 +20,11 @@ class VoucherToolV3RequiredPaperworkOC extends React.Component {
       spanText4,
       forExistingPhaPro,
       hudHelp,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
       property1Variant53Props,
+      property1Default4Props,
     } = this.props;
 
     return (
@@ -33,45 +32,44 @@ class VoucherToolV3RequiredPaperworkOC extends React.Component {
         <div className="voucher-tool-v3-required-paperwork-oc screen">
           <FlexCol>
             <OverlapGroup5>
-              <Logo />
-              <HomePageLink />
-              <MoreResources />
+              <Logo className={logoProps.className} />
+              <HomePageLink className={homePageLinkProps.className} />
+              <MoreResources className={moreResourcesProps.className} />
             </OverlapGroup5>
             <OverlapGroup7>
               <VoucherTool>{voucherTool}</VoucherTool>
               <Line1 src="/img/line-1@1x.svg" />
             </OverlapGroup7>
-            <FlexRow>
-              <TutorialButtons src="/img/tutorial-buttons-57@2x.svg" />
-              <TextInfo>
-                <OverlapGroup3>
-                  <NoDocumentsAreNee>
-                    <span className="librebaskerville-normal-black-27px">{spanText1}</span>
-                    <span className="librebaskerville-bold-black-27px">{spanText2}</span>
-                    <span className="librebaskerville-normal-black-27px">{spanText3}</span>
-                    <span className="librebaskerville-normal-black-30px">{spanText4}</span>
-                  </NoDocumentsAreNee>
-                  <Property1Variant53 proofOfIncome={property1Variant53Props.proofOfIncome} />
-                  <Property1Variant3 />
-                  <Property1Default4 />
-                  <Link to="/voucher-tool-v3-required-paperwork">
-                    <OwnerCert src="/img/owner-cert@1x.svg" />
-                  </Link>
-                  <ForExistingPHAPro>{forExistingPhaPro}</ForExistingPHAPro>
-                  <Vector src="/img/vector-11@2x.svg" />
-                </OverlapGroup3>
-              </TextInfo>
-            </FlexRow>
+            <TextInfo>
+              <OverlapGroup3>
+                <NoDocumentsAreNee>
+                  <span className="librebaskerville-normal-black-27px">{spanText1}</span>
+                  <span className="librebaskerville-bold-black-27px">{spanText2}</span>
+                  <span className="librebaskerville-normal-black-27px">{spanText3}</span>
+                  <span className="librebaskerville-normal-black-30px">{spanText4}</span>
+                </NoDocumentsAreNee>
+                <Property1Variant53 proofOfIncome={property1Variant53Props.proofOfIncome} />
+                <Property1Variant3 />
+                <Property1Default4 className={property1Default4Props.className} />
+                <Link to="/voucher-tool-v3-required-paperwork">
+                  <OwnerCert src="/img/owner-cert@1x.svg" />
+                </Link>
+                <ForExistingPHAPro>{forExistingPhaPro}</ForExistingPHAPro>
+                <Vector src="/img/vector-11@2x.svg" />
+              </OverlapGroup3>
+            </TextInfo>
           </FlexCol>
-          <FlexRow1>
+          <FlexRow>
             <Link to="/voucher-tool-v3-disqualifications">
-              <TutorialButtons1 src="/img/tutorial-buttons-58@2x.svg" />
+              <TutorialButtons src="/img/tutorial-buttons-58@2x.svg" />
             </Link>
             <OverlapGroup6>
               <a href="https://www.rhha.org/hud-form-5382" target="_blank">
                 <Rectangle45></Rectangle45>
               </a>
-              <HUDHelp>{hudHelp}</HUDHelp>
+              <a href="https://www.rhha.org/hud-form-5382" target="_blank">
+                <HUDHelp>{hudHelp}</HUDHelp>
+              </a>
               <a
                 href="https://www.seattlehousing.org/housing/housing-choice-vouchers/eligibility/income-level-housing-choice-voucher-program"
                 target="_blank"
@@ -80,9 +78,9 @@ class VoucherToolV3RequiredPaperworkOC extends React.Component {
               </a>
             </OverlapGroup6>
             <Link to="/voucher-tool-v3-next-steps">
-              <TutorialButtons2 src="/img/tutorial-buttons-56@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-56@2x.svg" />
             </Link>
-          </FlexRow1>
+          </FlexRow>
         </div>
       </div>
     );
@@ -94,13 +92,14 @@ const FlexCol = styled.div`
   margin-left: 5px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   min-height: 890px;
 `;
 
 const OverlapGroup5 = styled.div`
   height: 152px;
   position: relative;
+  margin-right: 5px;
   display: flex;
   padding: 38px 85px;
   justify-content: flex-end;
@@ -114,8 +113,8 @@ const OverlapGroup7 = styled.div`
   width: 1440px;
   height: 111px;
   position: relative;
-  align-self: flex-end;
-  margin-top: 63px;
+  margin-top: 62px;
+  margin-left: 5px;
 `;
 
 const VoucherTool = styled.div`
@@ -136,23 +135,11 @@ const Line1 = styled.img`
   left: 0;
 `;
 
-const FlexRow = styled.div`
-  margin-left: 43px;
-  display: flex;
-  align-items: flex-start;
-  min-width: 1183px;
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 24px;
-`;
-
 const TextInfo = styled.div`
   ${Border1pxBlack2}
   height: 564px;
-  margin-left: 108px;
+  margin-top: 1px;
+  margin-right: 4px;
   display: flex;
   padding: 0 34px;
   align-items: flex-end;
@@ -162,7 +149,7 @@ const TextInfo = styled.div`
 
 const OverlapGroup3 = styled.div`
   width: 934px;
-  height: 664px;
+  height: 665px;
   position: relative;
   margin-bottom: -131px;
 `;
@@ -180,29 +167,33 @@ const OwnerCert = styled.img`
   position: absolute;
   width: 924px;
   height: 250px;
-  top: 414px;
+  top: 415px;
   left: 10px;
   cursor: pointer;
 `;
 
 const ForExistingPHAPro = styled.div`
-  ${LibrebaskervilleNormalWhite20px}
   position: absolute;
-  width: 786px;
-  top: 476px;
-  left: 34px;
+  width: 688px;
+  top: 481px;
+  left: 33px;
+  font-family: var(--font-family-libre_baskerville);
+  font-weight: 400;
+  color: var(--white);
+  font-size: 18px;
   letter-spacing: 0;
+  line-height: 27px;
 `;
 
 const Vector = styled.img`
   position: absolute;
   width: 16px;
   height: 2px;
-  top: 451px;
+  top: 452px;
   left: 742px;
 `;
 
-const FlexRow1 = styled.div`
+const FlexRow = styled.div`
   height: 85px;
   margin-top: 24px;
   margin-right: 6px;
@@ -211,7 +202,7 @@ const FlexRow1 = styled.div`
   min-width: 1348px;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons = styled.img`
   width: 99px;
   height: 77px;
   margin-top: 1px;
@@ -239,12 +230,13 @@ const Rectangle45 = styled.div`
 `;
 
 const HUDHelp = styled.div`
-  ${LibrebaskervilleNormalWhite20px}
+  ${RobotoMediumWhite20px}
   position: absolute;
   width: 114px;
-  top: 3px;
-  left: 10px;
+  top: 5px;
+  left: 17px;
   letter-spacing: 0;
+  cursor: pointer;
 `;
 
 const Arrow2 = styled.img`
@@ -256,7 +248,7 @@ const Arrow2 = styled.img`
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 136px;

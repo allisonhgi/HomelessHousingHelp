@@ -1,5 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
-@import "https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Roboto:400,500";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500|Libre+Baskerville:400,700";
 @import "https://px.animaapp.com/621fec582592cbf202936905.621fec5aac60947c06215bb7.m7oH3JL.rcp.png";
 .screen a {
   text-decoration: none;
@@ -9,19 +9,10 @@
 .container-center-horizontal {
   pointer-events: none;
   width: 100%;
-  zoom: 88%;
+  zoom: 100%;
   flex-direction: row;
   justify-content: center;
   display: flex;
-}
-
-.container-center-horizontal > * {
-  pointer-events: auto;
-  flex-shrink: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 :root {
@@ -48,11 +39,9 @@
 
 .landing-page {
   background-color: var(--white);
-  height: 4310px;
+  height: 4684px;
   width: 1440px;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 102px 0;
+  align-items: flex-start;
   display: flex;
   overflow: hidden;
 }
@@ -121,15 +110,6 @@
   display: flex;
 }
 
-.voucher-tool-v3-rap-ccsb {
-  background-color: var(--white);
-  height: 1012px;
-  width: 1440px;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
 .resources-v3 {
   background-color: var(--white);
   height: 4475px;
@@ -138,6 +118,15 @@
   align-items: center;
   display: flex;
   position: relative;
+}
+
+.voucher-tool-v3-rap-ccsb {
+  background-color: var(--white);
+  height: 1012px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
 }
 
 .voucher-tool-v3-rap-sg {
@@ -190,7 +179,7 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
@@ -200,12 +189,22 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
 
 .voucher-tool-v3-required-paperwork-dob {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.voucher-tool-v3-tutorial-back-button {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;
@@ -220,18 +219,9 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-end;
-  display: flex;
-  overflow: hidden;
-}
-
-.voucher-tool-v3-eligibility-2 {
-  background-color: var(--white);
-  height: 1024px;
-  width: 1440px;
-  flex-direction: column;
   align-items: center;
   display: flex;
+  overflow: hidden;
 }
 
 .voucher-tool-v3-required-paperwork-ssn {
@@ -239,9 +229,19 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   overflow: hidden;
+}
+
+.voucher-tool-v3-disqualifications-notice-page-1 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 .voucher-tool-v3-eligibility-questions {
@@ -253,26 +253,7 @@
   display: flex;
 }
 
-.voucher-tool-v3-disclaimers {
-  background-color: var(--white);
-  height: 1024px;
-  width: 1440px;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
-.voucher-tool-v3-tutorial-back-button {
-  background-color: var(--white);
-  height: 1024px;
-  width: 1440px;
-  flex-direction: column;
-  align-items: flex-start;
-  display: flex;
-  overflow: hidden;
-}
-
-.voucher-tool-v3-disqualifications-notice-page {
+.voucher-tool-v3-eligibility-7 {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;
@@ -296,7 +277,7 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
@@ -306,7 +287,7 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
@@ -316,7 +297,7 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
@@ -326,7 +307,7 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
@@ -336,12 +317,12 @@
   height: 1024px;
   width: 1440px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   overflow: hidden;
 }
 
-.voucher-tool-v3-eligibility-3 {
+.voucher-tool-v3-disclaimers {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;
@@ -350,13 +331,23 @@
   display: flex;
 }
 
-.voucher-tool-v3-tutorial-audio-button {
+.voucher-tool-v3-eligibility-2 {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;
   flex-direction: column;
   align-items: center;
   display: flex;
+}
+
+.voucher-tool-v3-disqualifications-notice-page {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 .voucher-tool-v3-tutorial-next-button {
@@ -369,15 +360,6 @@
 }
 
 .voucher-tool-v3-eligibility-1 {
-  background-color: var(--white);
-  height: 1024px;
-  width: 1440px;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
-.voucher-tool-v3-eligibility-7 {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;
@@ -405,6 +387,24 @@
 }
 
 .voucher-tool-v3-eligibility-4 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-eligibility-3 {
+  background-color: var(--white);
+  height: 1024px;
+  width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.voucher-tool-v3-tutorial-audio-button {
   background-color: var(--white);
   height: 1024px;
   width: 1440px;

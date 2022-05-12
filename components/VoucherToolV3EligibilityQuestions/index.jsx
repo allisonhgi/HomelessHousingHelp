@@ -19,23 +19,23 @@ class VoucherToolV3EligibilityQuestions extends React.Component {
       sexualAssault,
       stalkingOrHumanTrafficking,
       noneOfTheAboveApplyToMe,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-eligibility-questions screen">
           <OverlapGroup2>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
           <FlexRow>
-            <TutorialButtonsContainer>
-              <TutorialButtons src="/img/tutorial-buttons-63@2x.svg" />
-              <Link to="/voucher-tool-v3-disclaimers">
-                <TutorialButtons1 src="/img/tutorial-buttons-64@2x.svg" />
-              </Link>
-            </TutorialButtonsContainer>
+            <Link to="/voucher-tool-v3-disclaimers">
+              <TutorialButtons src="/img/tutorial-buttons-64@2x.svg" />
+            </Link>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
               <OverlapGroup1>
@@ -99,7 +99,7 @@ class VoucherToolV3EligibilityQuestions extends React.Component {
               </OverlapGroup1>
             </FlexCol>
             <Link to="/voucher-tool-v3-disqualifications">
-              <TutorialButtons2 src="/img/tutorial-buttons-62@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-62@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -121,31 +121,17 @@ const OverlapGroup2 = styled.div`
 `;
 
 const FlexRow = styled.div`
-  height: 777px;
-  margin-top: 63px;
+  height: 778px;
+  margin-top: 62px;
   margin-right: 6px;
   display: flex;
   align-items: flex-end;
   min-width: 1348px;
 `;
 
-const TutorialButtonsContainer = styled.div`
-  width: 99px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 642px;
-`;
-
 const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-`;
-
-const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 504px;
   cursor: pointer;
 `;
 
@@ -156,7 +142,7 @@ const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 700px;
+  min-height: 701px;
 `;
 
 const VoucherTool = styled.div`
@@ -170,10 +156,10 @@ const VoucherTool = styled.div`
 const OverlapGroup1 = styled.div`
   ${Border1pxBlack}
   width: 1011px;
-  margin-top: 25px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-  padding: 13px 29px;
+  padding: 12px 29px;
   align-items: flex-end;
   min-height: 564px;
   background-color: var(--white);
@@ -199,6 +185,7 @@ const Rectangle116 = styled.div`
   ${Border2pxBlack}
   width: 27px;
   height: 27px;
+  margin-top: 1px;
   background-color: var(--white);
   cursor: pointer;
 `;
@@ -220,7 +207,7 @@ const FlexRow2 = styled.div`
   min-width: 892px;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 67px;

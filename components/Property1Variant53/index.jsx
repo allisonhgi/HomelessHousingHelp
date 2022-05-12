@@ -21,11 +21,11 @@ class Property1Variant53 extends React.Component {
 const DocumentButton = styled.div`
   position: absolute;
   height: 86px;
-  top: 316px;
+  top: 317px;
   left: 14px;
   display: flex;
   padding: 17px 19px;
-  align-items: center;
+  align-items: flex-start;
   min-width: 916px;
   background-color: var(--midnight-blue);
 `;
@@ -34,7 +34,6 @@ const ProofOfIncome = styled.div`
   ${RobotoMediumWhite30px}
   width: 323px;
   min-height: 51px;
-  align-self: flex-end;
   letter-spacing: 0;
   line-height: 45px;
   white-space: nowrap;
@@ -42,9 +41,10 @@ const ProofOfIncome = styled.div`
 
 const OverlapGroup = styled.div`
   height: 42px;
+  align-self: center;
   margin-left: 372px;
   display: flex;
-  padding: 9px 15px;
+  padding: 8px 15px;
   align-items: flex-start;
   min-width: 183px;
   background-color: var(--cornflower);

@@ -25,7 +25,7 @@ const HomePageLink = styled.div`
   display: flex;
   padding: 0 14px;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   min-width: 191px;
 `;
 

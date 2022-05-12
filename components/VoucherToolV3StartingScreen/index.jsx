@@ -11,34 +11,36 @@ import "./VoucherToolV3StartingScreen.css";
 
 class VoucherToolV3StartingScreen extends React.Component {
   render() {
-    const { voucherTool, property1WelcomeProps, property1BackToHomeProps } = this.props;
+    const {
+      voucherTool,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
+      property1WelcomeProps,
+      property1BackToHomeProps,
+    } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-starting-screen screen">
           <OverlapGroup3>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup3>
           <FlexRow>
             <FlexCol>
-              <FlexRow1>
-                <TutorialButtons src="/img/tutorial-buttons-19@2x.svg" />
-                <ToolContainer>
-                  <VoucherTool>{voucherTool}</VoucherTool>
-                  <Property1Welcome
-                    welcomeThisToolI={property1WelcomeProps.welcomeThisToolI}
-                    clickNextToCont={property1WelcomeProps.clickNextToCont}
-                    tutorial1={property1WelcomeProps.tutorial1}
-                    skip={property1WelcomeProps.skip}
-                  />
-                </ToolContainer>
-              </FlexRow1>
+              <VoucherTool>{voucherTool}</VoucherTool>
+              <Property1Welcome
+                welcomeThisToolI={property1WelcomeProps.welcomeThisToolI}
+                clickNextToCont={property1WelcomeProps.clickNextToCont}
+                tutorial1={property1WelcomeProps.tutorial1}
+                skip={property1WelcomeProps.skip}
+              />
               <Property1BackToHome>{property1BackToHomeProps.children}</Property1BackToHome>
             </FlexCol>
             <Link to="/voucher-tool-v3-tutorial-next-button" className="align-self-flex-end">
-              <TutorialButtons1 src="/img/tutorial-buttons-18@2x.svg" />
+              <TutorialButtons src="/img/tutorial-buttons-18@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -60,56 +62,34 @@ const OverlapGroup3 = styled.div`
 `;
 
 const FlexRow = styled.div`
-  height: 776px;
-  margin-top: 63px;
-  margin-right: 6px;
+  height: 777px;
+  margin-top: 62px;
+  margin-right: 5px;
   display: flex;
   align-items: flex-start;
-  min-width: 1348px;
+  min-width: 1347px;
 `;
 
 const FlexCol = styled.div`
-  width: 1193px;
+  width: 1192px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 770px;
-`;
-
-const FlexRow1 = styled.div`
-  height: 675px;
-  display: flex;
-  align-items: flex-start;
-  min-width: 1193px;
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 135px;
-`;
-
-const ToolContainer = styled.div`
-  width: 1011px;
-  position: relative;
-  margin-left: 118px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 675px;
+  min-height: 771px;
 `;
 
 const VoucherTool = styled.div`
   ${Header2}
   width: 356px;
   min-height: 111px;
-  margin-right: 21px;
+  align-self: center;
+  margin-left: 160px;
   font-weight: 500;
   color: var(--black);
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons = styled.img`
   width: 99px;
   height: 77px;
   align-self: flex-end;

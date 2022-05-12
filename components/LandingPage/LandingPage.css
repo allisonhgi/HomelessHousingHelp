@@ -1,11 +1,9 @@
 .landing-page {
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  flex-direction: column;
-  height: 4310px;
+  height: 4684px;
   overflow: hidden;
-  padding: 102px 0;
   width: 1440px;
 }
 

@@ -3,34 +3,39 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import HomePageLink from "../HomePageLink";
 import MoreResources from "../MoreResources";
-import TextInfo22 from "../TextInfo22";
+import TextInfo2 from "../TextInfo2";
 import styled from "styled-components";
 import { Header2, RobotoMediumWhite21px } from "../../styledMixins";
 import "./VoucherToolV3DownloadInfo2.css";
 
 class VoucherToolV3DownloadInfo2 extends React.Component {
   render() {
-    const { voucherTool, getSummaryViaTextOrEmail, downloadPdfOfSummary, textInfo22Props } = this.props;
+    const {
+      voucherTool,
+      getSummaryViaTextOrEmail,
+      downloadPdfOfSummary,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
+      textInfo2Props,
+    } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-download-info screen">
           <OverlapGroup2>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
           <FlexRow>
-            <TutorialButtonsContainer>
-              <TutorialButtons src="/img/tutorial-buttons-9@2x.svg" />
-              <Link to="/voucher-tool-v3-rap">
-                <TutorialButtons1 src="/img/tutorial-buttons-10@2x.svg" />
-              </Link>
-            </TutorialButtonsContainer>
+            <Link to="/voucher-tool-v3-rap" className="align-self-flex-end">
+              <TutorialButtons src="/img/tutorial-buttons-10@2x.svg" />
+            </Link>
             <FlexCol>
               <VoucherTool>{voucherTool}</VoucherTool>
               <OverlapGroup>
-                <TextInfo22>{textInfo22Props.children}</TextInfo22>
+                <TextInfo2 spanText1={textInfo2Props.spanText1} spanText2={textInfo2Props.spanText2} />
                 <IconMobile src="/img/ic-outline-phone-iphone@2x.svg" />
                 <UilimageDownload src="/img/uil-image-download@2x.svg" />
                 <Rectangle35></Rectangle35>
@@ -46,7 +51,7 @@ class VoucherToolV3DownloadInfo2 extends React.Component {
                 <DownloadPDFOfSummary>{downloadPdfOfSummary}</DownloadPDFOfSummary>
               </OverlapGroup>
               <Link to="/home-page-v3" className="align-self-flex-end">
-                <TutorialButtons2 src="/img/tutorial-buttons-11@2x.svg" />
+                <TutorialButtons1 src="/img/tutorial-buttons-11@2x.svg" />
               </Link>
             </FlexCol>
           </FlexRow>
@@ -69,32 +74,18 @@ const OverlapGroup2 = styled.div`
 `;
 
 const FlexRow = styled.div`
-  height: 777px;
-  margin-top: 63px;
+  height: 778px;
+  margin-top: 62px;
   margin-left: 8px;
   display: flex;
   align-items: flex-start;
   min-width: 1362px;
 `;
 
-const TutorialButtonsContainer = styled.div`
-  width: 99px;
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 642px;
-`;
-
 const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-`;
-
-const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 504px;
+  align-self: flex-end;
   cursor: pointer;
 `;
 
@@ -104,7 +95,7 @@ const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 776px;
+  min-height: 777px;
 `;
 
 const VoucherTool = styled.div`
@@ -121,6 +112,7 @@ const OverlapGroup = styled.div`
   width: 1011px;
   height: 564px;
   position: relative;
+  margin-top: 1px;
 `;
 
 const IconMobile = styled.img`
@@ -153,7 +145,7 @@ const GetSummaryViaTextOrEmail = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;
-  top: 421px;
+  top: 420px;
   left: 280px;
   text-align: center;
   letter-spacing: 0;
@@ -175,13 +167,13 @@ const DownloadPDFOfSummary = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;
-  top: 421px;
+  top: 420px;
   left: 557px;
   text-align: center;
   letter-spacing: 0;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 236px;
   height: 77px;
   align-self: flex-end;

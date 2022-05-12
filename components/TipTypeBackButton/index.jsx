@@ -52,7 +52,7 @@ const ThisButtonWillTak = styled.div`
   ${LibrebaskervilleNormalBlack30px}
   position: absolute;
   width: 526px;
-  top: 13px;
+  top: 12px;
   left: 18px;
   letter-spacing: 0;
 `;

@@ -35,7 +35,7 @@ class DocumentButtonVariant72 extends React.Component {
             >
               <DOBHelp>{dobHelp}</DOBHelp>
             </a>
-            <a href="https://www.ssa.gov/ssnumber/" target="_blank">
+            <a href="https://doh.wa.gov/licenses-permits-and-certificates/vital-records/ordering-birth-record" target="_blank">
               <Arrow1 src="/img/arrow-1-4@2x.svg" />
             </a>
           </OverlapGroup>
@@ -48,7 +48,7 @@ class DocumentButtonVariant72 extends React.Component {
 const DocumentButtonVariant7 = styled.div`
   position: absolute;
   height: 86px;
-  top: 218px;
+  top: 219px;
   left: 14px;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ const OverlapGroup3 = styled.div`
   margin-bottom: -114px;
   display: flex;
   flex-direction: column;
-  padding: 19px 0;
+  padding: 18px 0;
   align-items: flex-end;
   min-height: 201px;
   background-image: url(/img/rectangle-43-1@1x.svg);
@@ -99,13 +99,14 @@ const ABirthCertificate = styled.div`
   top: 46px;
   left: 0;
   letter-spacing: 0;
+  line-height: 27px;
 `;
 
 const OverlapGroup2 = styled.div`
   height: 42px;
-  margin-top: 4px;
+  margin-top: 5px;
   display: flex;
-  padding: 9px 10px;
+  padding: 8px 10px;
   justify-content: flex-end;
   align-items: flex-start;
   min-width: 183px;
@@ -132,8 +133,8 @@ const OverlapGroup = styled.div`
   width: 146px;
   height: 33px;
   position: relative;
-  margin-top: 16px;
-  margin-right: 71px;
+  margin-top: 22px;
+  margin-right: 70px;
   background-color: var(--blue-zodiac);
   border-radius: 10px;
 `;
@@ -142,7 +143,7 @@ const DOBHelp = styled.div`
   ${RobotoMediumWhite20px}
   position: absolute;
   width: 120px;
-  top: 6px;
+  top: 5px;
   left: 18px;
   letter-spacing: 0;
   cursor: pointer;

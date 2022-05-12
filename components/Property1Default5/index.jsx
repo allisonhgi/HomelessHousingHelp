@@ -22,7 +22,7 @@ class Property1Default5 extends React.Component {
 
 const RegionalAccessPointV2 = styled.div`
   height: 75px;
-  margin-top: 12px;
+  margin-top: 13px;
   margin-left: 1px;
   display: flex;
   padding: 16px 19px;
@@ -39,6 +39,7 @@ const CatholicCommunityServices = styled.div`
   ${RobotoMediumWhite29px}
   width: 580px;
   min-height: 29px;
+  margin-bottom: 2px;
   letter-spacing: 0;
 `;
 
@@ -47,7 +48,7 @@ const OverlapGroup4 = styled.div`
   align-self: flex-end;
   margin-left: 144px;
   display: flex;
-  padding: 9px 15px;
+  padding: 8px 15px;
   align-items: flex-start;
   min-width: 183px;
   background-color: var(--cornflower);

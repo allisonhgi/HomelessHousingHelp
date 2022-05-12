@@ -32,7 +32,7 @@ const ResourceSectionHousing = styled.div`
   margin-right: 1px;
   display: flex;
   flex-direction: column;
-  padding: 12px 21px;
+  padding: 11px 21px;
   align-items: flex-start;
   min-height: 208px;
   background-color: var(--hippie-blue);
@@ -65,7 +65,7 @@ const OverlapGroup1 = styled.div`
   height: 42px;
   position: relative;
   align-self: flex-end;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-right: 0.52px;
   border-radius: 8.4px;
 `;
@@ -85,7 +85,7 @@ const Rectangle27 = styled.div`
 const LinkToResource = styled.div`
   position: absolute;
   width: 157px;
-  top: 10px;
+  top: 9px;
   left: 14px;
   font-family: var(--font-family-roboto);
   font-weight: 500;

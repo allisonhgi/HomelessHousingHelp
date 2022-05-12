@@ -243,7 +243,7 @@ const MoreResources1 = styled.div`
   ${Header2}
   width: 440px;
   min-height: 75px;
-  margin-top: 43px;
+  margin-top: 42px;
   margin-left: 2px;
   font-weight: 500;
   color: var(--black);
@@ -272,13 +272,14 @@ const OverlapGroup17 = styled.div`
   width: 1293px;
   height: 242px;
   position: relative;
+  margin-top: 1px;
   margin-left: 19px;
 `;
 
 const HousingChoiceVouchers = styled.div`
   ${RobotoMediumWhite40px}
   position: absolute;
-  top: 76px;
+  top: 75px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -287,7 +288,7 @@ const TheHousingChoiceV = styled.div`
   ${LibrebaskervilleNormalWhite25px}
   position: absolute;
   width: 1217px;
-  top: 136px;
+  top: 135px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -297,7 +298,7 @@ const FoodAndShelterResources = styled.div`
   width: 687px;
   min-height: 75px;
   align-self: flex-start;
-  margin-top: 44px;
+  margin-top: 43px;
   margin-left: 83px;
   letter-spacing: 0;
 `;
@@ -334,7 +335,7 @@ const UniversityDistrictFoodBank = styled.div`
   ${RobotoMediumWhite35px}
   position: absolute;
   width: 1247px;
-  top: 13px;
+  top: 12px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -343,7 +344,7 @@ const OurMissionIsToBu = styled.div`
   ${LibrebaskervilleNormalWhite22px}
   position: absolute;
   width: 1217px;
-  top: 84px;
+  top: 83px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -364,7 +365,7 @@ const LinkToResource = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 195px;
+  top: 194px;
   left: 1096px;
   letter-spacing: 0;
   cursor: pointer;
@@ -375,12 +376,13 @@ const TemporaryHousingResources = styled.div`
   width: 789px;
   min-height: 75px;
   align-self: flex-start;
-  margin-top: 54px;
+  margin-top: 53px;
   margin-left: 83px;
   letter-spacing: 0;
 `;
 
 const ResourceSection = styled.div`
+  margin-top: 1px;
   margin-left: 19px;
   display: flex;
   align-items: flex-start;
@@ -408,7 +410,7 @@ const Rectangle261 = styled.div`
 const HousingChoiceVouchers1 = styled.div`
   ${RobotoMediumWhite35px}
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -429,7 +431,7 @@ const LinkToResource1 = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 188px;
+  top: 187px;
   left: 1085px;
   letter-spacing: 0;
   cursor: pointer;

@@ -57,7 +57,7 @@ const RegionalAccessPointsV2 = styled.div`
   left: 0;
   display: flex;
   flex-direction: column;
-  padding: 31px;
+  padding: 30px 31px;
   align-items: flex-start;
   min-height: 564px;
   background-color: var(--white);

@@ -23,11 +23,11 @@ class Property1Variant5 extends React.Component {
 const DocumentButton = styled.div`
   position: absolute;
   height: 86px;
-  top: 316px;
+  top: 317px;
   left: 14px;
   display: flex;
   padding: 17px 19px;
-  align-items: center;
+  align-items: flex-start;
   min-width: 916px;
   background-color: var(--midnight-blue);
 `;
@@ -36,7 +36,6 @@ const ProofOfIncome = styled.div`
   ${RobotoMediumWhite30px}
   width: 323px;
   min-height: 51px;
-  align-self: flex-end;
   letter-spacing: 0;
   line-height: 45px;
   white-space: nowrap;
@@ -46,6 +45,7 @@ const OverlapGroup2 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
+  align-self: center;
   margin-left: 372px;
   border-radius: 12px;
 `;
@@ -65,7 +65,7 @@ const ClickForDetails = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;
-  top: 9px;
+  top: 8px;
   left: 15px;
   letter-spacing: 0;
 `;
@@ -73,11 +73,11 @@ const ClickForDetails = styled.div`
 const DocumentButton1 = styled.div`
   position: absolute;
   height: 86px;
-  top: 316px;
+  top: 317px;
   left: 14px;
   display: flex;
   padding: 17px 19px;
-  align-items: center;
+  align-items: flex-start;
   min-width: 916px;
   background-color: var(--midnight-blue);
 `;
@@ -86,7 +86,6 @@ const ProofOfIncome1 = styled.div`
   ${RobotoMediumWhite30px}
   width: 323px;
   min-height: 51px;
-  align-self: flex-end;
   letter-spacing: 0;
   line-height: 45px;
   white-space: nowrap;
@@ -96,6 +95,7 @@ const OverlapGroup21 = styled.div`
   width: 183px;
   height: 42px;
   position: relative;
+  align-self: center;
   margin-left: 372px;
   border-radius: 12px;
 `;
@@ -115,7 +115,7 @@ const ClickForDetails1 = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;
-  top: 9px;
+  top: 8px;
   left: 15px;
   letter-spacing: 0;
 `;

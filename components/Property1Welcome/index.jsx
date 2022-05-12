@@ -28,6 +28,8 @@ class Property1Welcome extends React.Component {
 const ToolQuestionScreen = styled.div`
   ${Border1pxSummerGreen}
   height: 564px;
+  align-self: flex-end;
+  margin-top: 1px;
   display: flex;
   padding: 0 10px;
   align-items: flex-end;
@@ -38,7 +40,7 @@ const ToolQuestionScreen = styled.div`
 
 const OverlapGroup1 = styled.div`
   width: 985px;
-  height: 525px;
+  height: 526px;
   position: relative;
 `;
 
@@ -46,7 +48,7 @@ const OverlapGroup = styled.div`
   ${LibrebaskervilleNormalBlack30px}
   position: absolute;
   width: 985px;
-  height: 525px;
+  height: 526px;
   top: 0;
   left: 0;
 `;
@@ -71,7 +73,7 @@ const Tutorial1 = styled.img`
   position: absolute;
   width: 431px;
   height: 385px;
-  top: 140px;
+  top: 141px;
   left: 0;
   object-fit: cover;
 `;

@@ -35,6 +35,7 @@ class ResourceAddedOrNotResourceAddedOrNo2 extends React.Component {
 }
 
 const ResourceSection = styled.div`
+  margin-top: 1px;
   margin-left: 19px;
   display: flex;
   align-items: flex-start;
@@ -63,7 +64,7 @@ const UniversityDistrictFoodBank = styled.div`
   ${RobotoMediumWhite35px}
   position: absolute;
   width: 1247px;
-  top: 13px;
+  top: 12px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -72,7 +73,7 @@ const OurMissionIsToBu = styled.div`
   ${LibrebaskervilleNormalWhite22px}
   position: absolute;
   width: 1217px;
-  top: 84px;
+  top: 83px;
   left: 21px;
   letter-spacing: 0;
 `;
@@ -93,7 +94,7 @@ const LinkToResource = styled.div`
   ${RobotoMediumMidnightBlue21px}
   position: absolute;
   width: 157px;
-  top: 174px;
+  top: 173px;
   left: 1096px;
   letter-spacing: 0;
   cursor: pointer;

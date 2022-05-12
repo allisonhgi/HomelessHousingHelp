@@ -23,8 +23,8 @@ const RegionalAccessPointDefault = styled.div`
   top: 0;
   left: 0;
   display: flex;
-  padding: 22.8px 19px;
-  align-items: center;
+  padding: 22px 19px;
+  align-items: flex-start;
   min-width: 945px;
 `;
 
@@ -38,8 +38,9 @@ const CatholicCommunityServices = styled.div`
 const ViewOnMap = styled.div`
   width: 133px;
   min-height: 23px;
+  align-self: center;
   margin-left: 149px;
-  margin-bottom: 0.85px;
+  margin-bottom: 2.85px;
   font-family: var(--font-family-roboto);
   font-weight: 500;
   color: var(--white);
@@ -50,8 +51,8 @@ const ViewOnMap = styled.div`
 const IconCursor = styled.img`
   width: 27px;
   height: 22px;
-  align-self: flex-start;
   margin-left: 12px;
+  margin-top: 0.77px;
 `;
 
 export default Property1Default2;

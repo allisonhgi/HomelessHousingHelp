@@ -13,7 +13,7 @@ class Property1Default extends React.Component {
         <CatholicCommunityServices className="catholic-community-services">
           {catholicCommunityServices}
         </CatholicCommunityServices>
-        <OverlapGroup3 className="overlap-group3-3">
+        <OverlapGroup3 className="overlap-group3-5">
           <Link to="/voucher-tool-v3-rap-ccs">
             <Rectangle35 className="rectangle-35-2"></Rectangle35>
           </Link>
@@ -26,7 +26,7 @@ class Property1Default extends React.Component {
 
 const RegionalAccessPointV2 = styled.div`
   height: 75px;
-  margin-top: 12px;
+  margin-top: 13px;
   margin-left: 1px;
   display: flex;
   padding: 16px 19px;
@@ -91,6 +91,7 @@ const CatholicCommunityServices = styled.div`
   ${RobotoMediumWhite29px}
   width: 580px;
   min-height: 29px;
+  margin-bottom: 2px;
   letter-spacing: 0;
 `;
 
@@ -118,7 +119,7 @@ const ClickForDetails = styled.div`
   ${RobotoMediumWhite21px}
   position: absolute;
   width: 152px;
-  top: 9px;
+  top: 8px;
   left: 15px;
   letter-spacing: 0;
 `;

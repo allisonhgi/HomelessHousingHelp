@@ -6,7 +6,6 @@ import MoreResources from "../MoreResources";
 import styled from "styled-components";
 import {
   RobotoMediumBlack50px,
-  RobotoMediumBlack90px,
   LibrebaskervilleNormalBlack23px,
   LibrebaskervilleNormalBlack30px,
   RobotoMediumWhite40px,
@@ -17,7 +16,7 @@ import "./HomePageV3.css";
 class HomePageV3 extends React.Component {
   render() {
     const {
-      housingVoucherHelp,
+      title,
       connectingHousingR,
       emergencyHousingVo,
       moreInformation,
@@ -48,7 +47,7 @@ class HomePageV3 extends React.Component {
             <OverlapGroup4>
               <Polygon1 src="/img/polygon-1-1@1x.svg" />
               <Ellipse1></Ellipse1>
-              <HousingVoucherHelp>{housingVoucherHelp}</HousingVoucherHelp>
+              <Title>{title}</Title>
               <ConnectingHousingR>{connectingHousingR}</ConnectingHousingR>
               <a href="https://www.hud.gov/ehv" target="_blank">
                 <EmergencyHousingVo>{emergencyHousingVo}</EmergencyHousingVo>
@@ -117,16 +116,16 @@ const OverlapGroup3 = styled.div`
 const OverlapGroup6 = styled.div`
   ${RobotoMediumBlack50px}
   width: 1819px;
-  height: 1978px;
+  height: 1979px;
   position: relative;
-  margin-top: 79px;
+  margin-top: 78px;
   margin-left: -246px;
 `;
 
 const OverlapGroup4 = styled.div`
   position: absolute;
   width: 1819px;
-  height: 1685px;
+  height: 1686px;
   top: 0;
   left: 0;
 `;
@@ -135,7 +134,7 @@ const Polygon1 = styled.img`
   position: absolute;
   width: 511px;
   height: 827px;
-  top: 858px;
+  top: 859px;
   left: 1308px;
 `;
 
@@ -143,18 +142,21 @@ const Ellipse1 = styled.div`
   position: absolute;
   width: 818px;
   height: 818px;
-  top: 167px;
+  top: 168px;
   left: 0;
   background-color: #bee9e880;
   border-radius: 409px;
 `;
 
-const HousingVoucherHelp = styled.div`
-  ${RobotoMediumBlack90px}
+const Title = styled.h1`
   position: absolute;
   width: 405px;
   top: 0;
   left: 336px;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  color: var(--black);
+  font-size: 90px;
   letter-spacing: 0;
 `;
 
@@ -171,9 +173,10 @@ const EmergencyHousingVo = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 712px;
-  top: 1053px;
-  left: 867px;
+  top: 1054px;
+  left: 880px;
   letter-spacing: 0;
+  line-height: 33px;
   cursor: pointer;
 `;
 
@@ -203,13 +206,14 @@ const WeAreCurrentlyTar = styled.div`
   top: 809px;
   left: 741px;
   letter-spacing: 0;
+  line-height: 33px;
 `;
 
 const Arrow2 = styled.img`
   position: absolute;
   width: 32px;
   height: 33px;
-  top: 567px;
+  top: 568px;
   left: 1170px;
 `;
 
@@ -220,13 +224,14 @@ const NoWeCantPersona = styled.div`
   top: 1395px;
   left: 783px;
   letter-spacing: 0;
+  line-height: 33px;
 `;
 
 const Polygon2 = styled.img`
   position: absolute;
   width: 733px;
   height: 311px;
-  top: 1667px;
+  top: 1668px;
   left: 155px;
 `;
 
@@ -234,14 +239,14 @@ const OverlapGroup5 = styled.div`
   position: absolute;
   width: 491px;
   height: 41px;
-  top: 449px;
+  top: 450px;
   left: 1088px;
 `;
 
 const UnsureWhichToClick = styled.div`
   position: absolute;
   width: 241px;
-  top: 8px;
+  top: 7px;
   left: 0;
   font-family: var(--font-family-roboto);
   font-weight: 400;
@@ -257,7 +262,7 @@ const TutorialButtons = styled.div`
   left: 228px;
   display: flex;
   padding: 8.8px 13.8px;
-  align-items: flex-end;
+  align-items: flex-start;
   min-width: 263px;
   background-color: var(--amazon);
   border-radius: 10px;
@@ -287,7 +292,7 @@ const Arrow1 = styled.img`
   position: absolute;
   width: 25px;
   height: 13px;
-  top: 4px;
+  top: 5px;
   left: 206px;
 `;
 
@@ -310,12 +315,12 @@ const DoWeDistributeVouchers = styled.div`
 const VoucherButtonV2 = styled.div`
   position: absolute;
   height: 118px;
-  top: 315px;
+  top: 316px;
   left: 1088px;
   display: flex;
-  padding: 15.3px 22px;
+  padding: 15px 22px;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   min-width: 513px;
   background-color: #5fa8d3;
   border-radius: 5px;
@@ -324,7 +329,7 @@ const VoucherButtonV2 = styled.div`
 
 const OverlapGroup1 = styled.div`
   width: 468px;
-  height: 86px;
+  height: 87px;
   position: relative;
 `;
 
@@ -341,18 +346,18 @@ const Arrow11 = styled.img`
   position: absolute;
   width: 49px;
   height: 29px;
-  top: 57px;
+  top: 58px;
   left: 414px;
 `;
 
 const VoucherButtonV1 = styled.div`
   position: absolute;
   width: 513px;
-  top: 15px;
+  top: 16px;
   left: 1088px;
   display: flex;
   flex-direction: column;
-  padding: 15.3px 22px;
+  padding: 15px 22px;
   align-items: flex-end;
   min-height: 118px;
   background-color: var(--summer-green);
@@ -364,7 +369,6 @@ const INeedAVoucher = styled.div`
   ${RobotoMediumWhite40px}
   width: 468px;
   min-height: 47px;
-  margin-top: 1px;
   letter-spacing: 0;
   cursor: pointer;
 `;
@@ -372,14 +376,14 @@ const INeedAVoucher = styled.div`
 const Arrow12 = styled.img`
   width: 49px;
   height: 29px;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-right: 5px;
 `;
 
 const VoucherButtonV4 = styled.div`
   position: absolute;
   width: 513px;
-  top: 165px;
+  top: 166px;
   left: 1088px;
   display: flex;
   flex-direction: column;
@@ -395,14 +399,14 @@ const IHaveAVoucher = styled.div`
   ${RobotoMediumWhite40px}
   width: 468px;
   min-height: 47px;
-  margin-top: 10px;
+  margin-top: 9px;
   letter-spacing: 0;
 `;
 
 const Arrow13 = styled.img`
   width: 49px;
   height: 29px;
-  margin-top: 1px;
+  margin-top: 2px;
   margin-right: 5px;
 `;
 

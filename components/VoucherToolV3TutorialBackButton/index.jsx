@@ -10,27 +10,28 @@ import "./VoucherToolV3TutorialBackButton.css";
 
 class VoucherToolV3TutorialBackButton extends React.Component {
   render() {
-    const { voucherTool, tipTypeBackButtonProps } = this.props;
+    const { voucherTool, logoProps, homePageLinkProps, moreResourcesProps, tipTypeBackButtonProps } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-tutorial-back-button screen">
           <OverlapGroup2>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
-          <VoucherTool>{voucherTool}</VoucherTool>
-          <TutorialButtons src="/img/tutorial-buttons-52@2x.svg" />
           <FlexRow>
-            <OverlapGroup3>
-              <TipTypeBackButton thisButtonWillTak={tipTypeBackButtonProps.thisButtonWillTak} />
-              <Link to="/voucher-tool-v3-tutorial-next-button">
-                <TutorialButtons1 src="/img/tutorial-buttons-51@2x.svg" />
-              </Link>
-            </OverlapGroup3>
-            <Link to="/voucher-tool-v3-tutorial-audio-button">
-              <TutorialButtons2 src="/img/tutorial-buttons-50@2x.svg" />
+            <FlexCol>
+              <VoucherTool>{voucherTool}</VoucherTool>
+              <OverlapGroup3>
+                <TipTypeBackButton thisButtonWillTak={tipTypeBackButtonProps.thisButtonWillTak} />
+                <Link to="/voucher-tool-v3-tutorial-next-button">
+                  <TutorialButtons src="/img/tutorial-buttons-51@2x.svg" />
+                </Link>
+              </OverlapGroup3>
+            </FlexCol>
+            <Link to="/voucher-tool-v3-disclaimers">
+              <TutorialButtons1 src="/img/tutorial-buttons-50@2x.svg" />
             </Link>
           </FlexRow>
         </div>
@@ -51,39 +52,40 @@ const OverlapGroup2 = styled.div`
   box-shadow: 0px 4px 4px #00000040;
 `;
 
-const VoucherTool = styled.div`
-  ${Header2}
-  width: 405px;
-  min-height: 111px;
-  align-self: center;
-  margin-top: 63px;
-  margin-right: 1px;
-  font-weight: 500;
-  color: var(--black);
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 24px;
-  margin-left: 43px;
-`;
-
 const FlexRow = styled.div`
-  margin-top: 315px;
+  height: 784px;
+  margin-top: 62px;
   margin-left: -8px;
   display: flex;
   align-items: flex-end;
   min-width: 1399px;
 `;
 
+const FlexCol = styled.div`
+  width: 930px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 784px;
+`;
+
+const VoucherTool = styled.div`
+  ${Header2}
+  width: 405px;
+  min-height: 111px;
+  align-self: flex-end;
+  font-weight: 500;
+  color: var(--black);
+`;
+
 const OverlapGroup3 = styled.div`
   width: 623px;
   height: 272px;
   position: relative;
+  margin-top: 401px;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons = styled.img`
   position: absolute;
   width: 99px;
   height: 77px;
@@ -92,10 +94,10 @@ const TutorialButtons1 = styled.img`
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-left: 677px;
+  margin-left: 370px;
   margin-bottom: 7px;
   cursor: pointer;
 `;

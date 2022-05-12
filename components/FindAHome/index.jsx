@@ -75,7 +75,7 @@ const FindAHome1 = styled.div`
   ${Header2}
   width: 343px;
   min-height: 75px;
-  margin-top: 36px;
+  margin-top: 35px;
   margin-right: 1px;
   font-weight: 500;
   color: var(--black);

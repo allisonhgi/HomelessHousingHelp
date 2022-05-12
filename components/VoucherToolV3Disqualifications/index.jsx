@@ -18,76 +18,73 @@ class VoucherToolV3Disqualifications extends React.Component {
       spanText1,
       spanText2,
       noneOfTheAboveApplyToMe,
+      logoProps,
       homePageLinkProps,
+      moreResourcesProps,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-disqualifications screen">
           <OverlapGroup2>
-            <Logo />
+            <Logo className={logoProps.className} />
             <HomePageLink className={homePageLinkProps.className} />
-            <MoreResources />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
           <OverlapGroup3>
             <VoucherTool>{voucherTool}</VoucherTool>
             <Line1 src="/img/line-1@1x.svg" />
           </OverlapGroup3>
-          <FlexRow>
-            <FlexCol>
-              <FlexRow1>
-                <TutorialButtons src="/img/tutorial-buttons-39@2x.svg" />
-                <OverlapGroup1>
-                  <CheckWhichOneAppliesToYou>{checkWhichOneAppliesToYou}</CheckWhichOneAppliesToYou>
-                  <FlexRow2>
-                    <FlexCol1>
-                      <Link to="/voucher-tool-v3-disqualifications-1">
-                        <Rectangle124></Rectangle124>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-2">
-                        <Rectangle125></Rectangle125>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-3">
-                        <Rectangle126></Rectangle126>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-4">
-                        <Rectangle127></Rectangle127>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-checked">
-                        <Rectangle90></Rectangle90>
-                      </Link>
-                    </FlexCol1>
-                    <FlexCol2>
-                      <Link to="/voucher-tool-v3-disqualifications-1">
-                        <YoureARegistered>{youreARegistered}</YoureARegistered>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-2" className="align-self-flex-end">
-                        <YouHaveBeenConvic>{youHaveBeenConvic}</YouHaveBeenConvic>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-3">
-                        <YouHaveAHistoryO>{youHaveAHistoryO}</YouHaveAHistoryO>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-4" className="align-self-flex-center">
-                        <NobodyInTheApplyi>
-                          <span className="librebaskerville-normal-black-28px">{spanText1}</span>
-                          <Span112>{spanText2}</Span112>
-                        </NobodyInTheApplyi>
-                      </Link>
-                      <Link to="/voucher-tool-v3-disqualifications-checked">
-                        <NoneOfTheAboveApplyToMe>{noneOfTheAboveApplyToMe}</NoneOfTheAboveApplyToMe>
-                      </Link>
-                    </FlexCol2>
-                  </FlexRow2>
-                </OverlapGroup1>
-              </FlexRow1>
-              <Link to="/voucher-tool-v3-eligibility-questions">
-                <TutorialButtons1 src="/img/tutorial-buttons-40@2x.svg" />
-              </Link>
-            </FlexCol>
-            <Link to="/voucher-tool-v3-disqualifications-notice-page">
-              <TutorialButtons2 src="/img/tutorial-buttons-38@2x.svg" />
+          <OverlapGroup1>
+            <CheckWhichOneAppliesToYou>{checkWhichOneAppliesToYou}</CheckWhichOneAppliesToYou>
+            <FlexRow>
+              <FlexCol>
+                <Link to="/voucher-tool-v3-disqualifications-1">
+                  <Rectangle124></Rectangle124>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-2">
+                  <Rectangle125></Rectangle125>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-3">
+                  <Rectangle126></Rectangle126>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-4">
+                  <Rectangle127></Rectangle127>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-checked">
+                  <Rectangle90></Rectangle90>
+                </Link>
+              </FlexCol>
+              <FlexCol1>
+                <Link to="/voucher-tool-v3-disqualifications-1">
+                  <YoureARegistered>{youreARegistered}</YoureARegistered>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-2" className="align-self-flex-end">
+                  <YouHaveBeenConvic>{youHaveBeenConvic}</YouHaveBeenConvic>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-3">
+                  <YouHaveAHistoryO>{youHaveAHistoryO}</YouHaveAHistoryO>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-4" className="align-self-flex-center">
+                  <NobodyInTheApplyi>
+                    <span className="librebaskerville-normal-black-28px">{spanText1}</span>
+                    <Span114>{spanText2}</Span114>
+                  </NobodyInTheApplyi>
+                </Link>
+                <Link to="/voucher-tool-v3-disqualifications-checked">
+                  <NoneOfTheAboveApplyToMe>{noneOfTheAboveApplyToMe}</NoneOfTheAboveApplyToMe>
+                </Link>
+              </FlexCol1>
+            </FlexRow>
+          </OverlapGroup1>
+          <TutorialButtonsContainer>
+            <Link to="/voucher-tool-v3-eligibility-questions" className="align-self-flex-end">
+              <TutorialButtons src="/img/tutorial-buttons-40@2x.svg" />
             </Link>
-          </FlexRow>
+            <Link to="/voucher-tool-v3-disqualifications-notice-page-1">
+              <TutorialButtons1 src="/img/tutorial-buttons-38@2x.svg" />
+            </Link>
+          </TutorialButtonsContainer>
         </div>
       </div>
     );
@@ -97,7 +94,7 @@ class VoucherToolV3Disqualifications extends React.Component {
 const OverlapGroup2 = styled.div`
   height: 152px;
   position: relative;
-  margin-right: -1px;
+  margin-left: 2px;
   display: flex;
   padding: 38px 85px;
   justify-content: flex-end;
@@ -111,7 +108,8 @@ const OverlapGroup3 = styled.div`
   width: 1440px;
   height: 111px;
   position: relative;
-  margin-top: 63px;
+  align-self: flex-end;
+  margin-top: 62px;
   margin-right: -5px;
 `;
 
@@ -133,43 +131,14 @@ const Line1 = styled.img`
   left: 0;
 `;
 
-const FlexRow = styled.div`
-  height: 666px;
-  align-self: center;
-  margin-right: 6px;
-  display: flex;
-  align-items: flex-end;
-  min-width: 1348px;
-`;
-
-const FlexCol = styled.div`
-  width: 1179px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 666px;
-`;
-
-const FlexRow1 = styled.div`
-  height: 556px;
-  display: flex;
-  align-items: flex-start;
-  min-width: 1179px;
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 24px;
-`;
-
 const OverlapGroup1 = styled.div`
   ${Border1pxBlack}
   width: 1005px;
-  margin-left: 110px;
+  margin-top: 1px;
+  margin-right: 1px;
   display: flex;
   flex-direction: column;
-  padding: 18px 0;
+  padding: 17px 0;
   align-items: flex-start;
   min-height: 556px;
   background-color: var(--white);
@@ -183,7 +152,7 @@ const CheckWhichOneAppliesToYou = styled.div`
   letter-spacing: 0;
 `;
 
-const FlexRow2 = styled.div`
+const FlexRow = styled.div`
   height: 446px;
   align-self: center;
   margin-top: 7px;
@@ -193,8 +162,9 @@ const FlexRow2 = styled.div`
   min-width: 888px;
 `;
 
-const FlexCol1 = styled.div`
+const FlexCol = styled.div`
   width: 31px;
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -245,7 +215,7 @@ const Rectangle90 = styled.div`
   cursor: pointer;
 `;
 
-const FlexCol2 = styled.div`
+const FlexCol1 = styled.div`
   width: 837px;
   margin-left: 20px;
   display: flex;
@@ -293,7 +263,7 @@ const NobodyInTheApplyi = styled.div`
   cursor: pointer;
 `;
 
-const Span112 = styled.span`
+const Span114 = styled.span`
   ${LibrebaskervilleNormalBlack28px}
   line-height: 55px;
 `;
@@ -307,18 +277,26 @@ const NoneOfTheAboveApplyToMe = styled.div`
   cursor: pointer;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtonsContainer = styled.div`
+  height: 78px;
+  margin-top: 32px;
+  margin-right: 6px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 1348px;
+`;
+
+const TutorialButtons = styled.img`
   width: 99px;
   height: 77px;
-  margin-top: 33px;
+  align-self: flex-end;
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
-  margin-left: 70px;
-  margin-bottom: 1px;
+  margin-left: 1150px;
   cursor: pointer;
 `;
 

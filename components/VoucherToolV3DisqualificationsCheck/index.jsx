@@ -18,57 +18,57 @@ class VoucherToolV3DisqualificationsCheck extends React.Component {
       spanText1,
       spanText2,
       noneOfTheAboveApplyToMe,
+      logoProps,
+      homePageLinkProps,
+      moreResourcesProps,
     } = this.props;
 
     return (
       <div className="container-center-horizontal">
         <div className="voucher-tool-v3-disqualifications-checked screen">
           <OverlapGroup2>
-            <Logo />
-            <HomePageLink />
-            <MoreResources />
+            <Logo className={logoProps.className} />
+            <HomePageLink className={homePageLinkProps.className} />
+            <MoreResources className={moreResourcesProps.className} />
           </OverlapGroup2>
           <OverlapGroup3>
             <VoucherTool>{voucherTool}</VoucherTool>
             <Line1 src="/img/line-1@1x.svg" />
           </OverlapGroup3>
-          <FlexRow>
-            <TutorialButtons src="/img/tutorial-buttons-66@2x.svg" />
-            <OverlapGroup1>
-              <CheckWhichOneAppliesToYou>{checkWhichOneAppliesToYou}</CheckWhichOneAppliesToYou>
-              <FlexRow1>
-                <FlexCol>
-                  <Rectangle130></Rectangle130>
-                  <Rectangle131></Rectangle131>
-                  <Rectangle132></Rectangle132>
-                  <Rectangle133></Rectangle133>
-                  <OverlapGroup4>
-                    <Link to="/voucher-tool-v3-disqualifications">
-                      <IconCheckMark src="/img/vector-64@2x.svg" />
-                    </Link>
-                  </OverlapGroup4>
-                </FlexCol>
-                <FlexCol1>
-                  <YoureARegistered>{youreARegistered}</YoureARegistered>
-                  <YouHaveBeenConvic>{youHaveBeenConvic}</YouHaveBeenConvic>
-                  <YouHaveAHistoryO>{youHaveAHistoryO}</YouHaveAHistoryO>
-                  <NobodyInTheApplyi>
-                    <span className="librebaskerville-normal-black-28px">{spanText1}</span>
-                    <Span117>{spanText2}</Span117>
-                  </NobodyInTheApplyi>
+          <OverlapGroup1>
+            <CheckWhichOneAppliesToYou>{checkWhichOneAppliesToYou}</CheckWhichOneAppliesToYou>
+            <FlexRow>
+              <FlexCol>
+                <Rectangle130></Rectangle130>
+                <Rectangle131></Rectangle131>
+                <Rectangle132></Rectangle132>
+                <Rectangle133></Rectangle133>
+                <OverlapGroup4>
                   <Link to="/voucher-tool-v3-disqualifications">
-                    <NoneOfTheAboveApplyToMe>{noneOfTheAboveApplyToMe}</NoneOfTheAboveApplyToMe>
+                    <IconCheckMark src="/img/vector-64@2x.svg" />
                   </Link>
-                </FlexCol1>
-              </FlexRow1>
-            </OverlapGroup1>
-          </FlexRow>
+                </OverlapGroup4>
+              </FlexCol>
+              <FlexCol1>
+                <YoureARegistered>{youreARegistered}</YoureARegistered>
+                <YouHaveBeenConvic>{youHaveBeenConvic}</YouHaveBeenConvic>
+                <YouHaveAHistoryO>{youHaveAHistoryO}</YouHaveAHistoryO>
+                <NobodyInTheApplyi>
+                  <span className="librebaskerville-normal-black-28px">{spanText1}</span>
+                  <Span118>{spanText2}</Span118>
+                </NobodyInTheApplyi>
+                <Link to="/voucher-tool-v3-disqualifications">
+                  <NoneOfTheAboveApplyToMe>{noneOfTheAboveApplyToMe}</NoneOfTheAboveApplyToMe>
+                </Link>
+              </FlexCol1>
+            </FlexRow>
+          </OverlapGroup1>
           <TutorialButtonsContainer>
             <Link to="/voucher-tool-v3-disqualifications" className="align-self-flex-end">
-              <TutorialButtons1 src="/img/tutorial-buttons-67@2x.svg" />
+              <TutorialButtons src="/img/tutorial-buttons-67@2x.svg" />
             </Link>
             <Link to="/voucher-tool-v3-required-paperwork">
-              <TutorialButtons2 src="/img/tutorial-buttons-65@2x.svg" />
+              <TutorialButtons1 src="/img/tutorial-buttons-65@2x.svg" />
             </Link>
           </TutorialButtonsContainer>
         </div>
@@ -94,7 +94,7 @@ const OverlapGroup3 = styled.div`
   height: 111px;
   position: relative;
   align-self: flex-end;
-  margin-top: 63px;
+  margin-top: 62px;
   margin-right: -5px;
 `;
 
@@ -116,28 +116,14 @@ const Line1 = styled.img`
   left: 0;
 `;
 
-const FlexRow = styled.div`
-  height: 556px;
-  margin-top: 4px;
-  margin-left: 43px;
-  display: flex;
-  align-items: flex-start;
-  min-width: 1179px;
-`;
-
-const TutorialButtons = styled.img`
-  width: 64px;
-  height: 61px;
-  margin-top: 20px;
-`;
-
 const OverlapGroup1 = styled.div`
   ${Border1pxBlack}
   width: 1005px;
-  margin-left: 110px;
+  margin-top: 1px;
+  margin-right: 1px;
   display: flex;
   flex-direction: column;
-  padding: 18px 0;
+  padding: 17px 0;
   align-items: flex-start;
   min-height: 556px;
   background-color: var(--white);
@@ -151,7 +137,7 @@ const CheckWhichOneAppliesToYou = styled.div`
   letter-spacing: 0;
 `;
 
-const FlexRow1 = styled.div`
+const FlexRow = styled.div`
   height: 446px;
   align-self: center;
   margin-top: 7px;
@@ -163,6 +149,7 @@ const FlexRow1 = styled.div`
 
 const FlexCol = styled.div`
   width: 31px;
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -258,7 +245,7 @@ const NobodyInTheApplyi = styled.div`
   line-height: 28px;
 `;
 
-const Span117 = styled.span`
+const Span118 = styled.span`
   ${LibrebaskervilleNormalBlack28px}
   line-height: 55px;
 `;
@@ -274,22 +261,21 @@ const NoneOfTheAboveApplyToMe = styled.div`
 
 const TutorialButtonsContainer = styled.div`
   height: 78px;
-  align-self: center;
-  margin-top: 28px;
+  margin-top: 32px;
   margin-right: 6px;
   display: flex;
   align-items: flex-start;
   min-width: 1348px;
 `;
 
-const TutorialButtons1 = styled.img`
+const TutorialButtons = styled.img`
   width: 99px;
   height: 77px;
   align-self: flex-end;
   cursor: pointer;
 `;
 
-const TutorialButtons2 = styled.img`
+const TutorialButtons1 = styled.img`
   width: 99px;
   height: 77px;
   margin-left: 1150px;

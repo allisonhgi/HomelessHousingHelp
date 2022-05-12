@@ -20,7 +20,7 @@ const PhonePopUpV2 = styled.div`
   top: 478px;
   left: 394px;
   display: flex;
-  padding: 23.1px 55px;
+  padding: 22.1px 55px;
   justify-content: flex-end;
   align-items: flex-start;
   min-width: 651px;
