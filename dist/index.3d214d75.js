@@ -23357,7 +23357,7 @@ const landingPageData = {
     alex1: "/img/alex-1@2x.png",
     me1: "/img/me-1@2x.png",
     waheeda1: "/img/waheeda-1@2x.png",
-    weWillBePassingT: "We will be passing this project off to our sponsor, Frank Martinez, to maintain and possibly work on with another group in the future. The website will remain accessible with the same URL, but as a team, we will no longer be making updates to it after Spring Quarter 2022 ends.",
+    weWillBePassingT: "We will be passing this project off to our sponsor, Frank Martinez and Last Myle, LLC, to maintain and possibly work on with another group in the future. The website will remain accessible with the same URL, but as a team, we will no longer be making updates to it after Spring Quarter 2022 ends.",
     spanText1: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactDefault.default.Fragment, {
         children: [
             "Nate Nguyen",
@@ -24344,11 +24344,11 @@ const voucherToolV3RequiredPaperworkPOIData = {
     }, undefined),
     spanText8: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactDefault.default.Fragment, {
         children: [
-            "Additionally, households with 30% area median income or below will be prioritized in their voucher applications.",
+            "The above article outlines 10 different ways to provide proof of income. Additionally, households with 30% area median income or below will be prioritized in their voucher applications.",
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {}, void 0, false, {
                 fileName: "App.jsx",
                 lineNumber: 908,
-                columnNumber: 144
+                columnNumber: 217
             }, undefined)
         ]
     }, void 0, true, {
