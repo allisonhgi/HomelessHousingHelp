@@ -13,6 +13,7 @@ voucher applications so that 100% of Seattle vouchers are utilized to connect
 people with stable housing that could change their lives.
 
 Hosted Site: https://housingvoucherhelp.org/
+
 Hosted landing page: https://housingvoucherhelplandingpage.netlify.app
 
 # Our Group:
