@@ -16,15 +16,18 @@
   justify-content: center;
   pointer-events: none;
   width: 100%;
-  zoom: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1275px) {
   .container-center-horizontal {zoom: 88%;}
 }
 
-@media screen and (max-width: 1007) {
+@media screen and (max-width: 1111px) {
   .container-center-horizontal {zoom: 80%;}
+}
+
+@media screen and (max-width: 1024px) {
+  .container-center-horizontal {zoom: 75%;}
 }
 
 @media screen and (max-width: 992px) {
