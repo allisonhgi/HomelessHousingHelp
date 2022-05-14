@@ -317,7 +317,7 @@ const MatchingDemo1 = styled.img`
   position: absolute;
   width: 645px;
   height: 464px;
-  top: 1391px;
+  top: 1350px;
   left: 278px;
   object-fit: cover;
 `;
@@ -326,7 +326,7 @@ const VoucherToolDemo1 = styled.img`
   position: absolute;
   width: 738px;
   height: 533px;
-  top: 655px;
+  top: 730px;
   left: 791px;
   object-fit: cover;
 `;
@@ -335,7 +335,7 @@ const MoreResourcesDemo1 = styled.img`
   position: absolute;
   width: 638px;
   height: 464px;
-  top: 1391px;
+  top: 1350px;
   left: 934px;
   object-fit: cover;
 `;
