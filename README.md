@@ -2,9 +2,18 @@
 Capstone 2022
 
 # Our Project:
-As Seattle’s homeless population grows, countless resources attempt to combat this problem. The emergency housing voucher is one program that was implemented to help homeless people afford rent, but a year after distribution, less than half of them have been awarded in Seattle. Many homeless people face the barrier of low tech literacy, so our website is a design-sensitive solution that fills this gap, empowering the homeless community to get the resources they need. We aim to increase voucher applications so that 100% of Seattle vouchers are utilized to connect people with stable housing that could change their lives.
+Housing Voucher Help is a design-sensitive website that fills the
+tech-literacy gap for the homeless community, empowering individuals to get
+the resources they need. By simplifying the housing voucher application
+workflow and consolidating low-income housing resources, we make applying for
+and using the vouchers easier. The emergency housing voucher was implemented
+to help homeless people afford rent, but a year after distribution, less than
+half of them have been awarded in Seattle. That’s why we aim to increase
+voucher applications so that 100% of Seattle vouchers are utilized to connect
+people with stable housing that could change their lives.
 
-Hosted Site: https://housing-voucher-help.netlify.app 
+Hosted Site: https://housingvoucherhelp.org/
+Hosted landing page: https://housingvoucherhelplandingpage.netlify.app
 
 # Our Group:
 
