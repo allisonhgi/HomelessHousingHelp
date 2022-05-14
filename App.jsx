@@ -223,8 +223,7 @@ const landingPageData = {
     howWereSimplifyin: "How We’re Simplifying Resources for the Homeless Community",
     landinggraphic1: "/img/landinggraphic-1@1x.png",
     whatWeDid: "What We Did",
-    withTheGoalOfInc: "With the goal of increasing the number of vouchers used in Seattle, we landed on the solution of  making a resource that homeless people could use to learn more about the emergency housing vouchers, how to apply, and what housing they would qualify for when awarded one.",
-    weAlsoIncludedAdd: "We also included additional resources that the Seattle homeless population could use if they’re waiting for a voucher or ineligible to receive one.",
+    withTheGoalOfInc: "With the goal of increasing the number of vouchers used in Seattle, we landed on the solution of  making a resource that homeless people could use to learn more about the emergency housing vouchers, how to apply, and what housing they would qualify for when awarded one. We also included additional resources that the Seattle homeless population could use if they’re waiting for a voucher or ineligible to receive one.",
     asSeattlesHomeles: "As Seattle’s homeless population has been growing, countless resources have been created to combat this undeniable problem. The emergency housing voucher is just one program that was implemented across the US to help homeless people afford rent in their city, but after a year of being distributed, less than half of them have been awarded in the greater Seattle area. As Seattle residents who see this problem in our city every day, we wanted to make a difference, and take on the task of improving this program to get more people the housing they desperately need.",
     matchingdemo1: "/img/matchingdemo-1@1x.png",
     vouchertooldemo1: "/img/vouchertooldemo-1@1x.png",
@@ -246,11 +245,11 @@ const landingPageData = {
     spanText3: <React.Fragment>Waheeda Hakim<br /></React.Fragment>,
     spanText4: "Data Analyst",
     spanText5: <React.Fragment>Allison Gibbons<br /></React.Fragment>,
-    spanText6: "Web Developer",
+    spanText6: "Full Stack Dev",
     spanText7: <React.Fragment>Alex Gherman<br /></React.Fragment>,
     spanText8: "UX/UI Researcher and ",
     spanText9: "Designer",
-    exploreOurServices: "Explore Our Services",
+    exploreOurServices: "Get Housing Help Now",
     text: "",
 };
 
