@@ -47,8 +47,8 @@ class VoucherToolV3DownloadInfo2 extends React.Component {
                   target="_blank"
                 >
                   <Rectangle36></Rectangle36>
-                </a>
                 <DownloadPDFOfSummary>{downloadPdfOfSummary}</DownloadPDFOfSummary>
+                </a>
               </OverlapGroup>
               <Link to="/home-page-v3" className="align-self-flex-end">
                 <TutorialButtons1 src="/img/tutorial-buttons-11@2x.svg" />
