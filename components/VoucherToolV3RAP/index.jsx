@@ -62,7 +62,7 @@ class VoucherToolV3RAP extends React.Component {
               </Link>
               <MultiServiceCenterFederalWay>{multiServiceCenterFederalWay}</MultiServiceCenterFederalWay>
               <Link to="/voucher-tool-v3-rap-msc">
-                <Rectangle111 src="/img/rectangle-111@2x.svg" />
+                <Rectangle112></Rectangle112>
               </Link>
               <Link to="/voucher-tool-v3-rap-msc">
                 <ClickForDetails1>{clickForDetails2}</ClickForDetails1>
