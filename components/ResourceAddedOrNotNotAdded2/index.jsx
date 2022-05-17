@@ -77,6 +77,7 @@ const TheHousingChoiceV = styled.div`
   top: 83px;
   left: 21px;
   letter-spacing: 0;
+  line-height: 30px;
 `;
 
 const Rectangle27 = styled.div`
