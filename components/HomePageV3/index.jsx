@@ -173,10 +173,10 @@ const EmergencyHousingVo = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 712px;
-  top: 1054px;
+  top: 1020px;
   left: 880px;
   letter-spacing: 0;
-  line-height: 33px;
+  line-height: 40px;
   cursor: pointer;
 `;
 
@@ -194,7 +194,7 @@ const OurServices = styled.div`
   ${RobotoMediumBlack50px}
   position: absolute;
   width: 291px;
-  top: 793px;
+  top: 750px;
   left: 337px;
   letter-spacing: 0;
 `;
@@ -203,10 +203,10 @@ const WeAreCurrentlyTar = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 854px;
-  top: 809px;
+  top: 750px;
   left: 741px;
   letter-spacing: 0;
-  line-height: 33px;
+  line-height: 40px;
 `;
 
 const Arrow2 = styled.img`
@@ -221,10 +221,10 @@ const NoWeCantPersona = styled.div`
   ${LibrebaskervilleNormalBlack23px}
   position: absolute;
   width: 763px;
-  top: 1395px;
+  top: 1370px;
   left: 783px;
   letter-spacing: 0;
-  line-height: 33px;
+  line-height: 40px;
 `;
 
 const Polygon2 = styled.img`
@@ -299,7 +299,7 @@ const Arrow1 = styled.img`
 const WhatIsAnEmergencyHousingVoucher = styled.div`
   position: absolute;
   width: 509px;
-  top: 1040px;
+  top: 1020px;
   left: 336px;
   letter-spacing: 0;
 `;
@@ -307,7 +307,7 @@ const WhatIsAnEmergencyHousingVoucher = styled.div`
 const DoWeDistributeVouchers = styled.div`
   position: absolute;
   width: 374px;
-  top: 1382px;
+  top: 1370px;
   left: 337px;
   letter-spacing: 0;
 `;
