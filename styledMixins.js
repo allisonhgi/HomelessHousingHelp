@@ -130,6 +130,7 @@ export const LibrebaskervilleNormalBlack25px = css`
   font-size: var(--font-size-xs);
   font-weight: 400;
   font-style: normal;
+  line-height: 30px;
 `;
 
 export const LibrebaskervilleNormalWhite25px = css`
