@@ -339,7 +339,7 @@ const homePageV3Data = {
     getMoreInformation: "Get more information",
     whatIsAnEmergencyHousingVoucher: "What is an emergency housing voucher?",
     doWeDistributeVouchers: "Do we distribute vouchers?",
-    imInterestedInOtherResources: "I’m interested in other resources",
+    imInterestedInOtherResources: "I’m interested in other resources.",
     iNeedAVoucher: "I need a voucher.",
     iHaveAVoucher: "I have a voucher.",
     logoProps: logo4Data,
