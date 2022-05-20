@@ -27,4 +27,4 @@ Scope and Functionality:
  - The user can walk through the entire "I need a voucher" scenario and gain information about application materials, Regional Access Points, and can download a pdf summary at the end
  - The user can follow links to other housing resources via the "I have a voucher" scenario
  - The user can follow links and learn more about other programs and resources via the "I'm interested in other resources" scenario
- - Features that are not fully implemented include: getting a summary via text or email at the end of the "I need a voucher" scenario; being connected with housing after obtaining a voucher via the "I have a voucher" scenario
+ - Features that are not fully implemented include: getting a summary via text or email at the end of the "I need a voucher" scenario; being connected with housing after obtaining a voucher via the "I have a voucher" scenario; implementing Google Translate
